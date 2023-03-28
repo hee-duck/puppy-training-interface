@@ -1,0 +1,212 @@
+/* 모바일 */
+@media (min-width: 360px) {
+
+  /* 메인슬라이더 */
+  .swiper {
+    width: 100%;
+    height: 400px;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 교육안내 */
+  #edu_info {
+    padding: 50px 15px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* 교육안내 배경 */
+  #edu_info::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: url(../images/consulting_01.jpg) no-repeat top center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.6;
+  }
+
+  /* 교육안내 텍스트 */
+  .edu_info_txt {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .edu_info_txt h1 {
+    font-size: 30px;
+  }
+
+  .btn_edu_wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .btn_edu {
+    width: 160px;
+    padding: 10px 0px;
+    border-radius: 50px;
+    border:1px solid black;
+    display: inline-block;
+    text-align: center;
+    background: #fff;
+    box-sizing: border-box;
+    color: #061f5c;
+  }
+
+  /* 교육신청 */
+  #edu_join {
+    padding: 50px 15px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* form 공통 */
+  form.index_form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    padding:30px 10px;
+  }
+  .index_form input {
+    border-radius: 5px;
+    border:1px solid black;
+    height:25px;
+  }
+  .index_form select {
+    border-radius: 5px;
+    border:1px solid black;
+  }
+  h1 {
+    font-size:24px;
+  }
+  
+  .name{
+    width:100%;
+  
+  }
+  form.index_form>div.number{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+  }
+  
+  .telbox1 {
+    width:100%;
+  }
+  
+  .telbox2 {
+    width:100%;
+  }
+  
+  .telbox3 {
+    width:100%;
+  }
+  
+  #tel1{
+    width:100%;
+    height:25px;
+  }
+  
+  .email{
+    width:100%;
+  
+  }
+  
+  .text_memo{
+    width:100%;
+    
+  }
+  
+  .memo {
+    height:150px;
+    border-radius: 5px;
+    border:1px solid black;
+  }
+
+  #store_info {
+           
+    padding: 50px 15px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    
+ }
+ #store_info::after {
+  /* 가상요소 정하기 */
+    width: 100%;
+    height:100%;
+    content: "";
+    background:url(../images/index/store/store_01.jpeg) no-repeat top center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.text_box>h1{
+  font-weight: bold;
+  font-size: 24pt;
+ }
+
+.btn{
+  text-align: center;
+  padding: 50px;
+  
+}
+.btn>button{
+  border-radius: 20px;
+}
+
+#store_apply{
+  padding: 50px 15px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#store_apply::after{
+  width: 100%;
+  height: 100%;
+  content:"";
+  background:url(../images/index/store/store_02.jpg) no-repeat top center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.6;
+  
+}
+
+}

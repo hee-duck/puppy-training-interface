@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오구(Ogu)</title>
+    <!-- 초기화 css -->
+    <link href="../../css/reset.css" rel="stylesheet"/>
+    <!-- 외부 폰트, 외부 스타일 -->
+    <link href="../../css/header.css" rel="stylesheet"/>
+    <link href="../../css/footer.css" rel="stylesheet"/>
+    
+    <!-- 로고 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet"/>
+ 
+    <style>
+        /* section 메인 박스 */
+        .wrap{
+            display:flex;
+            width: 100%;
+            height: 67.24137%;
+            border: 1px solid black;
+        }
+        .section{
+            width: 91.46341%;
+            height: 76.92307%;
+            margin: 40px auto;
+            text-align: center;
+            border: 1px solid black;
+            background-color: antiquewhite;
+        }
+        .sns_logo{
+            display: inline-block;
+        }
+        .sns_logo img{
+            width: 95%;
+            height: 40px;
+            margin: 10px 4.5px 0 6.5px;
+        }
+        .sns_logo li:first-child{
+            margin-top: 20px;
+        }
+        .sns_logo li:last-child{
+            margin-bottom: 20px;
+        }
+        hr{
+            width: 85%;
+            border-top: 1px dashed black;
+        }
+        /* 오구 계정 만들기 부분 */
+        .create{
+            width: 84.14634%;
+            height: 40px;
+            margin: 20px auto;
+            border: 1px solid black;
+            border-radius: 30px;
+            background-color: darkblue;
+            text-align: center;
+        }
+        .create:hover{
+            cursor: pointer;
+            background-color:cornflowerblue;
+        }
+        .create_join{
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 40px; /* 부모 요소와 같게 */
+        }
+        .already{
+            float: left;
+        }
+        .login{
+            float: right;
+        }
+        .already, .login{
+            font-size: 0.5rem;
+            margin: 10px 10px;
+            color: black;
+        }
+        a.login:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+     <!-- header 시작 -->
+          <header class="header">
+            <div class="logo">
+                <!-- 링크에는 index.html 삽입 -->
+                <a href="#">
+                    <img src="../../images/logo/logo.png">
+                    <span class="logo_text">오구</span>
+                </a>
+                <span class="menu_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>               
+        </header>
+    <!-- header 끝 -->
+
+    <!-- 회원가입 메인 페이지 -->
+    <div class="wrap">
+        <!-- 회원가입 박스 -->
+        <div class="section">
+            <!-- 간편 로그인 버튼 부분 -->
+            <div class="sns_logo">
+                <ul>
+                    <li><a href="#"><img src="../../images/member/naver_join.png"></a></li>
+                    <li><a href="#"><img src="../../images/member/kakao_join.png"></a></li>
+                </ul>
+            </div>
+            <!-- 구분선 -->
+            <hr>
+            <!-- 오구 계정 만들기 부분 -->
+            <div class="create">
+                <a class="create_join" href="join_sub.html">오구 계정 만들기</a>
+            </div>
+            <div class="text">
+                <span class="already">이미 계정이 있으신가요?</span>
+                <a class="login" href="login.html">로그인 하러가기 </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer 부분 -->
+    <footer class="footer">
+        <!-- 약관 가로 정렬 부분 -->
+        <div class="term">
+            <ul>
+                <li><a href="#" target="_blank">이용약관</a></li>
+                <li> | </li>
+                <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                <li> | </li>
+                <li><a href="#" target="_blank">가맹문의</a></li>
+                <li> | </li>
+                <li><a href="#" target="_blank">고객센터</a></li>
+            </ul>
+        </div>
+        <!-- 회사 정보(주소, 사업자번호 등) 부분 -->
+        <div class="addr">
+            <p>(주)오구 | 대표 : 한희수<br/>
+                사업자등록번호 : 123-45-67890<br/>
+                대표전화 : 1212-5959<br/>
+                주소 : 서울시 양천구 목동중앙로13다길42-2<br/>
+                COPYRIGHT(C) 2023 (주)오구 All right reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

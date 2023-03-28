@@ -70,49 +70,43 @@
             opacity: 0.6;
             
         }
-        form.apply_form{
-            text-align: center;
+        form.apply_form {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            gap:10px;
         }
-        .store_apply>div.text_box{
-            text-align: center;
-            
+        .apply_form input {
+            height:25px;
         }
-       
-        input.name{
-            width: 49%;
-            height:25px ;
-            border-radius: 4px;
-            margin: 20px 20px;
+        h1 {
+            font-size:24px;
+        }
+
+        .name{
+            width:100%;
 
         }
         form.apply_form>div.number{
-            margin-bottom: 20px;
+            display:flex;
            
         }
         select#tel1{
-        padding: 5px;
+
         }
         input#tel2{
-            width: 16.333%;
-            height: 25px;
+
         }
         input#tel3{
-            width: 16.333%;
-            height: 25px;
+
         }
-        input#email{
-            width: 49%;
-            height: 25px;
-            margin-bottom: 20px;
+        .email{
+            width:100%;
+
         }
        
-        textarea.memo{
-            width: 49%;
-            height: 120px;
-            display: block;
-            margin-bottom: 20px;
-            margin: 0 100px 20px 100px;
-            
+        .text_memo{
+            width:100%;
         }
     }
        
@@ -144,7 +138,7 @@
     </div>
 
     <form action="" class="apply_form" method="post">
-        <input type="text" class="name"  name="name" id="name" placeholder="이름">
+        <div class="name"><input type="text" class="name"  name="name" id="name" placeholder="이름"></div>
         <div class="number">
             <select  name="tel1" id="tel1">
                 <option value="010"selected>010</option>
@@ -159,7 +153,7 @@
          <span>-</span>
          <input type="text" name="tel3" id="tel3">
         </div>
-     <input type="email" id="email" name="email" placeholder="이메일">
+     <div class="email"><input type="email" id="email" name="email" placeholder="이메일"></div>
      <div class="text_memo">
      <textarea class="memo">간단히 창업에 대한 계획을 설명해주세요. 문의 접수는 회원만 가능합니다.</textarea>
     </div>
