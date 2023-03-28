@@ -1,3 +1,12 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+}
+
 /* 모바일 */
 @media (min-width: 360px) {
 
@@ -69,7 +78,7 @@
 
   /* 교육안내 */
   #edu_info {
-    padding: 50px 15px;
+    padding: 30px 15px 60px;
     position: relative;
     z-index: 1;
   }
@@ -105,7 +114,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
   }
 
   .btn_edu {
@@ -159,6 +168,7 @@
     border-radius: 5px;
     border:1px solid black;
   }
+
   h1 {
     font-size:24px;
   }
