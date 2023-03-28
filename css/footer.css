@@ -13,10 +13,12 @@
 /* 약관 영역 스타일 */
 div.term{
     margin-bottom: 40px;
+    white-space: nowrap; /* width 줄여도 줄바꿈 안되게*/
 }
 div.term li{
     display: inline-block;
     padding: 0 5px;
+    font-size: 0.8rem;
 }
 div.term li>a{
     color: #fff;
@@ -26,5 +28,5 @@ div.term li>a:hover{
 }
 /* 주소 영역 스타일 */
 div.addr{
-    font-size: small;
+    font-size: 0.5rem;
 }
