@@ -13,46 +13,45 @@
     <!-- 로고 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet"/>
     <style>
-        /* 텍스트 상자 보더라인 - 'reset.css'인해 초기화 되어있음 */
         .wrap{
             padding: 0 15px;
-            /* border: 1px solid black; */
         }
         .section{
             padding: 0 10px;
             border: 1px solid black;
         }
-        input, select{
-            padding: 7px 0;
-        }        
         .start{
             margin-top:5px;
             text-align: center;
         }
-        ul{
-            display: flex;
+        /* 폼 공통 css */
+        form{
+            display:flex;
             flex-direction: column;
+            align-items: center;
+            gap:10px;
+            padding:30px 10px;
         }
-        ul>li{
-            padding: 2px;
+        /* 폼 input, select 공통 css */
+        form input, select {
+          border-radius: 5px;
+          border:1px solid black;
+          height:25px;
         }
-        .id{
-            gap: 5px;
+        /* 아이디 텍스트 상자 */
+        #id{
+            width: 70%;
         }
+        /* 아이디 중복확인 버튼 */
         #btn1{
-            width: 20%;
-        } 
-     
-        .pwd>input:first-child{
-            margin-bottom: 5px;
+            width: 27%;
+            height: 30px;
         }
-
+        li{
+            padding: 2px;
+        }        
         #radio, #chk{
             width: 15px;
-        }
-      
-        select, #phone{
-            width: 29%;
         }
         .marketing_wrap, .agree_wrap{
             border: 1px solid black;
@@ -134,8 +133,8 @@
                 <!-- 성별 부분 -->
             <li class="gender">
                 <label for="gender"><h2>성별</h2></label>
-                <input type="radio" name="gender" id="radio" value="m"> 남
-                <input type="radio" name="gender" id="radio" value="f"> 여 <br>
+                <input type="radio" name="gender" id="radio" value="m"> 남자 
+                <input type="radio" name="gender" id="radio" value="f"> 여자<br>
             </li>
 
                 <!-- 생년월일 부분 -->
