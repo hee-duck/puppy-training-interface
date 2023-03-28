@@ -11,16 +11,32 @@
     <!-- 외부 폰트, 외부 스타일 -->
     <link href="../../../css/header (상단 메뉴바 고정).css" rel="stylesheet">
     <link href="../../../css/footer.css" rel="stylesheet">
-
+        <!-- 3번탭 훈련사 소개 부트스트랩 이용 -->
+        
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="../../../images/logo/favicon.ico">
 
+    <!-- 훈련사 소개 부트스트랩 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <!--스타일 시트-->
     <style>
+        /* 폰트 스타일 */
+        @font-face {
+            font-family: 'Dovemayo_gothic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         /* 본문 전체 감싸는 부분 */
         .section {
             width: 100%;
             position: static;
+            font-family: 'Dovemayo_gothic';
         }
 
         /* 상위메뉴 제목 및 배경 이미지 */
@@ -74,6 +90,7 @@
         }
         .tab_con div {
             display: none;
+            width: 100%;
             height: 100%;
             background: #fff;
             line-height: 20px;
@@ -82,18 +99,29 @@
         }
 
         /* 본문 영역 */
-        .p1{
-            font-size: 1.5rem;
-            line-height: 30px;
-            padding-top: 10px;
-        }
-        .p2{
-            font-size: 0.8rem;
-        }
-        .introduce>img{
-            width: 100%;
-            margin-top: 5%;
-        }
+            /* 1번탭 - 회사소개 */
+            .p1{
+                font-size: 1.5rem;
+                line-height: 30px;
+                padding-top: 10px;
+                font-family: 'Dovemayo_gothic';
+            }
+            .p2{
+                font-size: 0.8rem;
+                font-family: 'Pretendard-Regular';
+            }
+            .introduce>img{
+                width: 100%;
+                margin-top: 5%;
+            }
+            /* 3번탭 - 훈련사 소개 */
+            .card{
+                margin: 0 auto;
+            }
+            .card-img-top{
+                padding: 10px 50px 0px 50px;
+            }
+            
     </style>
 
     <!-- jQuery -->
@@ -101,6 +129,7 @@
 
     <!-- 내부 js -->
     <script>
+        // 탭메뉴 js
         $(function () {
             tab('#tab', 0);
         }); //문서가 준비되면 함수 호출
@@ -158,6 +187,7 @@
         </ul>
 
         <div class="tab_con" id="tab_con">
+            <!-- 1번탭 회사소개 -->
             <div class="introduce">
                 <p class="p1">안녕하세요<br/>오구입니다.</p>
                 <p class="p2"><br/><br/>
@@ -179,8 +209,48 @@
                     반려견과 함께하는 사회가 보다 더욱 아름다워지길 바랍니다.</p>
                 <img src="../../../images/main_nav/info/info_1(대표사진!).jpg">
             </div>
-            <div>2nd Contents</div>
-            <div>3rd Contents</div>
+            <!-- 2번탭 오시는 길 / 카카오맵 api 연결-->
+            <div>
+
+            </div>
+            <!-- 3번탭 훈련사 소개 / 부트스트랩 카드 이용-->
+            <div class="container">
+                <span class="card" style="width:80%">
+                  <img class="card-img-top" src="../../../images/main_nav/info/info_heesoo.jpg" alt="Card image" style="width:100%">
+                  <span class="card-body">
+                    <h4 class="card-title">한희수</h4>
+                    <p class="card-text">중소형견 행동교정전문가</p>
+                    <a href="#" class="btn btn-primary">프로필 더보기</a>
+                  </span>
+                </span>
+                 <br>
+                <span class="card" style="width:80%">
+                  <img class="card-img-top" src="../../../images/main_nav/info/info_homin.jpg" alt="Card image" style="width:100%">
+                  <span class="card-body">
+                    <h4 class="card-title">김호민</h4>
+                    <p class="card-text">양몰이 전문가</p>
+                    <a href="#" class="btn btn-primary">프로필 더보기</a>
+                  </span>
+                </span>
+                <br>
+                <span class="card" style="width:80%">
+                    <img class="card-img-top" src="../../../images/main_nav/info/info_taewoo.jpg" alt="Card image" style="width:100%">
+                    <span class="card-body">
+                      <h4 class="card-title">이태우</h4>
+                      <p class="card-text">대형견 행동교정전문가</p>
+                      <a href="#" class="btn btn-primary">프로필 더보기</a>
+                    </span>
+                  </span>
+                  <br>
+                  <span class="card" style="width:80%">
+                    <img class="card-img-top" src="../../../images/main_nav/info/info_juyeon.jpg" alt="Card image" style="width:100%">
+                    <span class="card-body">
+                      <h4 class="card-title">김주연</h4>
+                      <p class="card-text">중소형견 행동교정전문가</p>
+                      <a href="#" class="btn btn-primary">프로필 더보기</a>
+                    </span>
+                  </span>
+              </div>
         </div>
     </section>
     <!-- footer 영역 -->

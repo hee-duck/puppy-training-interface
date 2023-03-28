@@ -1,0 +1,176 @@
+
+/* 고객센터 스타일시트 */
+    /* 본문영역 */
+    @media (min-width: 360px) {
+        .section{
+            width: 100%;
+            margin-top: 30px;
+        }
+
+      
+        
+        .search>h1{
+            margin-left: 10px;
+        }
+
+        .search_box {
+            
+            padding: 25px 0;
+            background-color: #F5F5F5;
+            border: 1px solid black;
+            margin: 20px 10px 50px 10px;
+           }
+        
+        
+
+        input[type=text] {
+            width: 390px;
+            box-sizing: border-box;
+            border: 1px solid #12ad00;
+            border-radius: 4px;
+            background-color: white;
+            background-image: url('searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 10px;
+            margin: 10px 20px;
+        }
+
+        .search_box>button {
+            width: 390px;
+            background-color: #00CC66;
+            border: 1px solid black;
+            padding:10px;
+            margin: 10px 20px;
+            border-radius:4px ;
+        }
+        .search_box>button>a{
+            color: white;
+            font-weight: bold;
+        }
+
+         /* 질문, 공지사항, 고객센터 정보 */
+         /* 질문 부분 */
+        
+         .quest>h1{
+            margin-left: 10px;
+         }
+      
+        #Accordion_wrap{
+            margin-top: 20px;
+        }
+        .que:first-child {
+            border-top: 1px solid black;
+        }
+
+        .que {
+            position: relative;
+            padding: 17px 0;
+            cursor: pointer;
+            font-size: 14px;
+            border-bottom: 1px solid #dddddd;
+
+        }
+
+        .que::before {
+            display: inline-block;
+            content: 'Q';
+            font-size: 14px;
+            color: #006633;
+            margin: 0 5px;
+        }
+
+        .que.on>span {
+            font-weight: bold;
+            color: #006633;
+        }
+
+        .anw {
+            display: none;
+            overflow: hidden;
+            font-size: 14px;
+            background-color: #f4f4f2;
+            padding: 27px 0;
+        }
+
+        .anw::before {
+            display: inline-block;
+            content: 'A';
+            font-size: 14px;
+            font-weight: bold;
+            color: #666;
+            margin: 0 5px;
+        }
+
+        .arrow-wrap {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translate(0, -50%);
+        }
+
+        .que .arrow-top {
+            display: none;
+        }
+
+        .que .arrow-bottom {
+            display: block;
+        }
+
+        .que.on .arrow-bottom {
+            display: none;
+        }
+
+        .que.on .arrow-top {
+            display: block;
+        }
+    /* 공지사항 영역 */
+        .news{
+            width:400px ;
+            margin: 20px 10px;
+            line-height: 30px;
+
+      }
+      .news>p{
+        font-size: 15px;
+      }
+      .news li{
+        font-size: 12px;
+      }
+      .news>button.plus{
+        width: 100px;
+        padding: 5px 0px;
+        border-radius: 50px;
+        border: 1px solid black;
+        display: inline-block;
+        text-align: center;
+        background-color: #000066 ;
+        box-sizing: border-box;
+        margin-top: 10px;
+        
+      }
+      button.plus>a{
+        color: white;
+        font-weight: bold;
+      }
+      /* 고객센터 정보 */
+      .faq_info{
+        width: 400ox;
+        margin: 30px 10px;
+        line-height: 30px;
+      }
+
+      .faq_info>p{
+        font-size: 20px;
+        font-weight: bold;
+        color: aqua;
+
+      }
+
+      .faq_info li{
+        font-size: 12px;
+      }
+
+    }
+
+    
