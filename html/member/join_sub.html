@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -13,10 +14,73 @@
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet"/>
     <style>
         /* 텍스트 상자 보더라인 - 'reset.css'인해 초기화 되어있음 */
-        input{
+        .wrap{
+            padding: 0 15px;
+            /* border: 1px solid black; */
+        }
+        .section{
+            padding: 0 10px;
             border: 1px solid black;
         }
+        input, select{
+            padding: 7px 0;
+        }        
+        .start{
+            margin-top:5px;
+            text-align: center;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+        }
+        ul>li{
+            padding: 2px;
+        }
+        .id{
+            gap: 5px;
+        }
+        #btn1{
+            width: 20%;
+        } 
+     
+        .pwd>input:first-child{
+            margin-bottom: 5px;
+        }
 
+        #radio, #chk{
+            width: 15px;
+        }
+      
+        select, #phone{
+            width: 29%;
+        }
+        .marketing_wrap, .agree_wrap{
+            border: 1px solid black;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .agree a{
+            color: black;
+            text-decoration: underline solid 1px;
+        }
+        .agree a:hover{
+            color: darkblue;
+            font-weight: 700;
+        }       
+        .join{
+            background-color: #000066;
+            color: #fff;
+        }
+        .index{
+            color: black;
+        }
+        .join, .index{
+            border: 1px solid black;
+            border-radius: 20px;
+            text-align: center;
+            margin: 7px auto;
+            padding: 5px 0;
+        }
     </style>
 </head>
 <body>
@@ -40,38 +104,44 @@
     <form action="" method="post" name="membership" enctype="multipart/form-data">
         <div class="section">
             <ul>
-                <li><h2>회원정보입력</h2></li>
+                <li class="start">
+                    <h2>회원정보입력</h2>
+                </li>
 
                 <!-- 아이디 부분 -->
             <li>
-                <label for="id"><h2>아이디</h2><br/></label>
+                <label for="id"><h2>아이디</h2></label></li>
+            <li class="id">
                 <input type="text" name="id" id="id" placeholder="영문(소문자), 4-12자 이내">
                 <input type="button" name="btn1" id="btn1" value="중복확인"><br/>
             </li>
                 
                 <!-- 비밀번호 부분 -->
             <li>
-                <label for="pwd"><h2>비밀번호</h2><br/></label>
-                <input type="password" name="pwd1" id="pwd1" placeholder="4-10자의 영문, 특수문자, 숫자"><br/>
-                <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호 확인"><br/>
+                <label for="pwd"><h2>비밀번호</h2></label>
+            </li>
+            <li class="pwd">
+                <input type="password" name="pwd" id="pwd" placeholder="4-10자의 영문, 특수문자, 숫자">
+                <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호 확인">
             </li>
                 
                 <!-- 이름 부분 -->
-            <li>
-                <label for="name"><h2>이름</h2><br/></label>
+            <li class="name">
+                <label for="name"><h2>이름</h2></label>
                 <input type="text" name="name" id="name"><br/>
             </li>
                 
                 <!-- 성별 부분 -->
-            <li>
-                <label for="gender">성별<br/></label>
-                <input type="radio" name="gender" value="m"> 남
-                <input type="radio" name="gender" value="f"> 여 <br>
+            <li class="gender">
+                <label for="gender"><h2>성별</h2></label>
+                <input type="radio" name="gender" id="radio" value="m"> 남
+                <input type="radio" name="gender" id="radio" value="f"> 여 <br>
             </li>
 
                 <!-- 생년월일 부분 -->
                 <li>
-                    <label for="birth"><h2>생년월일</h2><br/></label>
+                    <label for="birth"><h2>생년월일</h2></label></li>
+                    <li class="birth">
                         <select name="year" id="year">
                             <option value="">연도 선택</option>
                             <option value="2009">2009</option>
@@ -120,7 +190,6 @@
                             <option value="2">2</option>
                             <option value="1">1</option>
                         </select>
-                        </select>
                         <select name="date" id="date">
                             <option value="">일 선택</option>
                             <option value="31">31</option>
@@ -158,7 +227,8 @@
                 </li>
 
                 <!-- 휴대폰 부분 -->
-                <li>
+                <li><h2>휴대폰</h2></li>
+                <li class="phone">
                     <select name="phone" id="phone">
                         <option value="010">010</option>
                         <option value="011">011</option>
@@ -168,15 +238,22 @@
                         <option value="019">019</option>
                     </select>
                     -
-                    <input type="text" name="phone1" id="phone1">
+                    <input type="text" name="phone1" id="phone">
                     -
-                    <input type="text" name="phone2" id="phone2">
+                    <input type="text" name="phone2" id="phone">
+                </li>
+                <li>
+                    <input type="button" name="btn2" id="btn2" value="인증번호 전송">
+                </li>
+                <li>
+                    <input type="text" name="num" id="num">
+                    <input type="button" name="btn3" id="btn3" value="인증번호 확인">
                 </li>
 
                 <!-- 이메일 부분 -->
-                <li>
-                    <label for="email"><h2>이메일</h2><br/></label>
-                    <input type="text" name="email1" id="email1" > @
+                <li class="email">
+                    <label for="email"><h2>이메일</h2></label>
+                    <input type="text" name="email" id="email" > @
                     <input type="text" name="email2" id="email2" disabled value="naver.com">
                     <select name="selectEmail" id="selectEmail">
                     	 <option value="1" selected>직접입력</option>
@@ -213,34 +290,34 @@
                 </li>
                 
                 <!-- 마케팅 정보 수신동의 부분 -->
+            <div class="marketing_wrap">
                 <div class="marketing">
-                    <p>
                         <h2>마케팅 정보 수신동의</h2><br/>
                         중요한 알림 및 각종 혜택 알림을 수신합니다. <br/>
-                        주문내역 및 수업 관련사항은 수신동의와 관련없이 보내드립니다. <br/>
-                        <input type="checkbox" name="chk1" id="chk1">SNS 서비스 동의 (선택) <br/>
-                        <input type="checkbox" name="chk2" id="chk2">메일 수신 동의 (선택) <br/>
-                    </p>
+                        수업과 관련된 사항은 수신동의와 관련없이 보내드립니다. <br/>
+                        <input type="checkbox" name="chk1" id="chk">SNS 서비스 동의 (선택) <br/>
+                        <input type="checkbox" name="chk2" id="chk">메일 수신 동의 (선택) <br/>
                 </div>
-
+            </div>
                 <!-- 약관동의 부분 -->
+            <div class="agree_wrap">    
                 <div class="agree">
                     <p>
                         <h2>약관동의</h2><br/>
-                        <input type="checkbox" name="chk3" id="chk3" required><a class="term" href="#">이용약관</a> 동의 (필수) <br/>
-                        <input type="checkbox" name="chk4" id="chk4" required><a class="term" href="#">개인정보처리방침</a> 동의 (필수) <br/>
+                        <input type="checkbox" name="chk3" id="chk" required><a class="term" href="#">이용약관</a> 동의 (필수) <br/>
+                        <input type="checkbox" name="chk4" id="chk" required><a class="term" href="#">개인정보처리방침</a> 동의 (필수) <br/>
                     </p>
                 </div>
-
+            </div>
                 <!-- 가입하기 부분 -->
-                <div class="join">
-                    가입하기
-                </div>
+                <a href="#">
+                    <div class="join">가입하기</div>
+                </a>
 
                 <!-- 메인 페이지로 돌아가기 부분 -->
-                <div class="index">
-                    메인 페이지로 돌아가기
-                </div>
+                <a href="index.html"> <!-- 초기 화면으로 돌아감 -->
+                <div class="index">메인 페이지로 돌아가기</div>
+                </a>
             </ul>
         </div>
     </form>
