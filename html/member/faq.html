@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오구(Ogu)</title>
+     <!-- 초기화 css -->
+     <link href="../../css/reset.css" rel="stylesheet">
+     <!-- 외부 폰트, 외부 스타일 -->
+     <link href="../../css/header.css" rel="stylesheet">
+     <link href="../../css/footer.css" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet"/>
+     
+     <script>
+        $(".que").click(function() {
+           $(this).next(".anw").stop().slideToggle(300);
+          $(this).toggleClass('on').siblings().removeClass('on');
+          $(this).next(".anw").siblings(".anw").slideUp(300); // 1개씩 펼치기
+        });
+        </script>
+        
+     <style>
+        /* 본문영역 */
+        .search_box{ width: 100%;
+                    height: 130px;
+                    padding: 25px 18px;
+                    background-color:#F5F5F5;
+                    border: 1px solid black;
+                    margin: 20px 10px;
+
+        }
+        input[type=text]{
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #12ad00 ;
+            border-radius: 4px;
+            background-color: white;
+            background-image: url('searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            }
+        .search_box>button{
+            width: 100%;
+            background-color:#00CC66 ;
+            border: 1px solid #f4da00;
+            padding: 12px 20px 12px 40px ;
+        }   
+        
+        
+        .que:first-child{
+    border-top: 1px solid black;
+  }
+  
+.que{
+  position: relative;
+  padding: 17px 0;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 1px solid #dddddd;
+  
+}
+  
+.que::before{
+  display: inline-block;
+  content: 'Q';
+  font-size: 14px;
+  color: #006633;
+  margin: 0 5px;
+}
+
+.que.on>span{
+  font-weight: bold;
+  color: #006633; 
+}
+  
+.anw {
+  display: none;
+    overflow: hidden;
+  font-size: 14px;
+  background-color: #f4f4f2;
+  padding: 27px 0;
+}
+  
+.anw::before {
+  display: inline-block;
+  content: 'A';
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+  margin: 0 5px;
+}
+
+.arrow-wrap {
+  position: absolute;
+  top:50%; right: 10px;
+  transform: translate(0, -50%);
+}
+
+.que .arrow-top {
+  display: none;
+}
+.que .arrow-bottom {
+  display: block;
+}
+.que.on .arrow-bottom {
+  display: none;
+}
+.que.on .arrow-top {
+  display: block; 
+}
+     </style>
+
+   
+ 
+</head>
+<body>
+  
+     <!-- header 시작 -->
+     <header class="header">
+        <div class="logo">
+            <!-- 링크에는 index.html 삽입 -->
+            <a href="#"><img src="../../images/logo/logo.png">
+            <span class="logo_text">오구</span>
+            </a>
+            <span class="menu_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </div>               
+    </header>
+<!-- header 끝 -->
+
+   <!-- 본문 영역 -->
+       <!-- 검색 영역 -->
+     <div class="search">
+        <h1>고객센터</h1>
+        <div class="search_box">
+            <input type="text" name="search" id="search" placeholder="궁금하신 내용을 검색해 보세요.">
+            <button><a href="">검색</a></button>
+        </div>
+
+     </div>
+     <!--  -->
+     <div class="quest">
+        <h1>Q 자주 묻는 질문</h1>
+
+        <div id="Accordion_wrap">
+            <div class="que">
+             <span>리버풀에서 강아지 키울 수 있나요?</span>
+              <div class="arrow-wrap">
+                <span class="arrow-top">↑</span>
+               <span class="arrow-bottom">↓</span>
+              </div>
+             
+            </div>
+            <div class="anw">
+             <span>This is first answer.</span>
+            </div>
+             <div class="que">
+             <span>This is second question.</span>
+            </div>
+            <div class="anw">
+             <span>This is second answer.</span>
+            </div>
+             <div class="que">
+             <span>This is third question.</span>
+            </div>
+            <div class="anw">
+             <span>This is third answer.</span>
+            </div>
+       </div>
+     </div>
+
+     
+ 
+     <!-- footer 시작 -->
+    <footer class="footer">
+        <!-- 약관 가로 정렬 부분 -->
+        <div class="term">
+            <ul>
+                <li><a href="#" target="_blank">이용약관</a></li>
+                <li> | </li>
+                <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                <li> | </li>
+                <li><a href="#" target="_blank">가맹문의</a></li>
+                <li> | </li>
+                <li><a href="#" target="_blank">고객센터</a></li>
+            </ul>
+        </div>
+        <!-- 회사 정보(주소, 사업자번호 등) 부분 -->
+        <div class="addr">
+            <p>(주)오구 | 대표 : 한희수<br/>
+                사업자등록번호 : 123-45-67890<br/>
+                대표전화 : 1212-5959<br/>
+                주소 : 서울시 양천구 목동중앙로13다길42-2<br/>
+                COPYRIGHT(C) 2023 (주)오구 All right reserved.</p>
+        </div>
+    </footer>
+    <!-- footer 끝 -->
+ 
+    
+</body>
+</html>
