@@ -10,12 +10,14 @@
 /* 모바일 */
 @media (min-width: 360px) {
 
-      /* header */
+    /* header */
 
     /* header 전체 */
     .header{
       width: 100%;
-      height: 100%;
+      height: 90px;
+      position:fixed;
+      z-index:9999;
   }
 
   /* 오구 로고 부분 */
@@ -35,7 +37,8 @@
 
   /* 오른쪽 메뉴바(햄버거) 부분 */
   .menu_btn{
-      float:right;
+    position:absolute;
+    right:0;
       width:35px;
       padding: 30px;
       cursor:pointer;
@@ -55,6 +58,9 @@
   
 
   /* 메인슬라이더 */
+  #slider {
+    margin-top:90px;
+  }
   .swiper {
     width: 100%;
     height: 400px;
@@ -136,6 +142,7 @@
     display:flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   #edu_join::after {
