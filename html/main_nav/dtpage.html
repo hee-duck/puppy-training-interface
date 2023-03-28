@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오구(Ogu)</title>
+    <!-- 초기화 css -->
+    <link href="../../css/reset.css" rel="stylesheet">
+    <!-- 외부 폰트, 외부 스타일 -->
+    <link href="../../css/header.css" rel="stylesheet">
+    <link href="../../css/footer.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../images/logo/favicon.ico">
+
+    <!--스타일 시트-->
+    <style>
+        /* 본문 전체 감싸는 부분 */
+        .section {
+            width: 100%;
+            font-family: 'Pretendard-Regular';
+        }
+
+        /* 상위메뉴 제목 및 배경 이미지 */
+        .menu {
+            position: relative;
+        }
+        .menu>img {
+            width: 100%;
+            opacity: 0.3;
+            height: 150px;
+        }
+        .menu>h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 제목 가로,세로 중앙 정렬 */
+            z-index: 1;
+            color: black;
+            font-size: 2rem;
+        }
+
+        /* 탭 영역 */
+        .tab {
+            border: 1px solid #ddd;
+            border-left: none;
+            background: #fff;
+            overflow: hidden;
+        }
+        .tab li {
+            float: left;
+            width: 33.3%;
+            border-left: 1px solid #ddd;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .tab li {
+            display: inline-block;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .tab li.on {
+            background-color: #000066;
+            color: #fff;
+        }
+        .tab_con {
+            clear: both;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+        }
+        .tab_con div {
+            display: none;
+            height: 100px;
+            background: #fff;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <!-- 내부 js -->
+    <script>
+        $(function () {
+            tab('#tab', 0);
+        }); //문서가 준비되면 함수 호출
+
+        function tab(e, num) {
+            var num = num || 0; //숫자가 정의되지 않으면 0으로 설정
+            var menu = $(e).children(); //e로 지정된 요소의 모든 하위 요소를 가져옴
+            var con = $(e + '_con').children(); //e+_con으로 지정된 요소의 모든 하위 요소를 가져옵니다.
+            var select = $(menu).eq(num); //menu에서 인덱스 num에 있는 요소를 가져와 선택에 저장
+            var i = num; //i를 num값으로 저장
+
+            select.addClass('on'); //select로 지정된 요소에 on클래스 추가
+            con.eq(num).show(); //con에서 인덱스 num에 요소 표시
+
+            menu.click(function () { //메뉴의 모든 요소에 클릭 이벤트 리스너 추가
+                if (select !== null) {
+                    select.removeClass("on"); //select에서 on클래스 제거
+                    con.eq(i).hide(); //con에서 인덱스 i에 있는 요소 숨김
+                }
+
+                select = $(this); //클릭한 요소에 선택을 설정
+                i = $(this).index(); //i를 클릭한 요소의 인덱스로 설정
+
+                select.addClass('on'); //select에 on클래스 추가
+                con.eq(i).show(); //con에서 인덱스 i에 요소 표시
+            });
+        }
+    </script>
+    
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#headers").load("../header/header.html");
+            $("#footers").load("../footer/footer.html");
+        });
+    </script>
+</head>
+<body>
+    <!-- header 영역 -->
+    <div id="headers"></div>
+
+    <!-- 본문 영역 -->
+    <section class="section">
+        <!-- 상위 메뉴 배경 이미지 및 메뉴명 -->
+        <div class="menu">
+            <img src="../../images/main_nav/info/info_1.jpg">
+            <h1>어서오구(O-GU)</h1>
+        </div>
+        <!-- 탭 메뉴 -->
+        <ul class="tab" id="tab">
+            <li>회사소개</li>
+            <li>오시는 길</li>
+            <li>훈련사 소개</li>
+        </ul>
+
+        <div class="tab_con" id="tab_con">
+            <div>1st Contents</div>
+            <div>2nd Contents</div>
+            <div>3rd Contents</div>
+        </div>
+    </section>
+    <!-- footer 영역 -->
+    <div id="footers"></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+    /* header */
+
+    /* header 전체 */
+    .header{
+        width: 100%;
+        height: 100%;
+    }
+
+    /* 오구 로고 부분 */
+    .logo img{
+        width: 80px;
+        height: 80px;
+        margin-right: 5px;
+    }
+
+    /* 로고 옆 오구 텍스트 부분 */
+    div.logo .logo_text{
+        color: black;
+        line-height: 90px;
+        font-size: 3rem;
+        font-family: 'Gugi';
+    }
+
+    /* 오른쪽 메뉴바(햄버거) 부분 */
+    .menu_btn{
+        float:right;
+        width:35px;
+        padding: 30px;
+        cursor:pointer;
+    }
+
+    .menu_btn span{
+        display:block;
+        width:100%;
+        height:4px;
+        background: black;
+    }
+
+    .menu_btn span:nth-child(2){
+        margin:5px 0;
+    }
+        
+    

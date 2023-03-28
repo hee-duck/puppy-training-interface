@@ -1,0 +1,30 @@
+/* footer 스타일 */
+.footer{
+    width: 100%;
+    background-color: #000066;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+/* 약관 영역 스타일 */
+div.term{
+    margin-bottom: 40px;
+}
+div.term li{
+    display: inline-block;
+    padding: 0 5px;
+}
+div.term li>a{
+    color: #fff;
+}
+div.term li>a:hover{
+    color: #66B2FF;
+}
+/* 주소 영역 스타일 */
+div.addr{
+    font-size: small;
+}
