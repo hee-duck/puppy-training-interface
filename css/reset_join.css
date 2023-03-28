@@ -1,0 +1,71 @@
+/* !!!------ 회원가입 페이지 전용 css -------- !!! */
+
+/* 웹폰트 CSS */
+/*
+약관 : 노토 산스 : <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+메인폰트 -- 배너, 본문 : 프리텐다드
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+메뉴 : 둘기마요
+@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+/* CSS 초기화 */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
+margin:0;
+padding:0;
+border:0;
+outline:0;
+font-size:100%;
+vertical-align:baseline;
+background:transparent;
+}
+
+/* 시맨틱 태그를 지원하지 않는 브라우저를 위해 */
+article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section{
+display:block;
+}
+
+nav ul, li{
+list-style:none;
+margin:0; padding:0; border:0;
+}
+
+a{
+margin:0;
+padding:0;
+font-size:100%;
+vertical-align:baseline;
+background:transparent;
+text-decoration:none;
+}
+
+img, div{
+vertical-align:top; /* 원치 않는 img 태그의 간격을 없애기 위함 */
+}
+
+/* form 태그 초기화 삭제 */
+
+/* input, textarea{
+width:100%;
+margin:0;
+padding:0;
+border:0;
+color: #666666;
+font-size:12px;
+vertical-align:top;
+border-radius:0;
+box-sizing:content-box;
+appearance:none;
+} */
