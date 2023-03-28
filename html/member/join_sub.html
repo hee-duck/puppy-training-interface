@@ -11,7 +11,11 @@
     <!-- 로고 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet"/>
     <style>
-        
+        /* 텍스트 상자 보더라인 - 'reset.css'인해 초기화 되어있음 */
+        input{
+            border: 1px solid black;
+        }
+
     </style>
 </head>
 <body>
@@ -30,11 +34,44 @@
         </div>               
     </header>
 <!-- header 끝 -->
+<!-- 회원가입 시작 -->
 <div class="wrap">
-    <div class="section">
+    <form action="" method="post" name="membership" enctype="multipart/form-data">
+        <div class="section">
+            <ul>
+                <li><h2>회원정보입력</h2></li>
 
-    </div>
+                <!-- 아이디 부분 -->
+            <li>
+                <label for="id"><h2>아이디</h2><br/></label>
+                <input type="text" name="id" id="id">
+                <input type="button" name="btn1" id="btn1" value="중복확인"><br/>
+            </li>
+                
+                <!-- 비밀번호 부분 -->
+            <li>
+                <label for="pwd"><h2>비밀번호</h2><br/></label>
+                <input type="password" name="pwd1" id="pwd1"><br/>
+                <input type="password" name="pwd2" id="pwd2"><br/>
+            </li>
+                
+                <!-- 이름 부분 -->
+            <li>
+                <label for="name"><h2>이름</h2><br/></label>
+                <input type="text" name="name" id="name"><br/>
+            </li>
+                
+                <!-- 성별 부분 -->
+            <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </form>
 </div>
+    <!-- 회원가입 끝 -->
+
+    <!-- footer 시작 -->
     <footer class="footer">
         <!-- 약관 가로 정렬 부분 -->
         <div class="term">
@@ -57,5 +94,6 @@
                 COPYRIGHT(C) 2023 (주)오구 All right reserved.</p>
         </div>
     </footer>
+    <!-- footer 끝 -->
 </body>
 </html>
