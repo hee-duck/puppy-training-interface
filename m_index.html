@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오구</title>
+
+    <!-- 외부 스타일 링크 -->
+    <link href="./css/reset.css" rel="stylesheet">
+
+    <!-- 모바일 인덱스 스타일 -->
+    <style>
+        @media (min-width: 360px){
+        /* 지점안내 스타일 */
+        .store_info{
+           
+            padding: 50px 15px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            
+        }
+        .store_info::after{/* 가상요소 정하기 */
+            width: 100%;
+            height:100%;
+            content: "";
+            background:url(./images/index/store/store_01.jpeg) no-repeat top center;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.6;
+        }
+        
+       
+
+        div.text_box>h1{
+            font-weight: bold;
+            font-size: 24pt;
+           }
+         
+        div.btn{
+            text-align: center;
+            padding: 50px;
+            
+    }
+        div.btn>button{
+            border-radius: 20px;
+        }
+
+        /* 가맹문의 스타일 */
+        .store_apply{
+            padding: 50px 15px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .store_apply::after{
+            width: 100%;
+            height: 100%;
+            content:"";
+            background:url(./images/index/store/store_02.jpg) no-repeat top center;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.6;
+            
+        }
+        form.apply_form{
+            text-align: center;
+        }
+        .store_apply>div.text_box{
+            text-align: center;
+            
+        }
+       
+        input.name{
+            width: 49%;
+            height:25px ;
+            border-radius: 4px;
+            margin: 20px 20px;
+
+        }
+        form.apply_form>div.number{
+            margin-bottom: 20px;
+           
+        }
+        select#tel1{
+        padding: 5px;
+        }
+        input#tel2{
+            width: 16.333%;
+            height: 25px;
+        }
+        input#tel3{
+            width: 16.333%;
+            height: 25px;
+        }
+        input#email{
+            width: 49%;
+            height: 25px;
+            margin-bottom: 20px;
+        }
+       
+        textarea.memo{
+            width: 49%;
+            height: 120px;
+            display: block;
+            margin-bottom: 20px;
+            margin: 0 100px 20px 100px;
+            
+        }
+    }
+       
+   
+      
+            
+    </style>
+</head>
+<body>
+<!-- 모바일 인덱스 부분 -->
+<!-- 지점안내 부분 -->
+<div class="store_info">
+<div class="text_box">
+    <h1>오구는 어디에서든<br/>만날 수 있어요</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+<div class="btn">
+<button><a href="">지점안내</a></button>
+</div>
+
+</div>  
+
+<!-- 가맹문의 부분 -->
+<div class="store_apply">
+    <div class="text_box">
+        <h1>아름다운 반려문화를<br/>만들고싶다면</h1>
+        <p>아래 가맹 신청 양식을 작성해주세요.</p>
+        <p>확인 후 상담원이 빠르게 답변을 드릴게요.</p>
+    </div>
+
+    <form action="" class="apply_form" method="post">
+        <input type="text" class="name"  name="name" id="name" placeholder="이름">
+        <div class="number">
+            <select  name="tel1" id="tel1">
+                <option value="010"selected>010</option>
+                <option value="011">011</option>
+                <option value="016">016</option>
+                <option value="017">017</option>
+                <option value="018">018</option>
+                <option value="019">019</option>
+         </select>
+         <span>-</span>
+         <input type="text" name="tel2" id="tel2">
+         <span>-</span>
+         <input type="text" name="tel3" id="tel3">
+        </div>
+     <input type="email" id="email" name="email" placeholder="이메일">
+     <div class="text_memo">
+     <textarea class="memo">간단히 창업에 대한 계획을 설명해주세요. 문의 접수는 회원만 가능합니다.</textarea>
+    </div>
+     <button type="submit" class="btn"><a href="">문의하기</a></button>
+    </form>
+
+</div>
+    
+</body>
+</html>
