@@ -20,7 +20,6 @@
         /* 본문 전체 감싸는 부분 */
         .section {
             width: 100%;
-            font-family: 'Pretendard-Regular';
             position: static;
         }
 
@@ -42,6 +41,7 @@
             z-index: 1;
             color: black;
             font-size: 2rem;
+            white-space: nowrap; /* width 줄여도 줄바꿈 안되게*/
         }
 
         /* 탭 영역 */
@@ -74,14 +74,26 @@
         }
         .tab_con div {
             display: none;
-            height: 100px;
+            height: 100%;
             background: #fff;
-            line-height: 100px;
+            line-height: 20px;
             text-align: center;
+            padding: 20px 0px;
         }
 
         /* 본문 영역 */
-
+        .p1{
+            font-size: 1.5rem;
+            line-height: 30px;
+            padding-top: 10px;
+        }
+        .p2{
+            font-size: 0.8rem;
+        }
+        .introduce>img{
+            width: 100%;
+            margin-top: 5%;
+        }
     </style>
 
     <!-- jQuery -->
@@ -135,7 +147,7 @@
     <section class="section">
         <!-- 상위 메뉴 배경 이미지 및 메뉴명 -->
         <div class="menu">
-            <img src="../../images/main_nav/info/info_1.jpg">
+            <img src="../../../images/main_nav/info/info_1.jpg">
             <h1>어서오구(O-GU)</h1>
         </div>
         <!-- 탭 메뉴 -->
@@ -146,7 +158,27 @@
         </ul>
 
         <div class="tab_con" id="tab_con">
-            <div>1st Contents</div>
+            <div class="introduce">
+                <p class="p1">안녕하세요<br/>오구입니다.</p>
+                <p class="p2"><br/><br/>
+                    많은 분이 반려견과 살아가고 있습니다.<br/>
+                    반려견에게 교육이 필요한 시기는 언제일까요?<br/>
+                    그리고 반려견이 그러한 행동을 하는 이유는 무엇일까요?<br/>
+                    문제 행동이라고 말하는 짖음과 무는 행동을 왜 할까요?<br/><br/>
+                    오구는 행동을 문제로 바라보지 않고 반려견을 이해하기에서 시작합니다.<br/>
+                    왜 짖는 행동을 하는지, 왜 무는 행동을 하는지..<br/><br/>
+                    오구는 행동이 아닌 짖게 하였던 마음이 문제라고 합니다.<br/>
+                    그럴 수밖에 없었던 반려견의 상황을 생각합니다.<br/><br/>
+                    아이들은 항상 감정을 표현했지만 우리가 신호를 눈치채지 못했을겁니다.<br/><br/>
+                    그리고 우리는 지나친 신호를 보지 못하고 행동이 문제라고 하죠.<br/><br/>
+                    강압적인 교육은 사랑하는 반려견과의 관계에서 좋지 않습니다.<br/>
+                    그렇다고 오구가 무조건 칭찬만 하는 교육을 하진 않습니다.<br/>
+                    때로는 거절을 통해 옳고 그른 행동을 알려주며 우리가 살고있는<br/>
+                    이 복잡한 도시에 적응해 함께 잘 살아갈 수 있도록 오구는 교육합니다.<br/><br/>
+                    오구는 보호자님과 반려견이, 더 나아가 비반려인까지도<br/>
+                    반려견과 함께하는 사회가 보다 더욱 아름다워지길 바랍니다.</p>
+                <img src="../../../images/main_nav/info/info_1(대표사진!).jpg">
+            </div>
             <div>2nd Contents</div>
             <div>3rd Contents</div>
         </div>
