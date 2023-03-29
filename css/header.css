@@ -3,7 +3,11 @@
     /* header 전체 */
     .header{
         width: 100%;
-        height: 100%;
+        height: 90px;
+        z-index:9999;
+        position: fixed;
+        top:0;
+        background: #fff;
     }
 
     /* 오구 로고 부분 */
@@ -23,7 +27,10 @@
 
     /* 오른쪽 메뉴바(햄버거) 부분 */
     .menu_btn{
-        float:right;
+        position:absolute;
+        top:50%;
+        transform: translateY(-50%);
+        right:0;
         width:35px;
         padding: 30px;
         cursor:pointer;
