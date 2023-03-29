@@ -1,13 +1,14 @@
     /* header */
 
     /* header 전체 */
-    .header{
+    .header {
         width: 100%;
         height: 90px;
         z-index:9999;
         position: fixed;
         top:0;
         background: #fff;
+        border-bottom:1px solid #999;
     }
 
     /* 오구 로고 부분 */

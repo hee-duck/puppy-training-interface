@@ -96,14 +96,14 @@ a {
   }
 
 
-  .btn_edu_wrap {
+  .btn_index_wrap {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 10px;
   }
 
-  .btn_edu {
+  .btn_index {
     width: 100px;
     padding: 10px 0px;
     border-radius: 50px;

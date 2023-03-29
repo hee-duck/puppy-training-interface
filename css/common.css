@@ -1,0 +1,77 @@
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  }
+  
+  /* 기본 폰트 */
+  h1 {
+    font-family: 'Pretendard-Regular', sans-serif;
+    font-weight: 700;
+    font-size:30px;
+  }
+  
+  p {
+    font-family: 'Pretendard-Regular', sans-serif;
+    font-weight: 400;
+    font-size:19px;
+  }
+  
+  a {
+    font-family: 'Pretendard-Regular', sans-serif;
+    font-weight: 400;
+    font-size:16px;
+  }
+
+   /* form 공통 */
+   form.index_form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    padding:30px 10px;
+  }
+  .index_form input {
+    border-radius: 5px;
+    border:1px solid black;
+    height:40px;
+  }
+  .index_form select {
+    width:100%;
+    border-radius: 5px;
+    border:1px solid black;
+    height:40px;
+  }
+
+  form span {
+    width:60px;
+    display:inline-block;
+    text-align:center;
+    line-height:34px;
+    font-size:30px;
+  }
+  
+  .name{
+    width:100%;
+  
+  }
+  form.index_form>div.number{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+  }
+  
+  .telbox1 {
+    width:100%;
+  }
+  
+  .telbox2 {
+    width:100%;
+  }
+  
+  .telbox3 {
+    width:100%;
+  }
+  
