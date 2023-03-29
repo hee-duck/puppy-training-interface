@@ -5,6 +5,20 @@
     font-weight: 400;
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
   }
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  }
+
+@font-face {
+    font-family: 'Gugi';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.googleapis.com/css2?family=Gugi&display=swap') format('woff');
+  }
   
   /* 기본 폰트 */
   h1 {
@@ -73,5 +87,21 @@
   
   .telbox3 {
     width:100%;
+  }
+  
+  .email{
+    width:100%;
+  
+  }
+  
+  .text_memo{
+    width:100%;
+    
+  }
+  
+  .memo {
+    height:150px;
+    border-radius: 5px;
+    border:1px solid black;
   }
   
