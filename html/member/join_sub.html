@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -24,19 +22,28 @@
             margin-top:5px;
             text-align: center;
         }
-        /* 폼 공통 css */
+        /* 폼 공통 css
         form{
             display:flex;
             flex-direction: column;
             align-items: center;
             gap:10px;
             padding:30px 10px;
-        }
+        } */
         /* 폼 input, select 공통 css */
         form input, select {
           border-radius: 5px;
           border:1px solid black;
           height:25px;
+        }
+        
+        li{
+            padding: 2px 0;
+        }        
+        .id{
+            display: flex;
+            flex-direction: row;
+            gap: 2px;
         }
         /* 아이디 텍스트 상자 */
         #id{
@@ -44,15 +51,95 @@
         }
         /* 아이디 중복확인 버튼 */
         #btn1{
-            width: 27%;
+            width: 30%;
             height: 30px;
         }
-        li{
-            padding: 2px;
-        }        
-        #radio, #chk{
-            width: 15px;
+        #btn1:hover{
+            cursor: pointer;
+            color: #fff;
+            background-color: #000066;
         }
+        /* 비밀번호 부분 */
+        .pwd{
+            display: flex;
+            flex-direction: column;
+        }
+        #pwd{
+            margin: 3px 0;
+        }
+        /* 이름 부분 */
+        .name{
+            margin-bottom: 5px;
+        }
+        #name{
+            width: 98.5%;
+        }
+        /* 성별, 체크박스 높이 조정 */
+        .gender{
+            margin: 5px 0;
+        }
+        #radio, #chk{
+            height: 12px;
+        }
+        /* 생년월일 부분 */
+        .birth{
+            display: flex;
+            justify-content: space-between;
+        }
+        #year, #month, #date{
+            width: 33%;
+            height: 30px;
+            margin-bottom: 5px;
+        }
+        /* 휴대폰 부분 */
+        #phone{
+            width: 30%;
+            height: 28px; /* ?? */
+        }
+        #phone2{
+            width: 30%;
+        }
+        /* 인증번호 전송 부분 */
+        #btn2{
+            width: 100%;
+            cursor: pointer;
+            background-color: #fff;
+        }
+        #btn2:hover{
+            color: #fff;
+            background-color: #000066;
+        }
+        /* 인증번호 입력 부분 */
+        .number{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 2px;
+        }
+        #num{
+            width:70%;
+        }
+        #btn3{
+            width: 30%;
+            height: 30px;
+            color: #fff;
+            background-color: black;
+        }
+        #btn3:hover{
+            cursor: pointer;
+            color: #fff;
+            background-color: #000066;
+        }
+        /* 이메일 부분 */
+        #email{
+            width: 46%;
+        }
+        #selectEmail{
+            width: 100%;
+            height: 30px;
+            margin: 5px 0;
+        }
+        /* 하단 약관 부분 */
         .marketing_wrap, .agree_wrap{
             border: 1px solid black;
             padding: 5px;
@@ -69,6 +156,11 @@
         .join{
             background-color: #000066;
             color: #fff;
+        }
+        .join:hover, .index:hover{
+            cursor: pointer; 
+            color: #fff;
+            background-color: #000066;  
         }
         .index{
             color: black;
@@ -100,8 +192,8 @@
 <!-- header 끝 -->
 <!-- 회원가입 시작 -->
 <div class="wrap">
-    <form action="" method="post" name="membership" enctype="multipart/form-data">
-        <div class="section">
+    <div class="section">
+        <form action="" method="post" name="membership" enctype="multipart/form-data">
             <ul>
                 <li class="start">
                     <h2>회원정보입력</h2>
@@ -121,7 +213,7 @@
             </li>
             <li class="pwd">
                 <input type="password" name="pwd" id="pwd" placeholder="4-10자의 영문, 특수문자, 숫자">
-                <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호 확인">
+                <input type="password" name="pwd2" id="pwd" placeholder="비밀번호 확인">
             </li>
                 
                 <!-- 이름 부분 -->
@@ -226,7 +318,9 @@
                 </li>
 
                 <!-- 휴대폰 부분 -->
-                <li><h2>휴대폰</h2></li>
+                <li>
+                    <h2>휴대폰</h2>
+                </li>
                 <li class="phone">
                     <select name="phone" id="phone">
                         <option value="010">010</option>
@@ -236,24 +330,27 @@
                         <option value="018">018</option>
                         <option value="019">019</option>
                     </select>
-                    -
-                    <input type="text" name="phone1" id="phone">
-                    -
-                    <input type="text" name="phone2" id="phone">
+                    <span>-</span>
+                    <input type="text" name="phone1" id="phone2">
+                    <span>-</span>
+                    <input type="text" name="phone2" id="phone2">
                 </li>
+                <!-- 인증번호 전송 부분 -->
                 <li>
                     <input type="button" name="btn2" id="btn2" value="인증번호 전송">
                 </li>
-                <li>
+                <!-- 인증번호 입력 부분 -->
+                <li class="number">
                     <input type="text" name="num" id="num">
                     <input type="button" name="btn3" id="btn3" value="인증번호 확인">
                 </li>
 
                 <!-- 이메일 부분 -->
+                <li>
+                    <label for="email"><h2>이메일</h2></label></li>
                 <li class="email">
-                    <label for="email"><h2>이메일</h2></label>
                     <input type="text" name="email" id="email" > @
-                    <input type="text" name="email2" id="email2" disabled value="naver.com">
+                    <input type="text" name="email2" id="email" disabled value="naver.com">
                     <select name="selectEmail" id="selectEmail">
                     	 <option value="1" selected>직접입력</option>
                     	 <option value="naver.com" >naver.com</option>
@@ -270,6 +367,7 @@
                     	 <option value="hanmir.com">hanmir.com</option>
                     	 <option value="paran.com">paran.com</option>
                     </select>
+                    <!-- 스크립트 부분 -->
                     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
                     <script type="text/javascript">
                     //이메일 입력방식 선택
@@ -318,8 +416,8 @@
                 <div class="index">메인 페이지로 돌아가기</div>
                 </a>
             </ul>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
     <!-- 회원가입 끝 -->
 
@@ -328,16 +426,16 @@
         <!-- 약관 가로 정렬 부분 -->
         <div class="term">
             <ul>
-                <li><a href="#" target="_blank">이용약관</a></li>
+                <li‎‎˃̵ࡇ˂̵a href="#" target="_blank">이용약관</a></li>
                 <li> | </li>
-                <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                <li‎‎˃̵ࡇ˂̵a href="#" target="_blank">개인정보처리방침</a></li>
                 <li> | </li>
-                <li><a href="#" target="_blank">가맹문의</a></li>
+                <li‎‎˃̵ࡇ˂̵a href="#" target="_blank">가맹문의</a></li>
                 <li> | </li>
-                <li><a href="#" target="_blank">고객센터</a></li>
+                <li‎‎˃̵ࡇ˂̵a href="#" target="_blank">고객센터</a></li>
             </ul>
         </div>
-        <!-- 회사 정보(주소, 사업자번호 등) 부분 -->
+        <!— 회사 정보(주소, 사업자번호 등) 부분 —>
         <div class="addr">
             <p>(주)오구 | 대표 : 한희수<br/>
                 사업자등록번호 : 123-45-67890<br/>
@@ -346,6 +444,6 @@
                 COPYRIGHT(C) 2023 (주)오구 All right reserved.</p>
         </div>
     </footer>
-    <!-- footer 끝 -->
+    <!— footer 끝 —>
 </body>
 </html>
