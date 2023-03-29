@@ -11,19 +11,34 @@
     <!-- 외부 폰트, 외부 스타일 -->
     <link href="../../../css/header.css" rel="stylesheet">
     <link href="../../../css/footer.css" rel="stylesheet">
-
+      
+        
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="../../../images/logo/favicon.ico">
 
+
     <!--스타일 시트-->
     <style>
+        /* 폰트 스타일 */
+        @font-face {
+            font-family: 'Dovemayo_gothic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #wrap{
+            min-width: 360px;
+        }
+
         /* 본문 전체 감싸는 부분 */
         .section {
             width: 100%;
-            font-family: 'Pretendard-Regular';
             position: static;
+            font-family: 'Dovemayo_gothic';
+            margin-top: 90px;
+          
         }
-
 
         /* 상위메뉴 제목 및 배경 이미지 */
         .menu {
@@ -33,6 +48,7 @@
             width: 100%;
             opacity: 0.3;
             height: 150px;
+          
         }
         .menu>h1 {
             position: absolute;
@@ -43,6 +59,7 @@
             z-index: 1;
             color: black;
             font-size: 2rem;
+            white-space: nowrap; /* width 줄여도 줄바꿈 안되게 */
         }
 
         /* 탭 영역 */
@@ -74,55 +91,119 @@
             border: 1px solid #ddd;
         }
         .tab_con div {
-            display: none;
-            height: 100px;
+           /*  display: none; */
+            width: 100%;
+            height: 100%;
             background: #fff;
-            line-height: 100px;
+            line-height: 20px;
             text-align: center;
+            padding: 20px 0px;
         }
-    </style>
 
-    <!-- jQuery -->
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-
-    <!-- 내부 js -->
-    <script>
-        $(function () {
-            tab('#tab', 0);
-        }); //문서가 준비되면 함수 호출
-
-        function tab(e, num) {
-            var num = num || 0; //숫자가 정의되지 않으면 0으로 설정
-            var menu = $(e).children(); //e로 지정된 요소의 모든 하위 요소를 가져옴
-            var con = $(e + '_con').children(); //e+_con으로 지정된 요소의 모든 하위 요소를 가져옵니다.
-            var select = $(menu).eq(num); //menu에서 인덱스 num에 있는 요소를 가져와 선택에 저장
-            var i = num; //i를 num값으로 저장
-
-            select.addClass('on'); //select로 지정된 요소에 on클래스 추가
-            con.eq(num).show(); //con에서 인덱스 num에 요소 표시
-
-            menu.click(function () { //메뉴의 모든 요소에 클릭 이벤트 리스너 추가
-                if (select !== null) {
-                    select.removeClass("on"); //select에서 on클래스 제거
-                    con.eq(i).hide(); //con에서 인덱스 i에 있는 요소 숨김
-                }
-
-                select = $(this); //클릭한 요소에 선택을 설정
-                i = $(this).index(); //i를 클릭한 요소의 인덱스로 설정
-
-                select.addClass('on'); //select에 on클래스 추가
-                con.eq(i).show(); //con에서 인덱스 i에 요소 표시
-            });
+        /* 영상교육 전체 */
+        .edu{
+            margin-top: 50px;
         }
-    </script>
-    
-   
+      
+        /* 영상교육 이미지 영역 */
+        
+        .edu_img{
+            width: 100%;
+            
+
+        }
+        .edu_box1{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+       
+
+        .img_box1>img{
+            width: 100%;
+            height: 350px;
+        }
+
+        .text_box1{
+            margin: 0 10px ;
+        }
+
+        .text_box1>.number{
+            font-size: 40px;
+            font-weight: bold;
+            color: #000066;
+            text-align: left;
+        }
+
+        .text_box1>h1{
+            text-align: left;
+            margin-bottom: 10px;
+
+        }
+
+        .text_box1>p{
+            text-align: left;
+
+        }
+        
+        .edu_box2{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+         }
+
+        .img_box2>img{
+            width: 100%;
+            height: 350px;
+            
+        }
+
+        .text_box2{
+            margin: 0 10px;
+        }
+      
+        .text_box2>.number{
+            font-size: 40px;
+            font-weight: bold;
+            color: #000066;
+            text-align: left;
+        }
+        .text_box2>h1{
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .text_box2>p{
+            text-align: left;
+        }
+
+        /* 영상교육 영상 영역 */
+
+        .edu_video{
+            display: flex;
+            
+        }
+
+        .video1>video{
+            width: 100%;
+            height: 350px;
+        }
+
+        .video2>video{
+            width: 100%;
+            height: 350px;
+
+        }
+
+        </style>
+
+       
 </head>
 
 <body>
     <div id="wrap">
+
    <!-- header 시작 -->
- <div class="header">
+ <header id="header">
     <div class="logo">
         <!-- 링크에는 index.html 삽입 -->
         <a href="#"><img src="../../../images/logo/logo.png">
@@ -134,7 +215,7 @@
             <span></span>
         </span>
     </div>
-</div>
+</header>
 <!-- header 끝 -->
 
     <!-- 본문 영역 -->
@@ -152,12 +233,14 @@
         </ul>
 
         <div class="tab_con" id="tab_con">
+            <!-- 1번탭 영상교육 -->
             <div class="edu">
-                <!-- 사진 부분 -->
+                <!-- 이미지 영역 -->
                 <div class="edu_img">
-                
-                     <div class="img_box1">
-                      <img src="../../../images/main_nav/edu/edu_player1.jpg">
+                     
+                     <div class="edu_box1">
+                        <div class="img_box1">
+                      <img src="../../../images/main_nav/edu/edu_video1.jpg">
                      </div>
 
                      <div class="text_box1">
@@ -166,25 +249,44 @@
                       <p>오구교육은 한 가지 문제행동의 개선만을 목적으로 하는 것이 아닌 반려견의 더 나은 삶을 위한 총체적 접근을 원칙으로 합니다. 반려견의 마음을 알기 위해 그들의 언어를 공부하고 칭찬과 거절을 병행하며 오구해주는 교육을 오구교육이라고 합니다.
                       </p>
                      </div>
-
-                     <div class="img_box2">
-                    <img src="../../../images/main_nav/edu/edu_player2.jpg">
                     </div>
+
+                     <div class="edu_box2">
+                        <div class="img_box2">
+                    <img src="../../../images/main_nav/edu/edu_videor2.jpg">
+                    </div>
+                    
 
                      <div class="text_box2">
                     <div class="number">02</div>
                     <h1>오구의 노하우를 담았습니다.</h1>
                     <p>반려견의 언어인 커밍시그널부터 가장 기초가 되는 산책 교육,예절교육,분리불안 등 다양한 토픽에 대한 한희수 오구훈련사님의 노하우를 담았습니다. </p>
                     </div>
+                </div>
 
                 
                 </div>
-                 <!-- 글 부분 -->
+                 <!-- 글 영역 -->
                 <div class="edu_text">
+                    <h1>영상교육 듣는 방법</h1>
+                    <p>오구 교육은 이해, 관찰, 활동, 세부교육의 단계를 거치며 반려견의 회복을 돕습니다.
+                        이해, 관찰, 활동은 국,영,수와 같이 오구교육의 기초가 되는 과목입니다.
+                        위 세 가지를 중심으로 열심히 교육하시며 산책, 분리불안, 화장실 등의 세부 교육을 진행하시면 효과적입니다.
+                    </p>
+                    
+
     
                 </div>
-                    <!-- 영상 부분 -->       
-                <div class="player">
+                    <!-- 영상 영역 -->       
+                <div class="edu_video">
+                   <div class="video1">
+                    <video src="../../../images/main_nav/edu/edu_veo1.mp4" autoplay controls></video>
+                    <!-- control=동영상을 웹사이트에서 control할 수 있게 하기 -->
+                   </div>
+                   <div class="video2">
+                    <video src="../../../images/main_nav/edu/edu_veo2.mp4" autoplay controls></video>
+
+                   </div>
     
                 </div>
     
@@ -197,7 +299,7 @@
 
     </section>
 
-    <footer class="footer">
+    <footer id="footer">
         <!-- 약관 가로 정렬 부분 -->
         <div class="term">
             <ul>
