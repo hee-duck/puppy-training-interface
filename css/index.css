@@ -7,8 +7,31 @@
   src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
 }
 
+/* 기본 폰트 */
+h1 {
+  font-family: 'Pretendard-Regular', sans-serif;
+  font-weight: 700;
+  font-size:30px;
+}
+
+p {
+  font-family: 'Pretendard-Regular', sans-serif;
+  font-weight: 400;
+  font-size:16px;
+}
+
+a {
+  font-family: 'Pretendard-Regular', sans-serif;
+  font-weight: 400;
+  font-size:16px;
+}
+
+/* 360이하로 안줄어들게 */
+#wrap {
+  min-width:360px;
+}
+
 /* 모바일 */
-@media (min-width: 360px) {
 
   /* 메인슬라이더 */
   #slider {
@@ -33,6 +56,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  /* 본문 텍스트박스 공통 */
+  .text_box {
+    display:flex;
+    flex-direction: column;
+    gap:10px;
   }
 
   /* 교육안내 */
@@ -65,9 +95,6 @@
     gap: 20px;
   }
 
-  .edu_info_txt h1 {
-    font-size: 30px;
-  }
 
   .btn_edu_wrap {
     display: flex;
@@ -111,6 +138,7 @@
     opacity: 0.6;
   }
 
+
   /* form 공통 */
   form.index_form {
     display:flex;
@@ -127,10 +155,6 @@
   .index_form select {
     border-radius: 5px;
     border:1px solid black;
-  }
-
-  h1 {
-    font-size:24px;
   }
   
   .name{
@@ -198,10 +222,6 @@
     opacity: 0.6;
 }
 
-.text_box>h1{
-  font-weight: bold;
-  font-size: 24pt;
- }
 
 .btn{
   text-align: center;
@@ -261,37 +281,3 @@ text-align: center;
   height: 40px;
 }
 
-/* footer 스타일 */
-.footer{
-  width: 100%;
-  background-color: #000066;
-  color: #fff;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0px;
-}
-/* 약관 영역 스타일 */
-div.term{
-  margin-bottom: 40px;
-  white-space: nowrap; /* width 줄여도 줄바꿈 안되게*/
-}
-div.term li{
-  display: inline-block;
-  padding: 0 5px;
-  font-size: 0.8rem;
-}
-div.term li>a{
-  color: #fff;
-}
-div.term li>a:hover{
-  color: #66B2FF;
-}
-/* 주소 영역 스타일 */
-div.addr{
-  font-size: 0.5rem;
-}
-
-}
