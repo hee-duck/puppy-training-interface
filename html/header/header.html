@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오구(Ogu)</title>
     <!-- 초기화 css -->
-    <link href="../css/reset.css" rel="stylesheet"/>
+    <link href="../../css/reset.css" rel="stylesheet"/>
     
     <!-- header 외부 스타일시트 -->
     <link href="../../css/header.css" rel="stylesheet"/>
@@ -16,30 +16,65 @@
 </head>
 <body>
     <!-- header 시작 -->
-        <div class="header">
+        <header id="header">
+            <!-- 로고 영역 -->
             <div class="logo">
                 <!-- 링크에는 index.html 삽입 -->
                 <a href="#"><img src="../../images/logo/logo.png">
                 <span class="logo_text">오구</span>
                 </a>
-                <!-- 햄버거 버튼 시작 == 희수 -->
-                <input type="checkbox" id="check_box" />
-                <label for="check_box">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </label>
-                <div id="side_menu">
-                  <ul>
-                    <li>어서오구(O-GU)</li>
-                        <li><a href="#">회사소개</a></li>
-                        <li><a href="#">오시는길</a></li>
-                        <li><a href="#">훈련사 소개</a></li>
-                  </ul>
-                </div>
-                <!-- 햄버거 버튼 끝 ==희수 -->
             </div>
-        </div>
+            <!-- 메뉴 영역 감싸기 -->
+            <div id="menu-container">
+                <div id="menu-wrapper">
+                <!-- 햄버거 버튼 모양 -->
+                <span class="menu_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                </span>
+                </div>
+                <!-- 햄버거 버튼 내용 -->
+                <ul class="mo_gnb">
+                    <li id = "nav1" class="toggle accordion-toggle">
+                        <span class="icon-plus"></span>
+                        <a class="big_menu">어서오구</a>
+                        <ul class="menu-submenu accordion-toggle">
+                            <li><a class="head" href="#">회사소개</a></li>
+                            <li><a class="head" href="#">오시는길</a></li>
+                            <li><a class="head" href="#">훈련사 소개</a></li>
+                        </ul>
+                    </li>
+                    <li id = "nav2" class="toggle accordion-toggle">
+                        <span class="icon-plus"></span>
+                        <a class="big_menu">공부하자구</a>
+                        <ul class="menu-submenu accordion-toggle">
+                            <li><a class="head" href="#">영상교육</a></li>
+                            <li><a class="head" href="#">그룹교육</a></li>
+                            <li><a class="head" href="#">개인교육</a></li>
+                        </ul>
+                    </li>
+                    <li id = "nav3" class="toggle accordion-toggle">
+                        <span class="icon-plus"></span>
+                        <a class="big_menu">여기있다구</a>
+                        <ul class="menu-submenu accordion-toggle">
+                            <li><a class="head" href="#">지점찾기</a></li>
+                            <li><a class="head" href="#">가맹문의</a></li>
+                        </ul>
+                    </li>
+                    <li id = "nav4" class="toggle accordion-toggle">
+                        <span class="icon-plus"></span>
+                        <a class="big_menu">얘기하자구</a>
+                        <ul class="menu-submenu accordion-toggle">
+                            <li><a class="head" href="#">공지사항</a></li>
+                            <li><a class="head" href="#">교육후기</a></li>
+                            <li><a class="head" href="#">훈련사 칼럼</a></li>
+                            <li><a class="head" href="#">갤러리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
     <!-- header 끝 -->
 </body>
 </html>
