@@ -10,169 +10,11 @@
     <link href="../../css/footer.css" rel="stylesheet">
     <!-- 로고 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet"/>
-    <style>
-        .wrap{
-            padding: 0 15px;
-        }
-        .section{
-            padding: 0 10px;
-            border: 1px solid black;
-        }
-        .start{
-            margin-top:5px;
-            text-align: center;
-        }
-        /* 폼 공통 css
-        form{
-            display:flex;
-            flex-direction: column;
-            align-items: center;
-            gap:10px;
-            padding:30px 10px;
-        } */
-        /* 폼 input, select 공통 css */
-        form input, select {
-          border-radius: 5px;
-          border:1px solid black;
-          height:25px;
-        }
-        
-        li{
-            padding: 2px 0;
-        }        
-        .id{
-            display: flex;
-            flex-direction: row;
-            gap: 2px;
-        }
-        /* 아이디 텍스트 상자 */
-        #id{
-            width: 70%;
-        }
-        /* 아이디 중복확인 버튼 */
-        #btn1{
-            width: 30%;
-            height: 30px;
-        }
-        #btn1:hover{
-            cursor: pointer;
-            color: #fff;
-            background-color: #000066;
-        }
-        /* 비밀번호 부분 */
-        .pwd{
-            display: flex;
-            flex-direction: column;
-        }
-        #pwd{
-            margin: 3px 0;
-        }
-        /* 이름 부분 */
-        .name{
-            margin-bottom: 5px;
-        }
-        #name{
-            width: 98.5%;
-        }
-        /* 성별, 체크박스 높이 조정 */
-        .gender{
-            margin: 5px 0;
-        }
-        #radio, #chk{
-            height: 12px;
-        }
-        /* 생년월일 부분 */
-        .birth{
-            display: flex;
-            justify-content: space-between;
-        }
-        #year, #month, #date{
-            width: 33%;
-            height: 30px;
-            margin-bottom: 5px;
-        }
-        /* 휴대폰 부분 */
-        #phone{
-            width: 30%;
-            height: 28px; /* ?? */
-        }
-        #phone2{
-            width: 30%;
-        }
-        /* 인증번호 전송 부분 */
-        #btn2{
-            width: 100%;
-            cursor: pointer;
-            background-color: #fff;
-        }
-        #btn2:hover{
-            color: #fff;
-            background-color: #000066;
-        }
-        /* 인증번호 입력 부분 */
-        .number{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            gap: 2px;
-        }
-        #num{
-            width:70%;
-        }
-        #btn3{
-            width: 30%;
-            height: 30px;
-            color: #fff;
-            background-color: black;
-        }
-        #btn3:hover{
-            cursor: pointer;
-            color: #fff;
-            background-color: #000066;
-        }
-        /* 이메일 부분 */
-        #email{
-            width: 46%;
-        }
-        #selectEmail{
-            width: 100%;
-            height: 30px;
-            margin: 5px 0;
-        }
-        /* 하단 약관 부분 */
-        .marketing_wrap, .agree_wrap{
-            border: 1px solid black;
-            padding: 5px;
-            margin-bottom: 10px;
-        }
-        .agree a{
-            color: black;
-            text-decoration: underline solid 1px;
-        }
-        .agree a:hover{
-            color: darkblue;
-            font-weight: 700;
-        }       
-        .join{
-            background-color: #000066;
-            color: #fff;
-        }
-        .join:hover, .index:hover{
-            cursor: pointer; 
-            color: #fff;
-            background-color: #000066;  
-        }
-        .index{
-            color: black;
-        }
-        .join, .index{
-            border: 1px solid black;
-            border-radius: 20px;
-            text-align: center;
-            margin: 7px auto;
-            padding: 5px 0;
-        }
-    </style>
+    <!-- css -->
+    <link href="../../css/join_sub.css" rel="stylesheet">
+    <!-- 스크립트 -->
+    <script src="../../js/jquery-3.6.4.min.js"></script>
+    <script defer src="../../js/member.js"></script>
 </head>
 <body>
     <!-- header 시작 -->
@@ -201,9 +43,9 @@
 
                 <!-- 아이디 부분 -->
             <li>
-                <label for="id"><h2>아이디</h2></label></li>
+                <label for="id"><h2>아이디<span class="id_warning"> *첫번째 문자는 영소문자만 가능합니다.</span></h2></label></li>
             <li class="id">
-                <input type="text" name="id" id="id" placeholder="영문(소문자), 4-12자 이내">
+                <input type="text" name="id" id="id" placeholder="영문(소문자), 4-12자 이내" required>
                 <input type="button" name="btn1" id="btn1" value="중복확인"><br/>
             </li>
                 
@@ -212,14 +54,14 @@
                 <label for="pwd"><h2>비밀번호</h2></label>
             </li>
             <li class="pwd">
-                <input type="password" name="pwd" id="pwd" placeholder="4-10자의 영문, 특수문자, 숫자">
-                <input type="password" name="pwd2" id="pwd" placeholder="비밀번호 확인">
+                <input type="password" name="pwd" id="pwd" placeholder="4-10자의 영문, 특수문자, 숫자" required>
+                <input type="password" name="pwd2" id="pwd" placeholder="비밀번호 확인" required>
             </li>
                 
                 <!-- 이름 부분 -->
             <li class="name">
                 <label for="name"><h2>이름</h2></label>
-                <input type="text" name="name" id="name"><br/>
+                <input type="text" name="name" id="name" required><br/>
             </li>
                 
                 <!-- 성별 부분 -->
@@ -231,7 +73,7 @@
 
                 <!-- 생년월일 부분 -->
                 <li>
-                    <label for="birth"><h2>생년월일</h2></label></li>
+                    <label for="birth"><h2>생년월일<span class="birth_warning"> *만 15세 미만의 사용자는 가입할 수 없습니다.</span></h2></label></li>
                     <li class="birth">
                         <select name="year" id="year">
                             <option value="">연도 선택</option>
@@ -331,9 +173,9 @@
                         <option value="019">019</option>
                     </select>
                     <span>-</span>
-                    <input type="text" name="phone1" id="phone2">
+                    <input type="text" name="phone1" id="phone1" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
                     <span>-</span>
-                    <input type="text" name="phone2" id="phone2">
+                    <input type="text" name="phone2" id="phone2" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
                 </li>
                 <!-- 인증번호 전송 부분 -->
                 <li>
@@ -341,7 +183,7 @@
                 </li>
                 <!-- 인증번호 입력 부분 -->
                 <li class="number">
-                    <input type="text" name="num" id="num">
+                    <input type="text" name="num" id="num" maxlength="5">
                     <input type="button" name="btn3" id="btn3" value="인증번호 확인">
                 </li>
 
@@ -350,7 +192,7 @@
                     <label for="email"><h2>이메일</h2></label></li>
                 <li class="email">
                     <input type="text" name="email" id="email" > @
-                    <input type="text" name="email2" id="email" disabled value="naver.com">
+                    <input type="text" name="email2" id="email2" disabled value="naver.com">
                     <select name="selectEmail" id="selectEmail">
                     	 <option value="1" selected>직접입력</option>
                     	 <option value="naver.com" >naver.com</option>
@@ -367,31 +209,15 @@
                     	 <option value="hanmir.com">hanmir.com</option>
                     	 <option value="paran.com">paran.com</option>
                     </select>
-                    <!-- 스크립트 부분 -->
-                    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-                    <script type="text/javascript">
-                    //이메일 입력방식 선택
-                    $('#selectEmail').change(function(){
-                       $("#selectEmail option:selected").each(function () {
-                    
-                    		if($(this).val()== '1'){ //직접입력일 경우
-                    			 $("#email2").val('');                        //값 초기화
-                    			 $("#email2").attr("disabled",false); //활성화
-                    		}else{ //직접입력이 아닐경우
-                    			 $("#email2").val($(this).text());      //선택값 입력
-                    			 $("#email2").attr("disabled",true); //비활성화
-                    		}
-                       });
-                    });
-                    </script>
                 </li>
                 
                 <!-- 마케팅 정보 수신동의 부분 -->
+                <li>
             <div class="marketing_wrap">
                 <div class="marketing">
                         <h2>마케팅 정보 수신동의</h2><br/>
                         중요한 알림 및 각종 혜택 알림을 수신합니다. <br/>
-                        수업과 관련된 사항은 수신동의와 관련없이 보내드립니다. <br/>
+                        수업과 관련된 사항은 수신동의와 관련없이 보내드립니다. <br/><br/>
                         <input type="checkbox" name="chk1" id="chk">SNS 서비스 동의 (선택) <br/>
                         <input type="checkbox" name="chk2" id="chk">메일 수신 동의 (선택) <br/>
                 </div>
@@ -400,21 +226,22 @@
             <div class="agree_wrap">    
                 <div class="agree">
                     <p>
-                        <h2>약관동의</h2><br/>
+                        <h2>약관동의</h2>
                         <input type="checkbox" name="chk3" id="chk" required><a class="term" href="#">이용약관</a> 동의 (필수) <br/>
                         <input type="checkbox" name="chk4" id="chk" required><a class="term" href="#">개인정보처리방침</a> 동의 (필수) <br/>
                     </p>
                 </div>
             </div>
+        </li>
                 <!-- 가입하기 부분 -->
-                <a href="#">
-                    <div class="join">가입하기</div>
-                </a>
+             <li class="sub">
+                <input type="submit" name="submit" id="submit" value="가입하기">
 
                 <!-- 메인 페이지로 돌아가기 부분 -->
                 <a href="index.html"> <!-- 초기 화면으로 돌아감 -->
                 <div class="index">메인 페이지로 돌아가기</div>
                 </a>
+            </li>
             </ul>
         </form>
     </div>

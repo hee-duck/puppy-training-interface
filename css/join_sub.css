@@ -1,0 +1,172 @@
+.wrap{
+    padding: 0 15px;
+}
+.section{
+    margin-bottom: 50px;
+    padding: 0 10px;
+    border: 1px solid black;
+}
+.start{
+    margin-top:5px;
+    text-align: center;
+}
+/* 폼 공통 css
+form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    padding:30px 10px;
+} */
+/* 폼 input, select 공통 css */
+form input, select {
+  border-radius: 5px;
+  border:1px solid black;
+  height:25px;
+}
+
+li{
+    padding: 2px 0;
+}        
+.id{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+/* 아이디 텍스트 상자 */
+#id{
+    width: 70%;
+}
+.id_warning{
+    display: none;
+}
+.id_warning, .birth_warning{
+    font-size: 0.8rem;
+    color: red;
+}
+/* 아이디 중복확인 버튼 */
+#btn1{
+    width: 30%;
+    height: 30px;
+}
+#btn1:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: #000066;
+}
+/* 비밀번호 부분 */
+.pwd{
+    display: flex;
+    flex-direction: column;
+}
+#pwd{
+    margin: 3px 0;
+}
+/* 이름 부분 */
+.name{
+    margin-bottom: 5px;
+}
+#name{
+    width: 98.5%;
+}
+/* 성별, 체크박스 높이 조정 */
+.gender{
+    margin: 5px 0;
+}
+#radio, #chk{
+    height: 12px;
+}
+/* 생년월일 부분 */
+.birth{
+    display: flex;
+    justify-content: space-between;
+}
+#year, #month, #date{
+    width: 33%;
+    height: 30px;
+    margin-bottom: 5px;
+}
+/* 휴대폰 부분 */
+#phone{
+    width: 30%;
+    height: 28px; /* ?? */
+}
+#phone1, #phone2{
+    width: 30%;
+}
+/* 인증번호 전송 부분 */
+#btn2{
+    width: 100%;
+    cursor: pointer;
+    background-color: #fff;
+}
+#btn2:hover{
+    color: #fff;
+    background-color: #000066;
+}
+/* 인증번호 입력 부분 */
+.number{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2px;
+}
+#num{
+    width:70%;
+}
+#btn3{
+    width: 30%;
+    height: 30px;
+    color: #fff;
+    background-color: black;
+}
+#btn3:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: #000066;
+}
+/* 이메일 부분 */
+#email, #email2{
+    width: 46%;
+}
+#selectEmail{
+    width: 100%;
+    height: 30px;
+    margin: 5px 0;
+}
+/* 하단 약관 부분 */
+.marketing_wrap, .agree_wrap{
+    border: 1px solid black;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.agree a{
+    color: black;
+    text-decoration: underline solid 1px;
+}
+.agree a:hover{
+    color: darkblue;
+    font-weight: 700;
+}
+#submit{
+    width: 100%;
+    height: 35px;
+    margin-bottom: 5px;
+    background-color: #000066;
+    color: #fff;
+}
+#submit:hover, .index:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: #000066;  
+}
+.index{
+    height: 30px;
+    line-height: 30px;
+    color: black;
+}
+#submit, .index{
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+}
