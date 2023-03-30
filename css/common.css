@@ -96,7 +96,6 @@
   
   .text_memo{
     width:100%;
-    
   }
   
   .memo {
@@ -117,5 +116,6 @@
     text-align: center;
     box-sizing: border-box;
     color: #061f5c;
+    background: #fff;
   }
   

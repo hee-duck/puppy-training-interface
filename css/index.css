@@ -79,20 +79,14 @@
     gap: 10px;
   }
 
-  .btn_index {
-    width: 100px;
-    padding: 10px 0px;
-    border-radius: 50px;
-    border:1px solid black;
-    display: inline-block;
-    text-align: center;
-    box-sizing: border-box;
-    color: #061f5c;
-  }
 
-   div[class^="edu_icon"] {
+  div[class^="edu_icon"] {
       margin-bottom:10px;
     }
+
+  .btn_index_wrap div[class^="btn_index"] {
+    background-color: none;
+  }
 
   .edu_icon1 {
     width:128px;
