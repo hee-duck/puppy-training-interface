@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오구(Ogu)</title>
+    <!-- 초기화 css -->
+    <link href="../../../css/reset.css" rel="stylesheet">
+    <!-- 외부 폰트, 외부 스타일 -->
+    <link href="../../../css/header.css" rel="stylesheet">
+    <link href="../../../css/footer.css" rel="stylesheet">
+
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../../images/logo/favicon.ico">
+
+
+    <!--스타일 시트-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 폰트 스타일 */
+        @font-face {
+            font-family: 'Dovemayo_gothic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #wrap {
+            min-width: 360px;
+        }
+
+        /* 본문 전체 감싸는 부분 */
+        .section {
+            width: 100%;
+            position: static;
+            font-family: 'Dovemayo_gothic';
+            margin-top: 90px;
+
+        }
+
+        /* 상위메뉴 제목 및 배경 이미지 */
+        .menu {
+            position: relative;
+        }
+
+        .menu>img {
+            width: 100%;
+            opacity: 0.3;
+            height: 150px;
+
+        }
+
+        .menu>h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 제목 가로,세로 중앙 정렬 */
+            z-index: 1;
+            color: black;
+            font-size: 2rem;
+            white-space: nowrap;
+            /* width 줄여도 줄바꿈 안되게 */
+        }
+
+        /* 탭 영역 */
+        .tab {
+            border: 1px solid #ddd;
+            border-left: none;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .tab li {
+            float: left;
+            width: 33.3%;
+            border-left: 1px solid #ddd;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .tab li {
+            display: inline-block;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .tab li.on {
+            background-color: #000066;
+            color: #fff;
+        }
+
+        .tab_con {
+            clear: both;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .tab_con span {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            line-height: 20px;
+            text-align: center;
+            padding: 20px 0px;
+        }
+
+        /* 교육 전체 -공통부분*/
+        .edu {
+            margin-top: 50px;
+        }
+
+        /* 교육 이미지 영역 */
+
+        .edu_img {
+            width: 100%;
+
+
+        }
+
+        .edu_box {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .img_box>img {
+            width: 100%;
+            height: 350px;
+            padding: 10px;
+        }
+
+         /*교육 영상 영역 */
+        
+         .edu_video {
+            display: flex;
+            flex-direction: column;
+
+        }
+        .edu_text{
+            text-align: center;
+        }
+        /* 영상 여백 줄이는법? */
+        .video1>video {
+            width: 100%;
+            height: 350px;
+        }
+
+        .video2>video {
+            width: 100%;
+            height: 350px;
+          }
+
+        /*1번탭 영상교육 텍스트 */
+        
+
+        .text_box>.number {
+            font-size: 40px;
+            font-weight: bold;
+            color: #000066;
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        .text_box>h1 {
+            text-align: left;
+            padding: 10px;
+         }
+
+        .text_box>p {
+            text-align: left;
+            padding: 10px;
+
+        }
+        .edu_text>h1{
+            padding: 10px;
+
+        }
+
+        .edu_text>p{
+        padding: 0 10px;
+        }
+
+        /* 그룹레슨&개인레슨 텍스트 */
+        .text_box1>h1{
+           line-height: 50px;
+           font-size: 20px;
+
+        }
+
+       .text_box2>h1 {
+         padding: 10px;      
+         
+        }
+
+        .text_box2>p {
+        padding: 0 10px;
+         }
+</style>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+        <!-- 내부 js -->
+        <script>
+            // 탭메뉴 js
+            $(function () {
+                tab('#tab', 0);
+            }); //문서가 준비되면 함수 호출
+    
+            function tab(e, num) {
+                var num = num || 0; //숫자가 정의되지 않으면 0으로 설정
+                var menu = $(e).children(); //e로 지정된 요소의 모든 하위 요소를 가져옴
+                var con = $(e + '_con').children(); //e+_con으로 지정된 요소의 모든 하위 요소를 가져옵니다.
+                var select = $(menu).eq(num); //menu에서 인덱스 num에 있는 요소를 가져와 선택에 저장
+                var i = num; //i를 num값으로 저장
+    
+                select.addClass('on'); //select로 지정된 요소에 on클래스 추가
+                con.eq(num).show(); //con에서 인덱스 num에 요소 표시
+    
+                menu.click(function () { //메뉴의 모든 요소에 클릭 이벤트 리스너 추가
+                    if (select !== null) {
+                        select.removeClass("on"); //select에서 on클래스 제거
+                        con.eq(i).hide(); //con에서 인덱스 i에 있는 요소 숨김
+                    }
+    
+                    select = $(this); //클릭한 요소에 선택을 설정
+                    i = $(this).index(); //i를 클릭한 요소의 인덱스로 설정
+    
+                    select.addClass('on'); //select에 on클래스 추가
+                    con.eq(i).show(); //con에서 인덱스 i에 요소 표시
+                });
+            }
+        </script>
+
+
+</head>
+
+<body>
+    <div id="wrap">
+
+        <!-- header 시작 -->
+        <header id="header">
+            <div class="logo">
+                <!-- 링크에는 index.html 삽입 -->
+                <a href="#"><img src="../../../images/logo/logo.png">
+                    <span class="logo_text">오구</span>
+                </a>
+                <span class="menu_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+        </header>
+        <!-- header 끝 -->
+
+        <!-- 본문 영역 -->
+        <section class="section">
+            <!-- 상위 메뉴 배경 이미지 및 메뉴명 -->
+            <div class="menu">
+                <img src="../../../images/main_nav/edu/edu_back.jpg">
+                <h1>어서오구(0-GU)</h1>
+            </div>
+            <!-- 탭 메뉴 -->
+            <ul class="tab" id="tab">
+                <li>영상교육</li>
+                <li>그룹교육</li>
+                <li>개인교육</li>
+            </ul>
+
+            <div class="tab_con" id="tab_con">
+                <!-- 1번탭 영상교육 -->
+                <div class="edu">
+                    <!-- 이미지 영역 -->
+                    <div class="edu_img">
+
+                        <div class="edu_box">
+                            <div class="img_box">
+                                <img src="../../../images/main_nav/edu/edu_video1.jpg">
+                            </div>
+
+                            <div class="text_box">
+                                <div class="number">01</div>
+                                <h1>오구교육은 다릅니다.</h1>
+                                <p>오구교육은 한 가지 문제행동의 개선만을 목적으로 하는 것이 아닌 반려견의 더 나은 삶을 위한 총체적 접근을 원칙으로 합니다. 반려견의 마음을 알기 위해
+                                    그들의 언어를 공부하고 칭찬과 거절을 병행하며 오구해주는 교육을 오구교육이라고 합니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="edu_box">
+                            <div class="img_box">
+                                <img src="../../../images/main_nav/edu/edu_video2.jpg">
+                            </div>
+
+
+                            <div class="text_box">
+                                <div class="number">02</div>
+                                <h1>오구의 노하우를 담았습니다.</h1>
+                                <p>반려견의 언어인 커밍시그널부터 가장 기초가 되는 산책 교육,예절교육,분리불안 등 다양한 토픽에 대한 한희수 오구훈련사님의 노하우를 담았습니다. </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                  <!-- 영상 영역 -->
+                  <div class="edu_video">
+                    <div class="edu_text">
+                        <h1>영상교육 듣는 방법</h1>
+                        <p>오구 교육은 이해, 관찰, 활동, 세부교육의 단계를 거치며 반려견의 회복을 돕습니다.
+                            이해, 관찰, 활동은 국,영,수와 같이 오구교육의 기초가 되는 과목입니다.
+                            위 세 가지를 중심으로 열심히 교육하시며 산책, 분리불안, 화장실 등의 세부 교육을 진행하시면 효과적입니다.
+                        </p>
+                    </div>
+                   
+                        <div class="video1">
+                            <video src="../../../images/main_nav/edu/edu_veo1.mp4" autoplay controls></video>
+                            <!-- control=동영상을 웹사이트에서 control할 수 있게 하기 -->
+                        </div>
+                        <div class="video2">
+                            <video src="../../../images/main_nav/edu/edu_veo2.mp4" autoplay controls></video>
+
+                        </div>
+
+                    </div>
+                    <!-- 상담신청 영역 -->
+                    <div class="edu_join">
+
+                    </div>
+                </div>
+
+               <!-- 2번탭 그룹교육 -->
+                <div class="edu2">
+                    <!-- 이미지 영역 -->
+                    <div class="edu_img">
+
+                        <div class="edu_box">
+                            <div class="img_box">
+                                <img src="../../../images/main_nav/edu/edu_group1.jpg">
+                            </div>
+
+                            <div class="text_box1">
+                                <h1>풀패키지 회원을 위한 특별한 혜택</h1>
+                                <h1>오구훈련사와 함께하는 다양한 주제의 그룹 레슨!</h1>
+                                <h1>다른 반려견과 함께하는 교육을 통해 사회성을 길러주세요.</h1>
+
+                            </div>
+                        </div>
+
+                        <div class="edu_box">
+                            <div class="img_box">
+                                <img src="../../../images/main_nav/edu/edu_group2.jpg">
+                                <img src="../../../images/main_nav/edu/edu_group3.jpg">
+                            </div>
+
+                            <div class="text_box2">
+                                <h1>그룹 레슨이란?</h1>
+                                <p>한희수 훈련사님이 자신 있게 추천하는 오구교육 그룹레슨!
+                                    풀패키지 기간 동안 매주 풍부한 주제로 업데이트되는 그룹레슨을 통해 영상교육의 연장선인 양질의 오프라인 교육을 받으실 수 있습니다.
+                                    경험이 풍부한 오구훈련사의 지도 아래 분리불안, 어질리티, 예절 클리커등 다양한 주제로 진행되며, 내 반려견과 성향이 맞는 다른 강아지들과 어울려
+                                    사회성을 기를 수 있습니다.
+                                    보호자님의 반려견의 이 사회에 잘 적응하고 행복한 생활을 하는 것이 오구교육의 목표이고 바람입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 영상 영역 -->
+                    <div class="edu_video">
+                        <div class="video1">
+                            <video src="../../../images/main_nav/edu/edu_veo1.mp4" autoplay controls></video>
+                            <!-- control=동영상을 웹사이트에서 control할 수 있게 하기 -->
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- 3번탭 개인교육 -->
+                <div class="edu_3">
+                    <!-- 이미지 영역 -->
+                    <div class="edu_img">
+
+                        <div class="edu_box">
+                            <div class="img_box">
+                                <img src="../../../images/main_nav/edu/edu_one1.jpg">
+                            </div>
+
+                            <div class="text_box1">
+                                <h1>솔루션 교육회원을 위한 특별한 혜택</h1>
+                                <h1>오구훈련사와 일대일 맞춤 개인 레슨!</h1>
+                                <h1>경험이 풍부한 오구훈련사에게 내 반려견 맞춤 교육을 받아보세요.</h1>
+
+                            </div>
+                        </div>
+
+                        <div class="edu_box">
+                            <div class="img_box">
+                                <img src="../../../images/main_nav/edu/edu_one2.jpg">
+                                <img src="../../../images/main_nav/edu/edu_one3.jpg">
+                            </div>
+
+                            <div class="text_box2">
+                                <h1>개인 레슨이란?</h1>
+                                <p>그룹 레슨을 200회 이상 진행한 오구훈련사와 일대일로 이루어지는 Personal Care!
+                                    반려견의 성향과 특성에 맞는 맞춤 교육은 물론 산책 교육에 기초가 되는 섬세한 핸들링 교정을 받아보세요.
+                                    오구훈련사는 반려견 문제행동의 근본적인 원인을 파악하고 그 원인 치유에 주력할 것을 약속드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 영상 영역 -->
+                    <div class="edu_video">
+                        <div class="video1">
+                            <video src="../../../images/main_nav/edu/edu_veo4.mp4" autoplay controls></video>
+                            <!-- control=동영상을 웹사이트에서 control할 수 있게 하기 -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <!-- 약관 가로 정렬 부분 -->
+            <div class="term">
+                <ul>
+                    <li><a href="#" target="_blank">이용약관</a></li>
+                    <li> | </li>
+                    <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                    <li> | </li>
+                    <li><a href="#" target="_blank">가맹문의</a></li>
+                    <li> | </li>
+                    <li><a href="#" target="_blank">고객센터</a></li>
+                </ul>
+            </div>
+            <!-- 회사 정보(주소, 사업자번호 등) 부분 -->
+            <div class="addr">
+                <p>(주)오구 | 대표 : 한희수<br />
+                    사업자등록번호 : 123-45-67890 | 대표전화 : 1212-5959<br />
+                    주소 : 서울특별시 마음으로낳았구 지갑으로 키워길59<br />
+                    COPYRIGHT(C) 2023 (주)오구 All right reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
