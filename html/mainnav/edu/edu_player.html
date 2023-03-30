@@ -9,7 +9,7 @@
     <!-- 초기화 css -->
     <link href="../../../css/reset.css" rel="stylesheet">
     <!-- 외부 폰트, 외부 스타일 -->
-    <link href="../../../css/header.css" rel="stylesheet">
+    <link href="../../../css/header (상단 메뉴바 고정).css" rel="stylesheet">
     <link href="../../../css/footer.css" rel="stylesheet">
 
 
@@ -19,11 +19,7 @@
 
     <!--스타일 시트-->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+       
 
         /* 폰트 스타일 */
         @font-face {
@@ -31,6 +27,11 @@
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
             font-weight: normal;
             font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         #wrap {
@@ -42,13 +43,12 @@
             width: 100%;
             position: static;
             font-family: 'Dovemayo_gothic';
-            margin-top: 90px;
-
-        }
+           }
 
         /* 상위메뉴 제목 및 배경 이미지 */
         .menu {
             position: relative;
+            
         }
 
         .menu>img {
@@ -105,7 +105,7 @@
         }
 
         .tab_con div {
-            /* display: none; */
+            display: none;
             width: 100%;
             height: 100%;
             background: #fff;
@@ -137,7 +137,7 @@
         .img_box>img {
             width: 100%;
             height: 350px;
-            padding: 0 10px;
+            padding: 10px;
 
         }
         /*1번탭 영상교육 텍스트 */
@@ -209,7 +209,44 @@
             width: 100%;
             height: 350px;
           }
+
     </style>
+
+     <!-- jQuery -->
+     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+     <!-- 내부 js -->
+    <script>
+        // 탭메뉴 js
+        $(function () {
+            tab('#tab', 0);
+        }); //문서가 준비되면 함수 호출
+
+        function tab(e, num) {
+            var num = num || 0; //숫자가 정의되지 않으면 0으로 설정
+            var menu = $(e).children(); //e로 지정된 요소의 모든 하위 요소를 가져옴
+            var con = $(e + '_con').children(); //e+_con으로 지정된 요소의 모든 하위 요소를 가져옵니다.
+            var select = $(menu).eq(num); //menu에서 인덱스 num에 있는 요소를 가져와 선택에 저장
+            var i = num; //i를 num값으로 저장
+
+            select.addClass('on'); //select로 지정된 요소에 on클래스 추가
+            con.eq(num).show(); //con에서 인덱스 num에 요소 표시
+
+            menu.click(function () { //메뉴의 모든 요소에 클릭 이벤트 리스너 추가
+                if (select !== null) {
+                    select.removeClass("on"); //select에서 on클래스 제거
+                    con.eq(i).hide(); //con에서 인덱스 i에 있는 요소 숨김
+                }
+
+                select = $(this); //클릭한 요소에 선택을 설정
+                i = $(this).index(); //i를 클릭한 요소의 인덱스로 설정
+
+                select.addClass('on'); //select에 on클래스 추가
+                con.eq(i).show(); //con에서 인덱스 i에 요소 표시
+            });
+        }
+    </script>
+
 
 
 </head>
