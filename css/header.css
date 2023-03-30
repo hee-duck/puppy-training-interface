@@ -1,50 +1,152 @@
-    /* header */
+#header {
+    width: 100%;
+    height: 70px;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid #e1e1e1;
+}
 
-    /* header 전체 */
-    #header {
-        width: 100%;
-        height: 90px;
-        z-index:9999;
-        position: fixed;
-        top:0;
-        background: #fff;
-        border-bottom:1px solid #999;
-    }
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
 
-    /* 오구 로고 부분 */
-    .logo img{
-        width: 80px;
-        height: 80px;
-        margin-right: 5px;
-    }
+.head {
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
 
-    /* 로고 옆 오구 텍스트 부분 */
-    div.logo .logo_text{
-        color: black;
-        line-height: 90px;
-        font-size: 3rem;
-        font-family: 'Gugi';
-    }
+img {
+    width: 70px;
+    height: 70px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left;
+}
 
-    /* 오른쪽 메뉴바(햄버거) 부분 */
-     .menu_btn{
-        position:absolute;
-        top:50%;
-        transform: translateY(-50%);
-        right:0;
-        width:35px;
-        padding: 30px;
-        cursor:pointer;
-        overflow: hidden;
-    }
+.logo {
+    line-height: 70px;
+    font-size: 2.6rem;
+    padding-top: 8px;
+    font-family: 'Gugi';
+}
 
-    .menu_btn span{
-        display:block;
-        width:100%;
-        height:4px;
-        background: black;
-    }
+.body {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
 
-    .menu_btn span:nth-child(2){
-        margin:5px 0;
-    }
+/*         .content {
+            height: 100%;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
+
+.slide-open {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.burgur {
+    right: 15px;
+    top: 30px;
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: #000000;
+}
+
+.burgur .top-line {
+    width: 40px;
+    height: 2px;
+    background-color: #000000;
+    bottom: -5px;
+    content: '';
+    position: absolute;
+    right: 0;
+    -webkit-transition: .3s;
+    transition: .3s;
+
+}
+
+.burgur .bot-line {
+    width: 40px;
+    height: 2px;
+    background-color: #000000;
+    top: -5px;
+    content: '';
+    position: absolute;
+    right: 0;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.burgur.on {
+    width: 0;
+}
+
+.burgur.on .bot-line {
+    -webkit-transform: translateY(5px) rotate(135deg);
+    transform: translateY(5px) rotate(135deg);
+}
+
+.burgur.on .top-line {
+    -webkit-transform: translateY(-5px) rotate(-135deg);
+    transform: translateY(-5px) rotate(-135deg);
+}
+
+.slide {
+    width: 50%;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: left .3s;
+    -moz-transition: left .3s;
+    -ms-transition: left .3s;
+    -o-transition: left .3s;
+    transition: left .3s;
+    background-color: #000066;
+}
+
+.slide-title {
+    width: 100%;
+    height: 70px;
+    font-size: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+button {
+    width: 80px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #000066;
+    border: 1.5px solid #fff;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.slide.on {
+    left: 0;
+}
+
+.slide ul li {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #e1e1e1;
+}
