@@ -1,3 +1,7 @@
+html.open {
+    overflow: hidden;
+  }
+  
 #header {
     width: 100%;
     height: 70px;
@@ -130,6 +134,9 @@
     font-size: 0.7rem;
 }
 
+#slide{
+    height: 100%;
+}
 .slide.on {
     left: 0;
 }
@@ -142,4 +149,13 @@
     width: 100%;
     padding: 10px;
     border-bottom: 1px solid #e1e1e1;
+}
+
+.close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-image: 
 }
