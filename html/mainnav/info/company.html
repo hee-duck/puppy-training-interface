@@ -9,7 +9,7 @@
     <!-- 초기화 css -->
     <link href="../../../css/reset.css" rel="stylesheet">
     <!-- 외부 폰트, 외부 스타일 -->
-    <link href="../../../css/header (상단 메뉴바 고정).css" rel="stylesheet">
+    <link href="../../../css/header.css" rel="stylesheet">
     <link href="../../../css/footer.css" rel="stylesheet">
         <!-- 3번탭 훈련사 소개 부트스트랩 이용 -->
         
@@ -42,6 +42,7 @@
         /* 상위메뉴 제목 및 배경 이미지 */
         .menu {
             position: relative;
+            margin-top: 70px;
         }
         .menu>img {
             width: 100%;
@@ -161,16 +162,62 @@
 
     <!-- jQuery -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#headers").load("../../header/header.html");
-            $("#footers").load("../../footer/footer.html");
-        });
-    </script>
 </head>
 <body>
     <!-- header 영역 -->
-    <div id="headers"></div>
+    <header id="header">
+        <div class="container">
+            <div class="head">
+                <div class="slide-open" id="slide-open">
+                    <span class="burgur" id="burgur">
+                        <span class="top-line"></span>
+                        <span class="bot-line"></span>
+                    </span>
+                </div>
+                <div class="logo_img"><img src="../../images/logo/logo.png"></div>
+                <span class="logo">오구</span>
+
+                <div class="slide" id="slide">
+                    <div class="slide-title">
+                        <button>로그인</button>
+                        <button>회원가입</button>
+                    </div>
+                    <ul>
+                        <li><a href="#">어서오구</a></li>
+                        <li><a href="#">배우자구</a></li>
+                        <li><a href="#">여기있다구</a></li>
+                        <li><a href="#">얘기하자구</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script
+        src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script id="rendered-js">
+        $(function () {
+
+            $("#slide-open").click(function () {
+                if ($("#burgur").hasClass('on')) {
+                    $("#burgur").removeClass('on');
+                    $("#slide").removeClass('on');
+
+                } else {
+                    $("#burgur").addClass('on');
+                    $("#slide").addClass('on');
+                }
+            });
+
+        });
+//# sourceURL=pen.js
+    </script>
+
+
+    <script
+        src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
 
     <!-- 본문 영역 -->
     <section class="section">
@@ -265,6 +312,26 @@
         </div>
     </section>
     <!-- footer 영역 -->
-    <div id="footers"></div>
+    <footer id="footer">
+        <!-- 약관 가로 정렬 부분 -->
+        <div class="term">
+            <ul>
+                <li><a href="#" target="_blank">이용약관</a></li>
+                <li> | </li>
+                <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                <li> | </li>
+                <li><a href="#" target="_blank">가맹문의</a></li>
+                <li> | </li>
+                <li><a href="#" target="_blank">고객센터</a></li>
+            </ul>
+        </div>
+        <!-- 회사 정보(주소, 사업자번호 등) 부분 -->
+        <div class="addr">
+            <p>(주)오구 | 대표 : 한희수<br/>
+                사업자등록번호 : 123-45-67890 | 대표전화 : 1212-5959<br/>
+                주소 : 서울특별시 마음으로낳았구 지갑으로 키워길59<br/>
+                COPYRIGHT(C) 2023 (주)오구 All right reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
