@@ -8,11 +8,16 @@
     <title>오구(Ogu)</title>
     <!-- 초기화 css -->
     <link href="../../../css/reset.css" rel="stylesheet">
+    <!-- 3번탭 훈련사 카드 부트스트랩 css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- 외부 폰트, 외부 스타일 -->
     <link href="../../../css/header.css" rel="stylesheet">
     <link href="../../../css/footer.css" rel="stylesheet">
     <!-- 헤더 -->
-    <link rel="apple-touch-icon" type="image/png">
+
 
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="../../../images/logo/favicon.ico">
@@ -27,11 +32,12 @@
             font-style: normal;
         }
 
-        /* 본문 전체 감싸는 부분 */
-        .section {
+        /* 본문 전체 감싸는 부분 -- 360이하로 안줄어들게 */
+        #section {
             width: 100%;
             position: static;
             font-family: 'Dovemayo_gothic';
+            min-width:360px;
         }
 
         /* 상위메뉴 제목 및 배경 이미지 */
@@ -114,14 +120,11 @@
             .card{
                 margin: 0 auto;
             }
-            .card-img-top{
-                padding: 10px 50px 0px 50px;
-            }
             
     </style>
 
-    <!-- jQuery -->
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!--  탭 메뉴 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
     <!-- 내부 js -->
     <script>
@@ -155,8 +158,6 @@
         }
     </script>
 
-    <!-- jQuery -->
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 <body>
         <!-- header 시작 -->
@@ -212,7 +213,7 @@
     <!-- header 끝 -->
 
     <!-- 본문 영역 -->
-    <section class="section">
+    <section id="section">
         <!-- 상위 메뉴 배경 이미지 및 메뉴명 -->
         <div class="menu">
             <img src="../../../images/main_nav/info/info_1.jpg">
@@ -264,8 +265,8 @@
             </div>
             
             <!-- 3번탭 훈련사 소개 / 부트스트랩 카드 이용-->
-            <div class="container">
-                <span class="card" style="width:80%">
+            <div class="tab3_container">
+                <span class="card" style="width:400px">
                   <img class="card-img-top" src="../../../images/main_nav/info/info_heesoo.jpg" alt="Card image" style="width:100%">
                   <span class="card-body">
                     <h4 class="card-title">한희수</h4>
@@ -274,7 +275,7 @@
                   </span>
                 </span>
                  <br>
-                <span class="card" style="width:80%">
+                <span class="card" style="width:400px">
                   <img class="card-img-top" src="../../../images/main_nav/info/info_homin.jpg" alt="Card image" style="width:100%">
                   <span class="card-body">
                     <h4 class="card-title">김호민</h4>
@@ -283,7 +284,7 @@
                   </span>
                 </span>
                 <br>
-                <span class="card" style="width:80%">
+                <span class="card" style="width:400px">
                     <img class="card-img-top" src="../../../images/main_nav/info/info_taewoo.jpg" alt="Card image" style="width:100%">
                     <span class="card-body">
                       <h4 class="card-title">이태우</h4>
@@ -292,7 +293,7 @@
                     </span>
                   </span>
                   <br>
-                  <span class="card" style="width:80%">
+                  <span class="card" style="width:400px">
                     <img class="card-img-top" src="../../../images/main_nav/info/info_juyeon.jpg" alt="Card image" style="width:100%">
                     <span class="card-body">
                       <h4 class="card-title">김주연</h4>
