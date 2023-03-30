@@ -10,7 +10,6 @@
 
 .container {
     width: 100%;
-    margin: 0 auto;
 }
 
 .head {
@@ -23,7 +22,6 @@
     width: 70px;
     height: 70px;
     margin-right: 5px;
-    margin-bottom: 5px;
     float: left;
 }
 
@@ -31,7 +29,7 @@
     line-height: 70px;
     font-size: 2.6rem;
     padding-top: 8px;
-    font-family: 'Gugi';
+    font-family: 'Gugi'
 }
 
 .body {
@@ -53,13 +51,13 @@
     right: 15px;
     top: 30px;
     position: absolute;
-    width: 40px;
+    width: 30px;
     height: 2px;
     background: #000000;
 }
 
 .burgur .top-line {
-    width: 40px;
+    width: 100%;
     height: 2px;
     background-color: #000000;
     bottom: -5px;
@@ -72,7 +70,7 @@
 }
 
 .burgur .bot-line {
-    width: 40px;
+    width: 100%;
     height: 2px;
     background-color: #000000;
     top: -5px;
@@ -117,7 +115,7 @@
     height: 70px;
     font-size: 42px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     border-bottom: 1px solid #e1e1e1;
 }
@@ -136,10 +134,9 @@
 .slide.on {
     left: 0;
 }
-
-.slide-menu a{
-    text-decoration: none;
-    color: #000000;
+.menu-name{
+    width: 100%;
+    background-color: antiquewhite;
 }
 .slide ul li {
     display: inline-block;
