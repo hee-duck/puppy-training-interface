@@ -1,0 +1,71 @@
+ /* section 메인 박스 */
+ .wrap{
+    width: 90%;
+    padding: 20px;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    width: 91.46341%;
+    height: 76.92307%;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+}
+.already{
+    font-family: 'Pretendard-Regular';
+}
+.sns_logo{
+    display: inline-block;
+}
+.sns_logo img{
+    width: 95%;
+    height: 40px;
+    margin: 10px 4.5px 0 6.5px;
+}
+.sns_logo li:first-child{
+    margin-top: 20px;
+}
+.sns_logo li:last-child{
+    margin-bottom: 20px;
+}
+hr{
+    width: 85%;
+    border-top: 1px dashed black;
+}
+/* 오구 계정 만들기 부분 */
+.create{
+    width: 95%;
+    height: 40px;
+    margin: 20px auto;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: darkblue;
+    text-align: center;
+}
+.create:hover{
+    cursor: pointer;
+    background-color:cornflowerblue;
+}
+.create_join{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 40px; /* 부모 요소와 같게 */
+}
+/* already, login도 flex 쓸것 */
+.already{
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 0.9rem;
+}
+.already>a{
+    color: black;
+}
+a.login:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
