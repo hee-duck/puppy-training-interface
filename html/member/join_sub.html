@@ -14,8 +14,8 @@
     <link href="../../css/join_sub.css" rel="stylesheet">
     <!-- 스크립트 -->
     <script src="../../js/jquery-3.6.4.min.js"></script>
-    <script defer src="../../js/member.js"></script>
-</head>
+    <script defer src="../../js/member.js"></script>    
+    </head>
 <body>
     <!-- header 시작 -->
     <header class="header">
@@ -33,14 +33,13 @@
     </header>
 <!-- header 끝 -->
 <!-- 회원가입 시작 -->
-<div class="wrap">
+<div id="wrap">
     <div class="section">
         <form action="" method="post" name="membership" enctype="multipart/form-data">
             <ul>
                 <li class="start">
                     <h2>회원정보입력</h2>
                 </li>
-
                 <!-- 아이디 부분 -->
             <li>
                 <label for="id"><h2>아이디<span class="id_warning"> *첫번째 문자는 영소문자만 가능합니다.</span></h2></label></li>
@@ -51,7 +50,7 @@
                 
                 <!-- 비밀번호 부분 -->
             <li>
-                <label for="pwd"><h2>비밀번호</h2></label>
+                <label for="pwd"><h2>비밀번호<span class="pwd_warning"> *특수문자는 '! @ # $ % ^ & +='만 사용 가능합니다.</span></h2></label>
             </li>
             <li class="pwd">
                 <input type="password" name="pwd" id="pwd" placeholder="4-10자의 영문, 특수문자, 숫자" required>
@@ -66,9 +65,13 @@
                 
                 <!-- 성별 부분 -->
             <li class="gender">
-                <label for="gender"><h2>성별</h2></label>
-                <input type="radio" name="gender" id="radio" value="m"> 남자 
-                <input type="radio" name="gender" id="radio" value="f"> 여자<br>
+                <h2>성별</h2>
+                <label for="m">
+                    <input type="radio" name="gender" id="m" value="m"> 남자 
+                </label>
+                <label for="f">
+                    <input type="radio" name="gender" id="f" value="f"> 여자<br>
+                </label>
             </li>
 
                 <!-- 생년월일 부분 -->
@@ -183,7 +186,7 @@
                 </li>
                 <!-- 인증번호 입력 부분 -->
                 <li class="number">
-                    <input type="text" name="num" id="num" maxlength="5">
+                    <input type="text" name="num" id="num" maxlength="5" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
                     <input type="button" name="btn3" id="btn3" value="인증번호 확인">
                 </li>
 

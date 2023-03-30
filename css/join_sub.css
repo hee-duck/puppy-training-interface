@@ -1,8 +1,10 @@
-.wrap{
-    padding: 0 15px;
+/* 360이하로 안줄어들게 */
+#wrap{
+    margin-top: 50px;
+    min-width:360px;
+    padding: 75px 15px;
 }
 .section{
-    margin-bottom: 50px;
     padding: 0 10px;
     border: 1px solid black;
 }
@@ -40,7 +42,7 @@ li{
 .id_warning{
     display: none;
 }
-.id_warning, .birth_warning{
+.id_warning, .pwd_warning , .birth_warning{
     font-size: 0.8rem;
     color: red;
 }
@@ -73,8 +75,8 @@ li{
 .gender{
     margin: 5px 0;
 }
-#radio, #chk{
-    height: 12px;
+#m, #f, #chk{
+    height: 15px;
 }
 /* 생년월일 부분 */
 .birth{
