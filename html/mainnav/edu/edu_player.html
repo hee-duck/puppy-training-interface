@@ -105,7 +105,7 @@
         }
 
         .tab_con div {
-            /* display: none; */
+            display: none;
             width: 100%;
             height: 100%;
             background: #fff;
@@ -137,9 +137,30 @@
         .img_box>img {
             width: 100%;
             height: 350px;
-            padding: 0 10px;
+            padding: 10px;
+        }
+
+         /*교육 영상 영역 */
+        
+         .edu_video {
+            display: flex;
+            flex-direction: column;
 
         }
+        .edu_text{
+            text-align: center;
+        }
+        /* 영상 여백 줄이는법? */
+        .video1>video {
+            width: 100%;
+            height: 350px;
+        }
+
+        .video2>video {
+            width: 100%;
+            height: 350px;
+          }
+
         /*1번탭 영상교육 텍스트 */
         
 
@@ -184,32 +205,8 @@
 
         .text_box2>p {
         padding: 0 10px;
-         
-        }
-
-        
-
-        /*교육 영상 영역 */
-        
-        .edu_video {
-            display: flex;
-            flex-direction: column;
-
-        }
-        .edu_text{
-            text-align: center;
-        }
-        /* 영상 여백 줄이는법? */
-        .video1>video {
-            width: 100%;
-            height: 350px;
-        }
-
-        .video2>video {
-            width: 100%;
-            height: 350px;
-          }
-    </style>
+         }
+</style>
 
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -363,7 +360,7 @@
                         </div>
 
                         <div class="edu_box">
-                            <div class="img_box img2">
+                            <div class="img_box">
                                 <img src="../../../images/main_nav/edu/edu_group2.jpg">
                                 <img src="../../../images/main_nav/edu/edu_group3.jpg">
                             </div>
@@ -408,7 +405,7 @@
                         </div>
 
                         <div class="edu_box">
-                            <div class="img_box img2">
+                            <div class="img_box">
                                 <img src="../../../images/main_nav/edu/edu_one2.jpg">
                                 <img src="../../../images/main_nav/edu/edu_one3.jpg">
                             </div>
