@@ -57,7 +57,7 @@
 }
 
 .burgur .top-line {
-    width: 100%;
+    width: 30px;
     height: 2px;
     background-color: #000000;
     bottom: -5px;
@@ -70,7 +70,7 @@
 }
 
 .burgur .bot-line {
-    width: 100%;
+    width: 30px;
     height: 2px;
     background-color: #000000;
     top: -5px;
@@ -88,12 +88,11 @@
 .burgur.on .bot-line {
     -webkit-transform: translateY(5px) rotate(135deg);
     transform: translateY(5px) rotate(135deg);
-}
-
-.burgur.on .top-line {
+    }
+    .burgur.on .top-line{
     -webkit-transform: translateY(-5px) rotate(-135deg);
     transform: translateY(-5px) rotate(-135deg);
-}
+    }
 
 .slide {
     width: 50%;
