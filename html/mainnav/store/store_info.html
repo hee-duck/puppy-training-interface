@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오구(Ogu)</title>
+    <!-- 초기화 css -->
+    <link href="../../../css/reset.css" rel="stylesheet">
+    <!-- 외부 폰트, 외부 스타일 -->
+    <link href="../../../css/header.css" rel="stylesheet">
+    <link href="../../../css/footer.css" rel="stylesheet">
+
+    <!-- 로고 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet"/>
+
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../../images/logo/favicon.ico">
+
+
+    <!--스타일 시트-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 폰트 스타일 */
+        @font-face {
+            font-family: 'Dovemayo_gothic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #wrap {
+            min-width: 360px;
+        }
+
+        /* 본문 전체 감싸는 부분 */
+        .section {
+            width: 100%;
+            position: static;
+            font-family: 'Dovemayo_gothic';
+            margin-top: 90px;
+
+        }
+
+        /* 상위메뉴 제목 및 배경 이미지 */
+        .menu {
+            position: relative;
+        }
+
+        .menu>img {
+            width: 100%;
+            opacity: 0.3;
+            height: 150px;
+
+        }
+
+        .menu>h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 제목 가로,세로 중앙 정렬 */
+            z-index: 1;
+            color: black;
+            font-size: 2rem;
+            white-space: nowrap;
+            /* width 줄여도 줄바꿈 안되게 */
+        }
+
+        /* 탭 영역 */
+        .tab {
+            border: 1px solid #ddd;
+            border-left: none;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .tab li {
+            float: left;
+            width: 50%;
+            border-left: 1px solid #ddd;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .tab li.on {
+            background-color: #000066;
+            color: #fff;
+        }
+
+        .tab_con {
+            clear: both;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .tab_con div {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            line-height: 20px;
+            text-align: center;
+            padding: 20px 0px;
+        }
+
+</style>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+        <!-- 내부 js -->
+        <script>
+            // 탭메뉴 js
+            $(function () {
+                tab('#tab', 0);
+            }); //문서가 준비되면 함수 호출
+    
+            function tab(e, num) {
+                var num = num || 0; //숫자가 정의되지 않으면 0으로 설정
+                var menu = $(e).children(); //e로 지정된 요소의 모든 하위 요소를 가져옴
+                var con = $(e + '_con').children(); //e+_con으로 지정된 요소의 모든 하위 요소를 가져옵니다.
+                var select = $(menu).eq(num); //menu에서 인덱스 num에 있는 요소를 가져와 선택에 저장
+                var i = num; //i를 num값으로 저장
+    
+                select.addClass('on'); //select로 지정된 요소에 on클래스 추가
+                con.eq(num).show(); //con에서 인덱스 num에 요소 표시
+    
+                menu.click(function () { //메뉴의 모든 요소에 클릭 이벤트 리스너 추가
+                    if (select !== null) {
+                        select.removeClass("on"); //select에서 on클래스 제거
+                        con.eq(i).hide(); //con에서 인덱스 i에 있는 요소 숨김
+                    }
+    
+                    select = $(this); //클릭한 요소에 선택을 설정
+                    i = $(this).index(); //i를 클릭한 요소의 인덱스로 설정
+
+                    select.addClass('on'); //select에 on클래스 추가
+                    con.eq(i).show(); //con에서 인덱스 i에 요소 표시
+                });
+            }
+        </script>
+
+
+</head>
+
+<body>
+    <div id="wrap">
+
+      <!-- header 시작 -->
+    <header id="header">
+        <div class="head">
+            <div class="slide-open" id="slide-open">
+                <span class="burgur" id="burgur">
+                    <span class="top-line"></span>
+                    <span class="bot-line"></span>
+                </span>
+            </div>
+            <div class="logo_img"><img src="../../../images/logo/logo.png"></div>
+            <span class="logo">오구</span>
+            <div class="slide" id="slide">
+                <div class="slide-title">
+                    <button>로그인</button>
+                    <button>회원가입</button>
+                </div>
+                <div slide-menu>
+                    <ul class="menu-name">
+                        <li><a href="#">어서오구</a></li>
+                        <li><a href="#">배우자구</a></li>
+                        <li><a href="#">여기있다구</a></li>
+                        <li><a href="#">얘기하자구</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script id="rendered-js">
+        $(function () {
+
+            $("#slide-open").click(function () {
+                if ($("#burgur").hasClass('on')) {
+                    $("#burgur").removeClass('on');
+                    $("#slide").removeClass('on');
+
+                } else {
+                    $("#burgur").addClass('on');
+                    $("#slide").addClass('on');
+                }
+            });
+        });
+//# sourceURL=pen.js
+    </script>
+        <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+<!-- header 끝 -->
+
+         <!-- 본문 영역 -->
+    <section class="section">
+        <!-- 상위 메뉴 배경 이미지 및 메뉴명 -->
+        <div class="menu">
+            <img src="../../images/main_nav/info/info_1.jpg">
+            <h1>어서오구(O-GU)</h1>
+        </div>
+        <!-- 탭 메뉴 -->
+        <ul class="tab" id="tab">
+            <li>지점찾기</li>
+            <li>지점문의</li>
+        </ul>
+
+        <div class="tab_con" id="tab_con">
+            <!-- 지점찾기 (1번째 탭) -->
+            <div>
+                
+            </div>
+            <!-- 지점찾기 종료 -->
+
+            <!-- 지점문의 (2번째 탭) -->
+            <div>2</div>
+            <!-- 지점문의 종료 -->
+        </div>
+    </section>
+    <!-- 본문 영역 끝  -->
+
+        <!-- footer 시작 -->
+        <footer id="footer">
+            <!-- 약관 가로 정렬 부분 -->
+            <div class="term">
+                <ul>
+                    <li><a href="#" target="_blank">이용약관</a></li>
+                    <li> | </li>
+                    <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                    <li> | </li>
+                    <li><a href="#" target="_blank">가맹문의</a></li>
+                    <li> | </li>
+                    <li><a href="#" target="_blank">고객센터</a></li>
+                </ul>
+            </div>
+            <!-- 회사 정보(주소, 사업자번호 등) 부분 -->
+            <div class="addr">
+                <p>(주)오구 | 대표 : 한희수<br />
+                    사업자등록번호 : 123-45-67890 | 대표전화 : 1212-5959<br />
+                    주소 : 서울특별시 마음으로낳았구 지갑으로 키워길59<br />
+                    COPYRIGHT(C) 2023 (주)오구 All right reserved.</p>
+            </div>
+        </footer>
+        <!-- footer 끝 -->
+    </div>
+
+</body>
+
+</html>
