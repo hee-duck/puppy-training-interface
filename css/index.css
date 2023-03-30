@@ -6,6 +6,7 @@
   min-width:360px;
 }
 
+  
 /* 모바일 */
 
   /* 메인슬라이더 */
@@ -215,3 +216,51 @@ text-align: center;
   height: 40px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 타블렛 */
+@media (min-width:768px) {
+
+  /* 교육안내 배치변경 */
+  .btn_index_wrap {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+
+  #edu_join {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #store_apply {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+}
+
+
+
+
+
+/* PC버전 */
+@media  (min-width:1024px) {
+
+} 
