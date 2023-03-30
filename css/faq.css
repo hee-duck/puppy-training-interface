@@ -51,79 +51,30 @@
 
          /* 질문, 공지사항, 고객센터 정보 */
          /* 질문 부분 */
+         .collapsible {
+          background-color: white;
+          color:black;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+        }
         
-         .quest>h1{
-            margin-left: 10px;
-         }
-      
-        #Accordion_wrap{
-            margin-top: 20px;
+        .active, .collapsible:hover {
+          background-color:lightskyblue;
+          
         }
-        .que:first-child {
-            border-top: 1px solid black;
+        
+        .content {
+          padding: 0 18px;
+          display: none;
+          overflow: hidden;
+          background-color: #f1f1f1;
         }
-
-        .que {
-            position: relative;
-            padding: 17px 0;
-            cursor: pointer;
-            font-size: 14px;
-            border-bottom: 1px solid #dddddd;
-
-        }
-
-        .que::before {
-            display: inline-block;
-            content: 'Q';
-            font-size: 14px;
-            color: #006633;
-            margin: 0 5px;
-        }
-
-        .que.on>span {
-            font-weight: bold;
-            color: #006633;
-        }
-
-        .anw {
-            display: none;
-            overflow: hidden;
-            font-size: 14px;
-            background-color: #f4f4f2;
-            padding: 27px 0;
-        }
-
-        .anw::before {
-            display: inline-block;
-            content: 'A';
-            font-size: 14px;
-            font-weight: bold;
-            color: #666;
-            margin: 0 5px;
-        }
-
-        .arrow-wrap {
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translate(0, -50%);
-        }
-
-        .que .arrow-top {
-            display: none;
-        }
-
-        .que .arrow-bottom {
-            display: block;
-        }
-
-        .que.on .arrow-bottom {
-            display: none;
-        }
-
-        .que.on .arrow-top {
-            display: block;
-        }
+         
     /* 공지사항 영역 */
         .news{
             width:400px ;

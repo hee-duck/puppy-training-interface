@@ -19,6 +19,10 @@
 
     <!--스타일 시트-->
     <style>
+        *{margin: 0;
+        padding: 0;
+        box-sizing: border-box;}
+        
         /* 폰트 스타일 */
         @font-face {
             font-family: 'Dovemayo_gothic';
@@ -102,6 +106,7 @@
 
         /* 영상교육 전체 */
         .edu{
+            
             margin-top: 50px;
         }
       
@@ -122,10 +127,14 @@
         .img_box1>img{
             width: 100%;
             height: 350px;
+            box-sizing: border-box;
+            padding: 0 10px;
+
         }
 
         .text_box1{
-            margin: 0 10px ;
+            margin-left: 10px;
+        
         }
 
         .text_box1>.number{
@@ -143,7 +152,7 @@
 
         .text_box1>p{
             text-align: left;
-
+           
         }
         
         .edu_box2{
@@ -174,6 +183,13 @@
         }
         .text_box2>p{
             text-align: left;
+        }
+        /* 영상교육 글 영역 */
+        .edu_text{
+        text-align: center;
+        }
+        .edu_text>h1{
+            margin-bottom: 10px;
         }
 
         /* 영상교육 영상 영역 */
