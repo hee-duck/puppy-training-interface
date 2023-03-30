@@ -9,7 +9,7 @@
     <!-- 초기화 css -->
     <link href="../../../css/reset.css" rel="stylesheet">
     <!-- 외부 폰트, 외부 스타일 -->
-    <link href="../../../css/header (상단 메뉴바 고정).css" rel="stylesheet">
+    <link href="../../../css/header.css" rel="stylesheet">
     <link href="../../../css/footer.css" rel="stylesheet">
 
 
@@ -105,7 +105,7 @@
         }
 
         .tab_con div {
-            display: none;
+            display:none;
             width: 100%;
             height: 100%;
             background: #fff;
@@ -253,22 +253,61 @@
 
 <body>
     <div id="wrap">
+        <!-- header 영역 -->
+    <header id="header">
+        <div class="container">
+            <div class="head">
+                <div class="slide-open" id="slide-open">
+                    <span class="burgur" id="burgur">
+                        <span class="top-line"></span>
+                        <span class="bot-line"></span>
+                    </span>
+                </div>
+                <div class="logo_img"><img src="../../images/logo/logo.png"></div>
+                <span class="logo">오구</span>
 
-        <!-- header 시작 -->
-        <header id="header">
-            <div class="logo">
-                <!-- 링크에는 index.html 삽입 -->
-                <a href="#"><img src="../../../images/logo/logo.png">
-                    <span class="logo_text">오구</span>
-                </a>
-                <span class="menu_btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
+                <div class="slide" id="slide">
+                    <div class="slide-title">
+                        <button>로그인</button>
+                        <button>회원가입</button>
+                    </div>
+                    <ul>
+                        <li><a href="#">어서오구</a></li>
+                        <li><a href="#">배우자구</a></li>
+                        <li><a href="#">여기있다구</a></li>
+                        <li><a href="#">얘기하자구</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </div>
             </div>
-        </header>
-        <!-- header 끝 -->
+        </div>
+    </header>
+    <script
+    src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script id="rendered-js">
+    $(function () {
+
+        $("#slide-open").click(function () {
+            if ($("#burgur").hasClass('on')) {
+                $("#burgur").removeClass('on');
+                $("#slide").removeClass('on');
+
+            } else {
+                $("#burgur").addClass('on');
+                $("#slide").addClass('on');
+            }
+        });
+
+    });
+//# sourceURL=pen.js
+</script>
+
+
+<script
+    src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+      
 
         <!-- 본문 영역 -->
         <section class="section">
