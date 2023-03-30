@@ -11,6 +11,7 @@
   /* 메인슬라이더 */
   #slider {
     margin-top:90px;
+ 
   }
   .swiper {
     width: 100%;
@@ -31,6 +32,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 90% 50%;
   }
 
   /* 본문 텍스트박스 공통 */
@@ -42,7 +44,7 @@
 
   /* 교육안내 */
   #edu_info {
-    padding: 170px 15px ;
+    padding: 60px 15px ;
     position: relative;
     z-index: 1;
   }
@@ -70,7 +72,6 @@
     gap: 20px;
   }
 
-
   .btn_index_wrap {
     display: flex;
     align-items: center;
@@ -85,14 +86,38 @@
     border:1px solid black;
     display: inline-block;
     text-align: center;
-    background: #fff;
     box-sizing: border-box;
     color: #061f5c;
   }
 
+   div[class^="edu_icon"] {
+      margin-bottom:10px;
+    }
+
+  .edu_icon1 {
+    width:128px;
+    height:128px;
+    background-image: url("../images/index/edu/edu_img1.png");
+    background-size: 128px;
+  }
+
+  .edu_icon2 {
+    width:128px;
+    height:128px;
+    background-image: url("../images/index/edu/edu_img2.png");
+    background-size: 128px;
+  }
+
+  .edu_icon3 {
+    width:128px;
+    height:128px;
+    background-image: url("../images/index/edu/edu_img3.png");
+    background-size: 128px;
+  }
+
   /* 교육신청 */
   #edu_join {
-    padding: 50px 15px;
+    padding: 60px 15px;
     position:relative;
     display:flex;
     flex-direction: column;
