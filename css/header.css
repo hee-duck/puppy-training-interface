@@ -100,6 +100,7 @@ html.open {
 
 .slide {
     width: 40%;
+    height: 100%;
     position: absolute;
     left: -100%;
     top: 0;
@@ -111,6 +112,13 @@ html.open {
     -o-transition: left .3s;
     transition: left .3s;
     background-color: #000066;
+}
+
+/* 화면 어둡게 처리될 부분 작 */
+.dimmed{
+    background-color: #4D4D4D;
+    opacity: 0.5;
+    width: 60%;
 }
 
 .slide-title {
