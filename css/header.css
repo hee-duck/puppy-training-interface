@@ -99,7 +99,7 @@ html.open {
     }
 
 .slide {
-    width: 50%;
+    width: 30%;
     position: absolute;
     left: -100%;
     top: 0;
@@ -122,12 +122,7 @@ html.open {
     align-items: center;
     border-bottom: 1px solid #e1e1e1;
 }
-.slide-title-text{
-    font-size: small;
-    color: #fff;
-    text-align: center;
-    margin: 0 auto;
-}
+
 #slide button {
     width: 70px;
     height: 35px;
@@ -147,7 +142,7 @@ html.open {
 }
 
 .slide-menu{
-    height: 800px;
+    height: 1000px;
     background-color: black;
     opacity: 0.9;
 }
@@ -163,7 +158,8 @@ html.open {
 }
 
 .menu-name ol>a{
-    text-decoration: none;
-    color: #fff;
+/*     text-decoration: none;
+    color: #fff; */
     margin: 20px 0px 20px 30px;
+    font-size: 0.8rem;
 }
