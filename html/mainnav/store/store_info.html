@@ -176,10 +176,16 @@
             display: flex;
             justify-content: center;
         }
-        .btn_index{
+        #btn_index{
             width: 25%;
             line-height: 40px;
+            background-color: #fff;
             border: 1px solid black;
+        }
+        #btn_index:hover{
+            cursor: pointer;
+            color: #fff;
+            background-color: #000066;
         }
 </style>
 
@@ -362,7 +368,7 @@
                 <!-- 지점문의 양식 부분 -->
                 <form action="" class="store_form" method="post" enctype="multipart/form-data">
                 <div class="form_store">
-                    <input type="text" class="name" name="name" id="name" placeholder="이름">
+                    <input type="text" class="name" name="name" id="name" placeholder="이름 (필수입력)" required>
                     <div class="tel">
                     <select name="tel1" id="tel1">
                         <option value="010" selected>010</option>
@@ -373,14 +379,15 @@
                         <option value="019">019</option>
                     </select>
                     <span>-</span>
-                    <input type="text" name="tel2" id="tel2">
+                    <!-- 휴대폰 input 상자에는 최대 4글자, 숫자만 입력하게 함 -->
+                    <input type="text" name="tel2" id="tel2" maxlength="4" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                     <span>-</span>
-                    <input type="text" name="tel3" id="tel3">
+                    <input type="text" name="tel3" id="tel3" maxlength="4" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                     </div>
                     <input type="email" id="email" name="email" placeholder="이메일">
                     <textarea class="memo" placeholder="문의 접수는 회원만 가능합니다."></textarea>
                     <div class="btn">
-                        <a href="#" class="btn_index">문의하기</a>
+                        <input type="submit" id="btn_index" name="btn_index" value="문의하기">
                     </div>
                 </div>
             </form>
