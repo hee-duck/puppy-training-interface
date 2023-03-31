@@ -1,0 +1,60 @@
+        
+        /* 상위메뉴 제목 및 배경 이미지 */
+        .menu {
+            position: relative;
+            margin-top: 70px;
+        }
+        .menu>img {
+            width: 100%;
+            opacity: 0.3;
+            height: 150px;
+        }
+        .menu>h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 제목 가로,세로 중앙 정렬 */
+            z-index: 1;
+            color: black;
+            font-size: 2rem;
+            white-space: nowrap; /* width 줄여도 줄바꿈 안되게*/
+        }
+
+        /* 탭 영역 */
+        .tab {
+            border: 1px solid #ddd;
+            border-left: none;
+            background: #fff;
+            overflow: hidden;
+        }
+        .tab li {
+            float: left;
+            width: 33.3%;
+            border-left: 1px solid #ddd;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .tab li {
+            display: inline-block;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .tab li.on {
+            background-color: #000066;
+            color: #fff;
+        }
+        .tab_con {
+            clear: both;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+        }
+        .tab_con div {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            line-height: 20px;
+            text-align: center;
+            padding: 20px 0px;
+        }

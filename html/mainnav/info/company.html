@@ -16,6 +16,7 @@
     <!-- 외부 폰트, 외부 스타일 -->
     <link href="../../../css/header.css" rel="stylesheet">
     <link href="../../../css/footer.css" rel="stylesheet">
+    <link href="../../../css/tab_menu.css" rel="stylesheet">
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="../../../images/logo/favicon.ico">
     <!--스타일 시트-->
@@ -26,74 +27,6 @@
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
             font-weight: normal;
             font-style: normal;
-        }
-
-        /* 본문 전체 감싸는 부분 -- 360이하로 안줄어들게 */
-        #section {
-            width: 100%;
-            position: static;
-            font-family: 'Dovemayo_gothic';
-            min-width:360px;
-        }
-
-        /* 상위메뉴 제목 및 배경 이미지 */
-        .menu {
-            position: relative;
-            margin-top: 70px;
-        }
-        .menu>img {
-            width: 100%;
-            opacity: 0.3;
-            height: 150px;
-        }
-        .menu>h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            /* 제목 가로,세로 중앙 정렬 */
-            z-index: 1;
-            color: black;
-            font-size: 2rem;
-            white-space: nowrap; /* width 줄여도 줄바꿈 안되게*/
-        }
-
-        /* 탭 영역 */
-        .tab {
-            border: 1px solid #ddd;
-            border-left: none;
-            background: #fff;
-            overflow: hidden;
-        }
-        .tab li {
-            float: left;
-            width: 33.3%;
-            border-left: 1px solid #ddd;
-            text-align: center;
-            box-sizing: border-box;
-        }
-        .tab li {
-            display: inline-block;
-            padding: 20px;
-            cursor: pointer;
-        }
-        .tab li.on {
-            background-color: #000066;
-            color: #fff;
-        }
-        .tab_con {
-            clear: both;
-            margin-top: 5px;
-            border: 1px solid #ddd;
-        }
-        .tab_con div {
-            display: none;
-            width: 100%;
-            height: 100%;
-            background: #fff;
-            line-height: 20px;
-            text-align: center;
-            padding: 20px 0px;
         }
 
         /* 본문 영역 */
@@ -111,6 +44,23 @@
             .introduce>img{
                 width: 100%;
                 margin-top: 5%;
+            }
+
+            /* 2번탭 - 오시는길*/
+            .tab2_container{
+                width: 80%;
+            }
+            .tab2_container>iframe{
+                width: 80%;
+            }
+            .tab2_container>p{
+                font-family: 'Pretendard-Regular';
+            }
+            .tab2_container_maint{
+                font-size: 1.3rem;
+            }
+            .tab2_container_subt{
+                font-size: 0.8rem;
             }
             /* 3번탭 - 훈련사 소개 */
             .card{
@@ -216,18 +166,13 @@
             </div>
 
             <!-- 2번탭 오시는 길 / 카카오맵 api 연결-->
-            <div id="map" style="width:300px;height:300px;">
-<!--                 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc143c0bdef5ad13019c27cbeb463e6d"></script>
-                <script>
-                    var container = document.getElementById('map');
-                    var options = {
-                        center: new kakao.maps.LatLng(33.450701, 126.570667),
-                        level: 3
-                    };
-                    
-                    var map = new kakao.maps.Map(container, options);
-                    도메인 없어서 연결 안됨ㅡㅡ 절라빡쳐
-                </script> -->
+            <div class="tab2_container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3157.17531920299!2d127.20626831527358!3d37.692081479774664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cb5d5bdbf1925%3A0x484fb099d4a829c7!2z67O065Os7Lu07Y2864uI!5e0!3m2!1sko!2skr!4v1680168110653!5m2!1sko!2skr" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
+                <p class="tab2_container_maint"><br/><br/>오구(Ogu) 남양주 본사<br/><br/></p>
+                    <p class="tab2_container_subt">Tel: 031-111-5959 <br/>
+                    운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
+                    주말 및 공휴일은 운영하지 않습니다.
+                    </p>
             </div>
             
             <!-- 3번탭 훈련사 소개 / 부트스트랩 카드 이용-->
