@@ -66,11 +66,10 @@ li{
 }
 /* 이름 부분 */
 .name{
-    margin-bottom: 5px;
-}
-#name{
-    width: 98.5%;
-}
+    display: flex;
+    flex-direction: column;
+} /* TS: width:98.5%로 위아래 너비를 맞췄었는데 플렉스 태그로 간격이 자동으로 맞추어 짐 */
+
 /* 성별, 체크박스 높이 조정 */
 .gender{
     margin: 5px 0;
@@ -89,6 +88,10 @@ li{
     margin-bottom: 5px;
 }
 /* 휴대폰 부분 */
+li.phone{
+    display: flex;
+    justify-content: space-between;
+}
 #phone{
     width: 30%;
     height: 28px; /* ?? */
@@ -128,8 +131,16 @@ li{
     background-color: #000066;
 }
 /* 이메일 부분 */
-#email, #email2{
+/* #email, #email2{
     width: 46%;
+} */
+.email{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#email, #email2{
+    width: 47%;
 }
 #selectEmail{
     width: 100%;
@@ -166,6 +177,7 @@ li{
     font-size: 0.9rem;
     height: 30px;
     line-height: 30px;
+    margin-bottom: 15px;
     color: black;
 }
 #submit, .index{
