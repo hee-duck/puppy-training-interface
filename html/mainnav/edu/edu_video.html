@@ -8,6 +8,8 @@
     <title>오구(Ogu)</title>
     <!-- 초기화 css -->
     <link href="../../../css/reset.css" rel="stylesheet">
+    <!-- 공통 css -->
+    <link href="../../../css/common.css" rel="stylesheet">
     <!-- 외부 폰트, 외부 스타일 -->
     <link href="../../../css/header.css" rel="stylesheet">
     <link href="../../../css/footer.css" rel="stylesheet">
@@ -115,16 +117,27 @@
         }
 
         /* 교육 전체 -공통부분*/
-        .edu {
+        
+        h1{
+            font-size: 1.5rem;
+        }
+        p{font-size: 0.8rem;}
+        
+        .edu_box{
             margin-top: 50px;
+        }
+        
+        hr{
+         width: 30%;
+         margin: 0 auto;
+         border: 1px solid #000066;
         }
 
         /* 교육 이미지 영역 */
-
+        
         .edu_img {
             width: 100%;
-
-
+            margin-bottom:40px;
         }
 
         .edu_box {
@@ -146,6 +159,7 @@
          .edu_video {
             display: flex;
             flex-direction: column;
+            margin-bottom: 40px;
 
         }
         .edu_text{
@@ -162,6 +176,11 @@
             width: 100%;
             height: 350px;
           }
+        
+          /* 상담신청 영역 */
+         .edu_join{
+            margin-top: 40px;
+         } 
 
         /*1번탭 영상교육 텍스트 */
         
@@ -317,6 +336,8 @@
 
                     </div>
 
+                    <hr/>
+
                   <!-- 영상 영역 -->
                   <div class="edu_video">
                     <div class="edu_text">
@@ -337,9 +358,46 @@
                         </div>
 
                     </div>
+                     
+                    <hr/>
+
                     <!-- 상담신청 영역 -->
                     <div class="edu_join">
-
+                        <form action="" class="index_form" method="post">
+                            <div class="name"><input type="text" class="name" name="name" id="name" placeholder="이름"></div>
+                            <div class="number">
+                                <div class="telbox1">
+                                    <select name="tel1" id="tel1">
+                                        <option value="010" selected>010</option>
+                                        <option value="011">011</option>
+                                        <option value="016">016</option>
+                                        <option value="017">017</option>
+                                        <option value="018">018</option>
+                                        <option value="019">019</option>
+                                    </select>
+                                </div>
+                                <span>-</span>
+                                <div class="telbox2">
+                                    <input type="text" name="tel2" id="tel2">
+                                </div>
+                                <span>-</span>
+                                <div class="telbox3">
+                                    <input type="text" name="tel3" id="tel3">
+                                </div>
+                            </div>
+                
+                            <div class="email"><input type="email" id="email" name="email" placeholder="이메일"></div>
+                            <div class="text_memo">
+                                <textarea class="memo"> 
+맞춤 교육 추천을 위해 아래 사항을 작성해주세요. 
+                
+반려견 이름 / 나이 :
+견종 / 중성화 여부 :
+문제 행동 :
+관심 프로그램 : </textarea>
+                            </div>
+                            <a href="#" class="btn_index">문의하기</a>
+                        </form>
                     </div>
                 </span>
 
