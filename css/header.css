@@ -99,7 +99,7 @@ html.open {
     }
 
 .slide {
-    width: 30%;
+    width: 40%;
     position: absolute;
     left: -100%;
     top: 0;
@@ -128,10 +128,10 @@ html.open {
     height: 35px;
     margin: 0 auto;
     background-color: #000066;
-    border: 1.5px solid #fff;
+    border: 2px solid #fff;
     color: #fff;
     border-radius: 20px;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 #slide a{
     text-decoration: none;
