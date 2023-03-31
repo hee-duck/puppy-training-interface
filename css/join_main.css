@@ -1,7 +1,9 @@
  /* section 메인 박스 */
- .wrap{
-    width: 90%;
-    padding: 20px;
+/* 360이하로 안줄어들게 */
+#wrap{
+    margin-top: 50px;
+    min-width:360px;
+    padding: 75px 15px;
 }
 .section{
     display: flex;

@@ -3,35 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>오구(Ogu)</title>
     <!-- 초기화 css -->
     <link href="../../css/reset_form.css" rel="stylesheet">
     <link href="../../css/header.css" rel="stylesheet">
     <link href="../../css/footer.css" rel="stylesheet">
     <!-- 로고 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff" rel="stylesheet"/>
     <!-- css -->
     <link href="../../css/join_sub.css" rel="stylesheet">
+      <!-- 파비콘 -->
+      <link rel="shortcut icon" href="../../images/logo/favicon.ico">
+      <!-- 탭메뉴, 햄버거 jQuery -->
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <!-- 스크립트 -->
-    <script src="../../js/jquery-3.6.4.min.js"></script>
     <script defer src="../../js/member.js"></script>    
     </head>
 <body>
     <!-- header 시작 -->
-    <header class="header">
-        <div class="logo">
-            <!-- 링크에는 index.html 삽입 -->
-            <a href="#"><img src="../../images/logo/logo.png">
-            <span class="logo_text">오구</span>
-            </a>
-            <span class="menu_btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
-        </div>               
+    <header id="header">
+        <div class="dimmed"></div>
+        <div class="head">
+            <div class="slide-open" id="slide-open">
+                <span class="burgur" id="burgur">
+                    <span class="top-line"></span>
+                    <span class="bot-line"></span>
+                </span>
+            </div>
+            <div class="logo_img"><img src="../../images/logo/logo.png"></div>
+            <span class="logo">오구<style>@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');</style></span> <!--부트스트랩css 때문에 header.css에서 폰트 패밀리 안먹혀서 인라인으로 적용=>희수-->
+            <div class="slide" id="slide">
+                <div class="slide-title">
+                    <button><a href="../../html/member/login.html"><strong>로그인</strong></a></button>
+                    <button><a href="../../html/member/join_sub.html"><strong>회원가입</strong></a></button>
+                </div>
+                <div class="slide-menu">
+                    <ul class="menu-name">
+                        <li><a href="#"><strong>어서오구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="#">회사소개</a></ol>
+                            <ol><a href="#">오시는길</a></ol>
+                            <ol><a href="#">훈련사 소개</a></ol>
+                        </li>
+                        <li><a href="#"><strong>공부하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="#">영상교육</a></ol>
+                            <ol><a href="#">그룹교육</a></ol>
+                            <ol><a href="#">개인교육</a></ol>
+                        </li>
+                        <li><a href="#"><strong>여기있다구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="#">지점찾기</a></ol>
+                            <ol><a href="#">가맹문의</a></ol>
+                        </li>
+                        <li><a href="#"><strong>얘기하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="#">공지사항</a></ol>
+                            <ol><a href="#">교육후기</a></ol>
+                            <ol><a href="#">훈련사 칼럼</a></ol>
+                            <ol><a href="#">갤러리</a></ol>
+                        </li>
+                        <li><a href="#"><strong>고객센터&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="#">FAQ</a></ol>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </header>
-<!-- header 끝 -->
+    <script src="../../js/burger.js"></script><!-- header js-->
+    <!-- header 끝 -->
 <!-- 회원가입 시작 -->
 <div id="wrap">
     <div class="section">

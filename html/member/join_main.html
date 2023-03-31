@@ -14,28 +14,64 @@
     <!-- 로고 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff" rel="stylesheet"/>
-    
+     <!-- 파비콘 -->
+     <link rel="shortcut icon" href="../../images/logo/favicon.ico">
+     <!-- 탭메뉴, 햄버거 jQuery -->
+     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 <body>
-     <!-- header 시작 -->
-          <header class="header">
-            <div class="logo">
-                <!-- 링크에는 index.html 삽입 -->
-                <a href="#">
-                    <img src="../../images/logo/logo.png">
-                    <span class="logo_text">오구</span>
-                </a>
-                <span class="menu_btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-            </div>               
-        </header>
-    <!-- header 끝 -->
+   <!-- header 시작 -->
+   <header id="header">
+    <div class="dimmed"></div>
+    <div class="head">
+        <div class="slide-open" id="slide-open">
+            <span class="burgur" id="burgur">
+                <span class="top-line"></span>
+                <span class="bot-line"></span>
+            </span>
+        </div>
+        <div class="logo_img"><img src="../../images/logo/logo.png"></div>
+        <span class="logo">오구<style>@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');</style></span> <!--부트스트랩css 때문에 header.css에서 폰트 패밀리 안먹혀서 인라인으로 적용=>희수-->
+        <div class="slide" id="slide">
+            <div class="slide-title">
+                <button><a href="../../html/member/login.html"><strong>로그인</strong></a></button>
+                <button><a href="../../html/member/join_main.html"><strong>회원가입</strong></a></button>
+            </div>
+            <div class="slide-menu">
+                <ul class="menu-name">
+                    <li><a href="#"><strong>어서오구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                        <ol><a href="#">회사소개</a></ol>
+                        <ol><a href="#">오시는길</a></ol>
+                        <ol><a href="#">훈련사 소개</a></ol>
+                    </li>
+                    <li><a href="#"><strong>공부하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                        <ol><a href="#">영상교육</a></ol>
+                        <ol><a href="#">그룹교육</a></ol>
+                        <ol><a href="#">개인교육</a></ol>
+                    </li>
+                    <li><a href="#"><strong>여기있다구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                        <ol><a href="#">지점찾기</a></ol>
+                        <ol><a href="#">가맹문의</a></ol>
+                    </li>
+                    <li><a href="#"><strong>얘기하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                        <ol><a href="#">공지사항</a></ol>
+                        <ol><a href="#">교육후기</a></ol>
+                        <ol><a href="#">훈련사 칼럼</a></ol>
+                        <ol><a href="#">갤러리</a></ol>
+                    </li>
+                    <li><a href="#"><strong>고객센터&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                        <ol><a href="#">FAQ</a></ol>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<script src="../../js/burger.js"></script><!-- header js-->
+<!-- header 끝 -->
 
     <!-- 회원가입 메인 페이지 -->
-    <div class="wrap">
+    <div id="wrap">
         <!-- 회원가입 박스 -->
         <div class="section">
             <!-- 간편 로그인 버튼 부분 -->
@@ -49,7 +85,7 @@
             <hr>
             <!-- 오구 계정 만들기 부분 -->
             <div class="create">
-                <a class="create_join" href="../member/join_sub.html">오구 계정 만들기</a>
+                <a class="create_join" href="../../html/member/join_sub.html">오구 계정 만들기</a>
             </div>
             <div class="text">
                 <span class="already">이미 계정이 있으신가요?
@@ -64,13 +100,13 @@
         <!-- 약관 가로 정렬 부분 -->
         <div class="term">
             <ul>
-                <li><a href="#" target="_blank">이용약관</a></li>
+                <li><a href="../member/term.html" target="_blank">이용약관</a></li>
                 <li> | </li>
-                <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                <li><a href="../member/term2.html" target="_blank">개인정보처리방침</a></li>
                 <li> | </li>
                 <li><a href="#" target="_blank">가맹문의</a></li>
                 <li> | </li>
-                <li><a href="#" target="_blank">고객센터</a></li>
+                <li><a href="../member/faq.html" target="_blank">고객센터</a></li>
             </ul>
         </div>
         <!-- 회사 정보(주소, 사업자번호 등) 부분 -->
@@ -81,6 +117,6 @@
                 COPYRIGHT(C) 2023 (주)오구 All right reserved.</p>
         </div>
     </footer>
-    <!-- footer 끝 -->
+</body>
 </body>
 </html>
