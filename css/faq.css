@@ -34,13 +34,15 @@
           background-color: #F5F5F5;
           border: 1px solid black;
           margin-bottom: 20px;
+          display: flex;
+          flex-direction: column;
            
            }
         
         
 
         input[type=text] {
-            width: 390px;
+            width: 100%;
             box-sizing: border-box;
             border: 1px solid #12ad00;
             border-radius: 4px;
@@ -49,15 +51,16 @@
             background-position: 10px 10px;
             background-repeat: no-repeat;
             padding: 10px;
-            margin: 10px 20px;
+            margin-top: 10px;
+          
         }
 
         .search_box>button {
-            width: 390px;
+            width: 100%;
             background-color: #00CC66;
             border: 1px solid black;
             padding:10px;
-            margin: 10px 20px;
+            margin-top: 10px;
             border-radius:4px ;
         }
         .search_box>button>a{
