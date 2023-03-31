@@ -5,12 +5,17 @@
       *{margin: 0; padding:0;
         box-sizing: border-box;}
 
+        /* 공통 */
+        h1{
+          font-size: 1.5rem;
+        }
+
         .section{
             width: 100%;
             margin-top: 90px;
         }
 
-      
+        /* 검색 부분 */
         .search{
           padding:10px;
           
@@ -62,7 +67,8 @@
 
          /* 질문, 공지사항, 고객센터 정보 */
          /* 질문 부분 */
-
+        
+         
          .quest>h1{
           margin-bottom: 10px;
           margin-left: 10px;
@@ -90,7 +96,17 @@
           overflow: hidden;
           background-color: #f1f1f1;
         }
-         
+        
+        p.qu{
+          display: inline-block;
+          color: #0FC2C0;
+          margin-right: 5px;
+          
+        }
+        p.te{
+         display: inline-block;
+        
+        }
     /* 공지사항 영역 */
         .news{
             width:400px ;
@@ -99,10 +115,10 @@
 
       }
       .news>p{
-        font-size: 15px;
+        font-size: 1rem;
       }
-      .news li{
-        font-size: 12px;
+      .news li>a{
+        font-size: 0.9rem;
       }
       .news>button.plus{
         width: 100px;
@@ -130,12 +146,12 @@
       .faq_info>p{
         font-size: 20px;
         font-weight: bold;
-        color: aqua;
+        color: #0FC2C0;
 
       }
 
       .faq_info li{
-        font-size: 12px;
+        font-size: 0.8rem;
       }
 
     }
