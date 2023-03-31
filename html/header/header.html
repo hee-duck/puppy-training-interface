@@ -13,61 +13,78 @@
 
 </head>
 <body>
-    <!-- header 시작 -->
-    <header id="header">
-        <div class="head">
-            <div class="slide-open" id="slide-open">
-                <span class="burgur" id="burgur">
-                    <span class="top-line"></span>
-                    <span class="bot-line"></span>
-                </span>
-            </div>
-            <div class="logo_img"><img src="../../images/logo/logo.png"></div>
-            <span class="logo">오구<style>@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');</style></span>
-            <div class="slide" id="slide">
-                <div class="slide-title">
-                    <button>로그인</button>
-                    <button>회원가입</button>
+            <!-- header 시작 -->
+            <header id="header">
+                <div class="head">
+                    <div class="slide-open" id="slide-open">
+                        <span class="burgur" id="burgur">
+                            <span class="top-line"></span>
+                            <span class="bot-line"></span>
+                        </span>
+                    </div>
+    
+                    <div class="logo_img"><img src="../../../images/logo/logo.png"></div>
+                    <span class="logo">오구<style>@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');</style></span> <!--부트스트랩css 때문에 header.css에서 폰트 패밀리 안먹혀서 인라인으로 적용=>희수-->
+                    <div class="slide" id="slide">
+                        <div class="slide-title">
+                            <p class="slide-title-text">오구 회원</p>
+                            <button><a href="#">로그인</a></button>
+                            <button><a href="#">회원가입</a></button>
+                        </div>
+    
+                        <div class="slide-menu">
+                            <ul class="menu-name">
+                                <li><a href="#">어서오구</a>
+                                    <ol><a href="#">회사소개</a></ol>
+                                    <ol><a href="#">오시는길</a></ol>
+                                    <ol><a href="#">훈련사 소개</a></ol>
+                                </li>
+                                <li><a href="#">공부하자구</a>
+                                    <ol><a href="#">영상교육</a></ol>
+                                    <ol><a href="#">그룹교육</a></ol>
+                                    <ol><a href="#">개인교육</a></ol>
+                                </li>
+                                <li><a href="#">여기있다구</a>
+                                    <ol><a href="#">지점찾기</a></ol>
+                                    <ol><a href="#">가맹문의</a></ol>
+                                </li>
+                                <li><a href="#">얘기하자구</a>
+                                    <ol><a href="#">공지사항</a></ol>
+                                    <ol><a href="#">교육후기</a></ol>
+                                    <ol><a href="#">훈련사 칼럼</a></ol>
+                                    <ol><a href="#">갤러리</a></ol>
+                                </li>
+                                <li><a href="#">고객센터</a>
+                                    <ol><a href="#">FAQ</a></ol>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="slide-menu">
-                    <ul class="menu-name">
-                        <li><a href="#">어서오구</a>
-                            <li>
-                                <a href="#">1</a>
-                                <a href="#">1</a>
-                                <a href="#">1</a>
-                            </li>
-                        </li>
-                        <li><a href="#">배우자구</a></li>
-                        <li><a href="#">여기있다구</a></li>
-                        <li><a href="#">얘기하자구</a></li>
-                        <li><a href="#">고객센터</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-    <script
-        src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-    <script id="rendered-js">
-        $(function () {
-
-            $("#slide-open").click(function () {
-                if ($("#burgur").hasClass('on')) {
-                    $("#burgur").removeClass('on');
-                    $("#slide").removeClass('on');
-
-                } else {
-                    $("#burgur").addClass('on');
-                    $("#slide").addClass('on');
-                }
-            });
-        });
-//# sourceURL=pen.js
-    </script>
-        <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
-<!-- header 끝 -->
+            </header>
+            <script
+                src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+        
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+            <script id="rendered-js">
+                $(function () {
+        
+                    $("#slide-open").click(function () {
+                        if ($("#burgur").hasClass('on')) {
+                            $("#burgur").removeClass('on');
+                            $("#slide").removeClass('on');
+        
+                        } else {
+                            $("#burgur").addClass('on');
+                            $("#slide").addClass('on');
+                        }
+                    });
+        
+                });
+        //# sourceURL=pen.js
+            </script>
+                <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+        <!-- header 끝 -->
 </body>
 </html>

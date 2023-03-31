@@ -122,18 +122,26 @@ html.open {
     align-items: center;
     border-bottom: 1px solid #e1e1e1;
 }
-
+.slide-title-text{
+    font-size: small;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+}
 #slide button {
     width: 70px;
-    height: 30px;
-    margin-left: 10px;
+    height: 35px;
+    margin: 0 auto;
     background-color: #000066;
     border: 1.5px solid #fff;
     color: #fff;
     border-radius: 20px;
     font-size: 0.7rem;
 }
-
+#slide a{
+    text-decoration: none;
+    color: #fff;
+}
 .slide.on {
     left: 0;
 }
