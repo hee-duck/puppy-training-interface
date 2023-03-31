@@ -10,6 +10,7 @@ html.open {
     top: 0;
     background: #fff;
     border-bottom: 1px solid #e1e1e1;
+    min-width:360px;
 }
 
 .container {
@@ -49,6 +50,7 @@ html.open {
     width: 50px;
     height: 70px;
     cursor: pointer;
+    z-index: 300;
 }
 
 .burgur {
@@ -114,13 +116,7 @@ html.open {
     background-color: #000066;
 }
 
-/* 화면 어둡게 처리될 부분 작 */
-.dimmed{
-    background-color: #4D4D4D;
-    opacity: 0.5;
-    width: 60%;
-}
-
+/* 모바일gnb 메뉴*/
 .slide-title {
     width: 100%;
     height: 70px;
@@ -128,9 +124,13 @@ html.open {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid #000000;
+    z-index: 300;
+    color: #fff;
 }
-
+.slide-title strong{
+    color: #fff;
+}
 #slide button {
     width: 70px;
     height: 35px;
@@ -140,29 +140,33 @@ html.open {
     color: #fff;
     border-radius: 20px;
     font-size: 0.9rem;
+    z-index: 300;
 }
-#slide a{
+
+.slide a{
     text-decoration: none;
-    color: #fff;
+    color: #000000;
 }
 .slide.on {
     left: 0;
+    z-index: 400;
 }
 
 .slide-menu{
     height: 1000px;
-    background-color: black;
-    opacity: 0.9;
+    background-color: #fff;
+
 }
 .menu-name>li {
     display: inline-block;
     width: 100%;
     padding: 20px;
-    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid#A3A2A2;
+
 }
 .menu-name>li>a{
     text-decoration: none;
-    color: #fff;
+    color: #000000;
 }
 
 .menu-name ol>a{
@@ -170,4 +174,15 @@ html.open {
     color: #fff; */
     margin: 20px 0px 20px 30px;
     font-size: 0.8rem;
+}
+
+.dimmed{
+    display: block;
+    z-index: 100;
+    width: 100%;
+    height: 1000px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.45);
 }
