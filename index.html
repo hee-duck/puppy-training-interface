@@ -6,6 +6,7 @@
     <title>오구</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/header.css" />
@@ -14,189 +15,228 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script defer src="./js/ui_common.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
     <div id="wrap">
-    <!-- header 시작 -->
-    <header id="header">
-        <div class="logo">
-            <!-- 링크에는 index.html 삽입 -->
-            <a href="#"><img src="./images/logo/logo.png">
-            <span class="logo_text">오구</span>
-            </a>
-        </div>
-        <div class="menu_btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <!-- header 시작 -->
+        <  <!-- header 시작 -->
+        <header id="header">
+            <div class="head">
+                <div class="slide-open" id="slide-open">
+                    <span class="burgur" id="burgur">
+                        <span class="top-line"></span>
+                        <span class="bot-line"></span>
+                    </span>
+                </div>
+                <div class="logo_img"><img src="../../images/logo/logo.png"></div>
+                <span class="logo">오구</span>
+                <div class="slide" id="slide">
+                    <div class="slide-title">
+                        <button>로그인</button>
+                        <button>회원가입</button>
+                    </div>
+                    <div slide-menu>
+                        <ul class="menu-name">
+                            <li><a href="#">어서오구</a></li>
+                            <li><a href="#">배우자구</a></li>
+                            <li><a href="#">여기있다구</a></li>
+                            <li><a href="#">얘기하자구</a></li>
+                            <li><a href="#">고객센터</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </header>
- 
-<!-- header 끝 -->
+        <script
+            src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+    
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+        <script id="rendered-js">
+            $(function () {
+    
+                $("#slide-open").click(function () {
+                    if ($("#burgur").hasClass('on')) {
+                        $("#burgur").removeClass('on');
+                        $("#slide").removeClass('on');
+    
+                    } else {
+                        $("#burgur").addClass('on');
+                        $("#slide").addClass('on');
+                    }
+                });
+            });
+    //# sourceURL=pen.js
+        </script>
+            <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+    <!-- header 끝 -->
+        <!-- header 끝 -->
 
-    <section id="slider">
-        <!-- 메인 슬라이더 -->
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./images/index/slider/slider_01.jpg"></div>
-                <div class="swiper-slide"><img src="./images/index/slider/slider_02.jpg"></div>
-                <div class="swiper-slide"><img src="./images/index/slider/slider_03.jpg"></div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </section>
-    <section id="edu_info">
-        <div class="edu_info_txt">
-            <h1>수많은 레슨으로<br>
-                쌓인 실전 노하우!</h1>
-            <p> 수많은 회원과 2만번 이상의
-                누적 레슨으로<br> 다져진 오구만의 노하우를 경험해보세요.</p>
-            <div class="btn_index_wrap">
-                <a href="#" class="edu_info_section1">
-                    <div class="edu_icon1"></div>
-                    <div class="btn_index">영상강의</div>
-                </a>
-                <a href="#" class="edu_info_section2">
-                    <div class="edu_icon2"></div>
-                    <div class="btn_index">그룹레슨</div>
-                </a>
-                <a href="#" class="edu_info_section3">
-                    <div class="edu_icon3"></div>
-                    <div class="btn_index">개인레슨</div>
-                </a>
-            </div>
-        </div>
-
-    </section>
-    <section id="edu_join">
-        <div class="text_box">
-            <h1>오구와 함께해요</h1>
-            <p>오구의 레슨을 원하시는 분은 <br>
-                아래 상담 신청 양식을 작성해주세요. <br>
-                상담신청은 오구 회원만 가능합니다.</p>
-        </div>
-
-        <form action="" class="index_form" method="post">
-            <div class="name"><input type="text" class="name" name="name" id="name" placeholder="이름"></div>
-            <div class="number">
-                <div class="telbox1">
-                    <select name="tel1" id="tel1">
-                        <option value="010" selected>010</option>
-                        <option value="011">011</option>
-                        <option value="016">016</option>
-                        <option value="017">017</option>
-                        <option value="018">018</option>
-                        <option value="019">019</option>
-                    </select>
+        <section id="slider">
+            <!-- 메인 슬라이더 -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./images/index/slider/slider_01.jpg"></div>
+                    <div class="swiper-slide"><img src="./images/index/slider/slider_02.jpg"></div>
+                    <div class="swiper-slide"><img src="./images/index/slider/slider_03.jpg"></div>
                 </div>
-                <span>-</span>
-                <div class="telbox2">
-                    <input type="text" name="tel2" id="tel2">
-                </div>
-                <span>-</span>
-                <div class="telbox3">
-                    <input type="text" name="tel3" id="tel3">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <section id="edu_info">
+            <div class="edu_info_txt">
+                <h1>수많은 레슨으로<br>
+                    쌓인 실전 노하우!</h1>
+                <p> 수많은 회원과 2만번 이상의
+                    누적 레슨으로<br> 다져진 오구만의 노하우를 경험해보세요.</p>
+                <div class="btn_index_wrap">
+                    <a href="#" class="edu_info_section1">
+                        <div class="edu_icon1"></div>
+                        <div class="btn_index">영상강의</div>
+                    </a>
+                    <a href="#" class="edu_info_section2">
+                        <div class="edu_icon2"></div>
+                        <div class="btn_index">그룹레슨</div>
+                    </a>
+                    <a href="#" class="edu_info_section3">
+                        <div class="edu_icon3"></div>
+                        <div class="btn_index">개인레슨</div>
+                    </a>
                 </div>
             </div>
 
-            <div class="email"><input type="email" id="email" name="email" placeholder="이메일"></div>
-            <div class="text_memo">
-                <textarea class="memo">간단히 창업에 대한 계획을 설명해주세요. 문의 접수는 회원만 가능합니다.</textarea>
-            </div>
-            <a href="#" class="btn_index">문의하기</a>
-        </form>
-
-    </section>
-    <section id="store_info"> 
-        <div class="text_box">
-            <h1>오구는 어디에서든<br />만날 수 있어요</h1>
-            <p>수백지점의 오구지점에 합류하세요!<br>
-                 근처 지점이 궁금하시다면 지점안내를 눌러 확인하세요</p>
-        </div>
-        <div class="btn">
-            <a href="#" class="btn_index">지점안내</a></button>
-        </div>
-
-    </section>
-    <section id="store_apply">
-        <div class="text_box">
-            <h1>아름다운 반려문화를<br />만들고싶다면</h1>
-            <p>아래 가맹 신청 양식을 작성해주세요.<br>
-            확인 후 상담원이 빠르게 답변을 드릴게요.</p>
-        </div>
-
-        <form action="" class="index_form" method="post">
-            <div class="name"><input type="text" class="name" name="name" id="name" placeholder="이름"></div>
-            <div class="number">
-                <div class="telbox1">
-                    <select name="tel1" id="tel1">
-                        <option value="010" selected>010</option>
-                        <option value="011">011</option>
-                        <option value="016">016</option>
-                        <option value="017">017</option>
-                        <option value="018">018</option>
-                        <option value="019">019</option>
-                    </select>
-                </div>
-                <span>-</span>
-                <div class="telbox2">
-                    <input type="text" name="tel2" id="tel2">
-                </div>
-                <span>-</span>
-                <div class="telbox3">
-                    <input type="text" name="tel3" id="tel3">
-                </div>
+        </section>
+        <section id="edu_join">
+            <div class="text_box">
+                <h1>오구와 함께해요</h1>
+                <p>오구의 레슨을 원하시는 분은 <br>
+                    아래 상담 신청 양식을 작성해주세요. <br>
+                    상담신청은 오구 회원만 가능합니다.</p>
             </div>
 
-            <div class="email"><input type="email" id="email" name="email" placeholder="이메일"></div>
-            <div class="text_memo">
-                <textarea class="memo">간단히 창업에 대한 계획을 설명해주세요. 문의 접수는 회원만 가능합니다.</textarea>
-            </div>
-            <a href="#" class="btn_index">문의하기</a>
-        </form>
+            <form action="" class="index_form" method="post">
+                <div class="name"><input type="text" class="name" name="name" id="name" placeholder="이름"></div>
+                <div class="number">
+                    <div class="telbox1">
+                        <select name="tel1" id="tel1">
+                            <option value="010" selected>010</option>
+                            <option value="011">011</option>
+                            <option value="016">016</option>
+                            <option value="017">017</option>
+                            <option value="018">018</option>
+                            <option value="019">019</option>
+                        </select>
+                    </div>
+                    <span>-</span>
+                    <div class="telbox2">
+                        <input type="text" name="tel2" id="tel2">
+                    </div>
+                    <span>-</span>
+                    <div class="telbox3">
+                        <input type="text" name="tel3" id="tel3">
+                    </div>
+                </div>
 
-    </section>
-    <section id="sns">
-        <div class="sns_content">
-            <p><strong>다양한 채널</strong>을 통해 <strong>오구의 소식을 </strong>받아보세요!</p>
-        </div>
-        <div class="sns_img">
-            <ul>
-                <li><a href=""><img src="./images/member/sns logo/icon_blog(color).png"></a></li>
-                <li><a href=""><img src="./images/member/sns logo/icon_facebook(color).png"></a></li>
-                <li><a href=""><img src="./images/member/sns logo/icon_instagram(color).png"></a></li>
-                <li><a href=""><img src="./images/member/sns logo/icon_twitter(color).png"></a></li>
-                <li><a href="https://www.youtube.com/@user-ek7wj9wl1n"><img
-                            src="./images/member/sns logo/icon_youtube(color).png"></a></li>
-            </ul>
-        </div>
-    </section>
-    <footer id="footer">
-        <!-- 약관 가로 정렬 부분 -->
-        <div class="term">
-            <ul>
-                <li><a href="#" target="_blank">이용약관</a></li>
-                <li> | </li>
-                <li><a href="#" target="_blank">개인정보처리방침</a></li>
-                <li> | </li>
-                <li><a href="#" target="_blank">가맹문의</a></li>
-                <li> | </li>
-                <li><a href="#" target="_blank">고객센터</a></li>
-            </ul>
-        </div>
-        <!-- 회사 정보(주소, 사업자번호 등) 부분 -->
-        <div class="addr">
-            <p>(주)오구 | 대표 : 한희수<br/>
-                사업자등록번호 : 123-45-67890 | 대표전화 : 1212-5959<br/>
-                주소 : 서울특별시 마음으로낳았구 지갑으로 키워길59<br/>
-                COPYRIGHT(C) 2023 (주)오구 All right reserved.</p>
-        </div>
-    </footer>
-</div>
+                <div class="email"><input type="email" id="email" name="email" placeholder="이메일"></div>
+                <div class="text_memo">
+                    <textarea class="memo">간단히 창업에 대한 계획을 설명해주세요. 문의 접수는 회원만 가능합니다.</textarea>
+                </div>
+                <a href="#" class="btn_index">문의하기</a>
+            </form>
+
+        </section>
+        <section id="store_info">
+            <div class="text_box">
+                <h1>오구는 어디에서든<br />만날 수 있어요</h1>
+                <p>수백지점의 오구지점에 합류하세요!<br>
+                    근처 지점이 궁금하시다면 지점안내를 눌러 확인하세요</p>
+            </div>
+            <div class="btn">
+                <a href="#" class="btn_index">지점안내</a></button>
+            </div>
+
+        </section>
+        <section id="store_apply">
+            <div class="text_box">
+                <h1>아름다운 반려문화를<br />만들고싶다면</h1>
+                <p>아래 가맹 신청 양식을 작성해주세요.<br>
+                    확인 후 상담원이 빠르게 답변을 드릴게요.</p>
+            </div>
+
+            <form action="" class="index_form" method="post">
+                <div class="name"><input type="text" class="name" name="name" id="name" placeholder="이름"></div>
+                <div class="number">
+                    <div class="telbox1">
+                        <select name="tel1" id="tel1">
+                            <option value="010" selected>010</option>
+                            <option value="011">011</option>
+                            <option value="016">016</option>
+                            <option value="017">017</option>
+                            <option value="018">018</option>
+                            <option value="019">019</option>
+                        </select>
+                    </div>
+                    <span>-</span>
+                    <div class="telbox2">
+                        <input type="text" name="tel2" id="tel2">
+                    </div>
+                    <span>-</span>
+                    <div class="telbox3">
+                        <input type="text" name="tel3" id="tel3">
+                    </div>
+                </div>
+
+                <div class="email"><input type="email" id="email" name="email" placeholder="이메일"></div>
+                <div class="text_memo">
+                    <textarea class="memo">간단히 창업에 대한 계획을 설명해주세요. 문의 접수는 회원만 가능합니다.</textarea>
+                </div>
+                <a href="#" class="btn_index">문의하기</a>
+            </form>
+
+        </section>
+        <section id="sns">
+            <div class="sns_content">
+                <p><strong>다양한 채널</strong>을 통해 <strong>오구의 소식을 </strong>받아보세요!</p>
+            </div>
+            <div class="sns_img">
+                <ul>
+                    <li><a href=""><img src="./images/member/sns logo/icon_blog(color).png"></a></li>
+                    <li><a href=""><img src="./images/member/sns logo/icon_facebook(color).png"></a></li>
+                    <li><a href=""><img src="./images/member/sns logo/icon_instagram(color).png"></a></li>
+                    <li><a href=""><img src="./images/member/sns logo/icon_twitter(color).png"></a></li>
+                    <li><a href="https://www.youtube.com/@user-ek7wj9wl1n"><img
+                                src="./images/member/sns logo/icon_youtube(color).png"></a></li>
+                </ul>
+            </div>
+        </section>
+        <footer id="footer">
+            <!-- 약관 가로 정렬 부분 -->
+            <div class="term">
+                <ul>
+                    <li><a href="#" target="_blank">이용약관</a></li>
+                    <li> | </li>
+                    <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                    <li> | </li>
+                    <li><a href="#" target="_blank">가맹문의</a></li>
+                    <li> | </li>
+                    <li><a href="#" target="_blank">고객센터</a></li>
+                </ul>
+            </div>
+            <!-- 회사 정보(주소, 사업자번호 등) 부분 -->
+            <div class="addr">
+                <p>(주)오구 | 대표 : 한희수<br />
+                    사업자등록번호 : 123-45-67890 | 대표전화 : 1212-5959<br />
+                    주소 : 서울특별시 마음으로낳았구 지갑으로 키워길59<br />
+                    COPYRIGHT(C) 2023 (주)오구 All right reserved.</p>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>
