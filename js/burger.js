@@ -1,3 +1,4 @@
+// 상위메뉴 누르면 하위메뉴 아코디언 
 $(document).ready(function () {
   // 처음 모든 ol(하위메뉴) 숨김 처리
   $('.slide-menu li ol').hide();
@@ -12,6 +13,7 @@ $(document).ready(function () {
   });
 });
 
+// 슬라이드 오픈
 $(function () {
   $("#slide-open").click(function () {
     if ($("#burgur").hasClass('on')) {
@@ -25,10 +27,13 @@ $(function () {
   });
 });
 
+// 딤드 처리(처음엔 배경 투명, 햄버거 버튼 누르면 모바일gnb 제외 영역 딤드처리, 버튼 다시 클릭하면 배경 투명
 var dimmed = document.querySelector(".dimmed");
 var slideOpen = document.querySelector("#slide-open");
 
-slideOpen.addEventListener("click", function () {
+dimmed.style.backgroundColor = "transparent";
+
+slideOpen.addEventListener("click", function() {
   if (dimmed.style.backgroundColor === "rgba(0, 0, 0, 0.45)") {
     dimmed.style.backgroundColor = "transparent";
   } else {
