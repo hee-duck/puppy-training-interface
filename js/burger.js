@@ -27,16 +27,19 @@ $(function () {
   });
 });
 
-// 딤드 처리(처음엔 배경 투명, 햄버거 버튼 누르면 모바일gnb 제외 영역 딤드처리, 버튼 다시 클릭하면 배경 투명
-var dimmed = document.querySelector(".dimmed");
-var slideOpen = document.querySelector("#slide-open");
+// 딤드 처리(처음엔 display none 햄버거 버튼 누르면 모바일gnb 제외 영역 딤드처리, 버튼 다시 클릭하면 none
+const dimmed = document.querySelector('.dimmed');
+const slideOpen = document.querySelector('#slide-open');
+let isOpen = false;
 
-dimmed.style.backgroundColor = "transparent";
+dimmed.style.display = 'none';
 
-slideOpen.addEventListener("click", function() {
-  if (dimmed.style.backgroundColor === "rgba(0, 0, 0, 0.45)") {
-    dimmed.style.backgroundColor = "transparent";
+slideOpen.addEventListener('click', () => {
+  isOpen = !isOpen;
+  if (isOpen) {
+    dimmed.style.display = 'block';
+    dimmed.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
   } else {
-    dimmed.style.backgroundColor = "rgba(0, 0, 0, 0.45)";
+    dimmed.style.display = 'none';
   }
 });
