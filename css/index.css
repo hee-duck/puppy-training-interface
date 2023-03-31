@@ -235,6 +235,10 @@ text-align: center;
 /* 타블렛 */
 @media (min-width:768px) {
 
+  .swiper {
+    height:500px;
+  }
+
   /* 교육안내 배치변경 */
   .btn_index_wrap {
     flex-direction: row;
@@ -262,5 +266,7 @@ text-align: center;
 
 /* PC버전 */
 @media  (min-width:1024px) {
-
+  .swiper {
+    height:600px;
+  }
 } 

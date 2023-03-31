@@ -99,6 +99,7 @@
   }
   
   .memo {
+    padding-top:10px;
     height:150px;
     border-radius: 5px;
     border:1px solid black;
