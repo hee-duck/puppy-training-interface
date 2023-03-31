@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오구(Ogu)</title>
     <!-- 초기화 css -->
-    <link href="../../../css/reset.css" rel="stylesheet">
+    <link href="../../../css/reset_form.css" rel="stylesheet">
     <!-- 외부 폰트, 외부 스타일 -->
     <link href="../../../css/header.css" rel="stylesheet">
     <link href="../../../css/footer.css" rel="stylesheet">
-
+    
     <!-- 로고 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet"/>
 
@@ -102,7 +102,7 @@
             border: 1px solid #ddd;
         }
 
-        .tab_con div {
+        .tab_con div[class$="menu"] {
             display: none;
             width: 100%;
             height: 100%;
@@ -111,7 +111,75 @@
             text-align: center;
             padding: 20px 0px;
         }
+        /* 지점찾기 부분 */
+        hr{
+            border: 1px dashed black ;
+        }
+        
+        img, iframe{
+            width: 90%;
+        }
+        .store_message a{
+            text-decoration: underline;
+            color: #000066;
+        }
+        .store_message a:hover{
+            color: red
+        }
+        /* 지점문의 부분 */
+        .con2_menu{
+            text-align: center;
+        }
+        p.text_store{
+            text-decoration: underline;
+            color: darkblue;
+        }
+        .toJoin{
+            text-decoration: underline;
+            color: #000066;
+        }
+        .toJoin:hover{
+            color: red;
+        }
+        .memo{
+            height: 200px;
+        }
+        .store_form{
+            display: flex;
+            justify-content: center;
+        }
+        .form_store{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border: 1px solid black;
+        }
+        .tel{
+            display: flex;
+            justify-content: space-between;
 
+        }
+        #tel1, #tel2, #tel3{
+            width: 30%;
+        }
+        .tel span{
+            line-height: 60px;
+        }
+        input, select, textarea, .btn_index{
+            border-radius: 5px;
+            height: 40px;
+            margin-top: 10px;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+        }
+        .btn_index{
+            width: 25%;
+            line-height: 40px;
+            border: 1px solid black;
+        }
 </style>
 
         <!-- jQuery -->
@@ -148,15 +216,13 @@
                 });
             }
         </script>
-
-
 </head>
 
 <body>
     <div id="wrap">
-
-      <!-- header 시작 -->
+    <!-- header 시작 -->
     <header id="header">
+        <div class="dimmed"></div>
         <div class="head">
             <div class="slide-open" id="slide-open">
                 <span class="burgur" id="burgur">
@@ -165,51 +231,51 @@
                 </span>
             </div>
             <div class="logo_img"><img src="../../../images/logo/logo.png"></div>
-            <span class="logo">오구</span>
+            <span class="logo">오구<style>@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');</style></span> <!--부트스트랩css 때문에 header.css에서 폰트 패밀리 안먹혀서 인라인으로 적용=>희수-->
             <div class="slide" id="slide">
                 <div class="slide-title">
-                    <button>로그인</button>
-                    <button>회원가입</button>
+                    <button><a href="../../member/login.html"><strong>로그인</strong></a></button>
+                    <button><a href="../../member/join_main.html"><strong>회원가입</strong></a></button>
                 </div>
-                <div slide-menu>
+                <div class="slide-menu">
                     <ul class="menu-name">
-                        <li><a href="#">어서오구</a></li>
-                        <li><a href="#">배우자구</a></li>
-                        <li><a href="#">여기있다구</a></li>
-                        <li><a href="#">얘기하자구</a></li>
-                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#"><strong>어서오구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="#">회사소개</a></ol>
+                            <ol><a href="#">오시는길</a></ol>
+                            <ol><a href="#">훈련사 소개</a></ol>
+                        </li>
+                        <li><a href="#"><strong>공부하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="#">영상교육</a></ol>
+                            <ol><a href="#">그룹교육</a></ol>
+                            <ol><a href="#">개인교육</a></ol>
+                        </li>
+                        <li><a href="#"><strong>여기있다구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="#">지점찾기</a></ol>
+                            <ol><a href="#">가맹문의</a></ol>
+                        </li>
+                        <li><a href="#"><strong>얘기하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="#">공지사항</a></ol>
+                            <ol><a href="#">교육후기</a></ol>
+                            <ol><a href="#">훈련사 칼럼</a></ol>
+                            <ol><a href="#">갤러리</a></ol>
+                        </li>
+                        <li><a href="#"><strong>고객센터&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="#">FAQ</a></ol>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
-    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-    <script id="rendered-js">
-        $(function () {
-
-            $("#slide-open").click(function () {
-                if ($("#burgur").hasClass('on')) {
-                    $("#burgur").removeClass('on');
-                    $("#slide").removeClass('on');
-
-                } else {
-                    $("#burgur").addClass('on');
-                    $("#slide").addClass('on');
-                }
-            });
-        });
-//# sourceURL=pen.js
-    </script>
-        <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
-<!-- header 끝 -->
+    <script src="../../../js/burger.js"></script><!-- header js-->
+    <!-- header 끝 -->
 
          <!-- 본문 영역 -->
     <section class="section">
         <!-- 상위 메뉴 배경 이미지 및 메뉴명 -->
         <div class="menu">
-            <img src="../../images/main_nav/info/info_1.jpg">
-            <h1>어서오구(O-GU)</h1>
+            <img src="../../../images/main_nav/store/store_back.jpg">
+            <h1>여기있다구</h1>
         </div>
         <!-- 탭 메뉴 -->
         <ul class="tab" id="tab">
@@ -219,13 +285,105 @@
 
         <div class="tab_con" id="tab_con">
             <!-- 지점찾기 (1번째 탭) -->
-            <div>
-                
+            <div class="con1_menu">
+                <div class="con1_img">
+                    <img src="../../../images/main_nav/store/store_3.jpg" >
+                    <p>
+                        오구(Ogu)는 본사를 포함한 전국 6개의 지점에서 운영되고 있습니다.<br/>
+                        남양주, 잠실, 강원, 부산, 광주, 제주에서 오구(Ogu)를 만나보세요.
+                    </p>
+                </div>
+                <br/><hr/><br/>
+                <div class="store_map">
+                    <p>오구(Ogu) 남양주 본사<br/><br/>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3157.17531920299!2d127.20626831527358!3d37.692081479774664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cb5d5bdbf1925%3A0x484fb099d4a829c7!2z67O065Os7Lu07Y2864uI!5e0!3m2!1sko!2skr!4v1680168110653!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
+                    Tel: 031-111-5959 <br/>
+                    운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
+                    토,일, 공휴일은 휴무입니다.
+                    </p>
+                    <br/><hr/><br/>
+                    <p>오구(Ogu) 잠실지점<br/><br/>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.803243347169!2d127.09815793488772!3d37.51255850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca50a915f665b%3A0xabeb10cd5efdfce2!2z66Gv642w7JuU65Oc7YOA7JuM!5e0!3m2!1sko!2skr!4v1680231008429!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
+                    Tel: 02-2222-5959 <br/>
+                    운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
+                    토,일, 공휴일은 휴무입니다.
+                    </p>
+                    <br/><hr/><br/>
+                    <p>오구(Ogu) 강원지점<br/><br/>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405692.4418115902!2d127.25192056562499!3d37.402312400000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356373c1b2d88e41%3A0xa0e03c4e1739560d!2z7Jik7YGs67C466asIOyKpO2CpOyepQ!5e0!3m2!1sko!2skr!4v1680231281297!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
+                    Tel: 033-333-5959 <br/>
+                    운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
+                    토,일, 공휴일은 휴무입니다.
+                    </p>
+                    <br/><hr/><br/>
+                    <p>오구(Ogu) 부산지점<br/><br/>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13047.667036169483!2d129.15162943389663!3d35.15869668510892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35688d5c0f17ece1%3A0xc41f3c60c5c74f88!2z7ZW07Jq064yA7ZW07IiY7JqV7J6l!5e0!3m2!1sko!2skr!4v1680231313208!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
+                    Tel: 051-444-5959 <br/>
+                    운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
+                    토,일, 공휴일은 휴무입니다.
+                    </p>
+                    <br/><hr/><br/>
+                    <p>오구(Ogu) 광주지점<br/><br/>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1630.943180616002!2d126.85183825816134!3d35.1594547450798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3571894bfda800ab%3A0x466c1927782ab175!2z6rSR7KO86rSR7Jet7Iuc7LKt!5e0!3m2!1sko!2skr!4v1680231354081!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
+                    Tel: 062-555-5959 <br/>
+                    운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
+                    토,일, 공휴일은 휴무입니다.
+                    </p>
+                    <br/><hr/><br/>
+                    <p>오구(Ogu) 제주지점<br/><br/>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13309.017765127346!2d126.50737438317529!3d33.49475664217855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cfcae537cd439%3A0xd7a0bcd187c7bcce!2z7KCc7KO87Iuc7LKt!5e0!3m2!1sko!2skr!4v1680231176337!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
+                    Tel: 064-666-5959 <br/>
+                    운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
+                    토,일, 공휴일은 휴무입니다.
+                    </p>
+                </div>
+                <br/><hr/><br/>
+                <div class="store_message">
+                    <p>기타 지점과 관련된 문의사항은 <a href="store_info.html">상단</a>에 있는 '지점문의'를 이용해 주세요.</p>
+                </div>    
             </div>
             <!-- 지점찾기 종료 -->
 
             <!-- 지점문의 (2번째 탭) -->
-            <div>2</div>
+            <div class="con2_menu">
+                <div class="store_pic">
+                    <img src="../../../images/main_nav/store/store_2.jpg" ><br/><br/>
+                    <p>
+                        <h1>대한민국 최고의 반려동물 훈련 시스템</h1>
+                        누구든지 오구의 가족이 될 수 있습니다. <br/><br/>
+                        아래 양식에 맞추어 항목을 작성하셔서 제출하시면,<br/>
+                        <p class="text_store">영업일 기준, 5일 안에 기재하신 연락처로 답변을 드립니다.</p><br/>
+                        <p>*가맹문의는 회원분들께만 제공하고 있습니다.</p>
+                        <p>아직 오구의 회원이 아니신가요? <a class="toJoin" href="../../../html/member/join_main.html">회원가입</a></p>
+                    </p>
+                </div>
+                <br/><hr/><br/>
+                <!-- 지점문의 양식 부분 -->
+                <form action="" class="store_form" method="post" enctype="multipart/form-data">
+                <div class="form_store">
+                    <input type="text" class="name" name="name" id="name" placeholder="이름">
+                    <div class="tel">
+                    <select name="tel1" id="tel1">
+                        <option value="010" selected>010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                        <option value="019">019</option>
+                    </select>
+                    <span>-</span>
+                    <input type="text" name="tel2" id="tel2">
+                    <span>-</span>
+                    <input type="text" name="tel3" id="tel3">
+                    </div>
+                    <input type="email" id="email" name="email" placeholder="이메일">
+                    <textarea class="memo" placeholder="문의 접수는 회원만 가능합니다."></textarea>
+                    <div class="btn">
+                        <a href="#" class="btn_index">문의하기</a>
+                    </div>
+                </div>
+            </form>
+            </div>
             <!-- 지점문의 종료 -->
         </div>
     </section>

@@ -16,12 +16,8 @@
     <!-- 외부 폰트, 외부 스타일 -->
     <link href="../../../css/header.css" rel="stylesheet">
     <link href="../../../css/footer.css" rel="stylesheet">
-    <!-- 헤더 -->
-
-
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="../../../images/logo/favicon.ico">
-
     <!--스타일 시트-->
     <style>
         /* 폰트 스타일 */
@@ -123,114 +119,62 @@
             
     </style>
 
-    <!--  탭 메뉴 jQuery -->
+    <!-- 탭메뉴, 햄버거 jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
     <!-- 내부 js -->
-    <script>
-        // 탭메뉴 js
-        $(function () {
-            tab('#tab', 0);
-        }); //문서가 준비되면 함수 호출
-
-        function tab(e, num) {
-            var num = num || 0; //숫자가 정의되지 않으면 0으로 설정
-            var menu = $(e).children(); //e로 지정된 요소의 모든 하위 요소를 가져옴
-            var con = $(e + '_con').children(); //e+_con으로 지정된 요소의 모든 하위 요소를 가져옵니다.
-            var select = $(menu).eq(num); //menu에서 인덱스 num에 있는 요소를 가져와 선택에 저장
-            var i = num; //i를 num값으로 저장
-
-            select.addClass('on'); //select로 지정된 요소에 on클래스 추가
-            con.eq(num).show(); //con에서 인덱스 num에 요소 표시
-
-            menu.click(function () { //메뉴의 모든 요소에 클릭 이벤트 리스너 추가
-                if (select !== null) {
-                    select.removeClass("on"); //select에서 on클래스 제거
-                    con.eq(i).hide(); //con에서 인덱스 i에 있는 요소 숨김
-                }
-
-                select = $(this); //클릭한 요소에 선택을 설정
-                i = $(this).index(); //i를 클릭한 요소의 인덱스로 설정
-
-                select.addClass('on'); //select에 on클래스 추가
-                con.eq(i).show(); //con에서 인덱스 i에 요소 표시
-            });
-        }
-    </script>
+    <script src="../../../js/tab_menu.js"></script><!--탭메뉴 js-->
 
 </head>
 <body>
-        <!-- header 시작 -->
-        <header id="header">
-            <div class="head">
-                <div class="slide-open" id="slide-open">
-                    <span class="burgur" id="burgur">
-                        <span class="top-line"></span>
-                        <span class="bot-line"></span>
-                    </span>
-                </div>
-
-                <div class="logo_img"><img src="../../../images/logo/logo.png"></div>
-                <span class="logo">오구<style>@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');</style></span> <!--부트스트랩css 때문에 header.css에서 폰트 패밀리 안먹혀서 인라인으로 적용=>희수-->
-                <div class="slide" id="slide">
-                    <div class="slide-title">
-                        <button>로그인</button>
-                        <button>회원가입</button>
-                    </div>
-
-                    <div class="slide-menu">
-                        <ul class="menu-name">
-                            <li><a href="#">어서오구</a>
-                                <ol><a href="#">&#10045 회사소개</a></ol>
-                                <ol><a href="#">&#10045 오시는길</a></ol>
-                                <ol><a href="#">&#10045 훈련사 소개</a></ol>
-                            </li>
-                            <li><a href="#">공부하자구</a>
-                                <ol><a href="#">&#10045 영상교육</a></ol>
-                                <ol><a href="#">&#10045 그룹교육</a></ol>
-                                <ol><a href="#">&#10045 개인교육</a></ol>
-                            </li>
-                            <li><a href="#">여기있다구</a>
-                                <ol><a href="#">&#10045 지점찾기</a></ol>
-                                <ol><a href="#">&#10045 가맹문의</a></ol>
-                            </li>
-                            <li><a href="#">얘기하자구</a>
-                                <ol><a href="#">&#10045 공지사항</a></ol>
-                                <ol><a href="#">&#10045 교육후기</a></ol>
-                                <ol><a href="#">&#10045 훈련사 칼럼</a></ol>
-                                <ol><a href="#">&#10045 갤러리</a></ol>
-                            </li>
-                            <li><a href="#">고객센터</a>
-                                <ol><a href="#">&#10045 FAQ</a></ol>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
+    <!-- header 시작 -->
+    <header id="header">
+        <div class="dimmed"></div>
+        <div class="head">
+            <div class="slide-open" id="slide-open">
+                <span class="burgur" id="burgur">
+                    <span class="top-line"></span>
+                    <span class="bot-line"></span>
+                </span>
             </div>
-        </header>
-        <script
-            src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
-    
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-        <script id="rendered-js">
-            $(function () {
-    
-                $("#slide-open").click(function () {
-                    if ($("#burgur").hasClass('on')) {
-                        $("#burgur").removeClass('on');
-                        $("#slide").removeClass('on');
-    
-                    } else {
-                        $("#burgur").addClass('on');
-                        $("#slide").addClass('on');
-                    }
-                });
-    
-            });
-    //# sourceURL=pen.js
-        </script>
-            <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+            <div class="logo_img"><img src="../../../images/logo/logo.png"></div>
+            <span class="logo">오구<style>@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');</style></span> <!--부트스트랩css 때문에 header.css에서 폰트 패밀리 안먹혀서 인라인으로 적용=>희수-->
+            <div class="slide" id="slide">
+                <div class="slide-title">
+                    <button><a href="../../member/login.html"><strong>로그인</strong></a></button>
+                    <button><a href="../../member/join_main.html"><strong>회원가입</strong></a></button>
+                </div>
+                <div class="slide-menu">
+                    <ul class="menu-name">
+                        <li><a href="#"><strong>어서오구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="#">회사소개</a></ol>
+                            <ol><a href="#">오시는길</a></ol>
+                            <ol><a href="#">훈련사 소개</a></ol>
+                        </li>
+                        <li><a href="#"><strong>공부하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="#">영상교육</a></ol>
+                            <ol><a href="#">그룹교육</a></ol>
+                            <ol><a href="#">개인교육</a></ol>
+                        </li>
+                        <li><a href="#"><strong>여기있다구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="#">지점찾기</a></ol>
+                            <ol><a href="#">가맹문의</a></ol>
+                        </li>
+                        <li><a href="#"><strong>얘기하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="#">공지사항</a></ol>
+                            <ol><a href="#">교육후기</a></ol>
+                            <ol><a href="#">훈련사 칼럼</a></ol>
+                            <ol><a href="#">갤러리</a></ol>
+                        </li>
+                        <li><a href="#"><strong>고객센터&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="#">FAQ</a></ol>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="../../../js/burger.js"></script><!-- header js-->
     <!-- header 끝 -->
 
     <!-- 본문 영역 -->
@@ -273,16 +217,17 @@
 
             <!-- 2번탭 오시는 길 / 카카오맵 api 연결-->
             <div id="map" style="width:300px;height:300px;">
-                <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc143c0bdef5ad13019c27cbeb463e6d"></script>
+<!--                 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bc143c0bdef5ad13019c27cbeb463e6d"></script>
                 <script>
-                    let container = document.getElementById('map');
-                    let options = {
-                        center: new kakao.maps.LatLng(37.50012593428632, 127.0291602075206),
+                    var container = document.getElementById('map');
+                    var options = {
+                        center: new kakao.maps.LatLng(33.450701, 126.570667),
                         level: 3
                     };
-            
+                    
                     var map = new kakao.maps.Map(container, options);
-                </script>
+                    도메인 없어서 연결 안됨ㅡㅡ 절라빡쳐
+                </script> -->
             </div>
             
             <!-- 3번탭 훈련사 소개 / 부트스트랩 카드 이용-->
@@ -330,13 +275,13 @@
         <!-- 약관 가로 정렬 부분 -->
         <div class="term">
             <ul>
-                <li><a href="#" target="_blank">이용약관</a></li>
+                <li><a href="../../member/term.html">이용약관</a></li>
                 <li> | </li>
-                <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                <li><a href="../../member/term2.html">개인정보처리방침</a></li>
                 <li> | </li>
-                <li><a href="#" target="_blank">가맹문의</a></li>
+                <li><a href="#">가맹문의</a></li>
                 <li> | </li>
-                <li><a href="#" target="_blank">고객센터</a></li>
+                <li><a href="../../member/faq.html">고객센터</a></li>
             </ul>
         </div>
         <!-- 회사 정보(주소, 사업자번호 등) 부분 -->
