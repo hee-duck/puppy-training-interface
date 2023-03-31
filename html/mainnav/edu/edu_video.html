@@ -13,13 +13,10 @@
     <!-- 외부 폰트, 외부 스타일 -->
     <link href="../../../css/header.css" rel="stylesheet">
     <link href="../../../css/footer.css" rel="stylesheet">
-    
 
-   
 
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="../../../images/logo/favicon.ico">
-    
 
 
     <!--스타일 시트-->
@@ -120,34 +117,37 @@
         }
 
         /* 교육 전체 -공통부분*/
-        
-        h1{
+
+        h1 {
             font-size: 1.5rem;
         }
-        p{font-size: 0.8rem;}
-        
-        .edu_box{
+
+        p {
+            font-size: 0.8rem;
+        }
+
+        .edu_box {
             margin-top: 50px;
         }
-        
-        hr{
-         width: 30%;
-         margin: 0 auto;
-         border: 1px solid #000066;
+
+        hr {
+            width: 30%;
+            margin: 0 auto;
+            border: 1px solid #000066;
         }
 
         /* 교육 이미지 영역 */
-        
+
         .edu_img {
             width: 100%;
-            margin-bottom:40px;
+            margin-bottom: 40px;
         }
 
         .edu_box {
             width: 100%;
             display: flex;
             flex-direction: column;
-            
+
         }
 
 
@@ -157,46 +157,48 @@
             padding: 10px;
         }
 
-         /*교육 영상 영역 */
-        
-         .edu_video {
+        /*교육 영상 영역 */
+
+        .edu_video {
             display: flex;
             flex-direction: column;
             margin-bottom: 40px;
 
         }
-        .edu_text{
+
+        .edu_text {
             text-align: center;
             margin-top: 30px;
         }
-       
+
         /* 영상 여백 줄이는법? */
-        .video_box{
+        .video_box {
             padding: 10px;
         }
+
         .video_box>video {
             width: 100%;
             height: 350px;
         }
-        
-       
-          /* 상담신청 영역 */
-         .edu_join{
+
+
+        /* 상담신청 영역 */
+        .edu_join {
             margin-top: 40px;
             text-align: center;
-         } 
+        }
 
-         form div{
-    width:60px;
-    display:inline-block;
-    text-align:center;
-    line-height:34px;
-    font-size:30px;
-  }
+        form div {
+            width: 60px;
+            display: inline-block;
+            text-align: center;
+            line-height: 34px;
+            font-size: 30px;
+        }
 
         /*1번탭 영상교육 텍스트 */
-        
-      
+
+
         .text_box>.number {
             font-size: 40px;
             font-weight: bold;
@@ -208,45 +210,46 @@
         .text_box>h1 {
             text-align: left;
             padding: 10px;
-         }
+        }
 
         .text_box>p {
             text-align: left;
             padding: 10px;
 
         }
-        .edu_text>h1{
+
+        .edu_text>h1 {
             padding: 10px;
 
         }
 
-        .edu_text>p{
-        padding: 0 10px;
+        .edu_text>p {
+            padding: 0 10px;
         }
 
         /* 그룹레슨&개인레슨 텍스트 */
-        .text_box1>h1{
-           line-height: 40px;
-           font-size: 1.1rem;
-           
+        .text_box1>h1 {
+            line-height: 40px;
+            font-size: 1.1rem;
+
 
         }
 
-       .text_box2>h1 {
-         padding: 20px;      
-         
+        .text_box2>h1 {
+            padding: 20px;
+
         }
 
         .text_box2>p {
-        padding: 0 10px;
-         }
-</style>
+            padding: 0 10px;
+        }
+    </style>
 
-        <!-- 탭메뉴, 햄버거 jQuery -->
-        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-        <script src="../../../js/tab_menu.js"></script> <!-- 탭메뉴 js -->
+    <!-- 탭메뉴, 햄버거 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="../../../js/tab_menu.js"></script> <!-- 탭메뉴 js -->
 
-       
+
 
 </head>
 
@@ -264,7 +267,9 @@
                     </span>
                 </div>
                 <div class="logo_img"><img src="../../../images/logo/logo.png"></div>
-                <span class="logo">오구<style>@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');</style></span> <!--부트스트랩css 때문에 header.css에서 폰트 패밀리 안먹혀서 인라인으로 적용=>희수-->
+                <span class="logo">오구<style>
+                        @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+                    </style></span> <!--부트스트랩css 때문에 header.css에서 폰트 패밀리 안먹혀서 인라인으로 적용=>희수-->
                 <div class="slide" id="slide">
                     <div class="slide-title">
                         <button><a href="../../member/login.html"><strong>로그인</strong></a></button>
@@ -272,27 +277,32 @@
                     </div>
                     <div class="slide-menu">
                         <ul class="menu-name">
-                            <li><a href="#"><strong>어서오구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <li><a
+                                    href="#"><strong>어서오구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
                                 <ol><a href="#">회사소개</a></ol>
                                 <ol><a href="#">오시는길</a></ol>
                                 <ol><a href="#">훈련사 소개</a></ol>
                             </li>
-                            <li><a href="#"><strong>공부하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <li><a
+                                    href="#"><strong>공부하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
                                 <ol><a href="#">영상교육</a></ol>
                                 <ol><a href="#">그룹교육</a></ol>
                                 <ol><a href="#">개인교육</a></ol>
                             </li>
-                            <li><a href="#"><strong>여기있다구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <li><a
+                                    href="#"><strong>여기있다구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
                                 <ol><a href="#">지점찾기</a></ol>
                                 <ol><a href="#">가맹문의</a></ol>
                             </li>
-                            <li><a href="#"><strong>얘기하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <li><a
+                                    href="#"><strong>얘기하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
                                 <ol><a href="#">공지사항</a></ol>
                                 <ol><a href="#">교육후기</a></ol>
                                 <ol><a href="#">훈련사 칼럼</a></ol>
                                 <ol><a href="#">갤러리</a></ol>
                             </li>
-                            <li><a href="#"><strong>고객센터&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <li><a
+                                    href="#"><strong>고객센터&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
                                 <ol><a href="#">FAQ</a></ol>
                             </li>
                         </ul>
@@ -353,35 +363,36 @@
 
                     </div>
 
-                    <hr/>
+                    <hr />
 
-                  <!-- 영상 영역 -->
-                  <div class="edu_video">
-                    <div class="edu_text">
-                        <h1>영상교육 듣는 방법</h1>
-                        <p>오구 교육은 이해, 관찰, 활동, 세부교육의 단계를 거치며 반려견의 회복을 돕습니다.
-                            이해, 관찰, 활동은 국,영,수와 같이 오구교육의 기초가 되는 과목입니다.
-                            위 세 가지를 중심으로 열심히 교육하시며 산책, 분리불안, 화장실 등의 세부 교육을 진행하시면 효과적입니다.
-                        </p>
-                    </div>
-                   
+                    <!-- 영상 영역 -->
+                    <div class="edu_video">
+                        <div class="edu_text">
+                            <h1>영상교육 듣는 방법</h1>
+                            <p>오구 교육은 이해, 관찰, 활동, 세부교육의 단계를 거치며 반려견의 회복을 돕습니다.
+                                이해, 관찰, 활동은 국,영,수와 같이 오구교육의 기초가 되는 과목입니다.
+                                위 세 가지를 중심으로 열심히 교육하시며 산책, 분리불안, 화장실 등의 세부 교육을 진행하시면 효과적입니다.
+                            </p>
+                        </div>
+
                         <div class="video_box">
                             <video src="../../../images/main_nav/edu/edu_veo1.mp4" autoplay controls></video>
                             <!-- control=동영상을 웹사이트에서 control할 수 있게 하기 -->
                             <video src="../../../images/main_nav/edu/edu_veo2.mp4" autoplay controls></video>
 
                         </div>
-                       
+
 
                     </div>
-                     
-                    
+
+
 
                     <!-- 상담신청 영역 -->
                     <span class="edu_join">
                         <h1>상담신청</h1>
                         <form action="" class="index_form" method="post">
-                            <div class="name"><input type="text" class="name" name="name" id="name" placeholder="이름"></div>
+                            <div class="name"><input type="text" class="name" name="name" id="name" placeholder="이름">
+                            </div>
                             <div class="number">
                                 <div class="telbox1">
                                     <select name="tel1" id="tel1">
@@ -402,10 +413,10 @@
                                     <input type="text" name="tel3" id="tel3">
                                 </div>
                             </div>
-                
+
                             <div class="email"><input type="email" id="email" name="email" placeholder="이메일"></div>
                             <div class="text_memo">
-                                <textarea class="memo"> 
+                                <textarea class="memo">
 맞춤 교육 추천을 위해 아래 사항을 작성해주세요. 
                 
 반려견 이름 / 나이 :
@@ -418,7 +429,7 @@
                     </span>
                 </span>
 
-               <!-- 2번탭 그룹교육 -->
+                <!-- 2번탭 그룹교육 -->
                 <span class="edu2">
                     <!-- 이미지 영역 -->
                     <div class="edu_img">
@@ -453,24 +464,25 @@
                         </div>
                     </div>
 
-                   
+
 
                     <!-- 영상 영역 -->
                     <div class="edu_video">
                         <div class="video_box">
-                            <video src="../../../images/main_nav/edu/edu_veo1.mp4" autoplay controls></video>
+                            <video src="../../../images/main_nav/edu/edu_veo3.mp4" autoplay controls></video>
                             <!-- control=동영상을 웹사이트에서 control할 수 있게 하기 -->
                         </div>
 
                     </div>
 
-                   
+
 
                     <!-- 상담신청 영역 -->
                     <span class="edu_join">
                         <h1>상담신청</h1>
                         <form action="" class="index_form" method="post">
-                            <div class="name"><input type="text" class="name" name="name" id="name" placeholder="이름"></div>
+                            <div class="name"><input type="text" class="name" name="name" id="name" placeholder="이름">
+                            </div>
                             <div class="number">
                                 <div class="telbox1">
                                     <select name="tel1" id="tel1">
@@ -491,10 +503,10 @@
                                     <input type="text" name="tel3" id="tel3">
                                 </div>
                             </div>
-                
+
                             <div class="email"><input type="email" id="email" name="email" placeholder="이메일"></div>
                             <div class="text_memo">
-                                <textarea class="memo"> 
+                                <textarea class="memo">
 맞춤 교육 추천을 위해 아래 사항을 작성해주세요. 
                 
 반려견 이름 / 나이 :
@@ -542,7 +554,7 @@
                         </div>
                     </div>
 
-                   
+
 
                     <!-- 영상 영역 -->
                     <div class="edu_video">
@@ -552,49 +564,49 @@
                         </div>
                     </div>
                 </span>
-            
 
-            <hr/>
 
-            <!-- 상담신청 영역 -->
-            <div class="edu_join">
-                <h1>상담신청</h1>
-                <form action="" class="index_form" method="post">
-                    <div class="name"><input type="text" class="name" name="name" id="name" placeholder="이름"></div>
-                    <div class="number">
-                        <div class="telbox1">
-                            <select name="tel1" id="tel1">
-                                <option value="010" selected>010</option>
-                                <option value="011">011</option>
-                                <option value="016">016</option>
-                                <option value="017">017</option>
-                                <option value="018">018</option>
-                                <option value="019">019</option>
-                            </select>
+                <hr />
+
+                <!-- 상담신청 영역 -->
+                <div class="edu_join">
+                    <h1>상담신청</h1>
+                    <form action="" class="index_form" method="post">
+                        <div class="name"><input type="text" class="name" name="name" id="name" placeholder="이름"></div>
+                        <div class="number">
+                            <div class="telbox1">
+                                <select name="tel1" id="tel1">
+                                    <option value="010" selected>010</option>
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select>
+                            </div>
+                            <div>-</div>
+                            <div class="telbox2">
+                                <input type="text" name="tel2" id="tel2">
+                            </div>
+                            <div>-</div>
+                            <div class="telbox3">
+                                <input type="text" name="tel3" id="tel3">
+                            </div>
                         </div>
-                        <div>-</div>
-                        <div class="telbox2">
-                            <input type="text" name="tel2" id="tel2">
-                        </div>
-                        <div>-</div>
-                        <div class="telbox3">
-                            <input type="text" name="tel3" id="tel3">
-                        </div>
-                    </div>
-        
-                    <div class="email"><input type="email" id="email" name="email" placeholder="이메일"></div>
-                    <div class="text_memo">
-                        <textarea class="memo"> 
+
+                        <div class="email"><input type="email" id="email" name="email" placeholder="이메일"></div>
+                        <div class="text_memo">
+                            <textarea class="memo">
 맞춤 교육 추천을 위해 아래 사항을 작성해주세요. 
         
 반려견 이름 / 나이 :
 견종 / 중성화 여부 :
 문제 행동 :
 관심 프로그램 : </textarea>
-                    </div>
-                    <a href="#" class="btn_index">문의하기</a>
-                </form>
-            </div>
+                        </div>
+                        <a href="#" class="btn_index">문의하기</a>
+                    </form>
+                </div>
             </div>
 
         </section>
