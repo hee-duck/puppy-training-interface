@@ -4,9 +4,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>3
+    <title>오구(OGU) 관리자</title>
+    <!-- 스타일 시트 -->
+    <link href="../css/reset.css" rel="stylesheet"> <!-- 초기화 -->
+    <link href="../css/header.css" rel="stylesheet"> <!-- header / 로고 이미지 및 텍스트만 사용 -->
+
+    <style>
+        #wrap{
+            min-width: 360px;
+        }
+
+        /* 헤더 로고 밑 로그인 부분 시작 */
+        .login_nav{ /* 영역 및 크기 잡기 시작 */
+            width: 100%;
+            height: 40px;
+            background-color: #000066;
+            position: relative;
+        }
+        
+        .login_btn>a{
+            position: absolute;
+            color: #fff;
+            right: 200px;
+            line-height: 40px;
+        }
+        
+        .idpw_find_btn>a{
+            position: absolute;
+            color: #fff;
+            right: 80px;
+            line-height: 40px
+        } /* 영역 및 크기 잡기 종료 */
+        .login_nav a:hover{
+            color: #66B2FF;
+        }
+
+        /* section 영역 */
+        #section{
+            position: absolute;
+            top: 120px;
+            padding: 10px;
+            display: flex;
+        }
+
+        .side_menu{
+            border: 1px solid black;
+            width: 180px;
+        }
+
+        .side_menu li{
+            border-bottom: 1px solid black;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+        }
+
+        .side_menu li:last-child{
+            border-bottom: none;
+        }
+
+        .side_menu li:hover{
+            background-color: #000066;
+            color: #fff;
+        }
+        
+        .main_content{
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="wrap">
+        <header id="header">
+            <div class="logo_img"><img src="../images/logo/logo.png"></div>
+            <span class="logo">오구(OGU) 관리자<style>@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');</style></span> <!--부트스트랩css 때문에 header.css에서 폰트 패밀리 안먹혀서 인라인으로 적용=>희수-->
+            <div class="login_nav">
+                <span class="login_btn"><a href="#">로그인</a></span>
+                <span class="idpw_find_btn"><a href="#">ID/PW 찾기</a></span>
+            </div>
+        </header>
+        <section id="section">
+            <div class="side_menu">
+                <ul>
+                    <li>관리자 관리</li>
+                    <li>회원관리</li>
+                    <li>배너관리</li>
+                    <li>팝업관리</li>
+                    <li>교육관리</li>
+                    <li>교육문의</li>
+                    <li>영상교육</li>
+                    <li>그룹교육</li>
+                    <li>개인교육</li>
+                    <li>지점관리</li>
+                    <li>지점문의</li>
+                    <li>공지사항</li>
+                    <li>갤러리</li>
+                    <li>교육후기</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+            <div class="main_content">
+                본문내용에 머 쓰지
+            </div>
+        </section>
+    </div>
 </body>
 </html>
