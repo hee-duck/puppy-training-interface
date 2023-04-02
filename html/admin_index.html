@@ -1,12 +1,259 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>3
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오구(OGU) 관리자</title>
+  <!-- jQuery -->
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <!-- 스타일 시트 -->
+  <link href="../css/reset.css" rel="stylesheet"> <!-- 초기화 -->
+  <link href="../css/header.css" rel="stylesheet"> <!-- header / 로고 이미지 및 텍스트만 사용 -->
+
+  <style>
+    #wrap {
+      min-width: 360px;
+    }
+
+    /* 헤더 로고 밑 로그인 부분 시작 */
+    .login_nav {
+      /* 영역 및 크기 잡기 시작 */
+      width: 100%;
+      height: 40px;
+      background-color: #000066;
+      position: relative;
+    }
+
+    .login_btn>a {
+      position: absolute;
+      color: #fff;
+      right: 200px;
+      line-height: 40px;
+    }
+
+    .idpw_find_btn>a {
+      position: absolute;
+      color: #fff;
+      right: 80px;
+      line-height: 40px
+    }
+
+    /* 영역 및 크기 잡기 종료 */
+    .login_nav a:hover {
+      color: #66B2FF;
+    }
+
+    /* section 영역 */
+    #section {
+      position: absolute;
+      top: 120px;
+      padding: 10px;
+      display: flex;
+    }
+
+    .side_menu {
+      border: 1px solid black;
+      width: 180px;
+    }
+
+    .side_menu li {
+      border-bottom: 1px solid black;
+      height: 35px;
+      text-align: center;
+      line-height: 35px;
+      font-size: 0.8rem;
+    }
+
+    .side_menu li:last-child {
+      border-bottom: none;
+    }
+
+    .side_menu li:hover {
+      background-color: #000066;
+      color: #fff;
+    }
+
+    .main_content {
+      margin-left: 20px;
+      width: 900px;
+    }
+
+    /*--그래프 css--*/
+
+    .zt-skill-bar {
+      color: #fff;
+      font-size: 11px;
+      line-height: 25px;
+      height: 25px;
+      margin-bottom: 5px;
+
+      background-color: rgba(0, 0, 0, 0.1);
+
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      border-radius: 2px;
+
+    }
+
+    .zt-skill-bar * {
+      webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      color: #000066;
+    }
+
+    .zt-skill-bar div {
+      background-color: #ffc600;
+      position: relative;
+      padding-left: 25px;
+      width: 0;
+
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms- border-radius: 2px;
+      border-radius: 2px;
+    }
+
+    .zt-skill-bar span {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      padding: 0 5px 0 10px;
+      background-color: #1a1a1a;
+      color: #fff;
+
+      -webkit-border-radius: 0 2px 2px 0;
+      -moz-border-radius: 0 2px 2px 0;
+      -ms-border-radius: 0 2px 2px 0;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .zt-skill-bar span:before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      top: 50%;
+      left: -3px;
+      margin-top: -3px;
+      background-color: #1a1a1a;
+
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    strong{
+      font-size: 1.2rem;
+    }
+  </style>
+
+  <!-- 그래프 js -->
+  <link href="../js/skill-bar.js">
 </head>
+
 <body>
-    
+  <div id="wrap">
+    <header id="header">
+      <div class="logo_img"><img src="../images/logo/logo.png"></div>
+      <span class="logo">오구(OGU) 관리자<style>
+          @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+        </style></span> <!--부트스트랩css 때문에 header.css에서 폰트 패밀리 안먹혀서 인라인으로 적용=>희수-->
+      <div class="login_nav">
+        <span class="login_btn"><a href="#">로그인</a></span>
+        <span class="idpw_find_btn"><a href="#">ID/PW 찾기</a></span>
+      </div>
+    </header>
+    <section id="section">
+      <div class="side_menu">
+        <ul>
+          <li>관리자 관리</li>
+          <li>회원관리</li>
+          <li>배너관리</li>
+          <li>팝업관리</li>
+          <li>교육관리</li>
+          <li>교육문의</li>
+          <li>영상교육</li>
+          <li>그룹교육</li>
+          <li>개인교육</li>
+          <li>지점관리</li>
+          <li>지점문의</li>
+          <li>공지사항</li>
+          <li>갤러리</li>
+          <li>교육후기</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+      <div class="main_content">
+        <!-- 그래프 내용 -->
+        <p>&nbsp;</p>
+        <div class="zt-span6 last">
+          <h3><strong>교육문의 상담 진행율(daily)</strong></h3>
+          <p>&nbsp;</p>
+          <div class="zt-skill-bar">
+            <div data-width="30" style="">미회신<span>30%</span></div>
+          </div>
+          <div class="zt-skill-bar">
+            <div data-width="8" style="">회신중<span>8%</span></div>
+          </div>
+          <div class="zt-skill-bar">
+            <div data-width="62" style="">완료<span>62%</span></div>
+          </div>
+        </div>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <div class="zt-span6 last">
+          <h3><strong>가맹문의 상담 진행율(daily)</strong></h3>
+          <p>&nbsp;</p>
+          <div class="zt-skill-bar">
+            <div data-width="20" style="">미회신<span>20%</span></div>
+          </div>
+          <div class="zt-skill-bar">
+            <div data-width="10" style="">회신중<span>10%</span></div>
+          </div>
+          <div class="zt-skill-bar">
+            <div data-width="70" style="">완료<span>70%</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- 그래프 js -->
+  <script>
+    (function ($) {
+      "use strict";
+      $(function () {
+        function animated_contents() {
+          $(".zt-skill-bar > div ").each(function (i) {
+            var $this = $(this),
+              skills = $this.data('width');
+
+            $this.css({
+              'width': skills + '%'
+            });
+
+          });
+        }
+
+        if (jQuery().appear) {
+          $('.zt-skill-bar').appear().on('appear', function () {
+            animated_contents();
+          });
+        } else {
+          animated_contents();
+        }
+      });
+    }(jQuery));
+
+  </script>
 </body>
+
 </html>
