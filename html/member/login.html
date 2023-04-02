@@ -130,12 +130,51 @@
         margin: 10px 10px 20px 0;
     }
 
+</style>
 
-    
-   
-    
+<script>
+ function checklogin() {
+    var form = document.login;
+    //아이디의 값이 입력되지 않았다면
+    if(form.id.value ==""){
+        alert('아이디를 입력해주세요.');
+        form.id.select();
+        form.id.focus(); //아이디입력창으로 포커스
+        return;
+    }
 
-    </style>
+    //아이디 길이가 4미만 12초과이면
+    if(form.id.value.length<4 || form.id.value.length> 12)
+        alert('아이디는 4~12자 이내로 입력해주세요.');
+        form.id.select()
+        form.id.focus();
+        return;
+    //아이디가 영문 소문자로 입력되도록 검사(숫자 추가하기)
+    for(var i=0; i,form.id.value.length; i++){
+        var ch = form.id.value.charAt(i);
+        if((ch < 'a' || ch > 'z')){
+            alert('아이디는 영문 소문자로만 입력가능합니다')
+            form.id.select();
+            form.id.focus;
+            return;
+        }
+        }
+      //비밀번호 값이 없다면
+      if(form.pw.value == ""){
+        alert('비밀번호를 입력해주세요.');
+        form.pw.select();
+        form.pw.focus(); //비밀번호입력창으로 포커스
+        return;
+      } 
+
+      //비밀번호 길이가 6미만 12초과
+      if(form.pw.value.length <6 || form.pw.value.length>12)
+        alert('비밀번호는 영소문자와 숫자, 특수문자(! @ # $ % ^ & + =)가 포함되어야 합니다.')
+ }
+
+
+</script>
+
 </head>
 
 
@@ -163,7 +202,7 @@
                         <label for="auto_lo">자동 로그인</label>
                          </div>
 
-                        <button type="submit" class="btn_index btn_login">로그인</button>
+                        <button type="submit" class="btn_index btn_login" onclick="checklogin()">로그인</button>
                     </form>
                 </div>
            
