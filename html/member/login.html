@@ -209,8 +209,8 @@
                         <input type="password" name="pwd" id="pwd" placeholder="비밀번호" required>
                         <script>
                                 function checklogin() {
-                                    var pwd = document.getElementById("pwd").value; //ID가 pwd인 필드값을 가져와 변수 저장
-                                    var regex = /^(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&+=])[a-z\d!@#$%^&+=]{6,12}$/i;
+                                    let pwd = document.getElementById("pwd").value; //ID가 pwd인 필드값을 가져와 변수 저장
+                                    let regex = /^(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&+=])[a-z\d!@#$%^&+=]{6,12}$/i;
                                     /*
                                     조건 1. 영어 소문자 a-z까지
                                     조건 2. 특수문자 !@#$%^&+= 만 포함
