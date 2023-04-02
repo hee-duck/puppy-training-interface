@@ -168,9 +168,13 @@
       } 
 
       //비밀번호 길이가 6미만 12초과
-      if(form.pw.value.length <6 || form.pw.value.length>12)
-        alert('비밀번호는 영소문자와 숫자, 특수문자(! @ # $ % ^ & + =)가 포함되어야 합니다.')
- }
+      if(form.pw.value.length <6 || form.pw.value.length>12){
+        alert('비밀번호는 영소문자와 숫자, 특수문자(! @ # $ % ^ & + =)가 포함(6~12자)되어야 합니다.')
+        form.pw.select();
+        form.pw.focus();
+        return;
+      }
+    }
 
 
 </script>
