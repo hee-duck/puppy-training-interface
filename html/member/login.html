@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <title>오구(Ogu)</title>
     <!-- 초기화 css -->
     <link href="../../css/reset.css" rel="stylesheet">
-    
+
     <!-- 공통 css -->
     <link href="../../css/common.css" rel="stylesheet">
     <!-- 외부 폰트, 외부 스타일 -->
@@ -17,167 +18,175 @@
     <link rel="shortcut icon" href="../../images/logo/favicon.ico">
 
     <style>
-    * {margin: 0; padding: 0;
-      box-sizing: border-box;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* 전체 */
-    #wrap{min-width: 360px;}  
+        /* 전체 */
+        #wrap {
+            min-width: 360px;
+        }
 
-    /* 공통*/
-    h1{
-        font-size: 1rem;
-    }
+        /* 공통*/
+        h1 {
+            font-size: 1rem;
+        }
 
-    p{
-    font-size: 0.8rem;
-    }
+        p {
+            font-size: 0.8rem;
+        }
 
-    hr{
-        border: 1px dashed lightgray;
-    }
-  
-    /* 로그인 전체 박스 */
-    .login_box{
-        width: 95%;
-        margin: 0 auto;
-        background-color: beige;
-        display: flex;
-        flex-direction: column;
-    }  
-    
-    
-    /* 간편 로그인 영역 */
-    .login_1{
-      
-        width: 100%;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
-    }
-    
-    .login_1 img{
-     width: 100% ;
-     height: 40px;
-   
-    }
-    
-    
-    /* 로그인 영역 */
-    
-    form.login_form{
-        padding: 20px;
-    }
-    
-    .login_2{
-        width: 100%;
-        height: 240px;
-    }
-    
-    input#id,input#pwd{
-    
-    padding: 10px;
-    border: 1px solid black;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    
-     }
+        hr {
+            border: 1px dashed lightgray;
+        }
 
-    /* 아이디 저장, 자동 로그인 */
-    .check_box{
-        margin:20px 0;
-    }
-    input#check{
-    width: 20px;
-    height: 20px;
-    appearance: auto;  
-    }
+        /* 로그인 전체 박스 */
+        .login_box {
+            width: 95%;
+            margin: 0 auto;
+            background-color: beige;
+            display: flex;
+            flex-direction: column;
+        }
 
-    .btn_login{
-        width:100% ;
-        padding: 10px;
-       
-        background-color: #000066;
-        color: white;
-        font-size: 1.2rem;
-        cursor: pointer;
-    }
-    
-    /* 회원가입 연결 */
-    .join{
-        padding: 20px;
-        line-height: 30px;
 
-    }
-  
-    .btn_join{
-        margin-top: 10px;
-       background-color: #000066;
-      }
-     
-    .btn_join>a{
-        color: white;
-    }
+        /* 간편 로그인 영역 */
+        .login_1 {
 
-    /* 아이디, 비밀번호 찾기 */
-    .find{
-        padding: 20px;
-        line-height: 30px;
-    }
+            width: 100%;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
-    .btn_find{
-        margin: 10px 10px 20px 0;
-    }
+        }
 
-</style>
+        .login_1 img {
+            width: 100%;
+            height: 40px;
 
-<script>
- function checklogin() {
-    var form = document.login;
-    //아이디의 값이 입력되지 않았다면
-    if(form.id.value ==""){
-        alert('아이디를 입력해주세요.');
-        form.id.select();
-        form.id.focus(); //아이디입력창으로 포커스
-        return;
-    }
+        }
 
-    //아이디 길이가 4미만 12초과이면
-    if(form.id.value.length<4 || form.id.value.length> 12)
-        alert('아이디는 4~12자 이내로 입력해주세요.');
-        form.id.select()
-        form.id.focus();
-        return;
-    //아이디가 영문 소문자로 입력되도록 검사(숫자 추가하기)
-    for(var i=0; i,form.id.value.length; i++){
-        var ch = form.id.value.charAt(i);
-        if((ch < 'a' || ch > 'z')){
-            alert('아이디는 영문 소문자로만 입력가능합니다')
-            form.id.select();
-            form.id.focus;
+
+        /* 로그인 영역 */
+
+        form.login_form {
+            padding: 20px;
+        }
+
+        .login_2 {
+            width: 100%;
+            height: 240px;
+        }
+
+        input#id,
+        input#pwd {
+
+            padding: 10px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+
+        }
+
+        /* 아이디 저장, 자동 로그인 */
+        .check_box {
+            margin: 20px 0;
+        }
+
+        input#check {
+            width: 20px;
+            height: 20px;
+            appearance: auto;
+        }
+
+        .btn_login {
+            width: 100%;
+            padding: 10px;
+
+            background-color: #000066;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        /* 회원가입 연결 */
+        .join {
+            padding: 20px;
+            line-height: 30px;
+
+        }
+
+        .btn_join {
+            margin-top: 10px;
+            background-color: #000066;
+        }
+
+        .btn_join>a {
+            color: white;
+        }
+
+        /* 아이디, 비밀번호 찾기 */
+        .find {
+            padding: 20px;
+            line-height: 30px;
+        }
+
+        .btn_find {
+            margin: 10px 10px 20px 0;
+        }
+    </style>
+
+    <script>
+        function checklogin() {
+            var form = document.login;
+            //아이디의 값이 입력되지 않았다면
+            if (form.id.value == "") {
+                alert('아이디를 입력해주세요.');
+                form.id.select();
+                form.id.focus(); //아이디입력창으로 포커스
+                return;
+            }
+
+            //아이디 길이가 4미만 12초과이면
+            if (form.id.value.length < 4 || form.id.value.length > 12)
+                alert('아이디는 4~12자 이내로 입력해주세요.');
+            form.id.select()
+            form.id.focus();
             return;
-        }
-        }
-      //비밀번호 값이 없다면
-      if(form.pw.value == ""){
-        alert('비밀번호를 입력해주세요.');
-        form.pw.select();
-        form.pw.focus(); //비밀번호입력창으로 포커스
-        return;
-      } 
+            //아이디가 영문 소문자로 입력되도록 검사(숫자 추가하기)
+            for (var i = 0; i, form.id.value.length; i++) {
+                var ch = form.id.value.charAt(i);
+                if ((ch < 'a' || ch > 'z')) {
+                    alert('아이디는 영문 소문자로만 입력가능합니다')
+                    form.id.select();
+                    form.id.focus;
+                    return;
+                }
+            }
+/*       //비밀번호 값이 없다면
+              if(form.pw.value == ""){
+                alert('비밀번호를 입력해주세요.');
+                form.pw.select();
+                form.pw.focus(); //비밀번호입력창으로 포커스
+                return;
+              } 
+        
+              //비밀번호 길이가 6미만 12초과
+              if(form.pw.value.length <6 || form.pw.value.length>12){
+                alert('비밀번호는 영소문자와 숫자, 특수문자(! @ # $ % ^ & + =)가 포함(6~12자)되어야 합니다.')
+                form.pw.select();
+                form.pw.focus();
+                return;
+              }
+            } ============ 임시 주석 처리 (희수) ============== */
 
-      //비밀번호 길이가 6미만 12초과
-      if(form.pw.value.length <6 || form.pw.value.length>12){
-        alert('비밀번호는 영소문자와 숫자, 특수문자(! @ # $ % ^ & + =)가 포함(6~12자)되어야 합니다.')
-        form.pw.select();
-        form.pw.focus();
-        return;
-      }
-    }
 
 
-</script>
+
+    </script>
 
 </head>
 
@@ -188,29 +197,48 @@
             <div class="login_box">
                 <!-- 간편 로그인 -->
                 <div class="login_1">
-                <button class="naver"><a href="#">네이버 아이디로 로그인</a></button>
-                <button class="kakao"><a href="#">카카오 아이디로</a></button>
+                    <button class="naver"><a href="#">네이버 아이디로 로그인</a></button>
+                    <button class="kakao"><a href="#">카카오 아이디로</a></button>
                 </div>
-                <hr/>
+                <hr />
                 <!-- 로그인 -->
                 <div class="login_2">
                     <form action="" method="post" name="login" class="login_form" enctype="multipart/form-data">
-                        
+
                         <input type="text" name="id" id="id" placeholder="아이디" required>
                         <input type="password" name="pwd" id="pwd" placeholder="비밀번호" required>
+                        <script>
+                                function checklogin() {
+                                    var pwd = document.getElementById("pwd").value; //ID가 pwd인 필드값을 가져와 변수 저장
+                                    var regex = /^(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&+=])[a-z\d!@#$%^&+=]{6,12}$/i;
+                                    /*
+                                    조건 1. 영어 소문자 a-z까지
+                                    조건 2. 특수문자 !@#$%^&+= 만 포함
+                                    조건 3. 문자열 6-12자리까지
+                                    
+                                     /(?=.*\d)/에서 (?=)는 포지티브 룩헤드 어설션으로, 정규식 엔진이 룩헤드 내부의 패턴이 실제로 일치 항목에 포함되지 않고 문자열의 현재 위치 이후에 발생하는지 여부를 확인
+                                     .*는 모든 문자(개행 문자 제외)와 0회 이상 일치하고 \d는 숫자 문자와 일치.
+                                     (?=.*\d)는 "현재 위치부터 문자열 어딘가에 숫자 문자가 하나 이상 있다고 주장"한다는 의미 */
 
+                                    if (!regex.test(pwd)) { // !를 써서 부정문을 ==> 일치하지 않는 경우 내용 표시
+                                        alert("아이디 또는 비밀번호를 확인해주세요.");
+                                        return false; // ==> 양식을 제출하지 못하도록 false 반환
+                                    }
+                                    return true; // ==> 아니면 true 반환
+                                }
+                        </script>
                         <div class="check_box">
-                        <input type="checkbox" name="check" id="check">
-                        <label for="id_check">아이디 저장</label>
-                        <input type="checkbox" name="check" id="check">
-                        <label for="auto_lo">자동 로그인</label>
-                         </div>
+                            <input type="checkbox" name="check" id="check">
+                            <label for="id_check">아이디 저장</label>
+                            <input type="checkbox" name="check" id="check">
+                            <label for="auto_lo">자동 로그인</label>
+                        </div>
 
                         <button type="submit" class="btn_index btn_login" onclick="checklogin()">로그인</button>
                     </form>
                 </div>
-           
-                <hr/>
+
+                <hr />
 
                 <!-- 회원가입 연결 -->
                 <div class="join">
@@ -218,7 +246,7 @@
                     <p>오구 회원이 되시면 오구의 다양한 교육에 참여하실 수 있습니다.</p>
                     <button class="btn_index btn_join"><a href="../member/join_sub.html">회원가입</a></button>
                 </div>
-               
+
                 <!-- 아이디 비밀 번호 찾기 -->
                 <div class="find">
                     <h1>로그인 정보가 생각나지 않으세요?</h1>
@@ -233,7 +261,7 @@
 
 
     </div>
-    
+
     <footer id="footer">
         <!-- 약관 가로 정렬 부분 -->
         <div class="term">
@@ -256,6 +284,7 @@
         </div>
     </footer>
 
-    
+
 </body>
+
 </html>
