@@ -167,21 +167,21 @@
                 }
             }
 /*       //비밀번호 값이 없다면
-              if(form.pw.value == ""){
-                alert('비밀번호를 입력해주세요.');
-                form.pw.select();
-                form.pw.focus(); //비밀번호입력창으로 포커스
-                return;
-              } 
-        
-              //비밀번호 길이가 6미만 12초과
-              if(form.pw.value.length <6 || form.pw.value.length>12){
-                alert('비밀번호는 영소문자와 숫자, 특수문자(! @ # $ % ^ & + =)가 포함(6~12자)되어야 합니다.')
-                form.pw.select();
-                form.pw.focus();
-                return;
-              }
-            } ============ 임시 주석 처리 (희수) ============== */
+                                              if(form.pw.value == ""){
+                                                alert('비밀번호를 입력해주세요.');
+                                                form.pw.select();
+                                                form.pw.focus(); //비밀번호입력창으로 포커스
+                                                return;
+                                              } 
+                                        
+                                              //비밀번호 길이가 6미만 12초과
+                                              if(form.pw.value.length <6 || form.pw.value.length>12){
+                                                alert('비밀번호는 영소문자와 숫자, 특수문자(! @ # $ % ^ & + =)가 포함(6~12자)되어야 합니다.')
+                                                form.pw.select();
+                                                form.pw.focus();
+                                                return;
+                                              }
+                                            } ============ 임시 주석 처리 (희수) ============== */
 
 
 
@@ -207,25 +207,36 @@
 
                         <input type="text" name="id" id="id" placeholder="아이디" required>
                         <input type="password" name="pwd" id="pwd" placeholder="비밀번호" required>
+                        <!-- 유효성 체크 -->
                         <script>
-                                function checklogin() {
-                                    let pwd = document.getElementById("pwd").value; //ID가 pwd인 필드값을 가져와 변수 저장
-                                    let regex = /^(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&+=])[a-z\d!@#$%^&+=]{6,12}$/i;
-                                    /*
-                                    조건 1. 영어 소문자 a-z까지
-                                    조건 2. 특수문자 !@#$%^&+= 만 포함
-                                    조건 3. 문자열 6-12자리까지
-                                    
-                                     /(?=.*\d)/에서 (?=)는 포지티브 룩헤드 어설션으로, 정규식 엔진이 룩헤드 내부의 패턴이 실제로 일치 항목에 포함되지 않고 문자열의 현재 위치 이후에 발생하는지 여부를 확인
-                                     .*는 모든 문자(개행 문자 제외)와 0회 이상 일치하고 \d는 숫자 문자와 일치.
-                                     (?=.*\d)는 "현재 위치부터 문자열 어딘가에 숫자 문자가 하나 이상 있다고 주장"한다는 의미 */
+                            // 비밀번호 체크
+                            function checklogin() {
+                                /* let pwd = document.getElementById("pwd").value; //ID가 pwd인 필드값을 가져와 변수 저장
+                                let regex = /^(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&+=])[a-z\d!@#$%^&+=]{6,12}$/i;
+                                /*
+                                조건 1. 영어 소문자 a-z까지
+                                조건 2. 특수문자 !@#$%^&+= 만 포함
+                                조건 3. 문자열 6-12자리까지
+                                                            
+                                /(?=.*\d)/에서 (?=)는 포지티브 룩헤드 어설션으로, 정규식 엔진이 룩헤드 내부의 패턴이 실제로 일치 항목에 포함되지 않고 문자열의 현재 위치 이후에 발생하는지 여부를 확인
+                                .*는 모든 문자(개행 문자 제외)와 0회 이상 일치하고 \d는 숫자 문자와 일치.
+                                (?=.*\d)는 "현재 위치부터 문자열 어딘가에 숫자 문자가 하나 이상 있다고 주장"한다는 의미
+                                if (!regex.test(pwd)) { // !를 써서 부정문으로 ==> 일치하지 않는 경우 내용 표시
+                                    alert("비밀번호 확인하셈.");
+                                    return false; // ==> 양식을 제출하지 못하도록 false 반환
+                                } */
 
-                                    if (!regex.test(pwd)) { // !를 써서 부정문을 ==> 일치하지 않는 경우 내용 표시
-                                        alert("아이디 또는 비밀번호를 확인해주세요.");
-                                        return false; // ==> 양식을 제출하지 못하도록 false 반환
-                                    }
-                                    return true; // ==> 아니면 true 반환
+                                // 아이디 && 비밀번호 매칭
+                                let id = document.getElementById("id").value;
+                                let pwd = document.getElementById("pwd").value;
+                                // let regex = /^(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&+=])[a-z\d!@#$%^&+=]{6,12}$/i; >>>>>>이 코드는 꼭 필요한건 아닌데 비밀번호 복잡성 요건을 적용하고 보안을 위해 쓴대
+                                if (id === "ogu2023" && pwd === "ogu59!") {
+                                    return true;
+                                } else {
+                                    alert("아이디 또는 비밀번호를 확인해주세요.");
+                                    return false;
                                 }
+                            }
                         </script>
                         <div class="check_box">
                             <input type="checkbox" name="check" id="check">
