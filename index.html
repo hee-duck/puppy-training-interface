@@ -17,25 +17,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#header").load("./html/header/header.html");
+            $("#footer").load("./html/footer/footer.html");
+        });
+    </script>
 </head>
 
 <body>
     <div id="wrap">
         <!-- header 시작 -->
-        <header id="header">
-            <div class="logo">
-                <!-- 링크에는 index.html 삽입 -->
-                <a href="#"><img src="./images/logo/logo.png">
-                    <span class="logo_text">오구</span>
-                </a>
-            </div>
-            <div class="menu_btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </header>
-
+        <div id="header"></div>
         <!-- header 끝 -->
 
         <section id="slider">
@@ -185,28 +179,8 @@
                 </ul>
             </div>
         </section>
-        <footer id="footer">
-            <!-- 약관 가로 정렬 부분 -->
-            <div class="term">
-                <ul>
-                    <li><a href="#" target="_blank">이용약관</a></li>
-                    <li> | </li>
-                    <li><a href="#" target="_blank">개인정보처리방침</a></li>
-                    <li> | </li>
-                    <li><a href="#" target="_blank">가맹문의</a></li>
-                    <li> | </li>
-                    <li><a href="#" target="_blank">고객센터</a></li>
-                </ul>
-            </div>
-            <!-- 회사 정보(주소, 사업자번호 등) 부분 -->
-            <div class="addr">
-                <p>(주)오구 | 대표 : 한희수<br />
-                    사업자등록번호 : 123-45-67890 | 대표전화 : 1212-5959<br />
-                    주소 : 서울특별시 마음으로낳았구 지갑으로 키워길59<br />
-                    COPYRIGHT(C) 2023 (주)오구 All right reserved.</p>
-            </div>
-        </footer>
-    </div>
+        <!-- footer -->
+        <div id="footer"></div>
 </body>
 
 </html>
