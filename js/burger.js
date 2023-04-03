@@ -32,15 +32,15 @@ $(function () {
 
 $(document).ready(function() {
   // 처음 모든 ol(하위메뉴) 숨김 처리
-  $('li ol').hide();
+  $('.menu-name li ol').hide();
   
   // li를 클릭하면 ol 펼치기, 접기
-  $('li').click(function() {
+  $('.menu-name li').click(function() {
     $(this).children('ol').slideToggle();
   });
   
   // ol 클릭하면 a 링크로 연결 (이벤트 추가)
-  $('li ol a').click(function(event) {
+  $('.menu-name li ol a').click(function(event) {
     event.stopPropagation(); //stopPropagation : 클릭 이벤트가 li 요소로 버블링되어 토글 기능을 트리거하는걸 막음
     window.location.href = $(this).attr('href');
   });
@@ -63,4 +63,15 @@ slideOpen.addEventListener('click', () => {
   } else {
     dimmed.style.display = 'none';
   }
+});
+
+
+$(document).ready(function() {
+  // 처음 모든 ol(하위메뉴) 숨김 처리
+  $('.pc-main-menu').on('mouseenter', function () {
+    $('#header').addClass('on');
+  })
+  $('.pc-main-menu').on('mouseleave', function () {
+    $('#header').removeClass('on');
+  })
 });
