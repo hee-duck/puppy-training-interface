@@ -23,18 +23,27 @@ html.open {
     position: relative;
 }
 
+.logo_wrap {
+    z-index:9999;
+}
+
+.logo_wrap a {
+    display:flex;
+}
+
 .logo_img>img {
     width: 70px;
     height: 70px;
-    margin-right: 5px;
+    padding-right: 5px;
     float: left;
+    box-sizing: border-box;
 }
 
 .logo {
     line-height: 70px;
     font-size: 2.6rem;
-    padding-top: 8px;
     font-family: 'Gugi';
+    box-sizing: border-box;
 }
 
 .body {
@@ -213,17 +222,18 @@ html.open {
 
 /* ==================================PC ver.(min-width: 1024px)================================== */
 @media (min-width: 1024px) {
-    #slide, .slide-open, .dimmed{
+    #slide, .slide-open, .dimmed  {
         display: none;
     }
 
+    
     #header {
-        width: 100%;
-        height: 90px;
-        position: fixed;
-        top: 0;
+        transition: all 0.5s;
+        overflow:hidden;
         background: #fff;
-        border-bottom: 1px solid #e1e1e1;
+        height:100px;
+        position:relative;
+        border-bottom:1px solid #dfdfdf;
     }
     
     .head {
@@ -268,29 +278,59 @@ html.open {
         font-size: 0.8rem;
     }
 
+
+
     .pc-main-menu {
+        width:100%;
         display: flex;
         justify-content: center;
         align-items: center;
-
+        background: #fff;
 
         }
 
+        .pc-main-menu ul {
+            display:flex;
+        }
+
     .pc-main-menu li{
-        display: inline-block;
+        display: flex;
+        flex-direction:column;
         padding: 0px 40px;
         font-weight: 600;
         font-size: 1.3rem;
-/*         color: #000066; */
+    /*     color: #000066; */
         margin-top: 10px;
         margin-bottom: 10px;
     }
 
-    .pc-main-menu ol{
+    .pc-main-menu li a {
+        padding:20px;
+        padding-top:0;
+    }
+
+    .pc-main-menu .depth02 {
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        background-color: #fff;
+    }
+
+    .pc-main-menu .depth02 li{
         padding: 10px;
         font-weight: 400;
         color: #000066;
         font-size: 1rem;
+    }
+
+    
+    #header.on {
+        height:486px;
+    }
+    
+    
+    #header .gnb:hover .depth02 {
+        display: block;
     }
     
 }
