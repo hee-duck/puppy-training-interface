@@ -102,7 +102,7 @@ html.open {
 
 .slide {
     width: 40%;
-    height: 100%;
+    height: 1000%;
     position: absolute;
     left: -100%;
     top: 0;
@@ -121,12 +121,18 @@ html.open {
     width: 100%;
     height: 70px;
     font-size: 42px;
-    display: flex;
+/*     display: flex; */ 
     justify-content: space-evenly;
     align-items: center;
     border-bottom: 1px solid #000000;
     z-index: 300;
     color: #fff;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.slide-title-text{
+    font-size: 0.8rem;
 }
 .slide-title strong{
     color: #fff;
@@ -155,12 +161,16 @@ html.open {
 .slide-menu{
     height: 1000px;
     background-color: #fff;
+}
 
+.slide-menu strong{
+    display: block;
+    margin-bottom: 10px;
 }
 .menu-name>li {
     display: inline-block;
     width: 100%;
-    padding: 20px;
+    padding: 20px 0px;
     border-bottom: 1px solid#A3A2A2;
 
 }
@@ -170,10 +180,11 @@ html.open {
 }
 
 .menu-name ol>a{
-/*     text-decoration: none;
-    color: #fff; */
     margin: 20px 0px 20px 30px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+/*     display: block;
+    margin-bottom: 5px;
+    위에 두개를 쓰면 하위메뉴 줄높이 조정은 가능하나, 아코디언 애니메이션이 부자연스러워져서 주석 처리함 ==희수 */
 }
 
 .dimmed{
