@@ -12,6 +12,7 @@
     <!-- 공통 css -->
     <link href="../../css/common.css" rel="stylesheet">
     <!-- 외부 폰트, 외부 스타일 -->
+    <link href="../../css/header.css" rel="stylesheet">
     <link href="../../css/footer.css" rel="stylesheet">
 
     <!-- 파비콘 -->
@@ -43,6 +44,10 @@
         }
 
         /* 로그인 전체 박스 */
+        .login {
+            margin-top: 70px;
+        }
+
         .login_box {
             width: 95%;
             margin: 0 auto;
@@ -63,10 +68,35 @@
 
         }
 
-        .login_1 img {
-            width: 100%;
-            height: 40px;
+        .naver {
+            position: relative;
+            width: 300px;
+            height: 45px;
+            background-color: #1EC800;
+            border: 1px solid #12DA00;
+            margin: 0 auto;
 
+        }
+
+        .naver img {
+            position: absolute;
+            height: 40px;
+            left: 5px;
+        }
+
+        .naver p {
+            text-align: center;
+            color: white;
+            font-size: 1rem ;
+            margin-top: 10px;
+            padding-left: 20px;
+           
+        }
+
+        .login_1 img.kakao {
+
+            display: block;
+            margin: 10px auto;
         }
 
 
@@ -97,6 +127,12 @@
         }
 
         input#check {
+            width: 20px;
+            height: 20px;
+            appearance: auto;
+        }
+
+        input#auto {
             width: 20px;
             height: 20px;
             appearance: auto;
@@ -139,6 +175,7 @@
         }
     </style>
 
+
     <script>
         function checklogin() {
             var form = document.login;
@@ -166,22 +203,23 @@
                     return;
                 }
             }
+        }
 /*       //비밀번호 값이 없다면
-                                              if(form.pw.value == ""){
-                                                alert('비밀번호를 입력해주세요.');
-                                                form.pw.select();
-                                                form.pw.focus(); //비밀번호입력창으로 포커스
-                                                return;
-                                              } 
-                                        
-                                              //비밀번호 길이가 6미만 12초과
-                                              if(form.pw.value.length <6 || form.pw.value.length>12){
-                                                alert('비밀번호는 영소문자와 숫자, 특수문자(! @ # $ % ^ & + =)가 포함(6~12자)되어야 합니다.')
-                                                form.pw.select();
-                                                form.pw.focus();
-                                                return;
-                                              }
-                                            } ============ 임시 주석 처리 (희수) ============== */
+                                                      if(form.pw.value == ""){
+                                                        alert('비밀번호를 입력해주세요.');
+                                                        form.pw.select();
+                                                        form.pw.focus(); //비밀번호입력창으로 포커스
+                                                        return;
+                                                      } 
+                                                
+                                                      //비밀번호 길이가 6미만 12초과
+                                                      if(form.pw.value.length <6 || form.pw.value.length>12){
+                                                        alert('비밀번호는 영소문자와 숫자, 특수문자(! @ # $ % ^ & + =)가 포함(6~12자)되어야 합니다.')
+                                                        form.pw.select();
+                                                        form.pw.focus();
+                                                        return;
+                                                      }
+                                                    } ============ 임시 주석 처리 (희수) ============== */
 
 
 
@@ -193,12 +231,72 @@
 
 <body>
     <div id="wrap">
+        <!-- header 시작 -->
+        <header id="header">
+            <div class="dimmed"></div>
+            <div class="head">
+                <div class="slide-open" id="slide-open">
+                    <span class="burgur" id="burgur">
+                        <span class="top-line"></span>
+                        <span class="bot-line"></span>
+                    </span>
+                </div>
+                <div class="logo_img"><img src="../../images/logo/logo.png"></div>
+                <span class="logo">오구<style>
+                        @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+                    </style></span> <!--부트스트랩css 때문에 header.css에서 폰트 패밀리 안먹혀서 인라인으로 적용=>희수-->
+                <div class="slide" id="slide">
+                    <div class="slide-title">
+                        <button><a href="../../member/login.html"><strong>로그인</strong></a></button>
+                        <button><a href="../../member/join_main.html"><strong>회원가입</strong></a></button>
+                    </div>
+                    <div class="slide-menu">
+                        <ul class="menu-name">
+                            <li><a
+                                    href="#"><strong>어서오구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                                <ol><a href="#">회사소개</a></ol>
+                                <ol><a href="#">오시는길</a></ol>
+                                <ol><a href="#">훈련사 소개</a></ol>
+                            </li>
+                            <li><a
+                                    href="#"><strong>공부하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                                <ol><a href="#">영상교육</a></ol>
+                                <ol><a href="#">그룹교육</a></ol>
+                                <ol><a href="#">개인교육</a></ol>
+                            </li>
+                            <li><a
+                                    href="#"><strong>여기있다구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                                <ol><a href="#">지점찾기</a></ol>
+                                <ol><a href="#">가맹문의</a></ol>
+                            </li>
+                            <li><a
+                                    href="#"><strong>얘기하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                                <ol><a href="#">공지사항</a></ol>
+                                <ol><a href="#">교육후기</a></ol>
+                                <ol><a href="#">훈련사 칼럼</a></ol>
+                                <ol><a href="#">갤러리</a></ol>
+                            </li>
+                            <li><a
+                                    href="#"><strong>고객센터&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                                <ol><a href="#">FAQ</a></ol>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="../../js/burger.js"></script><!-- header js-->
+        <!-- header 끝 -->
+
         <section class="login">
             <div class="login_box">
                 <!-- 간편 로그인 -->
                 <div class="login_1">
-                    <button class="naver"><a href="#">네이버 아이디로 로그인</a></button>
-                    <button class="kakao"><a href="#">카카오 아이디로</a></button>
+                    <div class="naver"><a href="#"><img src="../../images/member/btnG_아이콘사각.png">
+                            <p>네이버 로그인</p>
+                        </a></div>
+                    <a href="#"><img class="kakao" src="../../images/member/kakao_login_medium_wide.png"></a>
                 </div>
                 <hr />
                 <!-- 로그인 -->
@@ -241,7 +339,10 @@
                         <div class="check_box">
                             <input type="checkbox" name="check" id="check">
                             <label for="id_check">아이디 저장</label>
-                            <input type="checkbox" name="check" id="check">
+
+                           
+
+                            <input type="checkbox" name="auto" id="auto">
                             <label for="auto_lo">자동 로그인</label>
                         </div>
 
