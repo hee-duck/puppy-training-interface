@@ -11,6 +11,9 @@
   <!-- 스타일 시트 -->
   <link href="../css/reset.css" rel="stylesheet"> <!-- 초기화 -->
   <link href="../css/header.css" rel="stylesheet"> <!-- header / 로고 이미지 및 텍스트만 사용 -->
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" href="../images/logo/favicon.ico">
+
 
   <style>
     #wrap {
@@ -154,9 +157,6 @@
       font-size: 1.2rem;
     }
   </style>
-
-  <!-- 그래프 js -->
-  <link href="../js/skill-bar.js">
 </head>
 
 <body>
@@ -226,10 +226,10 @@
       </div>
     </section>
   </div>
+  
   <!-- 그래프 js -->
   <script>
     (function ($) {
-      "use strict";
       $(function () {
         function animated_contents() {
           $(".zt-skill-bar > div ").each(function (i) {
@@ -252,8 +252,8 @@
         }
       });
     }(jQuery));
-
   </script>
+
 </body>
 
 </html>
