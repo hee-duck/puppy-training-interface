@@ -116,6 +116,7 @@
             padding: 20px 0px;
         }
 
+        @media (min-width:360px) {
         /* 교육 전체 -공통부분*/
 
         h1 {
@@ -126,7 +127,7 @@
             font-size: 0.8rem;
         }
 
-        .edu_box {
+        .edu_box,.edu_box2 {
             margin-top: 50px;
         }
 
@@ -135,12 +136,15 @@
             margin: 0 auto;
             border: 1px solid #000066;
         }
+       
 
         /* 교육 이미지 영역 */
-
+       
+            
+       
         .edu_img {
             width: 100%;
-            margin-bottom: 40px;
+            margin-bottom: 100px;
         }
 
         .edu_box {
@@ -154,7 +158,7 @@
         .img_box>img {
             width: 100%;
             height: 350px;
-            padding: 10px;
+            padding: 20px;
         }
 
         /*교육 영상 영역 */
@@ -162,20 +166,21 @@
         .edu_video {
             display: flex;
             flex-direction: column;
+            margin-top:100px ;
             margin-bottom: 40px;
 
         }
 
         .edu_text {
             text-align: center;
-            margin-top: 30px;
-        }
+        margin-bottom: 50px;}
+           
 
-        /* 영상 여백 줄이는법? */
-        .video_box {
-            padding: 10px;
+        /* 영상(공통) */
+       
+        .video_box{
+            padding: 20px;
         }
-
         .video_box>video {
             width: 100%;
             height: 350px;
@@ -204,27 +209,27 @@
             font-weight: bold;
             color: #000066;
             text-align: left;
-            padding: 10px;
+            padding: 20px;
         }
 
         .text_box>h1 {
             text-align: left;
-            padding: 10px;
+            padding: 20px;
         }
 
         .text_box>p {
             text-align: left;
-            padding: 10px;
+            padding: 20px;
 
         }
 
         .edu_text>h1 {
-            padding: 10px;
+            padding: 20px;
 
         }
 
         .edu_text>p {
-            padding: 0 10px;
+            padding: 0 20px;
         }
 
         /* 그룹레슨&개인레슨 텍스트 */
@@ -243,6 +248,82 @@
         .text_box2>p {
             padding: 0 10px;
         }
+    }
+
+
+    /* pc버전 */
+    @media(min-width:1024px){
+        /* 공통선 */
+        hr{width: 60%;}
+
+        /* 1번탭-영상교육 */
+        .edu .edu_box{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+           
+        }
+        .text_box{
+            width: 800px; 
+        }
+
+        /* 영상영역 */
+        .video_box{
+            display: flex;
+        }
+        .video_box>video{
+            width: 50%;
+        }
+
+        /* 2번탭-그룹레슨 */
+       .edu2 .edu_box>.img_box{
+        width: 30%;
+        margin: 0 auto;
+       
+       }
+
+       .edu2 .edu_box2>.img_box{
+        width: 60%;
+        display: flex;
+        margin: 0 auto;
+        
+        
+       }
+       
+       
+       /* 영상영역 */
+       .edu2 .edu_video{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+       }
+        .video_box2{
+            width: 500px;
+          
+        }
+        .video_box2>video{
+            width: 100%;
+            
+         }
+        /* 텍스트 */
+        .edu2 .edu_text{
+        width: 600px;
+        height: 300px;
+        text-align: left;
+        margin-top: 50px
+        
+       }
+
+       /* 상담신청 영역 */
+       .edu_join>.index_form{
+        width: 50%;
+        margin: 0 auto;
+       }
+
+
+    }
+
+
     </style>
 
     <!-- 탭메뉴, 햄버거 jQuery -->
@@ -341,9 +422,7 @@
                             <div class="text_box">
                                 <div class="number">01</div>
                                 <h1>오구교육은 다릅니다.</h1>
-                                <p>오구교육은 한 가지 문제행동의 개선만을 목적으로 하는 것이 아닌 반려견의 더 나은 삶을 위한 총체적 접근을 원칙으로 합니다. 반려견의 마음을 알기 위해
-                                    그들의 언어를 공부하고 칭찬과 거절을 병행하며 오구해주는 교육을 오구교육이라고 합니다.
-                                </p>
+                                <p>오구교육은 한 가지 문제행동의 개선만을 목적으로 하는 것이 아닌 반려견의 더 나은 삶을 위한 총체적 접근을 원칙으로 합니다. </p>
                             </div>
                         </div>
 
@@ -447,20 +526,12 @@
                             </div>
                         </div>
 
-                        <div class="edu_box">
+                        <div class="edu_box2">
                             <div class="img_box">
                                 <img src="../../../images/main_nav/edu/edu_group2.jpg">
                                 <img src="../../../images/main_nav/edu/edu_group3.jpg">
                             </div>
-
-                            <div class="text_box2">
-                                <h1>그룹 레슨이란?</h1>
-                                <p>한희수 훈련사님이 자신 있게 추천하는 오구교육 그룹레슨!
-                                    풀패키지 기간 동안 매주 풍부한 주제로 업데이트되는 그룹레슨을 통해 영상교육의 연장선인 양질의 오프라인 교육을 받으실 수 있습니다.
-                                    경험이 풍부한 오구훈련사의 지도 아래 분리불안, 어질리티, 예절 클리커등 다양한 주제로 진행되며, 내 반려견과 성향이 맞는 다른 강아지들과 어울려
-                                    사회성을 기를 수 있습니다.
-                                    보호자님의 반려견의 이 사회에 잘 적응하고 행복한 생활을 하는 것이 오구교육의 목표이고 바람입니다.</p>
-                            </div>
+                            
                         </div>
                     </div>
 
@@ -468,7 +539,17 @@
 
                     <!-- 영상 영역 -->
                     <div class="edu_video">
-                        <div class="video_box">
+                        <div class="edu_text">
+                            <h1>그룹 레슨이란?</h1>
+                            <p>한희수 훈련사님이 자신 있게 추천하는 오구교육 그룹레슨!
+                                풀패키지 기간 동안 매주 풍부한 주제로 업데이트되는 그룹레슨을 통해 영상교육의 연장선인 양질의 오프라인 교육을 받으실 수 있습니다.
+                                경험이 풍부한 오구훈련사의 지도 아래 분리불안, 어질리티, 예절 클리커등 다양한 주제로 진행되며, 내 반려견과 성향이 맞는 다른 강아지들과 어울려
+                                사회성을 기를 수 있습니다.
+                                보호자님의 반려견의 이 사회에 잘 적응하고 행복한 생활을 하는 것이 오구교육의 목표이고 바람입니다.</p>
+                        </div>
+                      
+                        
+                        <div class="video_box video_box2">
                             <video src="../../../images/main_nav/edu/edu_veo3.mp4" autoplay controls></video>
                             <!-- control=동영상을 웹사이트에서 control할 수 있게 하기 -->
                         </div>
@@ -521,7 +602,7 @@
                 </span>
 
                 <!-- 3번탭 개인교육 -->
-                <span class="edu_3">
+                <span class="edu2">
                     <!-- 이미지 영역 -->
                     <div class="edu_img">
 
@@ -538,19 +619,13 @@
                             </div>
                         </div>
 
-                        <div class="edu_box">
+                        <div class="edu_box2">
                             <div class="img_box">
                                 <img src="../../../images/main_nav/edu/edu_one2.jpg">
                                 <img src="../../../images/main_nav/edu/edu_one3.jpg">
                             </div>
 
-                            <div class="text_box2">
-                                <h1>개인 레슨이란?</h1>
-                                <p>그룹 레슨을 200회 이상 진행한 오구훈련사와 일대일로 이루어지는 Personal Care!
-                                    반려견의 성향과 특성에 맞는 맞춤 교육은 물론 산책 교육에 기초가 되는 섬세한 핸들링 교정을 받아보세요.
-                                    오구훈련사는 반려견 문제행동의 근본적인 원인을 파악하고 그 원인 치유에 주력할 것을 약속드립니다.
-                                </p>
-                            </div>
+                           
                         </div>
                     </div>
 
@@ -558,7 +633,14 @@
 
                     <!-- 영상 영역 -->
                     <div class="edu_video">
-                        <div class="video_box">
+                        <div class="edu_text">
+                            <h1>개인 레슨이란?</h1>
+                            <p>그룹 레슨을 200회 이상 진행한 오구훈련사와 일대일로 이루어지는 Personal Care!
+                                반려견의 성향과 특성에 맞는 맞춤 교육은 물론 산책 교육에 기초가 되는 섬세한 핸들링 교정을 받아보세요.
+                                오구훈련사는 반려견 문제행동의 근본적인 원인을 파악하고 그 원인 치유에 주력할 것을 약속드립니다.
+                            </p>
+                        </div>
+                        <div class="video_box video_box2">
                             <video src="../../../images/main_nav/edu/edu_veo4.mp4" autoplay controls></video>
                             <!-- control=동영상을 웹사이트에서 control할 수 있게 하기 -->
                         </div>
