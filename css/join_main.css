@@ -5,6 +5,13 @@
     min-width:360px;
     padding: 75px 15px;
 }
+/* 프리텐다드 폰트 */
+@font-face{
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 .section{
     display: flex;
     flex-direction: column;
@@ -45,6 +52,7 @@ hr{
     border-radius: 30px;
     background-color: darkblue;
     text-align: center;
+    font-family: 'Pretendard-Regular'; /* 오구 계정 만들기 부분 프리텐다드 폰트로 변경 */
 }
 .create:hover{
     cursor: pointer;

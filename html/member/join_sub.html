@@ -8,9 +8,7 @@
     <link href="../../css/reset_form.css" rel="stylesheet">
     <link href="../../css/header.css" rel="stylesheet">
     <link href="../../css/footer.css" rel="stylesheet">
-    <!-- 로고 폰트 -->
-    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff" rel="stylesheet"/>
+
     <!-- css -->
     <link href="../../css/join_sub.css" rel="stylesheet">
       <!-- 파비콘 -->
@@ -21,8 +19,8 @@
     <script defer src="../../js/member.js"></script>    
     </head>
 <body>
-    <!-- header 시작 -->
-    <header id="header">
+     <!-- header 시작 -->
+     <header id="header">
         <div class="dimmed"></div>
         <div class="head">
             <div class="slide-open" id="slide-open">
@@ -31,45 +29,47 @@
                     <span class="bot-line"></span>
                 </span>
             </div>
-            <div class="logo_img"><img src="../../images/logo/logo.png"></div>
+            <div class="logo_img"><img src="../../images/logo/logo.png"></div> <!-- ========경로 변경 필요========-->
             <span class="logo">오구<style>@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');</style></span> <!--부트스트랩css 때문에 header.css에서 폰트 패밀리 안먹혀서 인라인으로 적용=>희수-->
             <div class="slide" id="slide">
                 <div class="slide-title">
-                    <button><a href="../../html/member/login.html"><strong>로그인</strong></a></button>
-                    <button><a href="../../html/member/join_sub.html"><strong>회원가입</strong></a></button>
+                    <p class="slide-title-text">오구의 회원은 로그인을 해주세요.</p>
+                    <button><a href="../../member/login.html"><strong>로그인</strong></a></button>
+                    <button><a href="../../member/join_sub.html"><strong>회원가입</strong></a></button>
                 </div>
-                <div class="slide-menu">
+                <div class="slide-menu"> <!-- ========ol a 태그 경로 변경 필요========-->
                     <ul class="menu-name">
-                        <li><a href="#"><strong>어서오구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
-                            <ol><a href="#">회사소개</a></ol>
-                            <ol><a href="#">오시는길</a></ol>
-                            <ol><a href="#">훈련사 소개</a></ol>
+                        <li><strong>&nbsp&nbsp&nbsp어서오구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="./company.html">회사소개</a></ol> 
+                            <ol><a href="./company.html">오시는길</a></ol>
+                            <ol><a href="./company.html">훈련사 소개</a></ol>
                         </li>
-                        <li><a href="#"><strong>공부하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
-                            <ol><a href="#">영상교육</a></ol>
-                            <ol><a href="#">그룹교육</a></ol>
-                            <ol><a href="#">개인교육</a></ol>
+                        <li><strong>&nbsp&nbsp&nbsp공부하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="../edu/edu_video.html">영상교육</a></ol>
+                            <ol><a href="../edu/edu_video.html">그룹교육</a></ol>
+                            <ol><a href="../edu/edu_video.html">개인교육</a></ol>
                         </li>
-                        <li><a href="#"><strong>여기있다구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
-                            <ol><a href="#">지점찾기</a></ol>
-                            <ol><a href="#">가맹문의</a></ol>
+                        <li><strong>&nbsp&nbsp&nbsp여기있다구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="../store/store_info.html">지점찾기</a></ol>
+                            <ol><a href="../store/store_info.html">가맹문의</a></ol>
                         </li>
-                        <li><a href="#"><strong>얘기하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
-                            <ol><a href="#">공지사항</a></ol>
-                            <ol><a href="#">교육후기</a></ol>
-                            <ol><a href="#">훈련사 칼럼</a></ol>
-                            <ol><a href="#">갤러리</a></ol>
+                        <li><strong>&nbsp&nbsp&nbsp얘기하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="../community/community.html">공지사항</a></ol>
+                            <ol><a href="../community/community.html">교육후기</a></ol>
+                            <ol><a href="../community/community.html">훈련사 칼럼</a></ol>
+                            <ol><a href="../community/community.html">갤러리</a></ol>
                         </li>
-                        <li><a href="#"><strong>고객센터&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
-                            <ol><a href="#">FAQ</a></ol>
+                        <li><strong>&nbsp&nbsp&nbsp고객센터&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                            <ol><a href="../../member/faq.html">FAQ</a></ol>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
-    <script src="../../js/burger.js"></script><!-- header js-->
+    <script src="../../js/burger.js"></script> <!-- header js // ========경로 변경 필요========-->
     <!-- header 끝 -->
+    
 <!-- 회원가입 시작 -->
 <div id="wrap">
     <div class="section">
@@ -82,17 +82,19 @@
             <li>
                 <label for="id"><h2>아이디</h2></label></li>
             <li class="id">
-                <input type="text" name="id" id="id" placeholder="영문(소문자), 4-12자 이내" required>
+                <input type="text" name="id" id="id" placeholder="영소문자와 숫자 조합, 4-12자 이내" required>
                 <input type="button" name="btn1" id="btn1" value="중복확인"><br/>
             </li>
                 
                 <!-- 비밀번호 부분 -->
             <li>
-                <label for="pwd"><h2>비밀번호<span class="pwd_warning"> *특수문자는 '! @ # $ % ^ & +='만 사용 가능합니다.</span></h2></label>
+                <label for="pwd1"><h2>비밀번호<span class="pwd_warning"> *특수문자는 '! @ # $ % ^ & +='만 사용 가능합니다.</span></h2></label>
             </li>
+            <html>
             <li class="pwd">
-                <input type="password" name="pwd" id="pwd" placeholder="4-10자의 영문, 특수문자, 숫자" required>
-                <input type="password" name="pwd2" id="pwd" placeholder="비밀번호 확인" required>
+                <input type="password" name="pwd1" id="pwd1" placeholder="4-10자의 영문, 특수문자, 숫자" required>
+                <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호 확인" required>
+                <span id="chkNotice" size="1"></span>
             </li>
                 
                 <!-- 이름 부분 -->

@@ -4,6 +4,13 @@
     min-width:360px;
     padding: 75px 15px;
 }
+/* 프리텐다드 폰트 */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 .section{
     padding: 0 10px;
     border: 1px solid black;
@@ -20,6 +27,12 @@ form{
     gap:10px;
     padding:30px 10px;
 } */
+
+/* 프리텐다드 폰트 적용 */
+form, select, input{
+    font-family: 'Pretendard-Regular';
+}
+
 /* 폼 input, select 공통 css */
 form input, select {
   border-radius: 5px;
@@ -61,7 +74,7 @@ li{
     display: flex;
     flex-direction: column;
 }
-#pwd{
+#pwd1, #pwd2{
     margin: 3px 0;
 }
 /* 이름 부분 */
