@@ -5,7 +5,7 @@ html.open {
 #header {
     width: 100%;
     height: 70px;
-    z-index: 9999;
+    z-index: 900;
     position: fixed;
     top: 0;
     background: #fff;
@@ -197,4 +197,25 @@ html.open {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.45);
+}
+
+.pc-menu {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/* ==================================PC ver.(min-width: 1024px)================================== */
+@media (min-width: 1024px) {
+    #slide, .slide-open{
+        display: none;
+    }
+
+
 }
