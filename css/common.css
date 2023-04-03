@@ -66,6 +66,10 @@
     line-height:34px;
     font-size:30px;
   }
+
+  .id {
+    width:100%;
+  }
   
   .name{
     width:100%;

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오구</title>
+    <link href="../../css/reset.css" rel="stylesheet">
+
+    <!-- 공통 css -->
+    <link href="../../css/common.css" rel="stylesheet">
+    <!-- 외부 폰트, 외부 스타일 -->
+    <link href="../../css/footer.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../images/logo/favicon.ico">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#headers").load("../header/header.html");
+            $("#footers").load("../footer/footer.html");
+        });
+    </script>
+
+</head>
+<style>
+    #wrap {
+        min-width: 360px;
+    }
+
+    .containerwrap {
+        margin-top: 70px;
+        padding: 20px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+    }
+
+    /* 아이디 비밀번호 찾기 전체 박스 */
+    .find_box {
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .find_box h2 {
+        font-family: 'Pretendard-Regular', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* 왼쪽정렬 */
+    form.index_form {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .btn_index {
+        background-color: #000066;
+        color: white;
+        width: 100%;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $(".find_tab li").click(function () {
+            var idx = $(this).index();
+            $(".find_tab li").removeClass("on");
+            $(".find_tab li").eq(idx).addClass("on");
+            $(".tab_cont .tab").hide();
+            $(".tab_cont .tab").eq(idx).show();
+        });
+    });
+</script>
+
+<body>
+
+    <div id="headers"></div>
+    <div class="wrap">
+        <div class="containerwrap">
+            <div class="find_box">
+                <h2>비밀번호 찾기</h2>
+                <!-- form -->
+                <form action="" class="index_form" method="post">
+                    <h2>아이디</h2>
+                    <div class="id">
+                        <input type="text" class="id" name="id" id="id" placeholder="&nbsp&nbsp&nbsp아이디">
+                    </div>
+                    <h2>이름</h2>
+                    <div class="name">
+                        <input type="text" class="name" name="name" id="name" placeholder="&nbsp&nbsp&nbsp이름">
+                    </div>
+                    <h2>이메일</h2>
+                    <div class="email"><input type="email" id="email" name="email" placeholder="&nbsp&nbsp&nbsp이메일">
+                    </div>
+                    <a href="#" class="btn_index">비밀번호찾기</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="footers"></div>
+    </div>
+</body>
+
+</html>
