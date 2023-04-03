@@ -98,6 +98,11 @@
           display: none;
           overflow: hidden;
           background-color: #f1f1f1;
+         
+        }
+        
+        .content>p{
+          font-size: 1rem;
         }
         
         p.qu{
@@ -110,10 +115,22 @@
          display: inline-block;
         
         }
+      .collapsible{
+        position: relative;
+      }
+
+      .plus{
+        position: absolute;
+        right: 10px;
+        color: #000066 ;
+        font-size: 1rem;
+      }
+        
+       
     /* 공지사항 영역 */
         .news{
             width:400px ;
-            margin: 20px 10px;
+            margin: 40px 10px;
             line-height: 30px;
 
       }
@@ -123,7 +140,7 @@
       .news li>a{
         font-size: 0.9rem;
       }
-      .news>button.plus{
+      .news>button.plus_go{
         width: 100px;
         padding: 5px 0px;
         border-radius: 50px;
@@ -135,7 +152,7 @@
         margin-top: 10px;
         
       }
-      button.plus>a{
+      button.plus_go>a{
         color: white;
         font-weight: bold;
       }
