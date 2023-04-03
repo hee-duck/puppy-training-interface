@@ -12,7 +12,7 @@
 }
 /* 약관 영역 스타일 */
 div.term{
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     white-space: nowrap; /* width 줄여도 줄바꿈 안되게*/
 }
 div.term li{
@@ -30,3 +30,24 @@ div.term li>a:hover{
 div.addr{
     font-size: 0.5rem;
 }
+/* ==================================PC ver.(min-width: 1024px)================================== */
+@media (min-width: 1024px) {
+    #footer{
+        position: relative;
+        height: 170px;
+    }
+    .term{
+        position: absolute;
+        left: 10px;
+        top: 30px;
+    }
+    .addr{
+        position: absolute;
+        left: 10px;
+        top: 80px;
+        margin-bottom: 40px;
+    }
+    .addr>p{
+        text-align: left;
+    }
+    }
