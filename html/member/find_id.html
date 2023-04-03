@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오구</title>
+    <link href="../../css/reset.css" rel="stylesheet">
+
+    <!-- 공통 css -->
+    <link href="../../css/common.css" rel="stylesheet">
+    <!-- 외부 폰트, 외부 스타일 -->
+    <link href="../../css/footer.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../images/logo/favicon.ico">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $("#headers").load("../header/header.html");
+            $("#footers").load("../footer/footer.html");
+        });
+    </script>
+
+</head>
+<style>
+    #wrap {
+            min-width: 360px;
+        }
+    .containerwrap {
+        margin-top:70px;
+        padding:20px;
+        padding-top:80px;
+        padding-bottom: 80px;
+
+    }
+    /* 아이디 비밀번호 찾기 전체 박스 */
+    .find_box {
+        width: 100%;
+        border:1px solid black;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top:30px;
+        padding-bottom:30px;
+        }
+    /* 탭메뉴 */
+    .find_tab {
+        display:flex;
+        justify-content: space-between;
+        width:100%;
+        padding: 0 10px;
+        /* 박스안에 넣기 */
+        box-sizing: border-box;
+    }
+
+   
+
+    /* 탭메뉴왼쪽 */
+    .find_email {
+        text-align: center;
+        width:100%;
+        border:1px solid black;
+        border-right:none;
+        border-top:none;
+    }
+
+    .find_email a {
+        display:block;
+        width:100%;
+        padding:10px;
+        box-sizing: border-box;
+    }
+    /* 탭메뉴오른쪽 */
+    .find_phone {
+        text-align: center;
+        width:100%;
+        border:1px solid black;
+        border-top:none;
+        
+    }
+
+    .find_phone a {
+        display:block;
+        width:100%;
+        padding:10px;
+        box-sizing: border-box;
+    }
+
+    .find_tab .on {
+        border-top:1px solid black;
+        border-bottom:none;
+    }
+
+    .tab_cont .tab {
+        display:none;
+    }
+    .tab_cont .on {
+        display:block;
+    }
+
+    /* 왼쪽정렬 */
+    form.index_form {
+        display:flex;
+    align-items: flex-start;
+  }
+    .btn_index {
+        width:100%;
+    }
+
+</style>
+
+<script>
+    $(document).ready(function() {
+        $(".find_tab li").click(function(){
+            var idx = $(this).index();
+            $(".find_tab li").removeClass("on");
+            $(".find_tab li").eq(idx).addClass("on");
+            $(".tab_cont .tab").hide();
+            $(".tab_cont .tab").eq(idx).show();
+        });
+    });
+</script>
+<body>
+    
+    <div id="headers"></div>
+    <div class="wrap">
+    <div class="containerwrap">
+        <div class="find_box">
+            <ul class="find_tab">
+                <li class="find_email on"><a href="#">이메일로 찾기</a></li>
+                <li class="find_phone"><a href="#">휴대번호로 찾기</a></li>
+            </ul>
+            <div class="tab_cont">
+                <div class="tab on">
+            <!-- form -->
+            <form action="" class="index_form" method="post">
+                <h2>이름</h2>
+                <div class="name">
+                    
+                    <input type="text" class="name" name="name" id="name" placeholder="&nbsp&nbsp&nbsp이름">
+                </div>
+                <h2>이메일</h2>
+                <div class="email"><input type="email" id="email" name="email" placeholder="&nbsp&nbsp&nbsp이메일"></div>
+                <a href="#" class="btn_index">아이디찾기</a>
+            </form>
+        </div>
+        <div class="tab">
+            <!-- form -->
+            <form action="" class="index_form" method="post">
+                <h2>이름</h2>
+                <div class="name">
+                    
+                    <input type="text" class="name" name="name" id="name" placeholder="&nbsp&nbsp&nbsp이름">
+                </div>
+                <h2>전화번호</h2>
+                <div class="number">
+                    
+                    <div class="telbox1">
+                        
+                        <select name="tel1" id="tel1">
+                            <option value="010" selected>010</option>
+                            <option value="011">011</option>
+                            <option value="016">016</option>
+                            <option value="017">017</option>
+                            <option value="018">018</option>
+                            <option value="019">019</option>
+                        </select>
+                    </div>
+                    <span>-</span>
+                    <div class="telbox2">
+                        <input type="text" name="tel2" id="tel2">
+                    </div>
+                    <span>-</span>
+                    <div class="telbox3">
+                        <input type="text" name="tel3" id="tel3">
+                    </div>
+                </div>
+                <a href="#" class="btn_index">아이디찾기</a>
+            </form>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div id="footers"></div>
+    </div>
+</body>
+</html>
