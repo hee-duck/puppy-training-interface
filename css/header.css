@@ -119,7 +119,7 @@ html.open {
 /* 모바일gnb 메뉴*/
 .slide-title {
     width: 100%;
-    height: 70px;
+/*     height: 70px; */
     font-size: 42px;
 /*     display: flex; */ 
     justify-content: space-evenly;
