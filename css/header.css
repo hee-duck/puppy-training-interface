@@ -13,9 +13,9 @@ html.open {
     min-width:360px;
 }
 
-.container {
+/* .container {
     width: 100%;
-}
+} */
 
 .head {
     width: 100%;
@@ -213,9 +213,84 @@ html.open {
 
 /* ==================================PC ver.(min-width: 1024px)================================== */
 @media (min-width: 1024px) {
-    #slide, .slide-open{
+    #slide, .slide-open, .dimmed{
         display: none;
     }
 
+    #header {
+        width: 100%;
+        height: 90px;
+        position: fixed;
+        top: 0;
+        background: #fff;
+        border-bottom: 1px solid #e1e1e1;
+    }
+    
+    .head {
+        display: flex;
+        align-items: center;
+        }
 
+    .logo_img>img {
+            width: 90px;
+            height: 90px;
+            margin-right: 5px;
+            float: left;
+            margin-top: 20px;
+        }
+        
+        .logo {
+            line-height: 90px;
+            font-size: 2.6rem;
+            padding-top: 5px;
+            font-family: 'Gugi';
+            margin-top: 20px;
+        }
+
+    .pc-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 5%;
+        right: 0;
+        width: 100%;
+        }
+
+    .pc-top-nav {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+        }
+
+    .pc-top-nav li{
+        display: inline-block;
+        padding: 0px 20px;
+        font-size: 0.8rem;
+    }
+
+    .pc-main-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        }
+
+    .pc-main-menu li{
+        display: inline-block;
+        padding: 0px 40px;
+        font-weight: 600;
+        font-size: 1.3rem;
+/*         color: #000066; */
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .pc-main-menu ol{
+        padding: 10px;
+        font-weight: 400;
+        color: #000066;
+        font-size: 1rem;
+    }
+    
 }
