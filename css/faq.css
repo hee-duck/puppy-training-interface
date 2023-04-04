@@ -180,13 +180,14 @@
     @media(min-width:1024px){
        
       .faq{
+       width: 1024px;
        margin: 0 auto;
       }
      
       /* 검색영역 */
      
       .search_box{
-        width: 30%;
+        width: 45%;
         height: 80px;
         display: flex;
         flex-direction: row;
@@ -195,7 +196,7 @@
 
       }
       .search_box>#search{
-        width: 50%;
+        width: 60%;
         height: 40px;
       }
       .search_box>.search_btn{
@@ -210,14 +211,14 @@
          
          }
          #Accordion_wrap{
-          width: 50%;
-          margin-bottom: 30px;
+          width: 100%;
+          margin-bottom: 50px;
          }
 
          /* 공지사항&고객센터 정보 */
          .faq2{
           width: 100%;
-          margin-left: 30px;
+          margin-left: 50px;
         }
          
       
