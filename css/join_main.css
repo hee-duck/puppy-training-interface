@@ -1,8 +1,10 @@
- /* section 메인 박스 */
+/* Mobile Ver. */
+@media (min-width:360px) {
+/* section 메인 박스 */
 /* 360이하로 안줄어들게 */
 #wrap{
     margin-top: 50px;
-    min-width:360px;
+    min-width: 360px;
     padding: 75px 15px;
 }
 /* 프리텐다드 폰트 */
@@ -22,7 +24,10 @@
     padding: 20px;
     border: 1px solid black;
 }
-.already{
+.join_title{
+    font-weight: 600;
+}
+.join_title, .already{
     font-family: 'Pretendard-Regular';
 }
 .sns_logo{
@@ -78,4 +83,22 @@ hr{
 a.login:hover{
     text-decoration: underline;
     cursor: pointer;
+}
+
+}
+
+/* Tab ver. */
+@media(min-width:768px){
+    .section{
+        width: 60%;
+    }
+
+}
+
+/* PC ver. */
+@media(min-width:1024px){
+    .section{
+        width: 35%;
+    }
+
 }

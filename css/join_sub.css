@@ -1,3 +1,4 @@
+@media(min-width:360px){
 /* 360이하로 안줄어들게 */
 #wrap{
     margin-top: 50px;
@@ -143,6 +144,13 @@ li.phone{
     color: #fff;
     background-color: #000066;
 }
+/* 세로줄(pc ver. only) */
+.hr{
+    display: none;
+    width: 1px;
+    border-left: 1px dashed black;
+}
+
 /* 이메일 부분 */
 /* #email, #email2{
     width: 46%;
@@ -160,7 +168,7 @@ li.phone{
     height: 30px;
     margin: 5px 0;
 }
-/* 하단 약관 부분 */
+/* 하단 약관 부분(마케팅 정보 수신동의, 약관동의) */
 .marketing_wrap, .agree_wrap{
     border: 1px solid black;
     padding: 5px;
@@ -198,3 +206,35 @@ li.phone{
     border-radius: 20px;
     text-align: center;
 }
+
+}
+
+/* PC ver. */
+@media(min-width:1024px){
+    #wrap{
+        margin-top: 0;
+    }
+    .section{
+        margin-left: 20px;
+        width: 95%;
+        padding: 20px;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .pc_1, .pc_2{
+        width: 100%;
+        padding: 0 10px;
+    }
+    .marketing_wrap, .agree_wrap{
+        padding: 10px;
+    }
+    .marketing, .agree{
+        font-size: 1.2rem;
+    }
+    .hr{
+        display: block;
+    }
+}  
