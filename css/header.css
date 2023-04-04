@@ -272,7 +272,7 @@ html.open {
 
     /* 마우스 올렸을때 400만큼 늘어남 */
     #header.on {
-        height: 400px;
+        height: 460px;
     }
 
     /* PC버전 로고위치 변경 */
@@ -358,6 +358,7 @@ html.open {
         display: inline-block;
         padding: 20px;
         color:#000000;
+        font-weight: 400;
     }
 
 
