@@ -227,22 +227,51 @@
         /* 항목 css */
         .review_contents_wrap ul {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
         }
 
         .review_contents_wrap li {
-            width: 250px;
+            width: 100%;
             padding: 20px;
         }
 
         .review_contents_wrap img {
-            width: 100%;
+            width: 250px;
             height: 200px;
         }
 
+        .review_contents_wrap a {
+            display:flex;
+            justify-content: flex-start;
+            gap:20px;
+        }
+
+        /* 교육리뷰 폰트 */
+        .review_contents_wrap .txt_wrap {
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .review_contents_wrap h1 {
+            text-align: left;
+        }
+
+        .review_contents_wrap h2 {
+            font-weight:400;
+            padding-top: 10px;   
+        }
+
         .review_contents_wrap p {
-            padding-top: 10px;
+            text-align: left;
+        }
+
+        .review_contents_wrap .date {
+            text-align: left;
+        }
+
+        .review_contents_wrap li {
+                padding: 20px 50px;
         }
 
 
@@ -327,7 +356,12 @@
         }
 
         .gallery_wrap .contents:hover img {
-            filter: blur(4px);
+            filter: blur(5px);
+        }
+
+        .gallery_wrap a {
+            font-size:42px;
+            color:#fff;
         }
 
 
@@ -342,14 +376,12 @@
 
         /* PC */
         @media(min-width:1024px) {
-
-            .review_contents_wrap li {
-                padding: 0 50px;
-            }
             .menu {
             margin-top: 120px;
         }
-
+        .review_contents_wrap li {
+                padding-left:200px;
+        }
         }
     </style>
 
@@ -360,7 +392,7 @@
     <script>
         // 탭메뉴 js
         $(function () {
-            tab('#tab', 0);
+            tab('#tab', 2);
         }); //문서가 준비되면 함수 호출
 
         function tab(e, num) {
@@ -398,7 +430,8 @@
 </head>
 
 <body>
-    <header id="header">
+       <!-- header 시작 -->
+       <header id="header">
         <div class="dimmed"></div>
         <div class="head">
             <div class="slide-open" id="slide-open">
@@ -446,11 +479,12 @@
                         <li><a href="../store/store_join.html">가맹문의</a></li>
                     </ul>
                     </li>
-                    <li><a href="#">얘기하자구</a>
+                    <li><a href="../community/community_notice.html">얘기하자구</a>
                         <ul class="depth02">
-                        <li><a href="../community/community1.html">공지사항</a></li> 
-                        <li><a href="../community/community2.html">교육후기</a></li>
-                        <li><a href="../community/community4.html">훈련사 칼럼</a></li>
+                        <li><a href="../community/community_notice.html">공지사항</a></li> 
+                        <li><a href="../community/community_review.html">교육후기</a></li>
+                        <li><a href="../community/community_column.html">훈련사 칼럼</a></li>
+                        <li><a href="../community/community_gallery.html">갤러리</a></li>
                     </ul>
                     </li>
                 </ul>
@@ -504,9 +538,9 @@
             </div>
         </div>
     </div>
-    <script src="../../../js/burger.js"></script>
     </header>
-    <!-- 헤더끝 -->
+    <script src="../../../js/burger.js"></script> <!-- header js // ========경로 변경 필요========-->
+    <!-- header 끝 -->
 
     <script
         src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
@@ -654,73 +688,181 @@
                         <li>
                             <a href="#">
                                 <img src="../../../images/main_nav/community/community_1.jpg">
-                                <p>반려동물 ‘행복의 원칙’ 다섯 가지</p>
+                                <div class="txt_wrap">
+                                    <div class="txt_top">
+                                <h1>김주연 훈련사</h1>
+                                <h2>첫수업 매우 바빴어요~</h2>
+                                </div>
+                                <div class="txt_bottom">
+                                <p class="date">2023-04-01</p>
+                                <p class="writer">백승민</p>
+                                </div>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="../../../images/main_nav/community/community_2.jpg">
-                                <p>민간 동물보호시설 신고제...적절한 재정지원도 이뤄져야</p>
+                                <div class="txt_wrap">
+                                    <div class="txt_top">
+                                <h1>김주연 훈련사</h1>
+                                <h2>첫수업 매우 바빴어요~</h2>
+                                </div>
+                                <div class="txt_bottom">
+                                <p class="date">2023-04-01</p>
+                                <p class="writer">백승민</p>
+                                </div>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="../../../images/main_nav/community/community_3.jpg">
-                                <p>동물들을 위해 무엇을 할 수 있을까요</p>
+                                <div class="txt_wrap">
+                                    <div class="txt_top">
+                                <h1>김주연 훈련사</h1>
+                                <h2>첫수업 매우 바빴어요~</h2>
+                                </div>
+                                <div class="txt_bottom">
+                                <p class="date">2023-04-01</p>
+                                <p class="writer">백승민</p>
+                                </div>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="../../../images/main_nav/community/community_4.jpg">
-                                <p>반려동물 ‘행복의 원칙’ 다섯 가지</p>
+                                <div class="txt_wrap">
+                                    <div class="txt_top">
+                                <h1>김주연 훈련사</h1>
+                                <h2>첫수업 매우 바빴어요~</h2>
+                                </div>
+                                <div class="txt_bottom">
+                                <p class="date">2023-04-01</p>
+                                <p class="writer">백승민</p>
+                                </div>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="../../../images/main_nav/community/community_5.jpg">
-                                <p>민간 동물보호시설 신고제...적절한 재정지원도 이뤄져야</p>
+                                <div class="txt_wrap">
+                                    <div class="txt_top">
+                                <h1>김주연 훈련사</h1>
+                                <h2>첫수업 매우 바빴어요~</h2>
+                                </div>
+                                <div class="txt_bottom">
+                                <p class="date">2023-04-01</p>
+                                <p class="writer">백승민</p>
+                                </div>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="../../../images/main_nav/community/community_6.jpg">
-                                <p>동물들을 위해 무엇을 할 수 있을까요</p>
+                                <div class="txt_wrap">
+                                    <div class="txt_top">
+                                <h1>김주연 훈련사</h1>
+                                <h2>첫수업 매우 바빴어요~</h2>
+                                </div>
+                                <div class="txt_bottom">
+                                <p class="date">2023-04-01</p>
+                                <p class="writer">백승민</p>
+                                </div>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="../../../images/main_nav/community/community_7.jpg">
-                                <p>반려동물 ‘행복의 원칙’ 다섯 가지</p>
+                                <div class="txt_wrap">
+                                    <div class="txt_top">
+                                <h1>김주연 훈련사</h1>
+                                <h2>첫수업 매우 바빴어요~</h2>
+                                </div>
+                                <div class="txt_bottom">
+                                <p class="date">2023-04-01</p>
+                                <p class="writer">백승민</p>
+                                </div>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="../../../images/main_nav/community/community_9.jpg">
-                                <p>민간 동물보호시설 신고제...적절한 재정지원도 이뤄져야</p>
+                                <div class="txt_wrap">
+                                    <div class="txt_top">
+                                <h1>김주연 훈련사</h1>
+                                <h2>첫수업 매우 바빴어요~</h2>
+                                </div>
+                                <div class="txt_bottom">
+                                <p class="date">2023-04-01</p>
+                                <p class="writer">백승민</p>
+                                </div>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="../../../images/main_nav/community/community_10.jpg">
-                                <p>동물들을 위해 무엇을 할 수 있을까요</p>
+                                <div class="txt_wrap">
+                                    <div class="txt_top">
+                                <h1>김주연 훈련사</h1>
+                                <h2>첫수업 매우 바빴어요~</h2>
+                                </div>
+                                <div class="txt_bottom">
+                                <p class="date">2023-04-01</p>
+                                <p class="writer">백승민</p>
+                                </div>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="../../../images/main_nav/community/community_1.jpg">
-                                <p>반려동물 ‘행복의 원칙’ 다섯 가지</p>
+                                <div class="txt_wrap">
+                                    <div class="txt_top">
+                                <h1>김주연 훈련사</h1>
+                                <h2>첫수업 매우 바빴어요~</h2>
+                                </div>
+                                <div class="txt_bottom">
+                                <p class="date">2023-04-01</p>
+                                <p class="writer">백승민</p>
+                                </div>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="../../../images/main_nav/community/community_2.jpg">
-                                <p>민간 동물보호시설 신고제...적절한 재정지원도 이뤄져야</p>
+                                <div class="txt_wrap">
+                                    <div class="txt_top">
+                                <h1>김주연 훈련사</h1>
+                                <h2>첫수업 매우 바빴어요~</h2>
+                                </div>
+                                <div class="txt_bottom">
+                                <p class="date">2023-04-01</p>
+                                <p class="writer">백승민</p>
+                                </div>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="../../../images/main_nav/community/community_3.jpg">
-                                <p>동물들을 위해 무엇을 할 수 있을까요</p>
+                                <div class="txt_wrap">
+                                    <div class="txt_top">
+                                <h1>김주연 훈련사</h1>
+                                <h2>첫수업 매우 바빴어요~</h2>
+                                </div>
+                                <div class="txt_bottom">
+                                <p class="date">2023-04-01</p>
+                                <p class="writer">백승민</p>
+                                </div>
+                                </div>
                             </a>
                         </li>
                     </ul>
@@ -865,7 +1007,7 @@
                     </div>
                     <div class="contents">
                         <a class="location-title" href="#">
-                            콩이
+                            몽구
                         </a>
                         <a href="#">
                             <img src="../../../images/main_nav/community/community_10.jpg">
@@ -881,10 +1023,34 @@
                     </div>
                     <div class="contents">
                         <a class="location-title" href="#">
-                            몽이
+                            콩이
                         </a>
                         <a href="#">
                             <img src="../../../images/main_nav/community/community_2.jpg">
+                        </a>
+                    </div>
+                    <div class="contents">
+                        <a class="location-title" href="#">
+                            퍼벨
+                        </a>
+                        <a href="#">
+                            <img src="../../../images/main_nav/community/community_11(퍼벨).jpg">
+                        </a>
+                    </div>
+                    <div class="contents">
+                        <a class="location-title" href="#">
+                            벨
+                        </a>
+                        <a href="#">
+                            <img src="../../../images/main_nav/community/community_12(벨).jpg">
+                        </a>
+                    </div>
+                    <div class="contents">
+                        <a class="location-title" href="#">
+                            복돌이
+                        </a>
+                        <a href="#">
+                            <img src="../../../images/main_nav/community/community_13(복돌이).jpg">
                         </a>
                     </div>
                 </div>
