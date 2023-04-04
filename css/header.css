@@ -1,7 +1,15 @@
+/* 둘기마요 */
+@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html.open {
     overflow: hidden;
-  }
-  
+}
+
 #header {
     width: 100%;
     height: 70px;
@@ -10,25 +18,21 @@ html.open {
     top: 0;
     background: #fff;
     border-bottom: 1px solid #e1e1e1;
-    min-width:360px;
+    min-width: 360px;
 }
 
-/* .container {
-    width: 100%;
-} */
 
 .head {
     width: 100%;
     height: 70px;
     position: relative;
 }
-
 .logo_wrap {
-    z-index:9999;
+    width:100%;
 }
 
 .logo_wrap a {
-    display:flex;
+    display: flex;
 }
 
 .logo_img>img {
@@ -103,11 +107,12 @@ html.open {
 .burgur.on .bot-line {
     -webkit-transform: translateY(5px) rotate(135deg);
     transform: translateY(5px) rotate(135deg);
-    }
-    .burgur.on .top-line{
+}
+
+.burgur.on .top-line {
     -webkit-transform: translateY(-5px) rotate(-135deg);
     transform: translateY(-5px) rotate(-135deg);
-    }
+}
 
 .slide {
     width: 40%;
@@ -128,9 +133,9 @@ html.open {
 /* 모바일gnb 메뉴*/
 .slide-title {
     width: 100%;
-/*     height: 70px; */
+    /*     height: 70px; */
     font-size: 42px;
-/*     display: flex; */ 
+    /*     display: flex; */
     justify-content: space-evenly;
     align-items: center;
     border-bottom: 1px solid #000000;
@@ -140,12 +145,14 @@ html.open {
     padding: 10px 0px;
 }
 
-.slide-title-text{
+.slide-title-text {
     font-size: 0.8rem;
 }
-.slide-title strong{
+
+.slide-title strong {
     color: #fff;
 }
+
 #slide button {
     width: 70px;
     height: 35px;
@@ -158,25 +165,27 @@ html.open {
     z-index: 300;
 }
 
-.slide a{
+.slide a {
     text-decoration: none;
     color: #000000;
 }
+
 .slide.on {
     left: 0;
     z-index: 400;
 }
 
-.slide-menu{
+.slide-menu {
     height: 1000px;
     background-color: #fff;
 }
 
-.slide-menu strong{
+.slide-menu strong {
     display: block;
     margin-bottom: 10px;
     color: #000066;
 }
+
 .menu-name>li {
     display: inline-block;
     width: 100%;
@@ -184,20 +193,21 @@ html.open {
     border-bottom: 1px solid#A3A2A2;
 
 }
-.menu-name>li>a{
+
+.menu-name>li>a {
     text-decoration: none;
     color: #000000;
 }
 
-.menu-name ol>a{
+.menu-name ol>a {
     margin: 20px 0px 20px 30px;
     font-size: 0.9rem;
-/*     display: block;
+    /*     display: block;
     margin-bottom: 5px;
     위에 두개를 쓰면 하위메뉴 줄높이 조정은 가능하나, 아코디언 애니메이션이 부자연스러워져서 주석 처리함 ==희수 */
 }
 
-.dimmed{
+.dimmed {
     display: block;
     z-index: 100;
     width: 100%;
@@ -222,115 +232,132 @@ html.open {
 
 /* ==================================PC ver.(min-width: 1024px)================================== */
 @media (min-width: 1024px) {
-    #slide, .slide-open, .dimmed  {
+
+    #slide,
+    .slide-open,
+    .dimmed {
         display: none;
     }
 
-    
+    /* PC header시작 */
     #header {
         transition: all 0.5s;
-        overflow:hidden;
+        overflow: hidden;
         background: #fff;
-        height:100px;
-        position:relative;
-        border-bottom:1px solid #dfdfdf;
+        height: 120px;
+        position: fixed;
+        border-bottom: 1px solid #dfdfdf;
+        
     }
-    
+
+    /* 마우스 올렸을때 400만큼 늘어남 */
+    #header.on {
+        height: 400px;
+    }
+
+    /* PC버전 로고위치 변경 */
+    .logo_wrap {
+        padding-top: 20px;
+        z-index: 1000;
+    }
+
     .head {
         display: flex;
         align-items: center;
-        }
+    }
 
     .logo_img>img {
-            width: 90px;
-            height: 90px;
-            margin-right: 5px;
-            float: left;
-            margin-top: 20px;
-        }
-        
-        .logo {
-            line-height: 90px;
-            font-size: 2.6rem;
-            padding-top: 5px;
-            font-family: 'Gugi';
-            margin-top: 20px;
-        }
+        width: 90px;
+        height: 90px;
+        margin-right: 5px;
+        float: left;
+        margin-top: 20px;
+    }
+
+    .logo {
+        line-height: 90px;
+        font-size: 2.6rem;
+        padding-top: 5px;
+        font-family: 'Gugi';
+        margin-top: 20px;
+    }
 
     .pc-menu {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 5%;
+        top: 0;
         right: 0;
         width: 100%;
-        }
+        
+    }
+
+    .pc-menu li a {
+        font-family: 'Dovemayo_gothic';
+    }
 
     .pc-top-nav {
         display: flex;
         justify-content: flex-end;
         margin-bottom: 10px;
-        }
+    }
 
-    .pc-top-nav li{
+
+    .pc-top-nav li {
         display: inline-block;
         padding: 0px 20px;
-        font-size: 0.8rem;
+        font-size: 12px;
     }
 
 
 
     .pc-main-menu {
-        width:100%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         background: #fff;
+    }
 
-        }
-
-        .pc-main-menu ul {
-            display:flex;
-        }
-
-    .pc-main-menu li{
+    .pc-main-menu ul {
         display: flex;
-        flex-direction:column;
+    }
+
+    .pc-main-menu li {
+        display: flex;
+        flex-direction: column;
         padding: 0px 40px;
         font-weight: 600;
-        font-size: 1.3rem;
-    /*     color: #000066; */
-        margin-top: 10px;
-        margin-bottom: 10px;
+        font-size: 26px;
+
     }
 
     .pc-main-menu li a {
-        padding:20px;
-        padding-top:0;
+        text-align: center;
+        display: inline-block;
+        padding: 20px;
+    }
+
+    .pc-main-menu li a:hover {
+        color: lightskyblue;
     }
 
     .pc-main-menu .depth02 {
-        width:100%;
-        display:flex;
+        width: 100%;
+        display: flex;
         flex-direction: column;
         background-color: #fff;
     }
 
-    .pc-main-menu .depth02 li{
+    .pc-main-menu .depth02 li {
         padding: 10px;
         font-weight: 400;
         color: #000066;
-        font-size: 1rem;
+        font-size: 18px;
     }
 
-    
-    #header.on {
-        height:486px;
-    }
-    
-    
-    #header .gnb:hover .depth02 {
-        display: block;
-    }
-    
+
+
+
+
 }

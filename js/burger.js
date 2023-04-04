@@ -66,6 +66,8 @@ slideOpen.addEventListener('click', () => {
 });
 
 
+
+// PC헤더 JQUERY
 $(document).ready(function() {
   // 처음 모든 ol(하위메뉴) 숨김 처리
   $('.pc-main-menu').on('mouseenter', function () {
