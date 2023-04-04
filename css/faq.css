@@ -14,7 +14,7 @@
 
         .section{
             min-width: 360px;
-            margin-top: 90px;
+            margin-top: 70px;
         }
 
         /* 검색 부분 */
@@ -121,7 +121,8 @@
 
       .plus{
         position: absolute;
-        right: 10px;
+        right: 20px;
+        top: 23px;
         color: #000066 ;
         font-size: 1rem;
       }
@@ -178,6 +179,9 @@
 
     /* pc용 */
     @media(min-width:1024px){
+      .section{
+        margin-top: 120px;
+      }
        
       .faq{
        width: 1024px;

@@ -14,8 +14,9 @@
 }
 .section{
     padding: 0 10px;
-    border: 1px solid black;
+    border: 1px solid gainsboro;
 }
+
 .start{
     margin-top:5px;
     text-align: center;
@@ -37,7 +38,7 @@ form, select, input{
 /* 폼 input, select 공통 css */
 form input, select {
   border-radius: 5px;
-  border:1px solid black;
+  border:1px solid gainsboro;
   height:25px;
 }
 
@@ -148,7 +149,7 @@ li.phone{
 .hr{
     display: none;
     width: 1px;
-    border-left: 1px dashed black;
+    border-left: 1px dashed gainsboro;
 }
 
 /* 이메일 부분 */
@@ -170,7 +171,7 @@ li.phone{
 }
 /* 하단 약관 부분(마케팅 정보 수신동의, 약관동의) */
 .marketing_wrap, .agree_wrap{
-    border: 1px solid black;
+    border: 1px solid gainsboro;
     padding: 5px;
     margin-bottom: 10px;
 }
@@ -202,7 +203,7 @@ li.phone{
     color: black;
 }
 #submit, .index{
-    border: 1px solid black;
+    border: 1px solid gainsboro;
     border-radius: 20px;
     text-align: center;
 }

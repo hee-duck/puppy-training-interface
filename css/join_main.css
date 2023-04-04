@@ -15,14 +15,17 @@
     font-style: normal;
 }
 .section{
-    display: flex;
-    flex-direction: column;
-    width: 91.46341%;
+    width: 90%;
     height: 76.92307%;
     margin: 40px auto;
     text-align: center;
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid gainsboro;
+    background-color: beige;
+}
+.section_box{
+    display: flex;
+    flex-direction: column;
 }
 .join_title{
     font-weight: 600;
@@ -46,14 +49,14 @@
 }
 hr{
     width: 85%;
-    border-top: 1px dashed black;
+    border-top: 1px dashed gainsboro;
 }
 /* 오구 계정 만들기 부분 */
 .create{
     width: 95%;
     height: 40px;
     margin: 20px auto;
-    border: 1px solid black;
+    border: 1px solid gainsboro;
     border-radius: 30px;
     background-color: darkblue;
     text-align: center;
@@ -97,8 +100,11 @@ a.login:hover{
 
 /* PC ver. */
 @media(min-width:1024px){
+    #wrap{
+        margin-top: 0;
+    }
     .section{
-        width: 35%;
+        width: 40%;
     }
 
 }

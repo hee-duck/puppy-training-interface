@@ -339,9 +339,40 @@
            }
     </style>
 
-    <!-- 탭메뉴, 햄버거 jQuery -->
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="../../../js/tab_menu.js"></script> <!-- 탭메뉴 js -->
+
+    <!-- 내부 js -->
+    <script>
+        // 탭메뉴 js
+        $(function () {
+            tab('#tab', 1);
+        }); //문서가 준비되면 함수 호출
+
+        function tab(e, num) {
+            var num = num || 0; //숫자가 정의되지 않으면 0으로 설정
+            var menu = $(e).children(); //e로 지정된 요소의 모든 하위 요소를 가져옴
+            var con = $(e + '_con').children(); //e+_con으로 지정된 요소의 모든 하위 요소를 가져옵니다.
+            var select = $(menu).eq(num); //menu에서 인덱스 num에 있는 요소를 가져와 선택에 저장
+            var i = num; //i를 num값으로 저장
+
+            select.addClass('on'); //select로 지정된 요소에 on클래스 추가
+            con.eq(num).show(); //con에서 인덱스 num에 요소 표시
+
+            menu.click(function () { //메뉴의 모든 요소에 클릭 이벤트 리스너 추가
+                if (select !== null) {
+                    select.removeClass("on"); //select에서 on클래스 제거
+                    con.eq(i).hide(); //con에서 인덱스 i에 있는 요소 숨김
+                }
+
+                select = $(this); //클릭한 요소에 선택을 설정
+                i = $(this).index(); //i를 클릭한 요소의 인덱스로 설정
+
+                select.addClass('on'); //select에 on클래스 추가
+                con.eq(i).show(); //con에서 인덱스 i에 요소 표시
+            });
+        }
+    </script>
 
 
 
@@ -385,27 +416,27 @@
                         <li>
                             <a href="../info/company.html">어서오구</a>
                             <ul class="depth02">
-                            <li><a href="../info/company.html">회사소개</a></li> 
+                            <li><a href="#">회사소개</a></li> 
                             <li><a href="#">오시는길</a></li>
                             <li><a href="#">훈련사 소개</a></li>
                             </ul>
                         </li>
                         <li><a href="../edu/edu_video.html">공부하자구</a>
                             <ul class="depth02">
-                            <li><a href="./edu_video.html">영상교육</a></li> 
-                            <li><a href="./edu_group.html">그룹교육</a></li>
-                            <li><a href="./edu_personal.html">개인교육</a></li>
+                            <li><a href="#">영상교육</a></li> 
+                            <li><a href="#">그룹교육</a></li>
+                            <li><a href="#">개인교육</a></li>
                         </ul>
                         </li>
                         <li><a href="../store/store_info.html">여기있다구</a>
                             <ul class="depth02">
-                            <li><a href="../store/store_info.html">지점찾기</a></li> 
-                            <li><a href="../store/store_join.html">가맹문의</a></li>
+                            <li><a href="#">지점찾기</a></li> 
+                            <li><a href="#">가맹문의</a></li>
                         </ul>
                         </li>
                         <li><a href="../community/community.html">얘기하자구</a>
                             <ul class="depth02">
-                            <li><a href="../community/community.html">공지사항</a></li> 
+                            <li><a href="#">공지사항</a></li> 
                             <li><a href="#">교육후기</a></li>
                             <li><a href="#">훈련사 칼럼</a></li>
                         </ul>
@@ -424,25 +455,25 @@
                     <div class="slide-menu">
                         <ul class="menu-name">
                             <li><a
-                                href="#"><strong>어서오구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
-                                <ol><a href="../info/company.html">회사소개</a></ol>
+                                    href=""><strong>어서오구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                                <ol><a href="#">회사소개</a></ol>
                                 <ol><a href="#">오시는길</a></ol>
                                 <ol><a href="#">훈련사 소개</a></ol>
                             </li>
                             <li><a
                                     href=""><strong>공부하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
-                                <ol><a href="./edu_video.html">영상교육</a></ol>
-                                <ol><a href="./edu_group.html">그룹교육</a></ol>
-                                <ol><a href="./edu_personal.html">개인교육</a></ol>
+                                <ol><a href="#">영상교육</a></ol>
+                                <ol><a href="#">그룹교육</a></ol>
+                                <ol><a href="#">개인교육</a></ol>
                             </li>
                             <li><a
                                     href=""><strong>여기있다구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
-                                <ol><a href="../store/store_info.html">지점찾기</a></ol>
-                                <ol><a href="../store/store_join.html">가맹문의</a></ol>
+                                <ol><a href="#">지점찾기</a></ol>
+                                <ol><a href="#">가맹문의</a></ol>
                             </li>
                             <li><a
                                     href=""><strong>얘기하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
-                                <ol><a href="../community/community.html">공지사항</a></ol>
+                                <ol><a href="#">공지사항</a></ol>
                                 <ol><a href="#">교육후기</a></ol>
                                 <ol><a href="#">훈련사 칼럼</a></ol>
                                 <ol><a href="#">갤러리</a></ol>
