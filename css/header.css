@@ -33,6 +33,7 @@ html.open {
 
 .logo_wrap a {
     display: flex;
+    color: black;
 }
 
 .logo_img>img {
