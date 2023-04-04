@@ -185,6 +185,10 @@ html.open {
     display: inline-block;
 }
 
+.slide-menu strong:hover {
+    cursor: pointer;
+}
+
 .menu-name-txt {
     display:flex;
     justify-content: space-between;
@@ -237,27 +241,6 @@ html.open {
 .pc-menu {
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 타블렛 */
-
-@media (min-width:768px) {
-
-}
-
 
 
 
