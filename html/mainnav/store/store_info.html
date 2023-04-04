@@ -16,200 +16,226 @@
     <link rel="shortcut icon" href="../../../images/logo/favicon.ico">
 
 
-    <!--스타일 시트-->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        @media (min-width:360px) {
-        /* 폰트 스타일 */
-        @font-face {
-            font-family: 'Dovemayo_gothic';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        #wrap {
-            min-width: 360px;
-        }
-
-        /* 본문 전체 감싸는 부분 */
-        .section {
-            width: 100%;
-            position: static;
-            font-family: 'Dovemayo_gothic';
-            margin-top: 90px;
-
-        }
-
-        /* 상위메뉴 제목 및 배경 이미지 */
-        .menu {
-            position: relative;
-        }
-
-        .menu>img {
-            width: 100%;
-            opacity: 0.3;
-            height: 150px;
-
-        }
-
-        .menu>h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            /* 제목 가로,세로 중앙 정렬 */
-            z-index: 1;
-            color: black;
-            font-size: 2rem;
-            white-space: nowrap;
-            /* width 줄여도 줄바꿈 안되게 */
-        }
-
-        /* 탭 영역 */
-        .tab {
-            border: 1px solid #ddd;
-            border-left: none;
-            background: #fff;
-            overflow: hidden;
-        }
-
-        .tab li {
-            float: left;
-            width: 50%;
-            border-left: 1px solid #ddd;
-            text-align: center;
-            box-sizing: border-box;
-            padding: 20px;
-            cursor: pointer;
-        }
-        .tab li.on {
-            background-color: #000066;
-            color: #fff;
-        }
-
-        .tab_con {
-            clear: both;
-            margin-top: 5px;
-            border: 1px solid #ddd;
-        }
-
-        .tab_con div[class$="menu"] {
-            display: none;
-            width: 100%;
-            height: 100%;
-            background: #fff;
-            line-height: 20px;
-            text-align: center;
-            padding: 20px 0px;
-        }
-        /* 지점찾기 부분 */
-        hr{
-            border: 1px dashed black ;
-        }
-        .store_title{
-            font-size: 1.5rem;
-        }
-        .tab_con img, iframe{
-            border-radius: 25px;
-            width: 90%;
-        }
-        .store_message a{
-            text-decoration: underline;
-            color: #000066;
-        }
-        .store_message a:hover{
-            color: red
-        }
-        /* 지점문의 부분 */
-        .con2_menu{
-            text-align: center;
-        }
-        p.text_store{
-            text-decoration: underline;
-            color: darkblue;
-        }
-        .toJoin{
-            text-decoration: underline;
-            color: #000066;
-        }
-        .toJoin:hover{
-            color: red;
-        }
-        .memo{
-            height: 200px;
-        }
-        .store_form{
-            display: flex;
-            justify-content: center;
-        }
-        .form_store{
-            width: 90%;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            border: 1px solid black;
-        }
-        .tel{
-            display: flex;
-            justify-content: space-between;
-
-        }
-        #tel1, #tel2, #tel3{
-            width: 30%;
-        }
-        .tel span{
-            line-height: 60px;
-        }
-        input, select, textarea, .btn_index{
-            border-radius: 5px;
-            height: 40px;
-            margin-top: 10px;
-        }
-        .btn{
-            display: flex;
-            justify-content: center;
-        }
-        #btn_index{
-            width: 25%;
-            line-height: 40px;
-            background-color: #fff;
-            border: 1px solid black;
-        }
-        #btn_index:hover{
-            cursor: pointer;
-            color: #fff;
-            background-color: #000066;
-        }
+   <!--스타일 시트-->
+   <style>
+    /* Mobile ver. */
+    @media(min-width:360px){
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    @media (min-width:360px) {
+    /* 폰트 스타일 */
+    @font-face {
+        font-family: 'Dovemayo_gothic';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    /* 페이지 전체 감싸는 부분 */
+    #wrap {
+        min-width: 360px;
     }
 
-    /* PC ver. */
-    @media (min-width:1024px) {
-        .con1_menu, .con2_menu{
-            width: 90%;
-        }
-        .con2_pc{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        .store_pic{
-            width: 50%;
-        }
-        .store_form{
-            width: 50%;
-        }
-        .form_store{
-            height: 100%
-        }
-        .memo{
-            height: 350px;
-        }
+    /* 헤더 밑 본문 전체 감싸는 부분 */
+    .section {
+        width: 100%;
+        position: static;
+        font-family: 'Dovemayo_gothic';
+        margin-top: 70px;
+
     }
+
+    /* 상위메뉴 제목 및 배경 이미지 */
+    .menu {
+        position: relative;
+    }
+
+    .menu>img {
+        width: 100%;
+        opacity: 0.3;
+        height: 150px;
+
+    }
+
+    .menu>h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* 제목 가로,세로 중앙 정렬 */
+        z-index: 1;
+        color: black;
+        font-size: 2rem;
+        white-space: nowrap;
+        /* width 줄여도 줄바꿈 안되게 */
+    }
+
+    /* 탭 영역 */
+    .tab {
+        border: 1px solid #ddd;
+        border-left: none;
+        background: #fff;
+        overflow: hidden;
+    }
+
+    .tab li {
+        float: left;
+        width: 50%;
+        border-left: 1px solid #ddd;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 20px;
+        cursor: pointer;
+    }
+    .tab li.on {
+        background-color: #000066;
+        color: #fff;
+    }
+
+    .tab_con {
+        clear: both;
+        border: 1px solid #ddd;
+    }
+
+    .tab_con div[class$="menu"] {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        line-height: 20px;
+        text-align: center;
+        padding: 20px 0px;
+    }
+    /* 지점찾기 부분 */
+
+    /* 구분선 */
+    hr{
+        border-top: 1px solid black ;
+        margin: 0 100px;
+    }
+
+    /* 오구 지점명(남양주 지점 등) 부분 */
+    .store_title{
+        font-size: 1.5rem;
+    }
+    /* 구글지도 크기 */
+    .tab_con img, iframe{
+        border-radius: 25px;
+        width: 90%;
+    }
+    /* 가장 하단 부분 메시지 */
+    .store_message a{
+        text-decoration: underline;
+        color: #000066;
+    }
+    .store_message a:hover{
+        color: red
+    }
+    /* 지점문의 부분 */
+
+    /* 본문 감싸는 부분 */
+    .con2_menu{
+        text-align: center;
+    }
+
+    /* 영업일 기준 ~ 답변을 드립니다. */
+    p.text_store{
+        text-decoration: underline;
+        color: darkblue;
+    }
+
+    /* 회원가입 부분 */
+    .toJoin{
+        text-decoration: underline;
+        color: #000066;
+    }
+    .toJoin:hover{
+        color: red;
+    }
+    
+    /* 문의사항 양식 폼태그 부분 */
+    .store_form{
+        display: flex;
+        justify-content: center;
+    }
+    .form_store{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border: 1px solid black;
+    }
+    /* 전화번호 부분 */
+    .tel{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    #tel1, #tel2, #tel3{
+        width: 30%;
+    }
+    .tel span{
+        line-height: 60px;
+    }
+    /* 폼태그 개체 크기 */
+    input, select, textarea, .btn_index{
+        border-radius: 5px;
+        height: 40px;
+        margin-top: 10px;
+    }
+    /* 문의사항 textarea */
+    .memo{
+        height: 200px;
+    }
+    /* 문의하기 버튼 부분 */
+    .btn{
+        display: flex;
+        justify-content: center;
+    }
+    #btn_index{
+        width: 25%;
+        line-height: 40px;
+        background-color: #fff;
+        border: 1px solid black;
+    }
+    #btn_index:hover{
+        cursor: pointer;
+        color: #fff;
+        background-color: #000066;
+    }
+}
+    }
+/* PC ver. */
+@media (min-width:1024px) {
+    .section{
+        margin-top: 120px;
+    }
+    .con1_menu, .con2_menu{
+        width: 90%;
+    }
+    .con2_pc{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .store_pic{
+        width: 50%;
+    }
+    .store_form{
+        width: 50%;
+    }
+    .form_store{
+        height: 100%
+    }
+    .memo{
+        height: 350px;
+    }
+    .hr2{
+        border-left: 1px solid black;
+    }
+}
 </style>
 
         <!-- jQuery -->
@@ -219,7 +245,7 @@
         <script>
             // 탭메뉴 js
             $(function () {
-                tab('#tab', 0);
+                tab('#tab', 0); /* default: 지점문의 */
             }); //문서가 준비되면 함수 호출
     
             function tab(e, num) {
@@ -262,7 +288,7 @@
             </div>
             <!-- 로고랩 -->
             <div class="logo_wrap">
-            <a href="#">
+            <a href="../../../index.html">
             <div class="logo_img"><img src="../../../images/logo/logo.png"></div> <!-- ========경로 변경 필요========-->
             <span class="logo">오구<style>@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');</style></span> <!--부트스트랩css 때문에 header.css에서 폰트 패밀리 안먹혀서 인라인으로 적용=>희수-->
         </a>
@@ -271,9 +297,9 @@
             <div class="pc-menu">
                 <div class="pc-top-nav">
                     <ul>
-                        <li><a href="#">로그인</a></li>
-                        <li><a href="#">회원가입</a></li>
-                        <li><a href="#">고객센터</a></li>
+                        <li><a href="../../member/login.html">로그인</a></li>
+                        <li><a href="../../member/join_main.html">회원가입</a></li>
+                        <li><a href="../../member/faq.html">고객센터</a></li>
                     </ul>
                 </div>
                 <div class="pc-main-menu">
@@ -281,29 +307,29 @@
                         <li>
                             <a href="#">어서오구</a>
                             <ul class="depth02">
-                            <li><a href="#">회사소개</a></li> 
-                            <li><a href="#">오시는길</a></li>
-                            <li><a href="#">훈련사 소개</a></li>
+                            <li><a href="../info/company.html">회사소개</a></li> 
+                            <li><a href="../info/company.html">오시는길</a></li>
+                            <li><a href="../info/company.html">훈련사 소개</a></li>
                             </ul>
                         </li>
                         <li><a href="#">공부하자구</a>
                             <ul class="depth02">
-                            <li><a href="#">영상교육</a></li> 
-                            <li><a href="#">그룹교육</a></li>
-                            <li><a href="#">개인교육</a></li>
+                            <li><a href="../edu/edu_player.html">영상교육</a></li> 
+                            <li><a href="../edu/edu_player.html">그룹교육</a></li>
+                            <li><a href="../edu/edu_player.html">개인교육</a></li>
                         </ul>
                         </li>
                         <li><a href="#">여기있다구</a>
                             <ul class="depth02">
-                            <li><a href="#">지점찾기</a></li> 
-                            <li><a href="#">가맹문의</a></li>
+                            <li><a href="store_info.html">지점찾기</a></li> 
+                            <li><a href="store_join.html">가맹문의</a></li>
                         </ul>
                         </li>
                         <li><a href="#">얘기하자구</a>
                             <ul class="depth02">
-                            <li><a href="#">공지사항</a></li> 
-                            <li><a href="#">교육후기</a></li>
-                            <li><a href="#">훈련사 칼럼</a></li>
+                            <li><a href="../community/community.html">공지사항</a></li> 
+                            <li><a href="../community/community.html">교육후기</a></li>
+                            <li><a href="../community/community.html">훈련사 칼럼</a></li>
                         </ul>
                         </li>
                     </ul>
@@ -319,18 +345,18 @@
                 <div class="slide-menu"> <!-- ========ol a 태그 경로 변경 필요========-->
                     <ul class="menu-name">
                         <li><strong>&nbsp&nbsp&nbsp어서오구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong>
-                            <ol><a href="./company.html">회사소개</a></ol> 
-                            <ol><a href="./company.html">오시는길</a></ol>
-                            <ol><a href="./company.html">훈련사 소개</a></ol>
+                            <ol><a href="../info/company.html">회사소개</a></ol> 
+                            <ol><a href="../info/company.html">오시는길</a></ol>
+                            <ol><a href="../info/company.html">훈련사 소개</a></ol>
                         </li>
                         <li><strong>&nbsp&nbsp&nbsp공부하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong>
-                            <ol><a href="../edu/edu_video.html">영상교육</a></ol>
-                            <ol><a href="../edu/edu_video.html">그룹교육</a></ol>
-                            <ol><a href="../edu/edu_video.html">개인교육</a></ol>
+                            <ol><a href="../edu/edu_player.html">영상교육</a></ol>
+                            <ol><a href="../edu/edu_player.html">그룹교육</a></ol>
+                            <ol><a href="../edu/edu_player.html">개인교육</a></ol>
                         </li>
                         <li><strong>&nbsp&nbsp&nbsp여기있다구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong>
-                            <ol><a href="../store/store_info.html">지점찾기</a></ol>
-                            <ol><a href="../store/store_info.html">가맹문의</a></ol>
+                            <ol><a href="store_info.html">지점찾기</a></ol>
+                            <ol><a href="store_join.html">가맹문의</a></ol>
                         </li>
                         <li><strong>&nbsp&nbsp&nbsp얘기하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong>
                             <ol><a href="../community/community.html">공지사항</a></ol>
@@ -437,7 +463,7 @@
                         <p>아직 오구의 회원이 아니신가요? <a class="toJoin" href="../../../html/member/join_main.html">회원가입</a></p>
                     </p>
                 </div>
-                <br/><hr class="hr"><br/>
+                <div class="hr2"></div>
                 <!-- 지점문의 양식 부분 -->
                 <form action="" class="store_form" method="post" enctype="multipart/form-data">
                 <div class="form_store">
@@ -481,7 +507,7 @@
                     <li> | </li>
                     <li><a href="../../member/term2.html" target="_blank">개인정보처리방침</a></li>
                     <li> | </li>
-                    <li><a href="store_info.html" target="_blank">가맹문의</a></li>
+                    <li><a href="store_join.html" target="_blank">가맹문의</a></li>
                     <li> | </li>
                     <li><a href="../../member/faq.html" target="_blank">고객센터</a></li>
                 </ul>
