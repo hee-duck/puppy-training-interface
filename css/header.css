@@ -355,9 +355,7 @@ html.open {
         color:#000000;
     }
 
-    .pc-main-menu li a:hover {
-        color: lightskyblue;
-    }
+
 
     .pc-main-menu .depth02 {
         width: 100%;
@@ -371,6 +369,10 @@ html.open {
         font-weight: 400;
         color: #000066;
         font-size: 18px;
+    }
+
+    .pc-main-menu .depth02 li a:hover {
+        color: lightskyblue;
     }
 
 
