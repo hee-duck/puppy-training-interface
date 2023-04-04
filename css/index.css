@@ -9,6 +9,14 @@
   
 /* 모바일 */
 
+  section h1 {
+    font-size:24px;
+  }
+
+  section p {
+    font-size: 12px;
+  }
+
   /* 메인슬라이더 */
   #slider {
     margin-top:70px;
@@ -50,13 +58,13 @@
     text-align: left;
   }
   
-  .slider_txt h2 {
+  #slider .slider_txt h2 {
     position:absolute;
     top:20%;
     left:20%;
   }
 
-  .slider_txt h2:after {
+  #slider .slider_txt h2:after {
     content:'';
     display:inline-block;
     position:absolute;
@@ -67,13 +75,13 @@
     background-color: black;
   }
 
-  .slider_txt h3 {
+ .slider_txt h3 {
     position:absolute;
     top:20%;
     left:20%;
   }
 
-  .slider_txt p {
+  #slider .slider_txt p {
     position:absolute;
     top:30%;
     left:20%;
@@ -116,7 +124,7 @@
     width: 100%;
     height: 100%;
     content: "";
-    background: url(../images/consulting_01.jpg) no-repeat top center;
+    background: url(../images/index/edu/consulting_01.jpg) no-repeat top center;
     background-size: cover;
     position: absolute;
     top: 0;
@@ -277,6 +285,10 @@ text-align: center;
   height: 40px;
 }
 
+#sns p {
+  font-size:16px;
+}
+
 
 
 
@@ -293,6 +305,16 @@ text-align: center;
 
 /* 타블렛 */
 @media (min-width:768px) {
+
+    /* 섹션폰트 크기 */
+    section h1 {
+      font-size: 28px;
+    }
+  
+    section p {
+      font-size:14px;
+    }
+  
 
   .swiper {
     height:500px;
@@ -325,6 +347,40 @@ text-align: center;
 
 /* PC버전 */
 @media  (min-width:1024px) {
+
+  /* 교육안내섹션 */
+  #edu_info {
+    padding: 120px 15px;
+  }
+
+  /* 섹션폰트 크기 */
+  section h1 {
+    font-size: 32px;
+  }
+
+  section p {
+    font-size:18px;
+  }
+
+  /* sns PC버전 */
+  #sns {
+    padding-top:40px;
+    padding-bottom:100px;
+  }
+  #sns p {
+    font-size:26px;
+  }
+  #sns>div.sns_content {
+    padding:30px;
+  }
+
+  .sns_img img {
+    width:60px;
+    height:60px;
+  }
+
+
+
   #slider {
     margin-top:120px;
   }
@@ -332,7 +388,7 @@ text-align: center;
     height:600px;
   }
 
-  .slider_txt p {
+  #slider .slider_txt p {
     font-size:40px;
     color: black;
   }
