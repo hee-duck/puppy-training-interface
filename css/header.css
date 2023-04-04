@@ -28,7 +28,7 @@ html.open {
     position: relative;
 }
 .logo_wrap {
-    width:100%;
+    width:150px;
 }
 
 .logo_wrap a {
@@ -181,17 +181,30 @@ html.open {
 }
 
 .slide-menu strong {
-    display: block;
-    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.menu-name-txt {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
     color: #000066;
+    padding-bottom: 20px;
+}
+
+.menu-name-txt strong {
+    padding-left:20px;
+}
+
+.menu-name-txt span {
+    padding-right:20px;
 }
 
 .menu-name>li {
     display: inline-block;
     width: 100%;
-    padding: 20px 0px;
+    padding-top: 20px;
     border-bottom: 1px solid#A3A2A2;
-
 }
 
 .menu-name>li>a {
@@ -200,8 +213,10 @@ html.open {
 }
 
 .menu-name ol>a {
-    margin: 20px 0px 20px 30px;
-    font-size: 0.9rem;
+    display:inline-block;
+    width:100%;
+    padding: 15px 30px;
+    box-sizing: border-box;
     /*     display: block;
     margin-bottom: 5px;
     위에 두개를 쓰면 하위메뉴 줄높이 조정은 가능하나, 아코디언 애니메이션이 부자연스러워져서 주석 처리함 ==희수 */
@@ -259,6 +274,7 @@ html.open {
     .logo_wrap {
         padding-top: 20px;
         z-index: 1000;
+        width:100%;
     }
 
     .head {
@@ -336,6 +352,7 @@ html.open {
         text-align: center;
         display: inline-block;
         padding: 20px;
+        color:#000000;
     }
 
     .pc-main-menu li a:hover {
