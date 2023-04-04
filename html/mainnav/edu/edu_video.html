@@ -43,13 +43,14 @@
             width: 100%;
             position: static;
             font-family: 'Dovemayo_gothic';
-            margin-top: 90px;
+            margin-top: 70px;
 
         }
 
         /* 상위메뉴 제목 및 배경 이미지 */
         .menu {
             position: relative;
+            margin-top: 70px;
 
         }
 
@@ -91,9 +92,21 @@
         .tab li {
             display: inline-block;
             padding: 20px;
+            cursor: pointer;
+            white-space: nowrap;
         }
 
-        .tab_con span {
+        .tab li.on{
+            background-color: #000066;
+            color: #fff;
+        }
+        .tab_con{
+            clear: both;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .tab_con span{
             display: none;
             width: 100%;
             height: 100%;
@@ -103,10 +116,7 @@
             padding: 20px 0px;
         }
 
-
-
-
-        @media (min-width:360px) {
+          @media (min-width:360px) {
             /* 교육 전체 -공통부분*/
 
             h1 {
@@ -439,7 +449,7 @@
                             </li>
                             <li><a
                                     href="#"><strong>고객센터&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
-                                <ol><a href="#">FAQ</a></ol>
+                                <ol><a href="../../member/faq.html">FAQ</a></ol>
                             </li>
                         </ul>
                     </div>
@@ -752,13 +762,13 @@
             <!-- 약관 가로 정렬 부분 -->
             <div class="term">
                 <ul>
-                    <li><a href="#" target="_blank">이용약관</a></li>
+                    <li><a href="../../member/term.html" target="_blank">이용약관</a></li>
                     <li> | </li>
-                    <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                    <li><a href="../../member/term2.html" target="_blank">개인정보처리방침</a></li>
                     <li> | </li>
-                    <li><a href="#" target="_blank">가맹문의</a></li>
+                    <li><a href="../store/store_join.html" target="_blank">가맹문의</a></li>
                     <li> | </li>
-                    <li><a href="#" target="_blank">고객센터</a></li>
+                    <li><a href="../../member/faq.html" target="_blank">고객센터</a></li>
                 </ul>
             </div>
             <!-- 회사 정보(주소, 사업자번호 등) 부분 -->
