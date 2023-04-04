@@ -15,6 +15,8 @@
     <link href="../../../css/footer.css" rel="stylesheet">
 
 
+
+
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="../../../images/logo/favicon.ico">
 
@@ -51,13 +53,13 @@
         /* 상위메뉴 제목 및 배경 이미지 */
         .menu {
             position: relative;
+
         }
 
         .menu>img {
             width: 100%;
             opacity: 0.3;
             height: 150px;
-
         }
 
         .menu>h1 {
@@ -70,7 +72,7 @@
             color: black;
             font-size: 2rem;
             white-space: nowrap;
-            /* width 줄여도 줄바꿈 안되게 */
+            /* width 줄여도 줄바꿈 안되게*/
         }
 
         /* 탭 영역 */
@@ -92,18 +94,6 @@
         .tab li {
             display: inline-block;
             padding: 20px;
-            cursor: pointer;
-        }
-
-        .tab li.on {
-            background-color: #000066;
-            color: #fff;
-        }
-
-        .tab_con {
-            clear: both;
-            margin-top: 5px;
-            border: 1px solid #ddd;
         }
 
         .tab_con span {
@@ -116,216 +106,228 @@
             padding: 20px 0px;
         }
 
+
+
+
         @media (min-width:360px) {
-        /* 교육 전체 -공통부분*/
+            /* 교육 전체 -공통부분*/
 
-        h1 {
-            font-size: 1.5rem;
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+
+            .edu_box,
+            .edu_box2 {
+                margin-top: 50px;
+            }
+
+            hr {
+                width: 30%;
+                margin: 0 auto;
+                border: 1px solid #000066;
+            }
+
+
+            /* 교육 이미지 영역 */
+
+            .edu_img {
+                width: 100%;
+                margin-bottom: 100px;
+            }
+
+            .edu_box {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+            }
+
+
+            .img_box>img {
+                width: 100%;
+                height: 350px;
+                padding: 20px;
+            }
+
+            /*교육 영상 영역 */
+
+            .edu_video {
+                display: flex;
+                flex-direction: column;
+                margin-top: 100px;
+                margin-bottom: 40px;
+
+            }
+
+            .edu_text {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+
+            /* 영상(공통) */
+
+            .video_box {
+                padding: 20px;
+            }
+
+            .video_box>video {
+                width: 100%;
+                height: 350px;
+            }
+
+
+            /* 상담신청 영역 */
+            .edu_join {
+                margin-top: 40px;
+                text-align: center;
+            }
+
+            form div {
+                width: 60px;
+                display: inline-block;
+                text-align: center;
+                line-height: 34px;
+                font-size: 30px;
+            }
+
+            /*1번탭 영상교육 텍스트 */
+
+
+            .text_box>.number {
+                font-size: 40px;
+                font-weight: bold;
+                color: #000066;
+                text-align: left;
+                padding: 20px;
+            }
+
+            .text_box>h1 {
+                text-align: left;
+                padding: 20px;
+            }
+
+            .text_box>p {
+                text-align: left;
+                padding: 20px;
+
+            }
+
+            .edu_text>h1 {
+                padding: 20px;
+
+            }
+
+            .edu_text>p {
+                padding: 0 20px;
+            }
+
+            /* 그룹레슨&개인레슨 텍스트 */
+            .text_box1>h1 {
+                line-height: 40px;
+                font-size: 1.1rem;
+
+
+            }
+
+            .text_box2>h1 {
+                padding: 20px;
+
+            }
+
+            .text_box2>p {
+                padding: 0 10px;
+            }
         }
 
-        p {
-            font-size: 0.8rem;
-        }
 
-        .edu_box,.edu_box2 {
-            margin-top: 50px;
-        }
+        /* pc버전 */
+        @media(min-width:1024px) {
+            /* 공통 폰트 크기 */
+            h1{font-size: 1.5rem;}
+            p{font-size: 1rem;}
 
-        hr {
-            width: 30%;
-            margin: 0 auto;
-            border: 1px solid #000066;
-        }
-       
+            /* 공통선 */
+            hr {
+                width: 60%;
+            }
 
-        /* 교육 이미지 영역 */
-       
-            
-       
-        .edu_img {
-            width: 100%;
-            margin-bottom: 100px;
-        }
+            /* 상위 메뉴 배경이미지 */
+            .menu>img {
+                height: 220px;
+            }
 
-        .edu_box {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
+            /* 1번탭-영상교육 */
+            .edu .edu_box {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
 
-        }
+            }
 
+            .text_box {
+                width: 800px;
+            }
 
-        .img_box>img {
-            width: 100%;
-            height: 350px;
-            padding: 20px;
-        }
+            /* 영상영역 */
+            .video_box {
+                display: flex;
+            }
 
-        /*교육 영상 영역 */
+            .video_box>video {
+                width: 50%;
+            }
 
-        .edu_video {
-            display: flex;
-            flex-direction: column;
-            margin-top:100px ;
-            margin-bottom: 40px;
+             /* 2번탭-그룹레슨 */
+            .edu2 .edu_box>.img_box {
+                width: 30%;
+                margin: 0 auto;
 
-        }
+            }
 
-        .edu_text {
-            text-align: center;
-        margin-bottom: 50px;}
-           
-
-        /* 영상(공통) */
-       
-        .video_box{
-            padding: 20px;
-        }
-        .video_box>video {
-            width: 100%;
-            height: 350px;
-        }
+            .edu2 .edu_box2>.img_box {
+                width: 60%;
+                display: flex;
+                margin: 0 auto;
+            }
 
 
-        /* 상담신청 영역 */
-        .edu_join {
-            margin-top: 40px;
-            text-align: center;
-        }
+            /* 영상영역 */
+            .edu2 .edu_video {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: center;
+            }
 
-        form div {
-            width: 60px;
-            display: inline-block;
-            text-align: center;
-            line-height: 34px;
-            font-size: 30px;
-        }
+            .video_box2 {
+                width: 500px;
 
-        /*1번탭 영상교육 텍스트 */
+            }
 
+            .video_box2>video {
+                width: 100%;
 
-        .text_box>.number {
-            font-size: 40px;
-            font-weight: bold;
-            color: #000066;
-            text-align: left;
-            padding: 20px;
-        }
+            }
 
-        .text_box>h1 {
-            text-align: left;
-            padding: 20px;
-        }
+            /* 텍스트 */
+            .edu2 .edu_text {
+                width: 600px;
+                height: 300px;
+                text-align: left;
+                margin-top: 50px
+            }
 
-        .text_box>p {
-            text-align: left;
-            padding: 20px;
+            /* 상담신청 영역 */
+            .edu_join>.index_form {
+                width: 50%;
+                margin: 0 auto;
+            }
 
-        }
-
-        .edu_text>h1 {
-            padding: 20px;
-
-        }
-
-        .edu_text>p {
-            padding: 0 20px;
-        }
-
-        /* 그룹레슨&개인레슨 텍스트 */
-        .text_box1>h1 {
-            line-height: 40px;
-            font-size: 1.1rem;
-
-
-        }
-
-        .text_box2>h1 {
-            padding: 20px;
-
-        }
-
-        .text_box2>p {
-            padding: 0 10px;
-        }
-    }
-
-
-    /* pc버전 */
-    @media(min-width:1024px){
-        /* 공통선 */
-        hr{width: 60%;}
-
-        /* 1번탭-영상교육 */
-        .edu .edu_box{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-           
-        }
-        .text_box{
-            width: 800px; 
-        }
-
-        /* 영상영역 */
-        .video_box{
-            display: flex;
-        }
-        .video_box>video{
-            width: 50%;
-        }
-
-      
-
-        /* 2번탭-그룹레슨 */
-       .edu2 .edu_box>.img_box{
-        width: 30%;
-        margin: 0 auto;
-       
-       }
-
-       .edu2 .edu_box2>.img_box{
-        width: 60%;
-        display: flex;
-        margin: 0 auto;
-        
-        
-       }
-       
-       
-       /* 영상영역 */
-       .edu2 .edu_video{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-       }
-        .video_box2{
-            width: 500px;
-          
-        }
-        .video_box2>video{
-            width: 100%;
-            
-         }
-        /* 텍스트 */
-        .edu2 .edu_text{
-        width: 600px;
-        height: 300px;
-        text-align: left;
-        margin-top: 50px
-        
-       }
-
-       /* 상담신청 영역 */
-       .edu_join>.index_form{
-        width: 50%;
-        margin: 0 auto;
-       }
-
-
-    }
-
-
+           }
     </style>
 
     <!-- 탭메뉴, 햄버거 jQuery -->
@@ -361,13 +363,13 @@
                     <div class="slide-menu">
                         <ul class="menu-name">
                             <li><a
-                                    href="#"><strong>어서오구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                                    href="../info/company.html"><strong>어서오구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
                                 <ol><a href="#">회사소개</a></ol>
                                 <ol><a href="#">오시는길</a></ol>
                                 <ol><a href="#">훈련사 소개</a></ol>
                             </li>
                             <li><a
-                                    href="#"><strong>공부하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                                    href="./edu_video.html"><strong>공부하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
                                 <ol><a href="#">영상교육</a></ol>
                                 <ol><a href="#">그룹교육</a></ol>
                                 <ol><a href="#">개인교육</a></ol>
@@ -466,7 +468,7 @@
 
                     </div>
 
-                  
+
 
                     <!-- 상담신청 영역 -->
                     <span class="edu_join">
@@ -533,7 +535,7 @@
                                 <img src="../../../images/main_nav/edu/edu_group2.jpg">
                                 <img src="../../../images/main_nav/edu/edu_group3.jpg">
                             </div>
-                            
+
                         </div>
                     </div>
 
@@ -549,8 +551,8 @@
                                 사회성을 기를 수 있습니다.
                                 보호자님의 반려견의 이 사회에 잘 적응하고 행복한 생활을 하는 것이 오구교육의 목표이고 바람입니다.</p>
                         </div>
-                      
-                        
+
+
                         <div class="video_box video_box2">
                             <video src="../../../images/main_nav/edu/edu_veo3.mp4" autoplay controls></video>
                             <!-- control=동영상을 웹사이트에서 control할 수 있게 하기 -->
@@ -627,7 +629,7 @@
                                 <img src="../../../images/main_nav/edu/edu_one3.jpg">
                             </div>
 
-                           
+
                         </div>
                     </div>
 
