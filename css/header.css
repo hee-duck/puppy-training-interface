@@ -274,7 +274,7 @@ html.open {
     .logo_wrap {
         padding-top: 20px;
         z-index: 1000;
-        width:100%;
+        width:200px;
     }
 
     .head {
