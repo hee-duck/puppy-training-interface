@@ -110,7 +110,30 @@
             padding: 20px 0px;
         }
 
-        @media (min-width:360px) {
+        /* ==================================PC ver.(min-width: 1024px)================================== */
+    @media (min-width: 1024px) {
+        .menu>img {
+            width: 100%;
+            opacity: 0.3;
+            height: 220px;
+            margin-top: 50px;
+        }
+        .menu>h1 {
+            position: absolute;
+            top: 57%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 제목 가로,세로 중앙 정렬 */
+            z-index: 1;
+            color: black;
+            font-size: 2rem;
+            white-space: nowrap; /* width 줄여도 줄바꿈 안되게*/
+        }
+
+        
+    }
+
+     @media (min-width:360px) {
 
             /* 본문 전체 감싸는 부분 */
             .section {
@@ -129,6 +152,7 @@
 
             p {
                 font-size: 0.8rem;
+                font-family:'Pretendard-Regular' ;
             }
 
             .edu_box,
