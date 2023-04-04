@@ -14,9 +14,6 @@
     <link href="../../../css/header.css" rel="stylesheet">
     <link href="../../../css/footer.css" rel="stylesheet">
 
-
-
-
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="../../../images/logo/favicon.ico">
 
@@ -183,7 +180,7 @@
 
             /* 상담신청 영역 */
             .edu_join {
-                margin-top: 40px;
+                margin-top: 100px;
                 text-align: center;
             }
 
@@ -322,6 +319,7 @@
             }
 
             /* 상담신청 영역 */
+            
             .edu_join>.index_form {
                 width: 50%;
                 margin: 0 auto;
@@ -351,10 +349,62 @@
                         <span class="bot-line"></span>
                     </span>
                 </div>
-                <div class="logo_img"><img src="../../../images/logo/logo.png"></div>
+
+                <!-- 로고랩 -->
+                <div class="logo_wrap">
+                <a href="#">    
+                <div class="logo_img"><img src="../../../images/logo/logo.png"></div> <!-- ========경로 변경 필요========-->
                 <span class="logo">오구<style>
                         @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
                     </style></span> <!--부트스트랩css 때문에 header.css에서 폰트 패밀리 안먹혀서 인라인으로 적용=>희수-->
+               </a> 
+            </div>
+
+             <!-- pc 메뉴 / 가로 일렬 정렬 -->
+             <div class="pc-menu">
+                <div class="pc-top-nav">
+                    <ul>
+                        <li><a href="../../member/login.html">로그인</a></li>
+                        <li><a href="../../member/join_main.html">회원가입</a></li>
+                        <li><a href="../../member/faq.html">고객센터</a></li>
+                    </ul>
+                </div>
+                <div class="pc-main-menu">
+                    <ul>
+                        <li>
+                            <a href="../info/company.html">어서오구</a>
+                            <ul class="depth02">
+                            <li><a href="#">회사소개</a></li> 
+                            <li><a href="#">오시는길</a></li>
+                            <li><a href="#">훈련사 소개</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../edu/edu_video.html">공부하자구</a>
+                            <ul class="depth02">
+                            <li><a href="#">영상교육</a></li> 
+                            <li><a href="#">그룹교육</a></li>
+                            <li><a href="#">개인교육</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="../store/store_info.html">여기있다구</a>
+                            <ul class="depth02">
+                            <li><a href="#">지점찾기</a></li> 
+                            <li><a href="#">가맹문의</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="../community/community.html">얘기하자구</a>
+                            <ul class="depth02">
+                            <li><a href="#">공지사항</a></li> 
+                            <li><a href="#">교육후기</a></li>
+                            <li><a href="#">훈련사 칼럼</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                
+                
+                <!-- mobile gnb -- 햄버거 버튼 -->
                 <div class="slide" id="slide">
                     <div class="slide-title">
                         <button><a href="../../member/login.html"><strong>로그인</strong></a></button>
@@ -363,24 +413,24 @@
                     <div class="slide-menu">
                         <ul class="menu-name">
                             <li><a
-                                    href="../info/company.html"><strong>어서오구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                                    href=""><strong>어서오구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
                                 <ol><a href="#">회사소개</a></ol>
                                 <ol><a href="#">오시는길</a></ol>
                                 <ol><a href="#">훈련사 소개</a></ol>
                             </li>
                             <li><a
-                                    href="./edu_video.html"><strong>공부하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                                    href=""><strong>공부하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
                                 <ol><a href="#">영상교육</a></ol>
                                 <ol><a href="#">그룹교육</a></ol>
                                 <ol><a href="#">개인교육</a></ol>
                             </li>
                             <li><a
-                                    href="#"><strong>여기있다구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                                    href=""><strong>여기있다구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
                                 <ol><a href="#">지점찾기</a></ol>
                                 <ol><a href="#">가맹문의</a></ol>
                             </li>
                             <li><a
-                                    href="#"><strong>얘기하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
+                                    href=""><strong>얘기하자구&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp✚</strong></a>
                                 <ol><a href="#">공지사항</a></ol>
                                 <ol><a href="#">교육후기</a></ol>
                                 <ol><a href="#">훈련사 칼럼</a></ol>
@@ -403,7 +453,7 @@
             <!-- 상위 메뉴 배경 이미지 및 메뉴명 -->
             <div class="menu">
                 <img src="../../../images/main_nav/edu/edu_back.jpg">
-                <h1>어서오구(0-GU)</h1>
+                <h1>공부하자구(0-GU)</h1>
             </div>
             <!-- 탭 메뉴 -->
             <ul class="tab" id="tab">
