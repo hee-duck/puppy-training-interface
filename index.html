@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/common.css" />
@@ -21,43 +20,16 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
         $(document).ready(function () {
-            $("#header").load("./html/header/header.html");
-            $("#footer").load("./html/footer/footer.html");
-
+            $("#headers").load("./html/header/header.html");
+            $("#footers").load("./html/footer/footer.html");
         });
     </script>
 </head>
-
-<body>
-    <div id="wrap">
-        <!-- header 시작 -->
-        <!DOCTYPE html>
-<html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>오구(Ogu)</title>
-    <!-- 초기화 css -->
-    <link href="../../css/reset.css" rel="stylesheet"/> <!-- ========경로 변경 필요========-->
-    <!-- header 스타일시트 -->
-    <link href="../../css/header.css" rel="stylesheet"/> <!-- ========경로 변경 필요========-->
-    <!-- 로고 폰트 -->
-    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet"/>
-    <!-- 파비콘 -->
-    <link rel="shortcut icon" href="../../images/logo/favicon.ico"> <!-- ========경로 변경 필요========-->
-    <!-- 탭메뉴, 햄버거 jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-</head>
-
-<body>
+    <div id="container">
     <!-- header 시작 -->
-    <div id="header"></div>
+    <div id="headers"></div>
     <!-- header 끝 -->
-</body>
 
-</html>
-        <!-- header 끝 -->
 
         <section id="slider">
             <!-- 메인 슬라이더 -->
@@ -207,7 +179,8 @@
             </div>
         </section>
         <!-- footer -->
-        <div id="footer"></div>
+        <div id="footers">
+        </div>
+    </div>
 </body>
-
 </html>

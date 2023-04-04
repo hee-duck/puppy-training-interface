@@ -11,8 +11,7 @@
 
   /* 메인슬라이더 */
   #slider {
-    margin-top:90px;
- 
+    margin-top:70px;
   }
   .swiper {
     width: 100%;
@@ -230,8 +229,6 @@ text-align: center;
 
 
 
-
-
 /* 타블렛 */
 @media (min-width:768px) {
 
@@ -266,6 +263,9 @@ text-align: center;
 
 /* PC버전 */
 @media  (min-width:1024px) {
+  #slider {
+    margin-top:120px;
+  }
   .swiper {
     height:600px;
   }

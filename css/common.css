@@ -1,4 +1,4 @@
-
+/* 프리텐다드 */
 @font-face {
     font-family: 'Pretendard-Regular';
     font-style: normal;
@@ -12,13 +12,22 @@
     font-weight: 400;
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
   }
-
+  
+/* 구기 */
 @font-face {
     font-family: 'Gugi';
     font-style: normal;
     font-weight: 400;
     src: url('https://fonts.googleapis.com/css2?family=Gugi&display=swap') format('woff');
   }
+
+/* 둘기마요 */
+@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
   
   /* 기본 폰트 */
   h1 {
