@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오구(Ogu)</title>
+    <!-- 초기화 css -->
+    <link href="../../../css/reset.css" rel="stylesheet">
+    <!-- 외부 폰트, 외부 스타일 -->
+    <link href="../../../css/common.css" rel="stylesheet">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../../images/logo/favicon.ico">
+
+    <script>
+        $(document).ready(function () {
+            $("#headers").load("../../header/header.html");
+            $("#footers").load("../../footer/footer.html");
+        });
+    </script>
+
+    <!--스타일 시트-->
+    <style>
+        /* 폰트 스타일 */
+        @font-face {
+            font-family: 'Dovemayo_gothic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 본문 전체 감싸는 부분 */
+        .section {
+            width: 100%;
+            position: static;
+            font-family: 'Dovemayo_gothic';
+        }
+
+        /* 상위메뉴 제목 및 배경 이미지 */
+        .menu {
+            position: relative;
+            margin-top: 70px;
+        }
+
+        .menu>img {
+            width: 100%;
+            opacity: 0.3;
+            height: 150px;
+        }
+
+        .menu>h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 제목 가로,세로 중앙 정렬 */
+            z-index: 1;
+            color: black;
+            font-size: 2rem;
+            white-space: nowrap;
+            /* width 줄여도 줄바꿈 안되게*/
+        }
+
+        /* 탭 영역 */
+        .tab {
+            border: 1px solid #ddd;
+            border-left: none;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .tab li {
+            float: left;
+            width: 25%;
+            border-left: 1px solid #ddd;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .tab li {
+            display: inline-block;
+            padding: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .tab li.on {
+            background-color: #000066;
+            color: #fff;
+        }
+
+        .tab_con {
+            clear: both;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+        }
+
+        /* div class중에 끝부분에 menu있는 class 선택자 */
+        .tab_con div[class$="menu"] {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            line-height: 20px;
+            text-align: center;
+            padding: 20px 0px;
+        }
+
+        /* 본문 영역 */
+        /* 1번탭 - 공지사항 */
+        .notice_wrap_menu {
+            padding: 0 30px;
+            margin-bottom: 100px;
+        }
+
+        .notice_wrap_menu h1 {
+            padding-top: 30px;
+            padding-bottom: 60px;
+            font-size: 30px;
+        }
+
+
+        .notice_wrap_menu li {
+            border: 1px solid #d7d7d7;
+            padding: 10px 20px;
+            border-bottom: none;
+        }
+
+        .info {
+            display: flex;
+        }
+
+        .info_content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .category {
+            border-radius: 50px;
+            width: 44px;
+            padding: 0 10px;
+            margin-right: 20px;
+            font-size: 12px;
+            height: 22px;
+            line-height: 20px;
+            display: inline-block;
+            border: 1px solid #269cd3;
+        }
+
+        .notice_wrap_menu li:last-child {
+            border-bottom: 1px solid #d7d7d7;
+        }
+
+        .notice_board {
+            padding: 0 30px;
+        }
+
+
+        /* 버튼 */
+
+        button {
+            border: none;
+            width: 30px;
+            margin: 0 5px;
+            height: 30px;
+            font-family: 'Dovemayo_gothic';
+        }
+
+        button.before_move {
+            position: relative;
+            padding: 0;
+            width: 50px;
+        }
+
+        button.before_move:after {
+            position: absolute;
+            top: 10px;
+            right: -8px;
+            content: '';
+            width: 1px;
+            height: 12px;
+            background-color: black;
+        }
+
+        button.next_move {
+            padding: 0;
+            width: 50px;
+        }
+
+        /* 페이지네이션 */
+        .pagination {
+            margin-top: 30px;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* 2번탭 - 교육후기 */
+        .review_txt h1 {
+            padding-top: 30px;
+            padding-bottom: 60px;
+            font-size: 30px;
+        }
+
+        /* 항목 css */
+        .review_contents_wrap ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .review_contents_wrap li {
+            width: 250px;
+            padding: 20px;
+        }
+
+        .review_contents_wrap img {
+            width: 100%;
+            height: 200px;
+        }
+
+        .review_contents_wrap p {
+            padding-top: 10px;
+        }
+
+
+
+
+
+        /* 3번탭 - 훈련사 칼럼 */
+        .column_txt h1 {
+            padding-top: 30px;
+            padding-bottom: 60px;
+            font-size: 30px;
+        }
+
+        /* 항목 css */
+        .column_contents_wrap ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .column_contents_wrap li {
+            width: 250px;
+            padding: 20px 100px;
+        }
+
+        .column_contents_wrap img {
+            width: 100%;
+            height: 200px;
+        }
+
+        .column_contents_wrap p {
+            padding-top: 10px;
+        }
+
+        /* 4번탭- 갤러리 */
+        .gallery_menu h1 {
+            padding-top: 30px;
+            padding-bottom: 60px;
+            font-size: 30px;
+        }
+
+        .gallery_wrap {
+            padding: 40px 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 1em;
+        }
+
+        .gallery_wrap .contents {
+            position: relative;
+        }
+
+        .location-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+            z-index: 1;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity .5s;
+            color: black;
+
+            /* position the text in t’ middle*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery_wrap img {
+            width: 100%;
+            height: 300px;
+            filter: blur(0px);
+            transition: filter 0.3s ease-in;
+        }
+
+        .gallery_wrap .contents:hover .location-title {
+            opacity: 1;
+        }
+
+        .gallery_wrap .contents:hover img {
+            filter: blur(2px);
+        }
+
+
+
+        @media(max-width:768px) {
+            .tab li {
+                font-size: 12px
+            }
+
+        }
+
+        @media(min-width:768px) {
+            .review_contents_wrap li {
+                padding: 0 50px;
+            }
+
+        }
+    </style>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <!-- 내부 js -->
+    <script>
+        // 탭메뉴 js
+        $(function () {
+            tab('#tab', 0);
+        }); //문서가 준비되면 함수 호출
+
+        function tab(e, num) {
+            var num = num || 0; //숫자가 정의되지 않으면 0으로 설정
+            var menu = $(e).children(); //e로 지정된 요소의 모든 하위 요소를 가져옴
+            var con = $(e + '_con').children(); //e+_con으로 지정된 요소의 모든 하위 요소를 가져옵니다.
+            var select = $(menu).eq(num); //menu에서 인덱스 num에 있는 요소를 가져와 선택에 저장
+            var i = num; //i를 num값으로 저장
+
+            select.addClass('on'); //select로 지정된 요소에 on클래스 추가
+            con.eq(num).show(); //con에서 인덱스 num에 요소 표시
+
+            menu.click(function () { //메뉴의 모든 요소에 클릭 이벤트 리스너 추가
+                if (select !== null) {
+                    select.removeClass("on"); //select에서 on클래스 제거
+                    con.eq(i).hide(); //con에서 인덱스 i에 있는 요소 숨김
+                }
+
+                select = $(this); //클릭한 요소에 선택을 설정
+                i = $(this).index(); //i를 클릭한 요소의 인덱스로 설정
+
+                select.addClass('on'); //select에 on클래스 추가
+                con.eq(i).show(); //con에서 인덱스 i에 요소 표시
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- header 시작 -->
+    <div id="headers">
+    <!-- header 끝 -->
+
+
+    <script
+        src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+
+    <!-- 본문 영역 -->
+    <section class="section">
+        <!-- 상위 메뉴 배경 이미지 및 메뉴명 -->
+        <div class="menu">
+            <img src="../../../images/main_nav/info/info_1.jpg">
+            <h1>얘기하자구</h1>
+        </div>
+        <!-- 탭 메뉴 -->
+        <ul class="tab" id="tab">
+            <li>공지사항</li>
+            <li>교육후기</li>
+            <li>훈련사 칼럼</li>
+            <li>갤러리</li>
+        </ul>
+
+        <div class="tab_con" id="tab_con">
+            <!-- 1번탭 회사소개 -->
+            <div class="notice_wrap_menu">
+                <h1>공지사항</h1>
+                <div class="notice_board">
+                    <!-- title 열 -->
+                    <ul class="board_row title_row ">
+                        <li>
+                            <div class="info">
+                                <div class="category">공지</div>
+                                <div class="info_content">
+                                    <a href="#">[보듬교육] 2023년 4월 29일 반려견의 짖음 세미나 사전...</a>
+                                    <div class="date">2023-03-30</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="category">공지</div>
+                                <div class="info_content">
+                                    <a href="#">[보듬교육] 2023년 4월 29일 반려견의 짖음 세미나 사전...</a>
+                                    <div class="date">2023-03-30</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="category">공지</div>
+                                <div class="info_content">
+                                    <a href="#">[보듬교육] 2023년 4월 29일 반려견의 짖음 세미나 사전...</a>
+                                    <div class="date">2023-03-30</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="category">공지</div>
+                                <div class="info_content">
+                                    <a href="#">[보듬교육] 2023년 4월 29일 반려견의 짖음 세미나 사전...</a>
+                                    <div class="date">2023-03-30</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="category">공지</div>
+                                <div class="info_content">
+                                    <a href="#">[보듬교육] 2023년 4월 29일 반려견의 짖음 세미나 사전...</a>
+                                    <div class="date">2023-03-30</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="category">공지</div>
+                                <div class="info_content">
+                                    <a href="#">[보듬교육] 2023년 4월 29일 반려견의 짖음 세미나 사전...</a>
+                                    <div class="date">2023-03-30</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="category">공지</div>
+                                <div class="info_content">
+                                    <a href="#">[보듬교육] 2023년 4월 29일 반려견의 짖음 세미나 사전...</a>
+                                    <div class="date">2023-03-30</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="category">공지</div>
+                                <div class="info_content">
+                                    <a href="#">[보듬교육] 2023년 4월 29일 반려견의 짖음 세미나 사전...</a>
+                                    <div class="date">2023-03-30</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="category">공지</div>
+                                <div class="info_content">
+                                    <a href="#">[보듬교육] 2023년 4월 29일 반려견의 짖음 세미나 사전...</a>
+                                    <div class="date">2023-03-30</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="category">공지</div>
+                                <div class="info_content">
+                                    <a href="#">[보듬교육] 2023년 4월 29일 반려견의 짖음 세미나 사전...</a>
+                                    <div class="date">2023-03-30</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 게시글 추가로 들어오는 위치 -->
+                    <div class="pagination">
+                        <div class="block">
+                            <!-- 블럭 추가로 들어오는 위치 -->
+                            <button>1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                        </div>
+                        <div class="btn_move">
+                            <button class="before_move" onclick="before()">이전</button>
+                            <button class="next_move" onclick="next()">다음</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- 2번탭 교육후기-->
+            <div class="review_menu">
+                <div class="review_txt">
+                    <h1>교육후기</h1>
+                </div>
+                <div class="review_contents_wrap">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_1.jpg">
+                                <p>반려동물 ‘행복의 원칙’ 다섯 가지</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_2.jpg">
+                                <p>민간 동물보호시설 신고제...적절한 재정지원도 이뤄져야</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_3.jpg">
+                                <p>동물들을 위해 무엇을 할 수 있을까요</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_4.jpg">
+                                <p>반려동물 ‘행복의 원칙’ 다섯 가지</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_5.jpg">
+                                <p>민간 동물보호시설 신고제...적절한 재정지원도 이뤄져야</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_6.jpg">
+                                <p>동물들을 위해 무엇을 할 수 있을까요</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_7.jpg">
+                                <p>반려동물 ‘행복의 원칙’ 다섯 가지</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_9.jpg">
+                                <p>민간 동물보호시설 신고제...적절한 재정지원도 이뤄져야</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_10.jpg">
+                                <p>동물들을 위해 무엇을 할 수 있을까요</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_1.jpg">
+                                <p>반려동물 ‘행복의 원칙’ 다섯 가지</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_2.jpg">
+                                <p>민간 동물보호시설 신고제...적절한 재정지원도 이뤄져야</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_3.jpg">
+                                <p>동물들을 위해 무엇을 할 수 있을까요</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 페이지 블럭 -->
+                <div class="pagination">
+
+                    <div class="block">
+                        <!-- 블럭 추가로 들어오는 위치 -->
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                    </div>
+                    <button class="before_move" onclick="before()">이전</button>
+                    <button class="next_move" onclick="next()">다음</button>
+                </div>
+            </div>
+
+            <!-- 3번탭 훈련사 칼럼-->
+            <div class="column_menu">
+                <div class="column_txt">
+                    <h1>훈련사 칼럼</h1>
+                </div>
+                <div class="column_contents_wrap">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_1.jpg">
+                                <p>반려동물 ‘행복의 원칙’ 다섯 가지</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_2.jpg">
+                                <p>민간 동물보호시설 신고제...적절한 재정지원도 이뤄져야</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_3.jpg">
+                                <p>동물들을 위해 무엇을 할 수 있을까요</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_4.jpg">
+                                <p>반려동물 ‘행복의 원칙’ 다섯 가지</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_5.jpg">
+                                <p>민간 동물보호시설 신고제...적절한 재정지원도 이뤄져야</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_6.jpg">
+                                <p>동물들을 위해 무엇을 할 수 있을까요</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_7.jpg">
+                                <p>반려동물 ‘행복의 원칙’ 다섯 가지</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_9.jpg">
+                                <p>민간 동물보호시설 신고제...적절한 재정지원도 이뤄져야</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_10.jpg">
+                                <p>동물들을 위해 무엇을 할 수 있을까요</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_1.jpg">
+                                <p>반려동물 ‘행복의 원칙’ 다섯 가지</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_2.jpg">
+                                <p>민간 동물보호시설 신고제...적절한 재정지원도 이뤄져야</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../../images/main_nav/community/community_3.jpg">
+                                <p>동물들을 위해 무엇을 할 수 있을까요</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 페이지 블럭 -->
+                <div class="pagination">
+
+                    <div class="block">
+                        <!-- 블럭 추가로 들어오는 위치 -->
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                    </div>
+                    <button class="before_move" onclick="before()">이전</button>
+                    <button class="next_move" onclick="next()">다음</button>
+                </div>
+            </div>
+            <!-- 4번탭 갤러리-->
+            <div class="gallery_menu">
+                <h1>갤러리</h1>
+                <div class="gallery_wrap">
+                    <div class="contents">
+                        <a class="location-title" href="#">
+                            몽구
+                        </a>
+                        <a href="#">
+                            <img src="../../../images/main_nav/community/community_9.jpg">
+                        </a>
+                    </div>
+                    <div class="contents">
+                        <a class="location-title" href="#">
+                            브리
+                        </a>
+                        <a href="#">
+                            <img src="../../../images/main_nav/community/community_7.jpg">
+                        </a>
+                    </div>
+                    <div class="contents">
+                        <a class="location-title" href="#">
+                            초코
+                        </a>
+                        <a href="#">
+                            <img src="../../../images/main_nav/community/community_1.jpg">
+                        </a>
+                    </div>
+                    <div class="contents">
+                        <a class="location-title" href="#">
+                            콩이
+                        </a>
+                        <a href="#">
+                            <img src="../../../images/main_nav/community/community_10.jpg">
+                        </a>
+                    </div>
+                    <div class="contents">
+                        <a class="location-title" href="#">
+                            해피
+                        </a>
+                        <a href="#">
+                            <img src="../../../images/main_nav/community/community_3.jpg">
+                        </a>
+                    </div>
+                    <div class="contents">
+                        <a class="location-title" href="#">
+                            몽이
+                        </a>
+                        <a href="#">
+                            <img src="../../../images/main_nav/community/community_2.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer 영역 -->
+    <div id="footers"></div>
+</body>
+
+</html>
