@@ -16,224 +16,227 @@
     <link rel="shortcut icon" href="../../../images/logo/favicon.ico">
 
 
-    <!--스타일 시트-->
-    <style>
-        /* Mobile ver. */
-        @media(min-width:360px){
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        @media (min-width:360px) {
-        /* 폰트 스타일 */
-        @font-face {
-            font-family: 'Dovemayo_gothic';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
-        /* 페이지 전체 감싸는 부분 */
-        #wrap {
-            min-width: 360px;
-        }
+   <!--스타일 시트-->
+   <style>
+    /* Mobile ver. */
+    @media(min-width:360px){
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    @media (min-width:360px) {
+    /* 폰트 스타일 */
+    @font-face {
+        font-family: 'Dovemayo_gothic';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    /* 페이지 전체 감싸는 부분 */
+    #wrap {
+        min-width: 360px;
+    }
 
-        /* 헤더 밑 본문 전체 감싸는 부분 */
-        .section {
-            width: 100%;
-            position: static;
-            font-family: 'Dovemayo_gothic';
-            margin-top: 90px;
+    /* 헤더 밑 본문 전체 감싸는 부분 */
+    .section {
+        width: 100%;
+        position: static;
+        font-family: 'Dovemayo_gothic';
+        margin-top: 70px;
 
-        }
+    }
 
-        /* 상위메뉴 제목 및 배경 이미지 */
-        .menu {
-            position: relative;
-        }
+    /* 상위메뉴 제목 및 배경 이미지 */
+    .menu {
+        position: relative;
+    }
 
-        .menu>img {
-            width: 100%;
-            opacity: 0.3;
-            height: 150px;
+    .menu>img {
+        width: 100%;
+        opacity: 0.3;
+        height: 150px;
 
-        }
+    }
 
-        .menu>h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            /* 제목 가로,세로 중앙 정렬 */
-            z-index: 1;
-            color: black;
-            font-size: 2rem;
-            white-space: nowrap;
-            /* width 줄여도 줄바꿈 안되게 */
-        }
+    .menu>h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* 제목 가로,세로 중앙 정렬 */
+        z-index: 1;
+        color: black;
+        font-size: 2rem;
+        white-space: nowrap;
+        /* width 줄여도 줄바꿈 안되게 */
+    }
 
-        /* 탭 영역 */
-        .tab {
-            border: 1px solid #ddd;
-            border-left: none;
-            background: #fff;
-            overflow: hidden;
-        }
+    /* 탭 영역 */
+    .tab {
+        border: 1px solid #ddd;
+        border-left: none;
+        background: #fff;
+        overflow: hidden;
+    }
 
-        .tab li {
-            float: left;
-            width: 50%;
-            border-left: 1px solid #ddd;
-            text-align: center;
-            box-sizing: border-box;
-            padding: 20px;
-            cursor: pointer;
-        }
-        .tab li.on {
-            background-color: #000066;
-            color: #fff;
-        }
+    .tab li {
+        float: left;
+        width: 50%;
+        border-left: 1px solid #ddd;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 20px;
+        cursor: pointer;
+    }
+    .tab li.on {
+        background-color: #000066;
+        color: #fff;
+    }
 
-        .tab_con {
-            clear: both;
-            margin-top: 5px;
-            border: 1px solid #ddd;
-        }
+    .tab_con {
+        clear: both;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+    }
 
-        .tab_con div[class$="menu"] {
-            display: none;
-            width: 100%;
-            height: 100%;
-            background: #fff;
-            line-height: 20px;
-            text-align: center;
-            padding: 20px 0px;
-        }
-        /* 지점찾기 부분 */
+    .tab_con div[class$="menu"] {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        line-height: 20px;
+        text-align: center;
+        padding: 20px 0px;
+    }
+    /* 지점찾기 부분 */
 
-        /* 구분선 */
-        hr{
-            border-top: 1px solid black ;
-            margin: 0 100px;
-        }
+    /* 구분선 */
+    hr{
+        border-top: 1px solid black ;
+        margin: 0 100px;
+    }
 
-        /* 오구 지점명(남양주 지점 등) 부분 */
-        .store_title{
-            font-size: 1.5rem;
-        }
-        /* 구글지도 크기 */
-        .tab_con img, iframe{
-            border-radius: 25px;
-            width: 90%;
-        }
-        /* 가장 하단 부분 메시지 */
-        .store_message a{
-            text-decoration: underline;
-            color: #000066;
-        }
-        .store_message a:hover{
-            color: red
-        }
-        /* 지점문의 부분 */
+    /* 오구 지점명(남양주 지점 등) 부분 */
+    .store_title{
+        font-size: 1.5rem;
+    }
+    /* 구글지도 크기 */
+    .tab_con img, iframe{
+        border-radius: 25px;
+        width: 90%;
+    }
+    /* 가장 하단 부분 메시지 */
+    .store_message a{
+        text-decoration: underline;
+        color: #000066;
+    }
+    .store_message a:hover{
+        color: red
+    }
+    /* 지점문의 부분 */
 
-        /* 본문 감싸는 부분 */
-        .con2_menu{
-            text-align: center;
-        }
+    /* 본문 감싸는 부분 */
+    .con2_menu{
+        text-align: center;
+    }
 
-        /* 영업일 기준 ~ 답변을 드립니다. */
-        p.text_store{
-            text-decoration: underline;
-            color: darkblue;
-        }
+    /* 영업일 기준 ~ 답변을 드립니다. */
+    p.text_store{
+        text-decoration: underline;
+        color: darkblue;
+    }
 
-        /* 회원가입 부분 */
-        .toJoin{
-            text-decoration: underline;
-            color: #000066;
-        }
-        .toJoin:hover{
-            color: red;
-        }
+    /* 회원가입 부분 */
+    .toJoin{
+        text-decoration: underline;
+        color: #000066;
+    }
+    .toJoin:hover{
+        color: red;
+    }
+    
+    /* 문의사항 양식 폼태그 부분 */
+    .store_form{
+        display: flex;
+        justify-content: center;
+    }
+    .form_store{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border: 1px solid black;
+    }
+    /* 전화번호 부분 */
+    .tel{
+        display: flex;
+        justify-content: space-between;
         
-        /* 문의사항 양식 폼태그 부분 */
-        .store_form{
-            display: flex;
-            justify-content: center;
-        }
-        .form_store{
-            width: 90%;
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            border: 1px solid black;
-        }
-        /* 전화번호 부분 */
-        .tel{
-            display: flex;
-            justify-content: space-between;
-            
-        }
-        #tel1, #tel2, #tel3{
-            width: 30%;
-        }
-        .tel span{
-            line-height: 60px;
-        }
-        /* 폼태그 개체 크기 */
-        input, select, textarea, .btn_index{
-            border-radius: 5px;
-            height: 40px;
-            margin-top: 10px;
-        }
-        /* 문의사항 textarea */
-        .memo{
-            height: 200px;
-        }
-        /* 문의하기 버튼 부분 */
-        .btn{
-            display: flex;
-            justify-content: center;
-        }
-        #btn_index{
-            width: 25%;
-            line-height: 40px;
-            background-color: #fff;
-            border: 1px solid black;
-        }
-        #btn_index:hover{
-            cursor: pointer;
-            color: #fff;
-            background-color: #000066;
-        }
     }
-        }
-    /* PC ver. */
-    @media (min-width:1024px) {
-        .con1_menu, .con2_menu{
-            width: 90%;
-        }
-        .con2_pc{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        .store_pic{
-            width: 50%;
-        }
-        .store_form{
-            width: 50%;
-        }
-        .form_store{
-            height: 100%
-        }
-        .memo{
-            height: 350px;
-        }
-        .hr2{
-            border-left: 1px solid black;
-        }
+    #tel1, #tel2, #tel3{
+        width: 30%;
     }
+    .tel span{
+        line-height: 60px;
+    }
+    /* 폼태그 개체 크기 */
+    input, select, textarea, .btn_index{
+        border-radius: 5px;
+        height: 40px;
+        margin-top: 10px;
+    }
+    /* 문의사항 textarea */
+    .memo{
+        height: 200px;
+    }
+    /* 문의하기 버튼 부분 */
+    .btn{
+        display: flex;
+        justify-content: center;
+    }
+    #btn_index{
+        width: 25%;
+        line-height: 40px;
+        background-color: #fff;
+        border: 1px solid black;
+    }
+    #btn_index:hover{
+        cursor: pointer;
+        color: #fff;
+        background-color: #000066;
+    }
+}
+    }
+/* PC ver. */
+@media (min-width:1024px) {
+    .section{
+        margin-top: 120px;
+    }
+    .con1_menu, .con2_menu{
+        width: 90%;
+    }
+    .con2_pc{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .store_pic{
+        width: 50%;
+    }
+    .store_form{
+        width: 50%;
+    }
+    .form_store{
+        height: 100%
+    }
+    .memo{
+        height: 350px;
+    }
+    .hr2{
+        border-left: 1px solid black;
+    }
+}
 </style>
 
         <!-- jQuery -->
