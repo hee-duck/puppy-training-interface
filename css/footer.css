@@ -34,20 +34,24 @@ div.addr{
 @media (min-width: 1024px) {
     #footer{
         position: relative;
-        height: 170px;
+        height: 140px;
     }
     .term{
         position: absolute;
-        left: 10px;
+        left: 30px;
         top: 30px;
+    }
+    .term a{
+        font-size: 0.9rem;
     }
     .addr{
         position: absolute;
-        left: 10px;
+        left: 30px;
         top: 80px;
         margin-bottom: 40px;
     }
     .addr>p{
         text-align: left;
+        font-size: 0.7rem;
     }
     }
