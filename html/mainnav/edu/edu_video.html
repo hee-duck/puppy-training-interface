@@ -9,7 +9,7 @@
     <!-- 초기화 css -->
     <link href="../../../css/reset.css" rel="stylesheet">
     <!-- 공통 css -->
-    <link href="../../../css/common.css" rel="stylesheet">
+    <!-- <link href="../../../css/common.css" rel="stylesheet"> -->
     <!-- 외부 폰트, 외부 스타일 -->
     <link href="../../../css/header.css" rel="stylesheet">
     <link href="../../../css/footer.css" rel="stylesheet">
@@ -38,14 +38,7 @@
             min-width: 360px;
         }
 
-        /* 본문 전체 감싸는 부분 */
-        .section {
-            width: 100%;
-            position: static;
-            font-family: 'Dovemayo_gothic';
-            margin-top: 70px;
-
-        }
+       
 
         /* 상위메뉴 제목 및 배경 이미지 */
         .menu {
@@ -117,6 +110,14 @@
         }
 
           @media (min-width:360px) {
+             /* 본문 전체 감싸는 부분 */
+           .section {
+            width: 100%;
+            position: static;
+            font-family: 'Dovemayo_gothic';
+            margin-top: 70px;
+
+        }
             /* 교육 전체 -공통부분*/
 
             h1 {
@@ -336,6 +337,90 @@
                 margin: 0 auto;
             }
 
+            form.index_form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    padding:30px 10px;
+  }
+  .index_form input {
+    border-radius: 5px;
+    border:1px solid black;
+    height:40px;
+  }
+  .index_form select {
+    width:100%;
+    border-radius: 5px;
+    border:1px solid black;
+    height:40px;
+  }
+
+  form span {
+    width:60px;
+    display:inline-block;
+    text-align:center;
+    line-height:34px;
+    font-size:30px;
+  }
+
+  .id {
+    width:100%;
+  }
+  
+  .name{
+    width:100%;
+  
+  }
+  form.index_form>div.number{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+  }
+  
+  .telbox1 {
+    width:100%;
+  }
+  
+  .telbox2 {
+    width:100%;
+  }
+  
+  .telbox3 {
+    width:100%;
+  }
+  
+  .email{
+    width:100%;
+  
+  }
+  
+  .text_memo{
+    width:100%;
+  }
+  
+  .memo {
+    padding-top:10px;
+    height:150px;
+    border-radius: 5px;
+    border:1px solid black;
+  }
+
+
+  /* 버튼공통 */
+
+  .btn_index {
+    width: 100px;
+    padding: 10px 0px;
+    border-radius: 50px;
+    border:1px solid black;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    color: #061f5c;
+    background: #fff;
+  }
+
            }
     </style>
 
@@ -373,49 +458,50 @@
                </a> 
             </div>
 
-             <!-- pc 메뉴 / 가로 일렬 정렬 -->
-             <div class="pc-menu">
-                <div class="pc-top-nav">
-                    <ul>
-                        <li><a href="../../member/login.html">로그인</a></li>
-                        <li><a href="../../member/join_main.html">회원가입</a></li>
-                        <li><a href="../../member/faq.html">고객센터</a></li>
-                    </ul>
-                </div>
-                <div class="pc-main-menu">
-                    <ul>
-                        <li>
-                            <a href="../info/company1_info.html">어서오구</a>
-                            <ul class="depth02">
-                            <li><a href="../info/company1_info.html">회사소개</a></li> 
-                            <li><a href="../info/company2_map.html">오시는길</a></li>
-                            <li><a href="../info/company3_trainor.html">훈련사 소개</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="../edu/edu_video.html">공부하자구</a>
-                            <ul class="depth02">
-                            <li><a href="./edu_video.html">영상교육</a></li> 
-                            <li><a href="./edu_group.html">그룹교육</a></li>
-                            <li><a href="./edu_personal.html">개인교육</a></li>
-                        </ul>
-                        </li>
-                        <li><a href="../store/store_info.html">여기있다구</a>
-                            <ul class="depth02">
-                            <li><a href="../store/store_info.html">지점찾기</a></li> 
-                            <li><a href="../store/store_join.html">가맹문의</a></li>
-                        </ul>
-                        </li>
-                        <li><a href="../community/community.html">얘기하자구</a>
-                            <ul class="depth02">
-                            <li><a href="../community/community.html">공지사항</a></li> 
-                            <li><a href="#">교육후기</a></li>
-                            <li><a href="#">훈련사 칼럼</a></li>
-                        </ul>
-                        </li>
-                    </ul>
-                </div>
+              <!-- pc 메뉴 / 가로 일렬 정렬 -->
+        <div class="pc-menu">
+            <div class="pc-top-nav">
+                <ul>
+                    <li><a href="../../member/login.html">로그인</a></li>
+                    <li><a href="../../member/join_main.html">회원가입</a></li>
+                    <li><a href="../../member/faq.html">고객센터</a></li>
+                </ul>
             </div>
-                
+            <div class="pc-main-menu">
+                <ul>
+                    <li>
+                        <a href="#">어서오구</a>
+                        <ul class="depth02">
+                        <li><a href="../info/company1_info.html">회사소개</a></li> 
+                        <li><a href="../info/company2_map.html">오시는길</a></li>
+                        <li><a href="../info/company3_trainor.html">훈련사 소개</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">공부하자구</a>
+                        <ul class="depth02">
+                        <li><a href="../edu/edu_video.html">영상교육</a></li> 
+                        <li><a href="../edu/edu_group.html">그룹교육</a></li>
+                        <li><a href="../edu/edu_personal.html">개인교육</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#">여기있다구</a>
+                        <ul class="depth02">
+                        <li><a href="../store/store_info.html">지점찾기</a></li> 
+                        <li><a href="../store/store_join.html">가맹문의</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#">얘기하자구</a>
+                        <ul class="depth02">
+                        <li><a href="#">공지사항</a></li> 
+                        <li><a href="#">교육후기</a></li>
+                        <li><a href="#">훈련사 칼럼</a></li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+            
                 
                 <!-- mobile gnb -- 햄버거 버튼 -->
                 <div class="slide" id="slide">
