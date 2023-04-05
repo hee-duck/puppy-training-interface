@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오구</title>
+    <!-- 초기화 -->
     <link href="../../css/reset.css" rel="stylesheet">
 
-    <!-- 공통 css -->
-    <link href="../../css/common.css" rel="stylesheet">
     <!-- 외부 폰트, 외부 스타일 -->
+    <link href="../../css/header.css" rel="stylesheet">
     <link href="../../css/footer.css" rel="stylesheet">
 
     <!-- 파비콘 -->
@@ -18,7 +19,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
         $(document).ready(function () {
-            
+
             $("#headers").load("../header/header.html");
             $("#footers").load("../footer/footer.html");
         });
@@ -26,97 +27,201 @@
 
 </head>
 <style>
-    #wrap {
+    @media (min-width: 360px) {
+        #wrap {
             min-width: 360px;
         }
-    .containerwrap {
-        margin-top:70px;
-        padding:20px;
-        padding-top:80px;
-        padding-bottom: 80px;
 
-    }
-    /* 아이디 비밀번호 찾기 전체 박스 */
-    .find_box {
-        width: 100%;
-        border:1px solid black;
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-top:30px;
-        padding-bottom:30px;
+        .containerwrap {
+            margin-top: 70px;
+            padding: 20px;
+            padding-top: 80px;
+            padding-bottom: 80px;
+
         }
-    /* 탭메뉴 */
-    .find_tab {
-        display:flex;
-        justify-content: space-between;
-        width:100%;
-        padding: 0 10px;
-        /* 박스안에 넣기 */
-        box-sizing: border-box;
+
+        /* form 공통 */
+        form.index_form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 30px 10px;
+        }
+
+        .index_form input {
+            border-radius: 5px;
+            border: 1px solid black;
+            height: 40px;
+        }
+
+        .index_form select {
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid black;
+            height: 40px;
+        }
+
+        form span {
+            width: 60px;
+            display: inline-block;
+            text-align: center;
+            line-height: 34px;
+            font-size: 30px;
+        }
+
+        .id {
+            width: 100%;
+        }
+
+        .name {
+            width: 100%;
+
+        }
+
+        form.index_form>div.number {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .telbox1 {
+            width: 100%;
+        }
+
+        .telbox2 {
+            width: 100%;
+        }
+
+        .telbox3 {
+            width: 100%;
+        }
+
+        .email {
+            width: 100%;
+
+        }
+
+        .text_memo {
+            width: 100%;
+        }
+
+        .memo {
+            padding-top: 10px;
+            height: 150px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+
+        /* 버튼공통 */
+
+        .btn_index {
+            width: 100px;
+            padding: 10px 0px;
+            border-radius: 50px;
+            border: 1px solid black;
+            display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+            color: #061f5c;
+            background: #fff;
+        }
+
+        /* 아이디 비밀번호 찾기 전체 박스 */
+        .find_box {
+            width: 100%;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        /* 탭메뉴 */
+        .find_tab {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 10px;
+            /* 박스안에 넣기 */
+            box-sizing: border-box;
+        }
+
+
+
+        /* 탭메뉴왼쪽 */
+        .find_email {
+            text-align: center;
+            width: 100%;
+            border: 1px solid black;
+            border-right: none;
+            border-top: none;
+        }
+
+        .find_email a {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* 탭메뉴오른쪽 */
+        .find_phone {
+            text-align: center;
+            width: 100%;
+            border: 1px solid black;
+            border-top: none;
+
+        }
+
+        .find_phone a {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .find_tab .on {
+            border-top: 1px solid black;
+            border-bottom: none;
+        }
+
+        .tab_cont .tab {
+            display: none;
+        }
+
+        .tab_cont .on {
+            display: block;
+        }
+
+        /* 왼쪽정렬 */
+        form.index_form {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .btn_index {
+            background-color: #000066;
+            color: white;
+            width: 100%;
+        }
     }
 
-   
+    @media (min-width:1024px) {
+        .containerwrap {
+            width: 30%;
+            margin: 0 auto;
+            margin-top: 120px;
+        }
 
-    /* 탭메뉴왼쪽 */
-    .find_email {
-        text-align: center;
-        width:100%;
-        border:1px solid black;
-        border-right:none;
-        border-top:none;
     }
-
-    .find_email a {
-        display:block;
-        width:100%;
-        padding:10px;
-        box-sizing: border-box;
-    }
-    /* 탭메뉴오른쪽 */
-    .find_phone {
-        text-align: center;
-        width:100%;
-        border:1px solid black;
-        border-top:none;
-        
-    }
-
-    .find_phone a {
-        display:block;
-        width:100%;
-        padding:10px;
-        box-sizing: border-box;
-    }
-
-    .find_tab .on {
-        border-top:1px solid black;
-        border-bottom:none;
-    }
-
-    .tab_cont .tab {
-        display:none;
-    }
-    .tab_cont .on {
-        display:block;
-    }
-
-    /* 왼쪽정렬 */
-    form.index_form {
-        display:flex;
-    align-items: flex-start;
-  }
-    .btn_index {
-        background-color: #000066;
-        color:white;
-        width:100%;
-    }
-
 </style>
 
 <script>
-    $(document).ready(function() {
-        $(".find_tab li").click(function(){
+    $(document).ready(function () {
+        $(".find_tab li").click(function () {
             var idx = $(this).index();
             $(".find_tab li").removeClass("on");
             $(".find_tab li").eq(idx).addClass("on");
@@ -125,68 +230,213 @@
         });
     });
 </script>
+
 <body>
-    
-    <div id="headers"></div>
+
     <div class="wrap">
-    <div class="containerwrap">
-        <div class="find_box">
-            <ul class="find_tab">
-                <li class="find_email on"><a href="#">이메일로 찾기</a></li>
-                <li class="find_phone"><a href="#">휴대번호로 찾기</a></li>
-            </ul>
-            <div class="tab_cont">
-                <div class="tab on">
-            <!-- form -->
-            <form action="" class="index_form" method="post">
-                <h2>이름</h2>
-                <div class="name">
-                    
-                    <input type="text" class="name" name="name" id="name" placeholder="&nbsp&nbsp&nbsp이름">
+        <!-- header 시작 -->
+        <header id="header">
+            <div class="dimmed"></div>
+            <div class="head">
+                <div class="slide-open" id="slide-open">
+                    <span class="burgur" id="burgur">
+                        <span class="top-line"></span>
+                        <span class="bot-line"></span>
+                    </span>
                 </div>
-                <h2>이메일</h2>
-                <div class="email"><input type="email" id="email" name="email" placeholder="&nbsp&nbsp&nbsp이메일"></div>
-                <a href="#" class="btn_index">아이디찾기</a>
-            </form>
-        </div>
-        <div class="tab">
-            <!-- form -->
-            <form action="" class="index_form" method="post">
-                <h2>이름</h2>
-                <div class="name">
-                    
-                    <input type="text" class="name" name="name" id="name" placeholder="&nbsp&nbsp&nbsp이름">
+
+                <!-- 로고랩 -->
+                <div class="logo_wrap">
+                    <a href="../../../index.html">
+                        <div class="logo_img"><img src="../../images/logo/logo.png"></div>
+                        <!-- ========경로 변경 필요========-->
+                        <span class="logo">오구<style>
+                                @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+                            </style></span> <!--부트스트랩css 때문에 header.css에서 폰트 패밀리 안먹혀서 인라인으로 적용=>희수-->
+                    </a>
                 </div>
-                <h2>전화번호</h2>
-                <div class="number">
-                    
-                    <div class="telbox1">
-                        
-                        <select name="tel1" id="tel1">
-                            <option value="010" selected>010</option>
-                            <option value="011">011</option>
-                            <option value="016">016</option>
-                            <option value="017">017</option>
-                            <option value="018">018</option>
-                            <option value="019">019</option>
-                        </select>
+
+                <!-- pc 메뉴 / 가로 일렬 정렬 -->
+                <div class="pc-menu">
+                    <div class="pc-top-nav">
+                        <ul>
+                            <li><a href="./login.html">로그인</a></li>
+                            <li><a href="./join_main.html">회원가입</a></li>
+                            <li><a href="./faq.html">고객센터</a></li>
+                        </ul>
                     </div>
-                    <span>-</span>
-                    <div class="telbox2">
-                        <input type="text" name="tel2" id="tel2">
-                    </div>
-                    <span>-</span>
-                    <div class="telbox3">
-                        <input type="text" name="tel3" id="tel3">
+                    <div class="pc-main-menu">
+                        <ul>
+                            <li>
+                                <a href="../mainnav/info/company1_info.html">어서오구</a>
+                                <ul class="depth02">
+                                    <li><a href="../mainnav/info/company1_info.html">회사소개</a></li>
+                                    <li><a href="../mainnav/info/company2_map.html">오시는길</a></li>
+                                    <li><a href="../mainnav/info/company3_trainor.html">훈련사 소개</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../mainnav/edu/edu_video.html">공부하자구</a>
+                                <ul class="depth02">
+                                    <li><a href="../mainnav/edu/edu_video.html">영상교육</a></li>
+                                    <li><a href="../mainnav/edu/edu_group.html">그룹교육</a></li>
+                                    <li><a href="../mainnav/edu/edu_personal.html">개인교육</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../mainnav/store/store_info.html">여기있다구</a>
+                                <ul class="depth02">
+                                    <li><a href="../mainnav/store/store_info.html">지점찾기</a></li>
+                                    <li><a href="../mainnav/store/store_join.html">가맹문의</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../mainnav/community/community_notice.html">얘기하자구</a>
+                                <ul class="depth02">
+                                    <li><a href="../mainnav/community/community_notice.html">공지사항</a></li>
+                                    <li><a href="../mainnav/community/community_review.html">교육후기</a></li>
+                                    <li><a href="../mainnav/community/community_review.html">훈련사 칼럼</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <a href="#" class="btn_index">아이디찾기</a>
-            </form>
+
+                <!-- mobile gnb -- 햄버거 버튼 -->
+                <div class="slide" id="slide">
+                    <div class="slide-title">
+                        <p class="slide-title-text">오구의 회원은 로그인을 해주세요.</p>
+                        <button><a href="./login.html"><strong>로그인</strong></a></button>
+                        <button><a href="./join_main.html"><strong>회원가입</strong></a></button>
+                    </div>
+                    <div class="slide-menu"> <!-- ========ol a 태그 경로 변경 필요========-->
+                        <ul class="menu-name">
+                            <li>
+                                <div class="menu-name-txt">
+                                    <strong>어서오구</strong><span>✚</span>
+                                </div>
+                                <ol><a href="../mainnav/info/company1_info.html">회사소개</a></ol>
+                                <ol><a href="../mainnav/info/company2_map.html">오시는길</a></ol>
+                                <ol><a href="../mainnav/info/company3_trainor.html">훈련사 소개</a></ol>
+                            </li>
+                            <li>
+                                <div class="menu-name-txt">
+                                    <strong>공부하자구</strong><span>✚</span>
+                                </div>
+                                <ol><a href="../mainnav/edu/edu_video.html">영상교육</a></ol>
+                                <ol><a href="../mainnav/edu/edu_group.html">그룹교육</a></ol>
+                                <ol><a href="../mainnav/edu/edu_personal.html">개인교육</a></ol>
+                            </li>
+                            <li>
+                                <div class="menu-name-txt">
+                                    <strong>여기있다구</strong><span>✚</span>
+                                </div>
+                                <ol><a href="../mainnav/store/store_info.html">지점찾기</a></ol>
+                                <ol><a href="../mainnav/store/store_join.html">가맹문의</a></ol>
+                            </li>
+                            <li>
+                                <div class="menu-name-txt">
+                                    <strong>어서오구</strong><span>✚</span>
+                                </div>
+                                <ol><a href="../mainnav/community/community_notice.html">공지사항</a></ol>
+                                <ol><a href="../mainnav/community/community_review.html">교육후기</a></ol>
+                                <ol><a href="../mainnav/community/community_column.html">훈련사 칼럼</a></ol>
+                                <ol><a href="../mainnav/community/community_gallery.html">갤러리</a></ol>
+                            </li>
+                            <li>
+                                <div class="menu-name-txt">
+                                    <strong>고객센터</strong><span>✚</span>
+                                </div>
+                                <ol><a href="./faq.html">FAQ</a></ol>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <script src="../../js/burger.js"></script><!-- header js-->
+        <!-- header 끝 -->
+
+        <div class="containerwrap">
+            <div class="find_box">
+                <ul class="find_tab">
+                    <li class="find_email on"><a href="#">이메일로 찾기</a></li>
+                    <li class="find_phone"><a href="#">휴대번호로 찾기</a></li>
+                </ul>
+                <div class="tab_cont">
+                    <div class="tab on">
+                        <!-- form -->
+                        <form action="" class="index_form" method="post">
+                            <h2>이름</h2>
+                            <div class="name">
+
+                                <input type="text" c+lass="name" name="name" id="name" placeholder="&nbsp&nbsp&nbsp이름">
+                            </div>
+                            <h2>이메일</h2>
+                            <div class="email"><input type="email" id="email" name="email"
+                                    placeholder="&nbsp&nbsp&nbsp이메일"></div>
+                            <a href="#" class="btn_index">아이디찾기</a>
+                        </form>
+                    </div>
+                    <div class="tab">
+                        <!-- form -->
+                        <form action="" class="index_form" method="post">
+                            <h2>이름</h2>
+                            <div class="name">
+
+                                <input type="text" class="name" name="name" id="name" placeholder="&nbsp&nbsp&nbsp이름">
+                            </div>
+                            <h2>전화번호</h2>
+                            <div class="number">
+
+                                <div class="telbox1">
+
+                                    <select name="tel1" id="tel1">
+                                        <option value="010" selected>010</option>
+                                        <option value="011">011</option>
+                                        <option value="016">016</option>
+                                        <option value="017">017</option>
+                                        <option value="018">018</option>
+                                        <option value="019">019</option>
+                                    </select>
+                                </div>
+                                <span>-</span>
+                                <div class="telbox2">
+                                    <input type="text" name="tel2" id="tel2">
+                                </div>
+                                <span>-</span>
+                                <div class="telbox3">
+                                    <input type="text" name="tel3" id="tel3">
+                                </div>
+                            </div>
+                            <a href="#" class="btn_index">아이디찾기</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
-        </div>
-    </div>
-    <div id="footers"></div>
+
+        <footer id="footer">
+            <!-- 약관 가로 정렬 부분 -->
+            <div class="term">
+                <ul>
+                    <li><a href="./term.html" target="_blank">이용약관</a></li>
+                    <li> | </li>
+                    <li><a href="./term2.html" target="_blank">개인정보처리방침</a></li>
+                    <li> | </li>
+                    <li><a href="../mainnav/store/store_join.html" target="_blank">가맹문의</a></li>
+                    <li> | </li>
+                    <li><a href="./faq.html" target="_blank">고객센터</a></li>
+                </ul>
+            </div>
+            <!-- 회사 정보(주소, 사업자번호 등) 부분 -->
+            <div class="addr">
+                <p>(주)오구 | 대표 : 한희수<br />
+                    사업자등록번호 : 123-45-67890 | 대표전화 : 1212-5959<br />
+                    주소 : 서울특별시 마음으로낳았구 지갑으로 키워길59<br />
+                    COPYRIGHT(C) 2023 (주)오구 All right reserved.</p>
+            </div>
+        </footer>
+
     </div>
 </body>
+
 </html>
