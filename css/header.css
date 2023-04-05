@@ -152,6 +152,7 @@ html.open {
 
 .slide-title strong {
     color: #fff;
+    font-size: 0.8rem;
 }
 
 #slide button {
@@ -159,7 +160,7 @@ html.open {
     height: 35px;
     margin: 0 auto;
     background-color: #000066;
-    border: 2px solid #fff;
+    border: 1.8px solid #fff;
     color: #fff;
     border-radius: 20px;
     font-size: 0.9rem;
