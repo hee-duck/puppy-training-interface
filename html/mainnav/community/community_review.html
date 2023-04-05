@@ -424,14 +424,6 @@
             });
         }
     </script>
-
-<!-- footer불러오기 -->
-<script>
-    $(document).ready(function () {
-        $("#footers").load("../../footer/footer.html");
-    });
-</script>
-
 </head>
 
 <body>
@@ -1063,7 +1055,27 @@
         </div>
     </section>
     <!-- footer 영역 -->
-    <div id="footers"></div>
+    <footer id="footer">
+        <!-- 약관 가로 정렬 부분 -->
+        <div class="term">
+            <ul>
+                <li><a href="../../member/term.html">이용약관</a></li>
+                <li> | </li>
+                <li><a href="../../member/term2.html">개인정보처리방침</a></li>
+                <li> | </li>
+                <li><a href="../store/store_join.html">가맹문의</a></li>
+                <li> | </li>
+                <li><a href="../../member/faq.html">고객센터</a></li>
+            </ul>
+        </div>
+        <!-- 회사 정보(주소, 사업자번호 등) 부분 -->
+        <div class="addr">
+            <p>(주)오구 | 대표 : 한희수<br />
+                사업자등록번호 : 123-45-67890 | 대표전화 : 1212-5959<br />
+                주소 : 서울특별시 마음으로낳았구 지갑으로 키워길59<br />
+                COPYRIGHT(C) 2023 (주)오구 All right reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
