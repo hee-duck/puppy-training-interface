@@ -367,6 +367,7 @@ html.open {
         padding: 20px;
         color:#000000;
         font-weight: 400;
+        font-size:18px;
     }
 
     .pc-main-menu li h1 {
