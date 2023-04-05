@@ -30,6 +30,14 @@
         }
 
         /* 본문 영역 */
+        a{ /* 부트스트랩 css 때문에 안먹어서 별도 적용 */
+            color: black;
+        }
+
+        ul{
+            margin: 0rem;
+        }
+
         /* 1번탭 - 회사소개 */
         .p1 {
             font-size: 1.5rem;
@@ -95,25 +103,10 @@
         
         /* ==================================PC ver.(min-width: 1024px) / TA ver.(min-width: 768px)================================== */
         @media (min-width: 1024px) {
-
             .introduce>img {
                 width: 50%
             }
-            .card{
-                float: left;
-                margin: 5px 14%;
-            }
-            .tab3_container{
-                height: 1300px;
-            }
         }
-
-/*         @media (min-width: 768px) {
-            .card{
-                float: left;
-                margin: 5px 5%;
-            }
-        } */
 
         @media (min-width: 768px) {
             .introduce>img {
