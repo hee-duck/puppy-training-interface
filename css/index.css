@@ -23,9 +23,45 @@
     font-size: 12px;
   }
 
+  /* 모바일메인배너 */
+  #mobile_main_banner {
+    position:relative;
+    margin-top:70px;
+  }
+
+  .banner_inner {
+    width:100%;
+  }
+
+  .banner_inner .txt_wrap {
+    position:absolute;
+    top:20%;
+    left:50%;
+    transform: translateX(-50%);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner_inner .txt_wrap h1 {
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .banner_inner .img_wrap img {
+    width:100%;
+  }
+
+  .banner_inner .bottom_txt {
+    margin-top:20px;
+    color:#fff;
+    text-decoration: underline;
+  }
+
   /* 메인슬라이더 */
   #slider {
     margin-top:70px;
+    display:none;
   }
   .swiper {
     width: 100%;
@@ -46,7 +82,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 100% 50%;
+    object-position: 50% 50%;
   }
 
   .slider_box {
@@ -96,7 +132,7 @@
   }
 
 
-
+  /* 슬라이더 버튼 */
   .slider_txt .btn_index {
     position:absolute;
     top:70%;
@@ -109,6 +145,28 @@
     text-align: center;
     box-sizing: border-box;
     color: #061f5c;
+  }
+
+  /* 왼쪽버튼 */
+  .swiper-button-next {
+    padding-right:20px;
+    background: url(../images/index/slider/arrow.png) no-repeat;
+  }
+  
+  .swiper-button-prev {
+    padding-left:20px;
+    background: url(../images/index/slider/arrow.png) no-repeat;
+   
+    transform: scaleX(-1);   
+  }
+  
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    display: none;
+  }
+
+  #slider .swiper-pagination-bullet {
+    background : black;
   }
 
   /* 본문 텍스트박스 공통 */
@@ -353,6 +411,14 @@ text-align: center;
 
 /* PC버전 */
 @media  (min-width:1024px) {
+
+  #mobile_main_banner {
+    display:none;
+  }
+
+  #slider {
+    display:block;
+  }
 
   /* 교육안내섹션 */
   #edu_info {
