@@ -6,6 +6,12 @@
   min-width:360px;
 }
 
+/* 헤더 */
+
+.pc-top-nav li a {
+  font-size:12px;
+}
+
   
 /* 모바일 */
 

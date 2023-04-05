@@ -49,21 +49,38 @@ $(document).ready(function() {
 
 
 // 딤드 처리(처음엔 display none 햄버거 버튼 누르면 모바일gnb 제외 영역 딤드처리, 버튼 다시 클릭하면 none
-const dimmed = document.querySelector('.dimmed');
-const slideOpen = document.querySelector('#slide-open');
-let isOpen = false;
 
-dimmed.style.display = 'none';
 
-slideOpen.addEventListener('click', () => {
-  isOpen = !isOpen;
-  if (isOpen) {
-    dimmed.style.display = 'block';
-    dimmed.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+// const dimmed = document.querySelector('.dimmed');
+// const slideOpen = document.querySelector('#slide-open');
+// let isOpen = false;
+
+// dimmed.style.display = 'none';
+
+// slideOpen.addEventListener('click', () => {
+//   isOpen = !isOpen;
+//   if (isOpen) {
+//     dimmed.style.display = 'block';
+//     dimmed.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+//   } else {
+//     dimmed.style.display = 'none';
+//   }
+// });
+
+
+$(document).ready(function() {
+  $("#slide-open").click(function () {
+  if ($(".dimmed").hasClass('on')) {
+    $(".dimmed").removeClass('on');
+
   } else {
-    dimmed.style.display = 'none';
+    $(".dimmed").addClass('on');
   }
-});
+  });
+  });
+
+
+
 
 
 
