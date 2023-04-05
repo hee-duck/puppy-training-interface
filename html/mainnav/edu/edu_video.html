@@ -37,8 +37,6 @@
             min-width: 360px;
         }
 
-
-
         /* 상위메뉴 제목 및 배경 이미지 */
         .menu {
             position: relative;
@@ -176,9 +174,7 @@
                 width: 100%;
                 display: flex;
                 flex-direction: column;
-
-            }
-
+                }
 
             .img_box>img {
                 width: 100%;
@@ -200,7 +196,6 @@
                 text-align: center;
                 margin-bottom: 50px;
             }
-
 
             /* 영상(공통) */
 
@@ -232,7 +227,6 @@
 
             /*1번탭 영상교육 텍스트 */
 
-
             .text_box>.number {
                 font-size: 40px;
                 font-weight: bold;
@@ -251,6 +245,11 @@
                 padding: 20px;
 
             }
+            
+             /* 영상영역-텍스트*/
+             .edu .edu_text{
+                text-align: left;
+             }
 
             .edu_text>h1 {
                 padding: 20px;
@@ -261,12 +260,11 @@
                 padding: 0 20px;
             }
 
+
             /* 그룹레슨&개인레슨 텍스트 */
             .text_box1>h1 {
                 line-height: 40px;
                 font-size: 1.1rem;
-
-
             }
 
             .text_box2>h1 {
@@ -368,9 +366,6 @@
             }
         }
 
-
-
-
         /* pc버전 */
         @media(min-width:1024px) {
 
@@ -399,14 +394,20 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
-
             }
 
             .text_box {
-                width: 800px;
+                width: 800px;   
+            }
+            
+            /* 영상영역-텍스트*/
+            .edu .edu_text{
+              margin: 0 auto;
+              text-align: center;
+              margin-bottom: 50px;
             }
 
-            /* 영상영역 */
+             /* 영상영역 */
             .video_box {
                 display: flex;
             }
@@ -653,9 +654,9 @@
                     <div class="edu_video">
                         <div class="edu_text">
                             <h1>영상교육 듣는 방법</h1>
-                            <p>오구 교육은 이해, 관찰, 활동, 세부교육의 단계를 거치며 반려견의 회복을 돕습니다.
-                                이해, 관찰, 활동은 국,영,수와 같이 오구교육의 기초가 되는 과목입니다.
-                                위 세 가지를 중심으로 열심히 교육하시며 산책, 분리불안, 화장실 등의 세부 교육을 진행하시면 효과적입니다.
+                            <p>오구 교육은 이해, 관찰, 활동, 세부교육의 단계를 거치며 반려견의 회복을 돕습니다.<br/>
+                                이해, 관찰, 활동은 국,영,수와 같이 오구교육의 기초가 되는 과목입니다.<br/>
+                                위 세 가지를 중심으로 열심히 교육하시며 산책, 분리불안, 화장실 등의 세부 교육을 진행하시면 효과적입니다.<br/>
                             </p>
                         </div>
 
@@ -746,7 +747,7 @@
                     <div class="edu_video">
                         <div class="edu_text">
                             <h1>그룹 레슨이란?</h1>
-                            <p>한희수 훈련사님이 자신 있게 추천하는 오구교육 그룹레슨!
+                            <p>한희수 훈련사님이 자신 있게 추천하는 오구교육 그룹레슨!<br/>
                                 풀패키지 기간 동안 매주 풍부한 주제로 업데이트되는 그룹레슨을 통해 영상교육의 연장선인 양질의 오프라인 교육을 받으실 수 있습니다.
                                 경험이 풍부한 오구훈련사의 지도 아래 분리불안, 어질리티, 예절 클리커등 다양한 주제로 진행되며, 내 반려견과 성향이 맞는 다른 강아지들과 어울려
                                 사회성을 기를 수 있습니다.
