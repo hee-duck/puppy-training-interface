@@ -362,6 +362,12 @@ html.open {
         font-weight: 400;
     }
 
+    .pc-main-menu li h1 {
+        font-family: 'Dovemayo_gothic', sans-serif;
+        font-weight:300;
+        font-size:26px;
+    }
+
 
 
     .pc-main-menu .depth02 {
