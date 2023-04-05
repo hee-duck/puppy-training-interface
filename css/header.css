@@ -247,6 +247,10 @@ html.open {
     display: none;
 }
 
+.pc-main-menu a{
+    text-decoration: none;
+}
+
 
 
 
