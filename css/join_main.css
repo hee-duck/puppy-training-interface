@@ -1,19 +1,19 @@
 /* Mobile Ver. */
-@media (min-width:360px) {
-/* section 메인 박스 */
 /* 360이하로 안줄어들게 */
-#wrap{
-    margin-top: 50px;
-    min-width: 360px;
-    padding: 75px 15px;
-}
-/* 프리텐다드 폰트 */
-@font-face{
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
+@media (min-width:360px) {
+    #wrap{
+        margin-top: 50px;
+        min-width: 360px;
+        padding: 75px 15px;
+    }
+    /* 프리텐다드 폰트 */
+    @font-face{
+        font-family: 'Pretendard-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+    }
+    /* section 메인 박스 */
 .section{
     width: 90%;
     height: 76.92307%;
@@ -27,12 +27,15 @@
     display: flex;
     flex-direction: column;
 }
+/* 오구 회원가입 부분 */
 .join_title{
     font-weight: 600;
 }
+/* 오구 회원가입, 이미 계정이 있으신가요 부분 폰트 적용 */
 .join_title, .already{
     font-family: 'Pretendard-Regular';
 }
+/* sns 간편 회원가입 부분 */
 .sns_logo{
     display: inline-block;
 }
@@ -41,17 +44,20 @@
     height: 40px;
     margin: 10px 4.5px 0 6.5px;
 }
+/* 네이버 logo */
 .sns_logo li:first-child{
     margin-top: 20px;
 }
+/* 카카오 logo */
 .sns_logo li:last-child{
     margin-bottom: 20px;
 }
+/* 구분선 */
 hr{
     width: 85%;
     border-top: 1px dashed gainsboro;
 }
-/* 오구 계정 만들기 부분 */
+/* 하단 오구 계정 만들기 부분 */
 .create{
     width: 95%;
     height: 40px;
@@ -95,7 +101,6 @@ a.login:hover{
     .section{
         width: 60%;
     }
-
 }
 
 /* PC ver. */
