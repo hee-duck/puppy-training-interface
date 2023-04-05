@@ -140,6 +140,7 @@
       }
       .news li>a{
         font-size: 0.9rem;
+        color: rgb(77, 76, 76);
       }
       .news>button.plus_go{
         width: 100px;
