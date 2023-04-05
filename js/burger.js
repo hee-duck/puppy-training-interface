@@ -49,28 +49,57 @@ $(document).ready(function() {
 
 
 // 딤드 처리(처음엔 display none 햄버거 버튼 누르면 모바일gnb 제외 영역 딤드처리, 버튼 다시 클릭하면 none
-const dimmed = document.querySelector('.dimmed');
-const slideOpen = document.querySelector('#slide-open');
-let isOpen = false;
 
-dimmed.style.display = 'none';
 
-slideOpen.addEventListener('click', () => {
-  isOpen = !isOpen;
-  if (isOpen) {
-    dimmed.style.display = 'block';
-    dimmed.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-  } else {
-    dimmed.style.display = 'none';
-  }
-});
+// const dimmed = document.querySelector('.dimmed');
+// const slideOpen = document.querySelector('#slide-open');
+// let isOpen = false;
+
+// dimmed.style.display = 'none';
+
+// slideOpen.addEventListener('click', () => {
+//   isOpen = !isOpen;
+//   if (isOpen) {
+//     dimmed.style.display = 'block';
+//     dimmed.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+//   } else {
+//     dimmed.style.display = 'none';
+//   }
+// });
+
+// 딤드 JQuery
+$(document).ready(function() {
+  // #slide-open클릭시 .dimmed에 on추가(display:block)
+  $('#slide-open').on('click', function() {
+    $('.dimmed').toggleClass('on');
+  })
+  });
+
+  // width전체크기
+  window.innerWidth;
+  
+  $(document).ready(function() {
+    // 윈도우 사이즈변경시
+    $(window).on('resize', function() {
+        // .slide가 on 클래스 보유시 1024이상이면 dimmed on제거 아니면 추가
+        if ($('.slide').hasClass('on')) {
+        if(window.innerWidth >= 1024) {
+          $('.dimmed').removeClass('on');
+        } else {
+          $('.dimmed').addClass('on');
+        }
+      };
+    })
+    });
+
+
 
 
 
 
 // PC헤더 JQUERY
 $(document).ready(function() {
-  // 처음 모든 ol(하위메뉴) 숨김 처리
+  // pc-main-menu 마우스 올릴시 높이변경
   $('.pc-main-menu').on('mouseenter', function () {
     $('#header').addClass('on');
   })
