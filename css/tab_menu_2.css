@@ -49,6 +49,7 @@
      z-index: 1;
      color: black;
      font-size: 2rem;
+     font-family: 'Dovemayo_gothic';
      white-space: nowrap;
      /* width 줄여도 줄바꿈 안되게 */
  }
@@ -93,6 +94,7 @@
  }
  /* ==================================PC ver.(min-width: 1024px)================================== */
  @media (min-width: 1024px) {
+    
      .menu>img {
          width: 100%;
          opacity: 0.3;

@@ -123,26 +123,28 @@
     
 /* PC ver. */
 @media (min-width:1024px) {
+    /* 여기있다구 백그라운드 이미지 부분 */
     .section{
         margin-top: 120px;
     }
+    /* 본문 좌우 너비 */
     .con1_menu, .con2_menu{
         width: 90%;
     }
+    /* PC버전 양식 가로정렬 */
     .con2_pc{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-    .store_pic{
+    /* PC버전 가로 정렬 너비 조절 */
+    .store_pic, .store_form{
         width: 50%;
     }
-    .store_form{
-        width: 50%;
+    .store_pic img, .form_store{
+        width: 90%;
     }
-    .form_store{
-        height: 100%
-    }
+    /* 문의사항 textarea 크기 */
     .memo{
         height: 350px;
     }
