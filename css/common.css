@@ -138,6 +138,11 @@
     background: #fff;
   }
 
+  .btn_index:hover{
+    background-color: #061f5c;
+    color: #fff;
+  }
+
   @media (min-width:1280px) {
     input, textarea {
       font-size:16px;
