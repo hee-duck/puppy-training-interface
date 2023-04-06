@@ -136,6 +136,7 @@
     box-sizing: border-box;
     color: #061f5c;
     background: #fff;
+    cursor: pointer;
   }
 
   .btn_index:hover{
