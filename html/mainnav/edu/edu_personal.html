@@ -267,12 +267,10 @@
                 padding: 0 20px;
             }
 
-            /* 그룹레슨&개인레슨 텍스트 */
+            /* 2번탭 그룹레슨& 3번탭 개인레슨 텍스트 */
             .text_box1>h1 {
                 line-height: 40px;
                 font-size: 1.1rem;
-
-
             }
 
             .text_box2>h1 {
@@ -374,10 +372,33 @@
             }
         }
 
+        /* ==== 태블릿 버전 ==== */
+        @media(min-width:768px) {
 
+            /* 이미지 영역 */
+            .edu_img {
+                width: 80%;
+                margin: 0 auto;
+                margin-bottom: 100px;
+            }
 
+            /* 영상영역 */
+            .edu_video {
+                width: 80%;
+                margin: 0 auto;
+                margin-top: 100px;
+            }
 
-        /* pc버전 */
+            /* 상담신청 */
+            .edu_join{
+                width: 80%;
+                margin: 0 auto;
+                margin-top: 100px;
+            }
+
+        }
+
+        /* ==== pc버전 ==== */
         @media(min-width:1024px) {
 
             /* 공통 폰트 크기 */
@@ -628,7 +649,7 @@
             </ul>
 
             <div class="tab_con" id="tab_con">
-                <!-- 1번탭 영상교육 -->
+                <!-- ==== 1번탭 영상교육 ==== -->
                 <span class="edu">
                     <!-- 이미지 영역 -->
                     <div class="edu_img">
@@ -679,11 +700,7 @@
                             <video src="../../../images/main_nav/edu/edu_veo2.mp4" autoplay controls></video>
 
                         </div>
-
-
                     </div>
-
-
 
                     <!-- 상담신청 영역 -->
                     <span class="edu_join">
@@ -727,7 +744,7 @@
                     </span>
                 </span>
 
-                <!-- 2번탭 그룹교육 -->
+                <!-- ==== 2번탭 그룹교육 ==== -->
                 <span class="edu2">
                     <!-- 이미지 영역 -->
                     <div class="edu_img">
@@ -754,8 +771,6 @@
                         </div>
                     </div>
 
-
-
                     <!-- 영상 영역 -->
                     <div class="edu_video">
                         <div class="edu_text">
@@ -774,8 +789,6 @@
                         </div>
 
                     </div>
-
-
 
                     <!-- 상담신청 영역 -->
                     <span class="edu_join">
@@ -820,7 +833,7 @@
 
                 </span>
 
-                <!-- 3번탭 개인교육 -->
+                <!-- ==== 3번탭 개인교육 ==== -->
                 <span class="edu2">
                     <!-- 이미지 영역 -->
                     <div class="edu_img">
@@ -865,7 +878,6 @@
                         </div>
                     </div>
                 </span>
-
 
                 <hr />
 
@@ -923,7 +935,6 @@
                     right: 30px;
                     z-index: 999;
                     outline: none;
-                    background-color: white;
                     color: #333;
                     cursor: pointer;
                     border-radius: 100%;
@@ -946,8 +957,6 @@
             </script>
 
             <!-- Top btn 끝 -->
-
-
         </section>
 
         <footer id="footer">
