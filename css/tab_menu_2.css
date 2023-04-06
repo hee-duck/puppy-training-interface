@@ -80,6 +80,7 @@
      clear: both;
      margin-top: 5px;
      border: 1px solid #ddd;
+     padding: 30px 0px;
  }
 
  .tab_con div[class$="menu"] {
@@ -111,6 +112,13 @@
          font-size: 2rem;
          white-space: nowrap; /* width 줄여도 줄바꿈 안되게*/
      }
+
+     .tab_con {
+        clear: both;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        padding: 15px 0px;
+    }
 
  }
 /* 탭메뉴 css 끝 */

@@ -18,10 +18,10 @@ div.term{
 div.term li{
     display: inline-block;
     padding: 0 5px;
-    font-size: 0.8rem;
 }
 div.term li>a{
     color: #fff;
+    font-size: 0.8rem;
 }
 div.term li>a:hover{
     color: #66B2FF;
