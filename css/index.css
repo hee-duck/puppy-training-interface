@@ -194,7 +194,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.4;
   }
 
   /* 교육안내 텍스트 */
@@ -263,7 +263,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.4;
   }
 
 
@@ -287,7 +287,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.4;
 }
 
 
@@ -321,7 +321,7 @@
   top: 0;
   left: 0;
   z-index: -1;
-  opacity: 0.6;
+  opacity: 0.4;
   
 }
 

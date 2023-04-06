@@ -370,6 +370,12 @@
                 color: #061f5c;
                 background: #fff;
             }
+
+            .btn_index:hover {
+                cursor: pointer;
+                color: #fff;
+                background-color: #000066;
+            }
         }
 
         /* ==== 태블릿 버전 ==== */
@@ -453,19 +459,16 @@
                 width: 50%;
             }
 
-            /* 2번탭-그룹레슨 */
-            .edu2 .edu_box>.img_box {
-                width: 30%;
-                margin: 0 auto;
-
-            }
-
-            .edu2 .edu_box2>.img_box {
-                width: 60%;
-                display: flex;
+           /* 2번탭-그룹레슨, 3번탭-개인레슨 */
+           .edu2 .edu_box2>.img_box {
+                 display: flex;
                 margin: 0 auto;
             }
 
+            .img_top{
+                width: 50%;
+                margin: auto;
+            }
 
             /* 영상영역 */
             .edu2 .edu_video {
@@ -754,7 +757,7 @@
                     <div class="edu_img">
 
                         <div class="edu_box">
-                            <div class="img_box">
+                            <div class="img_box img_top">
                                 <img src="../../../images/main_nav/edu/edu_group1.jpg">
                             </div>
 
@@ -843,7 +846,7 @@
                     <div class="edu_img">
 
                         <div class="edu_box">
-                            <div class="img_box">
+                            <div class="img_box img_top">
                                 <img src="../../../images/main_nav/edu/edu_one1.jpg">
                             </div>
 

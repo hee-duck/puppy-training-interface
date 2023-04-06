@@ -130,6 +130,7 @@
     
         .info {
             display: flex;
+            line-height:24px;
         }
 
         .info_content {
@@ -238,10 +239,14 @@
         .review_contents_wrap li {
             width: 100%;
             padding: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .review_contents_wrap img {
-            width: 250px;
+            min-width: 250px;
+            max-width: 250px;
             height: 200px;
         }
 
@@ -351,7 +356,7 @@
 
         .gallery_wrap img {
             width: 100%;
-            height: 300px;
+            height: 350px;
             filter: blur(0px);
             transition: filter 0.3s ease-in;
         }
@@ -372,7 +377,7 @@
 
 
         @media(max-width:768px) {
-           
+   
 
         }
 
@@ -385,8 +390,27 @@
         .menu>img {
             height: 220px;
         }
-        .review_contents_wrap li {
-                padding-left:200px;
+
+
+        .review_contents_wrap h1 {
+            font-size: 24px;
+        }
+
+        .review_contents_wrap h2 {
+            font-size: 18px; 
+        }
+
+        .review_contents_wrap p {
+            font-size: 16px; 
+        }
+
+        .review_contents_wrap .date {
+            font-size: 16px; 
+        }
+
+        .review_contents_wrap img {
+            width: 500px;
+            height: 400px;
         }
         }
     </style>
@@ -519,12 +543,12 @@
                         <ol><a href="../store/store_join.html">가맹문의</a></ol>
                     </li>
                     <li><div class="menu-name-txt">
-                        <strong>어서오구</strong><span>✚</span>
+                        <strong>얘기하자구</strong><span>✚</span>
                         </div>
-                        <ol><a href="#">공지사항</a></ol>
-                        <ol><a href="#">교육후기</a></ol>
-                        <ol><a href="#">훈련사 칼럼</a></ol>
-                        <ol><a href="#">갤러리</a></ol>
+                        <ol><a href="../community/community_notice.html">공지사항</a></ol>
+                        <ol><a href="../community/community_review.html">교육후기</a></ol>
+                        <ol><a href="../community/community_column.html">훈련사 칼럼</a></ol>
+                        <ol><a href="../community/community_gallery.html">갤러리</a></ol>
                     </li>
                     <li>
                         <div class="menu-name-txt">
@@ -703,12 +727,12 @@
                                 <img src="../../../images/main_nav/community/community_2.jpg">
                                 <div class="txt_wrap">
                                     <div class="txt_top">
-                                <h1>김주연 훈련사</h1>
-                                <h2>첫수업 매우 바빴어요~</h2>
+                                <h1>김호민 훈련사</h1>
+                                <h2>양들이 너무 귀여워요~</h2>
                                 </div>
                                 <div class="txt_bottom">
-                                <p class="date">2023-04-01</p>
-                                <p class="writer">백승민</p>
+                                <p class="date">2023-03-27</p>
+                                <p class="writer">박진홍</p>
                                 </div>
                                 </div>
                             </a>
@@ -718,12 +742,12 @@
                                 <img src="../../../images/main_nav/community/community_3.jpg">
                                 <div class="txt_wrap">
                                     <div class="txt_top">
-                                <h1>김주연 훈련사</h1>
-                                <h2>첫수업 매우 바빴어요~</h2>
+                                <h1>이태우 훈련사</h1>
+                                <h2>교육 확실하게 도와주셔서 감사합니다</h2>
                                 </div>
                                 <div class="txt_bottom">
-                                <p class="date">2023-04-01</p>
-                                <p class="writer">백승민</p>
+                                <p class="date">2023-03-22</p>
+                                <p class="writer">한형섭</p>
                                 </div>
                                 </div>
                             </a>
@@ -733,12 +757,12 @@
                                 <img src="../../../images/main_nav/community/community_4.jpg">
                                 <div class="txt_wrap">
                                     <div class="txt_top">
-                                <h1>김주연 훈련사</h1>
-                                <h2>첫수업 매우 바빴어요~</h2>
+                                <h1>한희수 훈련사</h1>
+                                <h2>열심히 가르쳐주셔서 좋아요</h2>
                                 </div>
                                 <div class="txt_bottom">
-                                <p class="date">2023-04-01</p>
-                                <p class="writer">백승민</p>
+                                <p class="date">2023-02-28</p>
+                                <p class="writer">김예빈</p>
                                 </div>
                                 </div>
                             </a>
@@ -749,11 +773,11 @@
                                 <div class="txt_wrap">
                                     <div class="txt_top">
                                 <h1>김주연 훈련사</h1>
-                                <h2>첫수업 매우 바빴어요~</h2>
+                                <h2>다 좋아요 그런데 한가지 단점이 있다면</h2>
                                 </div>
                                 <div class="txt_bottom">
-                                <p class="date">2023-04-01</p>
-                                <p class="writer">백승민</p>
+                                <p class="date">2023-02-25</p>
+                                <p class="writer">김호민</p>
                                 </div>
                                 </div>
                             </a>
@@ -764,11 +788,11 @@
                                 <div class="txt_wrap">
                                     <div class="txt_top">
                                 <h1>김주연 훈련사</h1>
-                                <h2>첫수업 매우 바빴어요~</h2>
+                                <h2>예절교육은 기다림</h2>
                                 </div>
                                 <div class="txt_bottom">
-                                <p class="date">2023-04-01</p>
-                                <p class="writer">백승민</p>
+                                <p class="date">2023-02-16</p>
+                                <p class="writer">전소영</p>
                                 </div>
                                 </div>
                             </a>
@@ -778,12 +802,13 @@
                                 <img src="../../../images/main_nav/community/community_7.jpg">
                                 <div class="txt_wrap">
                                     <div class="txt_top">
-                                <h1>김주연 훈련사</h1>
-                                <h2>첫수업 매우 바빴어요~</h2>
+                                <h1>이태우 훈련사</h1>
+                                <h2>달라지고 있는 시아를 보니 미안하고 감사한 마음이 듭니다.
+                                    </h2>
                                 </div>
                                 <div class="txt_bottom">
-                                <p class="date">2023-04-01</p>
-                                <p class="writer">백승민</p>
+                                <p class="date">2023-02-12</p>
+                                <p class="writer">민희경</p>
                                 </div>
                                 </div>
                             </a>
@@ -793,12 +818,12 @@
                                 <img src="../../../images/main_nav/community/community_9.jpg">
                                 <div class="txt_wrap">
                                     <div class="txt_top">
-                                <h1>김주연 훈련사</h1>
-                                <h2>첫수업 매우 바빴어요~</h2>
+                                <h1>한희수 훈련사</h1>
+                                <h2>반려견에게 적합한 훈련제안 감사합니다</h2>
                                 </div>
                                 <div class="txt_bottom">
-                                <p class="date">2023-04-01</p>
-                                <p class="writer">백승민</p>
+                                <p class="date">2023-02-03</p>
+                                <p class="writer">정경문</p>
                                 </div>
                                 </div>
                             </a>
@@ -809,56 +834,11 @@
                                 <div class="txt_wrap">
                                     <div class="txt_top">
                                 <h1>김주연 훈련사</h1>
-                                <h2>첫수업 매우 바빴어요~</h2>
+                                <h2>리버풀 챔스 수업</h2>
                                 </div>
                                 <div class="txt_bottom">
-                                <p class="date">2023-04-01</p>
-                                <p class="writer">백승민</p>
-                                </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="../../../images/main_nav/community/community_1.jpg">
-                                <div class="txt_wrap">
-                                    <div class="txt_top">
-                                <h1>김주연 훈련사</h1>
-                                <h2>첫수업 매우 바빴어요~</h2>
-                                </div>
-                                <div class="txt_bottom">
-                                <p class="date">2023-04-01</p>
-                                <p class="writer">백승민</p>
-                                </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="../../../images/main_nav/community/community_2.jpg">
-                                <div class="txt_wrap">
-                                    <div class="txt_top">
-                                <h1>김주연 훈련사</h1>
-                                <h2>첫수업 매우 바빴어요~</h2>
-                                </div>
-                                <div class="txt_bottom">
-                                <p class="date">2023-04-01</p>
-                                <p class="writer">백승민</p>
-                                </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="../../../images/main_nav/community/community_3.jpg">
-                                <div class="txt_wrap">
-                                    <div class="txt_top">
-                                <h1>김주연 훈련사</h1>
-                                <h2>첫수업 매우 바빴어요~</h2>
-                                </div>
-                                <div class="txt_bottom">
-                                <p class="date">2023-04-01</p>
-                                <p class="writer">백승민</p>
+                                <p class="date">2023-02-01</p>
+                                <p class="writer">김호민</p>
                                 </div>
                                 </div>
                             </a>
@@ -1044,10 +1024,10 @@
                         </a>
                     </div>
                     <div class="contents">
-                        <a class="location-title" href="#">
+                        <a class="location-title" href="../../../images/main_nav/community/community_13(복돌이).jpg">
                             복돌이
                         </a>
-                        <a href="#">
+                        <a href="../../../images/main_nav/community/community_13(복돌이).jpg">
                             <img src="../../../images/main_nav/community/community_13(복돌이).jpg">
                         </a>
                     </div>
