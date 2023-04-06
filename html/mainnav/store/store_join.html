@@ -22,7 +22,7 @@
     /* Mobile ver. */
     @media (min-width:360px) {
 
-    /* 지점찾기 부분 */
+    /* !!!---- 지점찾기 부분 ----!!! */
 
     /* 구분선 */
     hr{
@@ -39,7 +39,7 @@
         border-radius: 25px;
         width: 70%;
     }
-    /* 가장 하단 부분 메시지 */
+     /* 가장 하단 부분 메시지 */
     .store_message a{
         text-decoration: underline;
         color: #000066;
@@ -73,6 +73,7 @@
     .store_form{
         display: flex;
         justify-content: center;
+        margin-top: 30px;
     }
     .form_store{
         width: 90%;
@@ -136,6 +137,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+    /* 모바일버전 margin-top 삭제 */
+    .store_form{
+        margin-top: 0;
     }
     /* PC버전 가로 정렬 너비 조절 */
     .store_pic, .store_form{
@@ -259,10 +264,10 @@
                     <li><div class="menu-name-txt">
                         <strong>어서오구</strong><span>✚</span>
                         </div>
-                        <ol><a href="#">공지사항</a></ol>
-                        <ol><a href="#">교육후기</a></ol>
-                        <ol><a href="#">훈련사 칼럼</a></ol>
-                        <ol><a href="#">갤러리</a></ol>
+                        <ol><a href="../community/community_notice.html">공지사항</a></ol>
+                        <ol><a href="../community/community_review.html">교육후기</a></ol>
+                        <ol><a href="../community/community_column.html">훈련사 칼럼</a></ol>
+                        <ol><a href="../community/community_gallery.html">갤러리</a></ol>
                     </li>
                     <li>
                         <div class="menu-name-txt">
@@ -292,66 +297,71 @@
         </ul>
 
         <div class="tab_con" id="tab_con">
-            <!-- 지점찾기 (1번째 탭) -->
-            <div class="con1_menu">
-                <div class="con1_img">
-                    <img src="../../../images/main_nav/store/store_3.jpg" ><br/><br/>
-                    <p>
-                        오구(Ogu)는 본사를 포함한 전국 6개의 지점에서 운영되고 있습니다.<br/>
-                        남양주, 잠실, 강원, 부산, 광주, 제주에서 오구(Ogu)를 만나보세요.
-                    </p>
-                </div>
-                <br/><hr/><br/>
-                <div class="store_map">
-                    <p class="store_title">오구(Ogu) 남양주 본사<br/><br/></p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3157.17531920299!2d127.20626831527358!3d37.692081479774664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cb5d5bdbf1925%3A0x484fb099d4a829c7!2z67O065Os7Lu07Y2864uI!5e0!3m2!1sko!2skr!4v1680168110653!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
-                    <p>Tel: 031-111-5959 <br/>
-                    운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
-                    토, 일, 공휴일은 휴무입니다.
-                    </p>
-                    <br/><hr/><br/>
-                    <p class="store_title">오구(Ogu) 잠실지점<br/><br/></p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.803243347169!2d127.09815793488772!3d37.51255850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca50a915f665b%3A0xabeb10cd5efdfce2!2z66Gv642w7JuU65Oc7YOA7JuM!5e0!3m2!1sko!2skr!4v1680231008429!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
-                    <p>Tel: 02-2222-5959 <br/>
-                    운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
-                    토, 일, 공휴일은 휴무입니다.
-                    </p>
-                    <br/><hr/><br/>
-                    <p class="store_title">오구(Ogu) 강원지점<br/><br/></p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405692.4418115902!2d127.25192056562499!3d37.402312400000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356373c1b2d88e41%3A0xa0e03c4e1739560d!2z7Jik7YGs67C466asIOyKpO2CpOyepQ!5e0!3m2!1sko!2skr!4v1680231281297!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
-                    <p>Tel: 033-333-5959 <br/>
-                    운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
-                    토, 일, 공휴일은 휴무입니다.
-                    </p>
-                    <br/><hr/><br/>
-                    <p class="store_title">오구(Ogu) 부산지점<br/><br/></p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13047.667036169483!2d129.15162943389663!3d35.15869668510892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35688d5c0f17ece1%3A0xc41f3c60c5c74f88!2z7ZW07Jq064yA7ZW07IiY7JqV7J6l!5e0!3m2!1sko!2skr!4v1680231313208!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
-                    <p>Tel: 051-444-5959 <br/>
-                    운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
-                    토, 일, 공휴일은 휴무입니다.
-                    </p>
-                    <br/><hr/><br/>
-                    <p class="store_title">오구(Ogu) 광주지점<br/><br/></p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1630.943180616002!2d126.85183825816134!3d35.1594547450798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3571894bfda800ab%3A0x466c1927782ab175!2z6rSR7KO86rSR7Jet7Iuc7LKt!5e0!3m2!1sko!2skr!4v1680231354081!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
-                    <p>Tel: 062-555-5959 <br/>
-                    운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
-                    토, 일, 공휴일은 휴무입니다.
-                    </p>
-                    <br/><hr/><br/>
-                    <p class="store_title">오구(Ogu) 제주지점<br/><br/></p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13309.017765127346!2d126.50737438317529!3d33.49475664217855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cfcae537cd439%3A0xd7a0bcd187c7bcce!2z7KCc7KO87Iuc7LKt!5e0!3m2!1sko!2skr!4v1680231176337!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
-                    <p>Tel: 064-666-5959 <br/>
-                    운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
-                    토, 일, 공휴일은 휴무입니다.
-                    </p>
-                </div>
-                <br/><hr/><br/>
-                <!-- 가장 하단 부분 메시지 -->
-                <div class="store_message">
-                    <p>기타 지점과 관련된 문의사항은 <a href="store_join.html">지점문의</a>를 이용해 주세요.</p>
-                </div>    
+        <!-- 지점찾기 (1번째 탭) -->
+        <div class="con1_menu">
+            <div class="con1_img">
+                <img src="../../../images/main_nav/store/store_3.jpg" ><br/><br/>
+                <p>
+                    오구(Ogu)는 본사를 포함한 전국 6개의 지점에서 운영되고 있습니다.<br/>
+                    남양주, 잠실, 강원, 부산, 광주, 제주에서 오구(Ogu)를 만나보세요.
+                </p>
             </div>
-            <!-- 지점찾기 종료 -->
+            <br/><br/><hr/><br/><br/>
+            <div class="store_map">
+                <p class="store_title">오구(Ogu) 남양주 본사<br/><br/><br/></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3157.17531920299!2d127.20626831527358!3d37.692081479774664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cb5d5bdbf1925%3A0x484fb099d4a829c7!2z67O065Os7Lu07Y2864uI!5e0!3m2!1sko!2skr!4v1680168110653!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
+                <br/>
+                <p>Tel: 031-111-5959 <br/>
+                운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
+                토,일, 공휴일은 휴무입니다.
+                </p>
+                <br/><br/><hr/><br/><br/>
+                <p class="store_title">오구(Ogu) 잠실지점<br/><br/><br/></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.803243347169!2d127.09815793488772!3d37.51255850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca50a915f665b%3A0xabeb10cd5efdfce2!2z66Gv642w7JuU65Oc7YOA7JuM!5e0!3m2!1sko!2skr!4v1680231008429!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
+                <br/>
+                <p>Tel: 02-2222-5959 <br/>
+                운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
+                토,일, 공휴일은 휴무입니다.
+                </p>
+                <br/><br/><hr/><br/><br/>
+                <p class="store_title">오구(Ogu) 강원지점<br/><br/><br/></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405692.4418115902!2d127.25192056562499!3d37.402312400000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356373c1b2d88e41%3A0xa0e03c4e1739560d!2z7Jik7YGs67C466asIOyKpO2CpOyepQ!5e0!3m2!1sko!2skr!4v1680231281297!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
+                <br/>
+                <p>Tel: 033-333-5959 <br/>
+                운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
+                토,일, 공휴일은 휴무입니다.
+                </p>
+                <br/><br/><hr/><br/><br/>
+                <p class="store_title">오구(Ogu) 부산지점<br/><br/><br/></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13047.667036169483!2d129.15162943389663!3d35.15869668510892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35688d5c0f17ece1%3A0xc41f3c60c5c74f88!2z7ZW07Jq064yA7ZW07IiY7JqV7J6l!5e0!3m2!1sko!2skr!4v1680231313208!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
+                <br/>
+                <p>Tel: 051-444-5959 <br/>
+                운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
+                토,일, 공휴일은 휴무입니다.
+                </p>
+                <br/><br/><hr/><br/><br/>
+                <p class="store_title">오구(Ogu) 광주지점<br/><br/><br/></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1630.943180616002!2d126.85183825816134!3d35.1594547450798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3571894bfda800ab%3A0x466c1927782ab175!2z6rSR7KO86rSR7Jet7Iuc7LKt!5e0!3m2!1sko!2skr!4v1680231354081!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
+                <br/>
+                <p>Tel: 062-555-5959 <br/>
+                운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
+                토,일, 공휴일은 휴무입니다.
+                </p>
+                <br/><br/><hr/><br/><br/>
+                <p class="store_title">오구(Ogu) 제주지점<br/><br/><br/></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13309.017765127346!2d126.50737438317529!3d33.49475664217855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cfcae537cd439%3A0xd7a0bcd187c7bcce!2z7KCc7KO87Iuc7LKt!5e0!3m2!1sko!2skr!4v1680231176337!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
+                <br/>
+                <p>Tel: 064-666-5959 <br/>
+                운영시간: 09:00-18:00 / 점심시간 13:00 ~ 14:00 <br/>
+                토,일, 공휴일은 휴무입니다.
+                </p>
+            </div>
+            <br/><hr/><br/>
+            <div class="store_message">
+                <p>기타 지점과 관련된 문의사항은 <a href="store_join.html">지점문의</a>를 이용해 주세요.</p>
+            </div>    
+        </div>
+        <!-- 지점찾기 종료 -->
 
             <!-- 지점문의 (2번째 탭) -->
             <div class="con2_menu">
