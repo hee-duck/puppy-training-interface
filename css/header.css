@@ -49,6 +49,7 @@ html.open {
     font-size: 2.6rem;
     font-family: 'Gugi';
     box-sizing: border-box;
+    text-decoration: none !important;
 }
 
 .body {
