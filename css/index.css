@@ -243,14 +243,24 @@
     background-size: 128px;
   }
 
+
+  /* 교육안내 안보였다가 나타나기 */
+  .edu_info_txt {
+    transition-delay: 0s;
+    opacity: 0;
+    transform: translateY(150px);
+  }
+
+  .edu_info_txt.on {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.3s;
+  }
+
   /* 교육신청 */
   #edu_join {
     padding: 60px 15px;
     position:relative;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
 
   #edu_join::after {
@@ -265,6 +275,37 @@
     z-index: -1;
     opacity: 0.4;
   }
+
+
+  .edu_join_inner {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  /* edu_join움직임 */
+  .edu_join_inner .text_box, .edu_join_inner form {
+    transition-delay: 0s;
+    opacity: 0;
+    transform: translateY(150px);
+  }
+
+
+  .edu_join_inner .text_box.on {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.3s;
+  }
+
+  .edu_join_inner form.on {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.8s;
+  }
+
+
 
 
 
@@ -414,7 +455,7 @@ text-align: center;
     gap: 10px;
   }
 
-  #edu_join {
+  .edu_join_inner {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
