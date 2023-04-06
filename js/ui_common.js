@@ -21,12 +21,12 @@
     $(window).scroll(function(){
         var hei = $(document).scrollTop();
         if(hei > 300){
-            $('.edu_info_txt').addClass('on')
+            $('.btn_index_wrap').children().addClass('on')
         }
     });
   });
 
-  // edu_join움직임
+  // edu_join 움직임
   $(document).ready(function(){
     $(window).scroll(function(){
         var hei = $(document).scrollTop();
@@ -35,5 +35,35 @@
         }
     });
   });
+
+  // store_info 움직임
+  $(document).ready(function(){
+    $(window).scroll(function(){
+        var hei = $(document).scrollTop();
+        if(hei > 1200){
+            $('.store_info_inner').addClass('on')
+        }
+    });
+  });
+
+  // store_apply 움직임
+  $(document).ready(function(){
+    $(window).scroll(function(){
+        var hei = $(document).scrollTop();
+        if(hei > 1800){
+            $('.store_apply_inner').addClass('on')
+        }
+    });
+  });
+
+  $(document).ready(function(){
+    $(window).scroll(function(){
+        var hei = $(document).scrollTop();
+        if(hei > 2200){
+            $('#sns').addClass('on')
+        }
+    });
+  });
+
 
 

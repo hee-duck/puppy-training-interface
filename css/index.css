@@ -245,16 +245,27 @@
 
 
   /* 교육안내 안보였다가 나타나기 */
-  .edu_info_txt {
-    transition-delay: 0s;
+  .edu_info_section1, .edu_info_section2, .edu_info_section3 {
     opacity: 0;
     transform: translateY(150px);
   }
 
-  .edu_info_txt.on {
+  .edu_info_section1.on {
     opacity: 1;
     transform: translateY(0);
     transition: 0.3s;
+  }
+
+  .edu_info_section2.on {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.6s;
+  }
+
+  .edu_info_section3.on {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.9s;
   }
 
   /* 교육신청 */
@@ -305,10 +316,6 @@
     transition: 0.8s;
   }
 
-
-
-
-
   #store_info {
            
     padding: 180px 15px;
@@ -331,6 +338,17 @@
     opacity: 0.4;
 }
 
+.store_info_inner {
+  opacity: 0;
+  transform: translateY(150px);
+}
+
+.store_info_inner.on {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.3s;
+}
+
 
 .btn{
   text-align: center;
@@ -346,9 +364,7 @@
   text-align: center;
   position: relative;
   z-index: 1;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
+  
 }
 
 
@@ -364,6 +380,20 @@
   z-index: -1;
   opacity: 0.4;
   
+}
+
+.store_apply_inner {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(150px);
+}
+
+.store_apply_inner.on {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.3s;
 }
 
 /* sns */
@@ -392,6 +422,17 @@ text-align: center;
 
 #sns p {
   font-size:16px;
+}
+
+#sns {
+  opacity: 0;
+  transform: translateY(150px);
+}
+
+#sns.on {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.3s;
 }
 
 /* 탑버튼css */
@@ -460,7 +501,7 @@ text-align: center;
     align-items: center;
   }
 
-  #store_apply {
+  .store_apply_inner {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
@@ -500,7 +541,9 @@ text-align: center;
   /* sns PC버전 */
   #sns {
     padding-top:40px;
-    padding-bottom:100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
   #sns p {
     font-size:26px;
@@ -508,11 +551,15 @@ text-align: center;
   #sns>div.sns_content {
     padding:30px;
   }
+  .sns_img li{
+    padding: 10px;
+  }
 
   .sns_img img {
     width:60px;
     height:60px;
   }
+  
 
 
 
