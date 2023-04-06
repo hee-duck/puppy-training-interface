@@ -58,8 +58,7 @@ $('#pwd2').keyup(function(){
     }else if(!pwdChk.test($('#pwd1').val())){
         $('#chkNotice').html('비밀번호는 영문, 숫자와 특수문자를 모두 포함해야 합니다.<br>').css('color', 'red');                    
     }else{/* 모든 조건에 충족하고, 비밀번호와 비밀번호 확인란의 값이 일치할 때 */
-        $('#chkNotice').html('비밀번호가 일치합니다. 사용 가능합니다.<br>').css('color', 'darkblue'); /* 일치시 color: darkblue */
-        $('#chkNotice').attr('color', '#199894b3');
+        $('#chkNotice').html('비밀번호가 일치합니다. 사용 가능합니다.<br>').css('color', 'navy'); /* 일치시 color: darkblue */
         }
      });
 });
