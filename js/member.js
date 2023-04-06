@@ -49,16 +49,17 @@
 $('#pwd2').keyup(function(){
     if($('#pwd1').val() != $('#pwd2').val()){
         /* 비밀번호와 비밀번호 확인란의 값이 일치하지 않을 때 */
-        $('#chkNotice').html('비밀번호가 일치하지 않습니다.<br>');
+        $('#chkNotice').html('비밀번호가 일치하지 않습니다.<br><br>').css('color', 'red'); /* 비밀번호 양식 오류일시 color: red */
         /* 비밀번호 길이 검사 */
             /* 비밀번호의 길이가 4글자 미만이거나, 10글자 초과일 때 */
     }else if($('#pwd1').val().length < 4 || $('#pwd1').val().length > 10){ 
-        $('#chkNotice').html('비밀번호의 길이는 4-10글자 사이여야 합니다.<br>');
+        $('#chkNotice').html('비밀번호의 길이는 4-10글자 사이여야 합니다.<br>').css('color', 'red');
         /* 숫자와 특수문자 포함 */
     }else if(!pwdChk.test($('#pwd1').val())){
-        $('#chkNotice').html('비밀번호는 영문, 숫자와 특수문자를 모두 포함해야 합니다.<br>');                    
+        $('#chkNotice').html('비밀번호는 영문, 숫자와 특수문자를 모두 포함해야 합니다.<br>').css('color', 'red');                    
     }else{/* 모든 조건에 충족하고, 비밀번호와 비밀번호 확인란의 값이 일치할 때 */
-        $('#chkNotice').html('비밀번호가 일치합니다. 사용 가능합니다.<br>');
+        $('#chkNotice').html('비밀번호가 일치합니다. 사용 가능합니다.<br>').css('color', 'darkblue'); /* 일치시 color: darkblue */
+        $('#chkNotice').attr('color', '#199894b3');
         }
      });
 });
