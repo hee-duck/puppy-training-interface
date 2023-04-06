@@ -74,7 +74,7 @@
     
     /* 문의사항 양식 폼태그 부분 */
     /* 오구(Ogu) 지점문의 하단 간격 조정 */
-    span{
+    .storeJoin_title{
         margin-bottom: 15px;
     }
     .store_form{
@@ -88,6 +88,11 @@
         flex-direction: column;
         padding: 20px;
         border: 1px solid black;
+        background-color: beige;
+    }
+
+    strong{
+        font-size: 1.3rem;
     }
     /* 전화번호 부분 */
     .tel{
@@ -389,8 +394,8 @@
                 <!-- 지점문의 양식 부분 -->
                 <form action="" class="store_form" method="post" enctype="multipart/form-data">
                 <div class="form_store">
-                    <span>오구(Ogu) 지점문의</span>
-                    <input type="text" class="name" name="name" id="name" placeholder="이름 (필수입력)" required>
+                    <span class="storeJoin_title"><strong>오구(Ogu) 지점문의</strong></span>
+                    <input type="text" class="name" name="name" id="name" placeholder="이름 (필수입력)">
                     <div class="tel">
                     <select name="tel1" id="tel1">
                         <option value="010" selected>010</option>
@@ -402,14 +407,14 @@
                     </select>
                     <span>-</span>
                     <!-- 휴대폰 input 상자에는 최대 4글자, 숫자만 입력하게 함 -->
-                    <input type="text" name="tel2" id="tel2" maxlength="4" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                    <input type="text" name="tel2" id="tel2" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                     <span>-</span>
-                    <input type="text" name="tel3" id="tel3" maxlength="4" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                    <input type="text" name="tel3" id="tel3" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                     </div>
                     <input type="email" id="email" name="email" placeholder="이메일">
                     <textarea class="memo" placeholder="문의 접수는 회원만 가능합니다."></textarea>
                     <div class="btn">
-                        <input type="submit" id="btn_index" name="btn_index" value="문의하기">
+                        <input type="submit" id="btn_index" name="btn_index" onclick="alert('문의 등록이 완료되었습니다. 확인 후 연락드릴게요!')" value="문의하기">
                     </div>
                 </div>
             </form>

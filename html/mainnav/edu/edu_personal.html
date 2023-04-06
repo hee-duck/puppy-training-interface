@@ -208,6 +208,7 @@
 
             .video_box {
                 padding: 20px;
+                margin-bottom: 80px;
             }
 
             .video_box>video {
@@ -402,10 +403,6 @@
                 margin-top: 100px;
             }
 
-            input, textarea{
-                font-size: 16px;
-            }
-
         }
 
         /* ==== pc버전 ==== */
@@ -418,6 +415,7 @@
 
             p {
                 font-size: 1rem;
+                font-family: 'Pretendard-Regular';
             }
 
             /* 공통선 */
@@ -441,7 +439,6 @@
             .text_box {
                 width: 800px;
             }
-
 
             /* 영상영역-텍스트*/
             .edu .edu_text {
@@ -500,6 +497,11 @@
             .edu_join>.index_form {
                 width: 50%;
                 margin: 0 auto;
+            }
+
+            input,
+            textarea {
+                font-size: 16px;
             }
         }
     </style>
@@ -746,7 +748,7 @@
  문제 행동 :
  관심 프로그램 : </textarea>
                             </div>
-                            <a href="#" class="btn_index">문의하기</a>
+                            <a class="btn_index" onclick="alert('문의 등록이 완료되었습니다. 확인 후 연락드릴게요!')">문의하기</a>
                         </form>
                     </span>
                 </span>
@@ -834,7 +836,7 @@
  문제 행동 :
  관심 프로그램 : </textarea>
                             </div>
-                            <a href="#" class="btn_index">문의하기</a>
+                            <a class="btn_index" onclick="alert('문의 등록이 완료되었습니다. 확인 후 연락드릴게요!')">문의하기</a>
                         </form>
                     </span>
 
@@ -924,7 +926,7 @@
  문제 행동 :
  관심 프로그램 : </textarea>
                         </div>
-                        <a href="#" class="btn_index">문의하기</a>
+                        <a class="btn_index" onclick="alert('문의 등록이 완료되었습니다. 확인 후 연락드릴게요!')">문의하기</a>
                     </form>
                 </div>
             </div>
