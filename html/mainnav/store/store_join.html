@@ -121,14 +121,14 @@
         display: flex;
         justify-content: center;
     }
-    #btn_index{
+    .btn_index{
         width: 25%;
         line-height: 40px;
         border-radius: 50px;
         background-color: #fff;
         border: 1px solid black;
     }
-    #btn_index:hover{
+    .btn_index:hover{
         cursor: pointer;
         color: #fff;
         background-color: #000066;
@@ -414,7 +414,7 @@
                     <input type="email" id="email" name="email" placeholder="이메일">
                     <textarea class="memo" placeholder="문의 접수는 회원만 가능합니다."></textarea>
                     <div class="btn">
-                        <input type="submit" id="btn_index" name="btn_index" onclick="alert('문의 등록이 완료되었습니다. 확인 후 연락드릴게요!')" value="문의하기">
+                        <a class="btn_index" onclick="alert('문의 등록이 완료되었습니다. 확인 후 연락드릴게요!')">문의하기</a>
                     </div>
                 </div>
             </form>

@@ -39,7 +39,8 @@
     /* 비밀번호 부분 */
 
     let pwdChk = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[$@$!%*#?&])/; /* 영문 + 숫자 + 특수문자 */
-    
+    let pwd_space = /[ ]/; /* 공백 */
+
     $(function(){
         $('#pwd1').keyup(function(){ /* keyup: 사용자가 키보드를 누르고 떼는 순간 이벤트 발생 */
             $('#chkNotice').html(''); /* .html() -> 선택한 요소 안의 내용을 호출하거나 바꾸어준다. */
@@ -57,6 +58,8 @@ $('#pwd2').keyup(function(){
         /* 숫자와 특수문자 포함 */
     }else if(!pwdChk.test($('#pwd1').val())){
         $('#chkNotice').html('비밀번호는 영문, 숫자와 특수문자를 모두 포함해야 합니다.<br>').css('color', 'red');                    
+    }else if(pwd_space.test($('#pwd1').val())){
+        $('#chkNotice').html('비밀번호는 공백을 포함할 수 없습니다.<br>').css('color', 'red');         
     }else{/* 모든 조건에 충족하고, 비밀번호와 비밀번호 확인란의 값이 일치할 때 */
         $('#chkNotice').html('비밀번호가 일치합니다. 사용 가능합니다.<br>').css('color', 'navy'); /* 일치시 color: darkblue */
         }
