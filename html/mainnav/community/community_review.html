@@ -74,7 +74,6 @@
             float: left;
             width: 25%;
             border-left: 1px solid #ddd;
-            text-align: center;
             box-sizing: border-box;
         }
 
@@ -83,7 +82,9 @@
             padding: 20px;
             cursor: pointer;
             white-space: nowrap;
+            text-align: center;
         }
+
 
         .tab li.on {
             background-color: #000066;
@@ -149,6 +150,10 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+
+        .info .date {
+            display:none;
         }
 
         .ctg_event {
@@ -238,15 +243,15 @@
 
         .review_contents_wrap li {
             width: 100%;
-            padding: 20px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            padding: 20px 20px;
+            box-sizing: border-box;
         }
 
         .review_contents_wrap img {
-            width: 250px;
-            height: 200px;
+            width: 50%;
         }
 
 
@@ -269,7 +274,10 @@
 
         .review_contents_wrap h2 {
             font-weight:400;
-            padding-top: 10px;   
+            padding-top: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .review_contents_wrap p {
@@ -280,9 +288,6 @@
             text-align: left;
         }
 
-        .review_contents_wrap li {
-                padding: 20px 50px;
-        }
 
 
 
@@ -412,6 +417,11 @@
             width: 500px;
             height: 400px;
         }
+
+        .info .date {
+            display:none;
+        }
+
         }
     </style>
 
@@ -578,7 +588,7 @@
         <ul class="tab" id="tab">
             <li>공지사항</li>
             <li>교육후기</li>
-            <li>훈련사 칼럼</li>
+            <li>칼럼</li>
             <li>갤러리</li>
         </ul>
 
@@ -815,7 +825,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="../../../images/main_nav/community/community_9.jpg">
+                                <img src="../../../images/main_nav/community/community_4.jpg">
                                 <div class="txt_wrap">
                                     <div class="txt_top">
                                 <h1>한희수 훈련사</h1>
@@ -830,7 +840,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="../../../images/main_nav/community/community_10.jpg">
+                                <img src="../../../images/main_nav/community/community_3.jpg">
                                 <div class="txt_wrap">
                                     <div class="txt_top">
                                 <h1>김주연 훈련사</h1>
